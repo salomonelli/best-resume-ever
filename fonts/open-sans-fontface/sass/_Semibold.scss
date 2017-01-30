@@ -1,0 +1,8 @@
+/* BEGIN Semibold */
+@font-face {
+  font-family: 'Open Sans';
+  @include fontdef($OpenSansPath, $OpenSansVersion, "Semibold");
+  font-weight: 600;
+  font-style: normal;
+}
+/* END Semibold */

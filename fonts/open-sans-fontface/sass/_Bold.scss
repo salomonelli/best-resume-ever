@@ -1,0 +1,8 @@
+/* BEGIN Bold */
+@font-face {
+  font-family: 'Open Sans';
+  @include fontdef($OpenSansPath, $OpenSansVersion, "Bold");
+  font-weight: bold;
+  font-style: normal;
+}
+/* END Bold */

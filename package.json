@@ -1,0 +1,20 @@
+{
+    "name": "beautifulcv",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "pdf": "node app.js",
+        "server": "ws --spa index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SalamiMitPizza/beautifulCV.git"
+    },
+    "author": "salamimipizza",
+    "homepage": "https://salamimitpizza.github.io/beautifulCV/",
+    "dependencies": {
+        "html-pdf": "2.1.0",
+        "local-web-server": "1.2.6"
+    }
+}

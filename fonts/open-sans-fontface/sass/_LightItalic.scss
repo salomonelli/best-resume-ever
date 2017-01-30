@@ -1,0 +1,8 @@
+/* BEGIN Light Italic */
+@font-face {
+  font-family: 'Open Sans';
+  @include fontdef($OpenSansPath, $OpenSansVersion, "LightItalic");
+  font-weight: 300;
+  font-style: italic;
+}
+/* END Light Italic */

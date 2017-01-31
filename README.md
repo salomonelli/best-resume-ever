@@ -2,7 +2,7 @@
 
 Build your best resume ever!
 
-A collection of beautiful Resumes build with LESS, Mustache Templates and JavaScript. Choose your favorite Curriculum Vitae and easily export it as pdf.
+A collection of beautiful resumes build with LESS and Mustache Templates. Choose your favorite Curriculum Vitae and easily export it as pdf.
 
 ## Install
 

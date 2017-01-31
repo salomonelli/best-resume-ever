@@ -1,12 +1,13 @@
 {
-    "name": "beautifulcv",
+    "name": "best-resume-ever",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
-        "start": "npm run less && node server.js",
+        "server": "node server.js",
+        "start": "npm run less && npm run server",
         "pdf": "bash createPDF.bash",
-        "server": "ws --spa index.html",
+        "pdf:win": "sh createPDF.sh",
         "less": "lessc --clean-css less/style.less public/style.min.css"
     },
     "repository": {

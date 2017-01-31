@@ -6,7 +6,7 @@ A collection of beautiful resumes build with LESS and Mustache Templates. Choose
 
 ## Resumes
 
-![](http://preview/resume-1.png | width=350)
+![](http://public/preview/resume-1.png | width=350)
 
 ## Install
 

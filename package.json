@@ -4,8 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "pdf": "node app.js",
-        "server": "ws --spa index.html"
+        "start": "npm run less && node server.js",
+        "pdf": "bash createPDF.bash",
+        "server": "ws --spa index.html",
+        "less": "lessc --clean-css less/style.less public/style.min.css"
     },
     "repository": {
         "type": "git",
@@ -14,7 +16,17 @@
     "author": "salamimipizza",
     "homepage": "https://salamimitpizza.github.io/beautifulCV/",
     "dependencies": {
+        "electron": "^1.4.15",
+        "electroshot": "^1.2.0",
+        "express": "^4.14.1",
+        "font-awesome": "^4.7.0",
+        "hogan-express": "^0.5.2",
         "html-pdf": "2.1.0",
-        "local-web-server": "1.2.6"
+        "jquery": "^3.1.1",
+        "less": "^2.7.2",
+        "less-plugin-clean-css": "^1.5.1",
+        "local-web-server": "1.2.6",
+        "mustache-express": "^1.2.4",
+        "path": "^0.12.7"
     }
 }

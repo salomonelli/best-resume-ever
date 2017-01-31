@@ -1,8 +1,0 @@
-/* BEGIN Extrabold Italic */
-@font-face {
-  font-family: 'Open Sans';
-  @include fontdef($OpenSansPath, $OpenSansVersion, "ExtraBoldItalic");
-  font-weight: 800;
-  font-style: italic;
-}
-/* END Extrabold Italic */

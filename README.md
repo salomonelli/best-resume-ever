@@ -20,4 +20,10 @@ Follow these instructions to create your own CV:
 - Feel free to adjust styles in `/less` according to your needs.
 - When finished, run `npm run pdf` to generate all CVs as pdf. You will find the generated pdfs in `/pdf`.
 
+## Contribute
+
+Feel free to create your own templates!
+
+--------------------------------------------------------------------------------
+
 Icons made by [Vectors Market](http://www.flaticon.com/authors/vectors-market "Vectors Market") from [www.flaticon.com](http://www.flaticon.com "Flaticon") is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/ "Creative Commons BY 3.0")

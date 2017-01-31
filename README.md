@@ -4,6 +4,10 @@ Build your best resume ever!
 
 A collection of beautiful resumes build with LESS and Mustache Templates. Choose your favorite Curriculum Vitae and easily export it as pdf.
 
+## Resumes
+
+![](http://preview/resume-1.png | width=350)
+
 ## Install
 
 Follow these instructions to create your own CV:

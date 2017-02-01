@@ -12,7 +12,8 @@ app.engine('mustache', require('hogan-express'));
 app.set('view engine', 'mustache');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
-app.use(express.static(path.join(__dirname, 'node_modules/open-sans-fontface')));
+app.use('/fonts', express.static(path.join(__dirname, 'node_modules/open-sans-fontface/fonts')));
+app.use('/fonts', express.static(path.join(__dirname, 'node_modules/raleway-webfont/fonts')));
 
 app.get('/', function(req, res) {
     res.render('layout', {

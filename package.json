@@ -29,6 +29,7 @@
     "local-web-server": "1.2.6",
     "mustache-express": "^1.2.4",
     "open-sans-fontface": "^1.4.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "raleway-webfont": "^3.0.1"
   }
 }

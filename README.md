@@ -23,7 +23,11 @@ Follow these instructions to create your own CV:
 
 ## Adding a template
 
+TODO
+
 ## How to add a font
+
+TODO
 
 ## Contribute
 

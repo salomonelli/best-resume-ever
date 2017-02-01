@@ -6,7 +6,7 @@ A collection of beautiful resumes build with LESS and Mustache Templates. Choose
 
 ## Resumes
 
-![image](public/preview/resume-1.png)
+![image](public/preview/resume-1.png) ![image](public/preview/resume-2.png)
 
 ## Install
 
@@ -19,6 +19,10 @@ Follow these instructions to create your own CV:
 - To preview your CV run `npm start`. Check out <http://localhost:3000>.
 - Feel free to adjust styles in `/less` according to your needs.
 - When finished, run `npm run pdf` to generate all CVs as pdf. You will find the generated pdfs in `/pdf`.
+
+## Adding a template
+
+## How to add a font
 
 ## Contribute
 

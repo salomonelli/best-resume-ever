@@ -7,7 +7,7 @@ var writeFile = require('write');
 fs.readFile('README.md', 'utf-8', function(err, data) {
     if (err) console.log(err);
     var readme = converter.makeHtml(data);
-    fs.readFile('resumes/readme.mustache', 'utf-8', function(err, template) {
+    fs.readFile('resumes/githubPages.mustache', 'utf-8', function(err, template) {
         var html = Mustache.render(template, {
             content: readme
         });

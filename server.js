@@ -30,6 +30,15 @@ app.get('/resume-1', function(req, res) {
     });
 });
 
+app.get('/resume-2', function(req, res) {
+    res.render('layout', {
+        partials: {
+            content: 'resume-2'
+        },
+        person: person
+    });
+});
+
 app.listen(3000, '0.0.0.0', function() {
     console.log('Listening on localhost:3000!');
 });

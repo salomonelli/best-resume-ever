@@ -1,8 +1,9 @@
 @import "resume-1.less";
+@import "resume-2.less";
 @header: #4B5B6E;
 @background: #CCCCCC;
 @darkgrey: #343444;
-@briefcase: #F1F2DF;
+@main: #E77171;
 
 body {
     background: @background;
@@ -28,30 +29,72 @@ body {
         header {
             background: @header;
             color: white;
-            padding-top: 100px;
-            padding-bottom: 100px;
+            padding-top: 10px;
+            padding-bottom: 10px;
 
-            h1 {
-                .fa {
-                    color: @briefcase;
-                    margin-bottom: 10px;
-                    font-size: 70px;
+            #forkme {
+                cursor: pointer;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 10%;
+                z-index: 10;
+                padding: 10px;
+                color: #fff;
+                background: @main;
+                font-weight: 700;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                border-bottom-left-radius: 2px;
+                border-bottom-right-radius: 2px;
+            }
+
+            .content {
+                width: 80%;
+                margin-right: auto;
+                margin-left: auto;
+
+                .logo {
+                    display: inline-block;
+                    position: relative;
+
+                    .fa {
+                        color: white;
+                        margin-bottom: 10px;
+                        font-size: 70px;
+                        float: left;
+                        margin-right: 10px;
+                        margin-top: 15px;
+                    }
+
+                    h1 {
+                        float: left;
+                        margin-top: 27px;
+                    }
                 }
-                width: 100%;
-                text-align: center;
             }
         }
 
         main {
             padding-left: 5%;
             padding-right: 5%;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 50px;
 
             p {
                 font-size: 20px;
             }
 
             .resume-collection {
-                a.resume {
+                h3 {
+                    font-size: 30px;
+                }
+
+                .resume {
+                    display: inline-block;
+                    text-decoration: none;
+
                     img {
                         height: 300px;
                         width: auto;
@@ -61,6 +104,14 @@ body {
                         &:hover {
                             box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
                         }
+                    }
+
+                    .resume-title {
+                        text-align: center;
+                        display: block;
+                        text-decoration: none;
+                        margin-top: 10px;
+                        color: black;
                     }
                 }
             }

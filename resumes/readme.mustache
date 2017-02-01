@@ -10,12 +10,13 @@
 
 <body>
     <div id="forkme">View on Github <i class="fa fa-github"></i></div>
-    <div class="suitcase">
-        <img src="public/suitcase.png" width="150" />
-    </div>
     <div id="readme">
         {{{content}}}
     </div>
+    <script>
+        var headline = document.getElementByTagName('h1')[0];
+        headline.innerHTML += '<img src="public/suitcase.png" width="150" />';
+    </script>
 </body>
 
 </html>

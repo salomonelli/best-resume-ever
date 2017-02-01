@@ -6,8 +6,10 @@
     "scripts": {
         "server": "node server.js",
         "start": "npm run less && npm run server",
-        "pdf": "bash createPDF.bash",
-        "pdf:win": "sh createPDF.sh",
+        "pdf": "bash scripts/createPDF.bash",
+        "pdf:win": "sh scripts/createPDF.sh",
+        "png": "npm run pdf && bash scripts/createPNG.bash",
+        "png:win": "npm run pdf:win && sh scripts/createPNG.sh",
         "less": "lessc --clean-css less/style.less public/style.min.css"
     },
     "repository": {
@@ -30,6 +32,7 @@
         "mustache-express": "^1.2.4",
         "open-sans-fontface": "^1.4.0",
         "path": "^0.12.7",
+        "pdf-to-png": "^1.0.3",
         "raleway-webfont": "^3.0.1"
     }
 }

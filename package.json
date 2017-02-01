@@ -10,6 +10,7 @@
         "pdf:win": "sh scripts/createPDF.sh",
         "png": "npm run pdf && bash scripts/createPNG.bash",
         "png:win": "npm run pdf:win && sh scripts/createPNG.sh",
+        "readme": "node renderReadMe.js",
         "less": "lessc --clean-css less/style.less public/style.min.css"
     },
     "repository": {
@@ -19,6 +20,7 @@
     "author": "salamimipizza",
     "homepage": "https://salamimitpizza.github.io/beautifulCV/",
     "dependencies": {
+        "buffer-to-string": "^0.1.0",
         "electron": "^1.4.15",
         "electroshot": "^1.2.0",
         "express": "^4.14.1",
@@ -29,10 +31,14 @@
         "less": "^2.7.2",
         "less-plugin-clean-css": "^1.5.1",
         "local-web-server": "1.2.6",
+        "markdown-to-html": "0.0.13",
+        "mustache": "^2.3.0",
         "mustache-express": "^1.2.4",
         "open-sans-fontface": "^1.4.0",
         "path": "^0.12.7",
         "pdf-to-png": "^1.0.3",
-        "raleway-webfont": "^3.0.1"
+        "raleway-webfont": "^3.0.1",
+        "showdown": "^1.6.3",
+        "write": "^0.3.2"
     }
 }

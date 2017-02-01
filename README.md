@@ -6,8 +6,8 @@ A collection of beautiful resumes build with LESS and Mustache Templates. Choose
 
 ## Resumes
 
-<img src="public/preview/resume-1.png" width="150"/>
-<img src="public/preview/resume-2.png" width="150"/>
+<img src="resumes/resume-1/resume-1.png" width="150"/>
+<img src="resumes/resume-1/resume-2.png" width="150"/>
 
 ## Install
 

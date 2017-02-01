@@ -1,35 +1,35 @@
 {
-  "name": "best-resume-ever",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "server": "node server.js",
-    "start": "npm run less && npm run server",
-    "pdf": "bash createPDF.bash",
-    "pdf:win": "sh createPDF.sh",
-    "less": "lessc --clean-css less/style.less public/style.min.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SalamiMitPizza/beautifulCV.git"
-  },
-  "author": "salamimipizza",
-  "homepage": "https://salamimitpizza.github.io/beautifulCV/",
-  "dependencies": {
-    "electron": "^1.4.15",
-    "electroshot": "^1.2.0",
-    "express": "^4.14.1",
-    "font-awesome": "^4.7.0",
-    "hogan-express": "^0.5.2",
-    "html-pdf": "2.1.0",
-    "jquery": "^3.1.1",
-    "less": "^2.7.2",
-    "less-plugin-clean-css": "^1.5.1",
-    "local-web-server": "1.2.6",
-    "mustache-express": "^1.2.4",
-    "open-sans-fontface": "^1.4.0",
-    "path": "^0.12.7",
-    "raleway-webfont": "^3.0.1"
-  }
+    "name": "best-resume-ever",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "server": "node server.js",
+        "start": "npm run less && npm run server",
+        "pdf": "bash createPDF.bash",
+        "pdf:win": "sh createPDF.sh",
+        "less": "lessc --clean-css less/style.less public/style.min.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SalamiMitPizza/beautifulCV.git"
+    },
+    "author": "salamimipizza",
+    "homepage": "https://salamimitpizza.github.io/beautifulCV/",
+    "dependencies": {
+        "electron": "^1.4.15",
+        "electroshot": "^1.2.0",
+        "express": "^4.14.1",
+        "font-awesome": "^4.7.0",
+        "hogan-express": "^0.5.2",
+        "html-pdf": "2.1.0",
+        "jquery": "^3.1.1",
+        "less": "^2.7.2",
+        "less-plugin-clean-css": "^1.5.1",
+        "local-web-server": "1.2.6",
+        "mustache-express": "^1.2.4",
+        "open-sans-fontface": "^1.4.0",
+        "path": "^0.12.7",
+        "raleway-webfont": "^3.0.1"
+    }
 }

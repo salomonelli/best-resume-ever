@@ -1,4 +1,4 @@
-# best-resume-ever
+# <img src="public/suitcase.png" width="150"/> best-resume-ever
 
 Build your best resume ever!
 

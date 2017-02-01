@@ -10,9 +10,6 @@
 
 <body>
     <div id="forkme">View on Github <i class="fa fa-github"></i></div>
-    <div class="suitcase">
-        <img src="public/suitcase.png" width="150" />
-    </div>
     <div id="readme">
         <h1 id="bestresumeever">best-resume-ever</h1>
 <p>Build your best resume ever!</p>
@@ -40,6 +37,10 @@
 <hr />
 <p>Icons made by <a href="http://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC 3.0 BY</a></p>
     </div>
+    <script>
+        var headline = document.getElementByTagName('h1')[0];
+        headline.innerHTML += '<img src="public/suitcase.png" width="150" />';
+    </script>
 </body>
 
 </html>

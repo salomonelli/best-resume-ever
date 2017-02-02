@@ -45,6 +45,7 @@
     "pdf-to-png": "^1.0.3",
     "pre-commit": "^1.2.2",
     "raleway-webfont": "^3.0.1",
+    "roboto-fontface": "^0.7.0",
     "showdown": "^1.6.3",
     "write": "^0.3.2"
   }

@@ -1,0 +1,197 @@
+@main: #EE5566;
+@textDark: #222233;
+@textLight: #554455;
+@page4: #eaeaea;
+
+.resume4 {
+    background: @page4;
+}
+
+#resume4 {
+    font-family: 'Roboto', sans-serif;
+    color: @textDark;
+
+    a,
+    a:focus,
+    a:hover {
+        color: @textDark;
+    }
+
+    .card {
+        border-radius: 2px;
+        border-radius: 4px;
+        margin-bottom: 25px;
+
+        &.contact,
+        &.education {
+            float: left;
+        }
+
+        &.half {
+            width: 49%;
+
+            .card-content,
+            .card-header {
+                padding: 15px 8%;
+                width: 84%;
+            }
+        }
+
+        .card-header {
+            width: 92%;
+            display: inline-block;
+            padding: 20px 4%;
+            border-bottom: #CCC 1px solid;
+
+            i {
+                float: left;
+                font-size: 32px;
+                color: @textLight;
+            }
+
+            h3 {
+                margin: 0;
+                float: left;
+                font-size: 26px;
+                font-weight: 300;
+                margin-left: 10px;
+                color: @textLight;
+                margin-top: 2px;
+            }
+        }
+
+        .card-content {
+            width: 92%;
+            padding: 20px 4%;
+        }
+    }
+
+    .resume-header {
+        .box {
+            display: inline-block;
+            background: @main;
+            height: 150px;
+            width: 100%;
+        }
+
+        .person-header {
+            position: absolute;
+            width: 100%;
+            top: 50px;
+
+            .img {
+                background: url('person.jpg');
+                background-position: center;
+                background-size: cover;
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                border: @page4 3px solid;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                filter: grayscale(100%);
+            }
+
+            .person-wrapper {
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+
+                .name {
+                    color: @textDark;
+                    font-size: 35px;
+                    margin-top: 10px;
+                }
+
+                .position {
+                    color: @textLight;
+                }
+            }
+        }
+    }
+
+    .resume-content {
+        margin-top: 200px;
+        padding-left: 5%;
+        padding-right: 5%;
+
+        .experience-block {
+            margin-bottom: 10px;
+            color: @textDark;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .row {
+                &:first-child {
+                    font-size: 18px;
+                    color: @textDark;
+                }
+
+                &:nth-child(2) {
+                    font-size: 15px;
+                    color: @textLight;
+                }
+            }
+        }
+
+        .education {
+            margin-right: 2%;
+
+            .education-block {
+                margin-bottom: 10px;
+                color: @textDark;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                .row {
+                    &:first-child {
+                        font-size: 18px;
+                        color: @textDark;
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 15px;
+                        color: @textLight;
+                    }
+                }
+            }
+        }
+
+        .skills {
+            width: 100%;
+
+            .wrapper {
+                display: inline-block;
+                width: 100%;
+
+                .skill {
+                    i {
+                        margin-right: 5px;
+                        font-size: 12px;
+                    }
+                    width: 50%;
+                    display: inline-block;
+                    float: left;
+                    width: 50%;
+                    font-size: 18px;
+                    color: #223;
+                }
+            }
+        }
+
+        .contact {
+            color: @textDark;
+
+            a,
+            span {
+                padding-bottom: 5px;
+                display: inline-block;
+            }
+        }
+    }
+}

@@ -13,6 +13,7 @@ app.set('view engine', 'mustache');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules/material-design-icons/iconfont')));
 app.use('/fonts', express.static(path.join(__dirname, 'node_modules/npm-font-open-sans-condensed/fonts')));
+app.use('/fonts', express.static(path.join(__dirname, 'node_modules/roboto-fontface/fonts')));
 app.use(express.static(path.join(__dirname, 'resumes')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/fonts', express.static(path.join(__dirname, 'node_modules/open-sans-fontface/fonts')));
@@ -48,6 +49,15 @@ app.get('/resume-3', function(req, res) {
     res.render('layout', {
         partials: {
             content: 'resume-3/resume-3'
+        },
+        person: person
+    });
+});
+
+app.get('/resume-4', function(req, res) {
+    res.render('layout', {
+        partials: {
+            content: 'resume-4/resume-4'
         },
         person: person
     });

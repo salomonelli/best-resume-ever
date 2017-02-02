@@ -1,0 +1,80 @@
+<page class="a4">
+
+    <div id="resume3">
+        <div class="resume-header">
+            <div class="triangle"></div>
+            <div class="person-header">
+                <div class="person-wrapper">
+                    <div class="person">
+                        <div class="name">{{person.name}}</div>
+                        <div class="position">{{person.position}}</div>
+                    </div>
+                    <div class="img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="resume-content">
+            <div class="experience">
+                <h3>Experience</h3>
+
+                {{#person.experience}}
+                    <div class="experience-block">
+                        <div class="row">
+                            <span class="job-title"> {{position}} </span>
+                            <i class="material-icons">details</i>
+                            <span class="company"> {{company}} </span>
+                        </div>
+
+                        <div class="row">
+                            <span class="time-period"> {{timeperiod}}</span>
+                            <span class="job-description"> {{description}} </span>
+                        </div>
+                    </div>
+                {{/person.experience}}
+            </div>
+            <div class="education">
+                <h3>Education</h3>
+                {{#person.education}}
+                    <div class="education-block">
+                        <div class="row">
+                            <span class="degree">{{degree}}</span>
+                        </div>
+                        <div class="row">
+                            <span class="degree-description">{{description}}</span>
+                        </div>
+                    </div>
+                {{/person.education}}
+            </div>
+            <div class="skill-section">
+                <h3>Skills</h3>
+                {{#person.skills}}
+                    <div class="skills">
+                        <div class="skill-block">
+                            <i class="material-icons">details</i>
+                            <span class="skill">{{name}}</span>
+                        </div>
+                    </div>
+                {{/person.skills}}
+            </div>
+            <div class="skills-other">
+                <span>{{person.skillDescription}} </span>
+            </div>
+            <div class="contact">
+                <h3>Contact</h3>
+                <a href="mailto:{{person.contact.email}}"> {{person.contact.email}}</a>
+                <span>;&nbsp;</span>
+                <a href="tel:{{person.contact.phone}}">{{person.contact.phone}}</a>
+                <span>;&nbsp;</span>
+                <span>{{person.contact.street}}, {{person.contact.city}}</span>
+                <span>;&nbsp;</span>
+                <a href="{{person.contact.website}}">
+                {{person.contact.website}}</a>
+                <span>;&nbsp;</span>
+                <a href="{{person.contact.github}}">
+                  {{person.contact.github}}</a>
+            </div>
+        </div>
+    </div>
+</page>

@@ -11,6 +11,8 @@ app.set('views', path.join(__dirname, 'resumes'));
 app.engine('mustache', require('hogan-express'));
 app.set('view engine', 'mustache');
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'node_modules/material-design-icons/iconfont')));
+app.use('/fonts', express.static(path.join(__dirname, 'node_modules/npm-font-open-sans-condensed/fonts')));
 app.use(express.static(path.join(__dirname, 'resumes')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/fonts', express.static(path.join(__dirname, 'node_modules/open-sans-fontface/fonts')));
@@ -37,6 +39,15 @@ app.get('/resume-2', function(req, res) {
     res.render('layout', {
         partials: {
             content: 'resume-2/resume-2'
+        },
+        person: person
+    });
+});
+
+app.get('/resume-3', function(req, res) {
+    res.render('layout', {
+        partials: {
+            content: 'resume-3/resume-3'
         },
         person: person
     });

@@ -1,49 +1,51 @@
 {
-    "name": "best-resume-ever",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-        "server": "node server.js",
-        "start": "npm run less && npm run server",
-        "pdf": "bash scripts/createPDF.bash",
-        "pdf:win": "sh scripts/createPDF.sh",
-        "png": "npm run pdf && bash scripts/createPNG.bash",
-        "png:win": "npm run pdf:win && sh scripts/createPNG.sh",
-        "readme": "node renderReadMe.js",
-        "less": "lessc --clean-css less/style.less public/style.min.css"
-    },
-    "pre-commit": [
-        "less",
-        "readme"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/SalamiMitPizza/beautifulCV.git"
-    },
-    "author": "salamimipizza",
-    "homepage": "https://salamimitpizza.github.io/beautifulCV/",
-    "dependencies": {
-        "buffer-to-string": "^0.1.0",
-        "electron": "^1.4.15",
-        "electroshot": "^1.2.0",
-        "express": "^4.14.1",
-        "font-awesome": "^4.7.0",
-        "hogan-express": "^0.5.2",
-        "html-pdf": "2.1.0",
-        "jquery": "^3.1.1",
-        "less": "^2.7.2",
-        "less-plugin-clean-css": "^1.5.1",
-        "local-web-server": "1.2.6",
-        "markdown-to-html": "0.0.13",
-        "mustache": "^2.3.0",
-        "mustache-express": "^1.2.4",
-        "open-sans-fontface": "^1.4.0",
-        "path": "^0.12.7",
-        "pdf-to-png": "^1.0.3",
-        "pre-commit": "^1.2.2",
-        "raleway-webfont": "^3.0.1",
-        "showdown": "^1.6.3",
-        "write": "^0.3.2"
-    }
+  "name": "best-resume-ever",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "start": "npm run less && npm run server",
+    "pdf": "bash scripts/createPDF.bash",
+    "pdf:win": "sh scripts/createPDF.sh",
+    "png": "npm run pdf && bash scripts/createPNG.bash",
+    "png:win": "npm run pdf:win && sh scripts/createPNG.sh",
+    "readme": "node renderReadMe.js",
+    "less": "lessc --clean-css less/style.less public/style.min.css"
+  },
+  "pre-commit": [
+    "less",
+    "readme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalamiMitPizza/beautifulCV.git"
+  },
+  "author": "salamimipizza",
+  "homepage": "https://salamimitpizza.github.io/beautifulCV/",
+  "dependencies": {
+    "buffer-to-string": "^0.1.0",
+    "electron": "^1.4.15",
+    "electroshot": "^1.2.0",
+    "express": "^4.14.1",
+    "font-awesome": "^4.7.0",
+    "hogan-express": "^0.5.2",
+    "html-pdf": "2.1.0",
+    "jquery": "^3.1.1",
+    "less": "^2.7.2",
+    "less-plugin-clean-css": "^1.5.1",
+    "local-web-server": "1.2.6",
+    "markdown-to-html": "0.0.13",
+    "material-design-icons": "^3.0.1",
+    "mustache": "^2.3.0",
+    "mustache-express": "^1.2.4",
+    "npm-font-open-sans-condensed": "^1.0.3",
+    "open-sans-fontface": "^1.4.0",
+    "path": "^0.12.7",
+    "pdf-to-png": "^1.0.3",
+    "pre-commit": "^1.2.2",
+    "raleway-webfont": "^3.0.1",
+    "showdown": "^1.6.3",
+    "write": "^0.3.2"
+  }
 }

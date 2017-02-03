@@ -1,0 +1,235 @@
+.resume5 {
+    background: #ECEFF1;
+}
+
+#resume5 {
+    .dp1 {
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    }
+
+    .dp2 {
+        box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+    }
+
+    .dp3 {
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+    }
+
+    .dp4 {
+        box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
+    }
+
+    .dp5 {
+        box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+    }
+
+    .introduction {
+        height: 25%;
+        position: relative;
+        background: #009688;
+
+        .wrapper {
+            width: 100%;
+            display: inline-block;
+            margin-top: 50px;
+            height: auto;
+            position: relative;
+            text-align: center;
+
+            .img {
+                background: url('person.jpg');
+                background-position: center;
+                background-size: cover;
+                height: 100px;
+                width: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 50%;
+                display: inline-block;
+                position: relative;
+            }
+
+            .position {
+                color: white;
+            }
+
+            .name {
+                color: white;
+                margin-top: 16px;
+                font-size: 42px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .resume-content {
+        margin-top: 20px;
+    }
+
+    .card-row {
+        display: flex;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        margin-bottom: 15px;
+
+        &.multiple .card:last-child {
+            margin-left: 2.5%;
+        }
+    }
+
+    .card {
+        flex: 1;
+        background: white;
+        border-radius: 2px;
+
+        .title {
+            display: block;
+            line-height: 32px;
+            margin-bottom: 8px;
+            font-size: 24px;
+            font-weight: 300;
+            padding: 24px;
+            background: #607D8B;
+            color: white;
+        }
+
+        .text {
+            line-height: 1.5;
+            font-family: "Roboto", sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+            color: black;
+
+            .name {
+                font-size: 36px;
+                margin-top: 10px;
+            }
+
+            .row {
+                padding: 24px;
+                border-bottom: 1px solid #B0BEC5;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    .chip {
+        display: inline-block;
+        height: 32px;
+        font-size: 13px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+        line-height: 32px;
+        padding: 0 12px;
+        border-radius: 16px;
+        background-color: #CFD8DC;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+
+    .resume-footer {
+        background: rgba(51, 51, 51, 0.08);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+
+        .contact {
+            width: 100%;
+            padding: 2.5%;
+            font-weight: 300px;
+            font-size: 14px;
+            text-align: center;
+            color: #455A64;
+
+            a,
+            a:focus,
+            a:hover,
+            a:visited {
+                color: #455A64;
+                text-decoration: none;
+            }
+
+            i.fa {
+                margin-left: 10px;
+                margin-right: 10px;
+                font-size: 8px;
+                color: #969da0;
+            }
+        }
+    }
+
+    .degree {
+        font-size: 18px;
+    }
+
+    .degree-description {
+        color: #455A64;
+    }
+
+    .skill-desc {
+        color: #455A64;
+    }
+
+    .timeline {
+        position: relative;
+        margin-top: -6px;
+
+        .line {
+            border-left: 1px solid #B0BEC5;
+            height: 100px;
+            position: absolute;
+            left: 38px;
+            height: 100%;
+            top: 0;
+        }
+
+        .experience-block {
+            padding-left: 24px;
+            padding-right: 24px;
+            display: inline-block;
+            margin-bottom: 20px;
+
+            &:first-of-type {
+                padding-top: 29px;
+            }
+
+            .circle {
+                height: 30px;
+                width: 30px;
+                display: inline-block;
+                background: #009688;
+                border-radius: 50%;
+                float: left;
+                position: absolute;
+                z-index: 2;
+            }
+
+            .job {
+                margin-left: 53px;
+                margin-top: -5px;
+                padding: 10px;
+                background: #CFD8DC;
+                width: 240px;
+
+                .jobtitle {
+                    line-height: 1.0;
+                    font-family: Roboto,sans-serif;
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: #000;
+                }
+
+                .company,
+                .description,
+                .timeperiod {
+                    line-height: 1.0;
+                    color: #455A64;
+                }
+            }
+        }
+    }
+}

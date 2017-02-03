@@ -2,3 +2,5 @@ electroshot localhost:3000/resume-1 2481x3508 --pdf-margin none --format pdf --o
 electroshot localhost:3000/resume-2 2481x3508 --pdf-margin none --format pdf --out resumes/resume-2 --filename "resume-2.pdf"
 electroshot localhost:3000/resume-3 2481x3508 --pdf-margin none --format pdf --out resumes/resume-3 --filename "resume-3.pdf"
 electroshot localhost:3000/resume-4 2481x3508 --pdf-margin none --format pdf --out resumes/resume-4 --filename "resume-4.pdf"
+electroshot localhost:3000/resume-5 2481x3508 --pdf-margin none --format pdf --out resumes/resume-5 --filename "resume-5.pdf"
+electroshot localhost:3000/resume-6 2481x3508 --pdf-margin none --format pdf --out resumes/resume-6 --filename "resume-6.pdf"

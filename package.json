@@ -24,6 +24,7 @@
   "author": "salamimipizza",
   "homepage": "https://salamimitpizza.github.io/beautifulCV/",
   "dependencies": {
+    "@typopro/web-montserrat": "^3.4.9",
     "buffer-to-string": "^0.1.0",
     "electron": "^1.4.15",
     "electroshot": "^1.2.0",

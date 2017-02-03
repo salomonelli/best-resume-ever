@@ -1,0 +1,100 @@
+<page class="a4 resume6">
+    <div id="resume6">
+        <div class="left-col">
+            <div class="person-box">
+                <div class="img"></div>
+                <div class="content">
+                    <div class="person-name"> {{person.name}} </div>
+                    <div class="person-position"> {{person.position}} </div>
+                </div>
+            </div>
+            <div class="skills-block">
+
+                <h3>Skills</h3>
+                <div class="skills">
+                    {{#person.skills}}
+                        <div class="skill">
+                            <span class="skill-name">{{name}}</span>
+                            <div class="skill-bar">
+                                <div style="width: {{level}}%" class="level"> </div>
+                            </div>
+                            <div class="skill-circle">
+                                <div style="left: {{level}}%" class="circle"></div>
+                            </div>
+                        </div>
+                    {{/person.skills}}
+                </div>
+
+                <span class="skills-other"> {{person.skillDescription}} </span>
+            </div>
+        </div>
+        <div class="right-col">
+            <div class="experience">
+                <h3>Experience</h3>
+
+                {{#person.experience}}
+                    <div class="experience-block">
+                        <div class="row">
+                            <span class="company"> {{company}} -</span>
+                            <span class="job-title"> {{position}} </span>
+                        </div>
+                        <div class="row">
+                            <span class="time-period"> {{timeperiod}}</span>
+                        </div>
+                        <div class="row">
+
+                            <span class="job-description"> {{description}} </span>
+                        </div>
+                    </div>
+                {{/person.experience}}
+
+            </div>
+            <div class="education">
+
+                <h3>Education</h3>
+
+                {{#person.education}}
+                    <div class="education-block">
+                        <div class="row">
+                            <span class="degree">{{degree}}</span>
+                        </div>
+                        <div class="row">
+                            <span class="degree-description">{{description}}</span>
+                        </div>
+                    </div>
+                {{/person.education}}
+            </div>
+
+            <div class="contact">
+                <h3>Contact</h3>
+
+                <table>
+                    <tr>
+                        <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+                        <td><a href="mailto:{{person.contact.email}}">{{person.contact.email}}</a></td>
+
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-phone" aria-hidden="true"></i></td>
+                        <td><a href="tel:{{person.contact.phone}}">{{person.contact.phone}}</a></td>
+
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-home" aria-hidden="true"></i></td>
+                        <td>{{person.contact.street}} <br> {{person.contact.city}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-globe" aria-hidden="true"></i></td>
+                        <td><a href="{{person.contact.website}}">{{person.contact.website}}</a></td>
+
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-github" aria-hidden="true"></i></td>
+                        <td><a href="{{person.contact.github}}">{{person.contact.github}}</a></td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</page>

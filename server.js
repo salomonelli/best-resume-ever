@@ -14,6 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules/material-design-icons/iconfont')));
 app.use('/fonts', express.static(path.join(__dirname, 'node_modules/npm-font-open-sans-condensed/fonts')));
 app.use('/fonts', express.static(path.join(__dirname, 'node_modules/roboto-fontface/fonts')));
+app.use(express.static(path.join(__dirname, 'node_modules/@typopro/web-montserrat')));
 app.use(express.static(path.join(__dirname, 'resumes')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/fonts', express.static(path.join(__dirname, 'node_modules/open-sans-fontface/fonts')));
@@ -58,6 +59,24 @@ app.get('/resume-4', function(req, res) {
     res.render('layout', {
         partials: {
             content: 'resume-4/resume-4'
+        },
+        person: person
+    });
+});
+
+app.get('/resume-5', function(req, res) {
+    res.render('layout', {
+        partials: {
+            content: 'resume-5/resume-5'
+        },
+        person: person
+    });
+});
+
+app.get('/resume-6', function(req, res) {
+    res.render('layout', {
+        partials: {
+            content: 'resume-6/resume-6'
         },
         person: person
     });

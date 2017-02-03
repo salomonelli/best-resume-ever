@@ -1,0 +1,161 @@
+.resume6 {
+    background: #171717;
+    font-family: 'TypoPRO Montserrat';
+    font-weight: 300;
+}
+
+#resume6 {
+    color: white;
+
+    h3 {
+        background: #1cb251;
+        margin: 0;
+        text-align: center;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 9px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 35px;
+    }
+
+    .left-col {
+        float: left;
+        width: 38%;
+        padding: 3%;
+
+        .person-box {
+            width: 100%;
+            background: #282828;
+
+            .img {
+                height: 300px;
+                width: 100%;
+                background: url('/person.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .content {
+                padding: 7%;
+
+                .person-name {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                }
+
+                .person-position {
+                    color: #767676;
+                    width: 100%;
+                }
+            }
+        }
+
+        .skill {
+            margin-bottom: 35px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+
+            .skill-name {
+                color: #9a9a9a;
+            }
+        }
+
+        .skills-other {
+            color: rgba(154,154,154,.8);
+        }
+
+        .skills-block {
+            h3 {
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+
+            .skill-bar {
+                width: 100%;
+                background: #282828;
+                height: 10px;
+                border-radius: 20px;
+                position: relative;
+                overflow: hidden;
+                margin-top: 10px;
+
+                .level {
+                    width: 99%;
+                    position: absolute;
+                    background: #9a9a9a;
+                    height: 10px;
+                }
+            }
+
+            .skill-circle {
+                position: relative;
+                width: 100%;
+                margin-top: -15px;
+                transform: translateX(-15px);
+
+                .circle {
+                    background: #c6c6c6;
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+    .right-col {
+        width: 53%;
+        float: left;
+        padding-top: 3%;
+        padding-right: 3%;
+
+        .education,
+        .experience {
+            margin-bottom: 20px;
+
+            .education-block,
+            .experience-block {
+                font-size: 20px;
+                padding: 20px;
+                border-bottom: 1px #262626 solid;
+                color: rgba(154, 154, 154, 0.8);
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .row:first-child {
+                    color: #9a9a9a;
+                }
+            }
+        }
+
+        .contact {
+            table {
+                color: #9a9a9a;
+                padding: 20px;
+                font-size: 20px;
+                font-weight: 300;
+
+                a,
+                a:focus,
+                a:hover,
+                a:visited {
+                    color: #9a9a9a;
+                    text-decoration: none;
+                }
+
+                i.fa {
+                    color: rgba(154, 154, 154, 0.8);
+                    font-size: 30px;
+                    margin-right: 20px;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+}

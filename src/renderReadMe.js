@@ -16,11 +16,12 @@ function readFileContent(fileName) {
 }
 
 async function renderReadMe() {
-    const readme = await readFileContent('README.md');
+    const readmeContent = await readFileContent('README.md');
     const githubPagesTemplate = await readFileContent('resumes/views/githubPages.mustache');
-    var html = Mustache.render(githubPagesTemplate, {
-        content: readme
+    const readme = Mustache.render(githubPagesTemplate, {
+        content: readmeContent
     });
+    const html = converter.makeHtml(readme);
     writeFile('index.html', html, err => {
         if (err) console.log(err)
         else console.log('Github pages index.html was successfully generated from README.');

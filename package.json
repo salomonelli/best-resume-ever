@@ -24,6 +24,7 @@
     "@typopro/web-montserrat": "^3.4.9",
     "buffer-to-string": "^0.1.0",
     "clean-css": "^4.0.4",
+    "electroshot": "^1.2.0",
     "express": "^4.14.1",
     "font-awesome": "^4.7.0",
     "fs": "0.0.1-security",

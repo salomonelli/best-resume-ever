@@ -3,7 +3,7 @@ const Mustache = require('mustache');
 const pdf = require('html-pdf');
 const fs = require('fs');
 const path = require('path');
-
+var exec = require('child_process').exec;
 const dir = path.join(__dirname, '../resumes');
 const directories = getDirectories(dir);
 
@@ -12,43 +12,20 @@ function getDirectories(srcpath) {
         .filter(file => file.includes('resume-'))
 }
 
-function readFileContent(fileName) {
-    const dir = path.join(__dirname, '../resumes/' + fileName);
-    return new Promise((res, rej) => {
-        fs.readFile(dir, 'utf8', (err, template) => {
-            if (err) rej(err);
-            else res(template);
-        });
-    });
-}
-
-function generatePdf(html, fileName) {
-    const dir = path.join(__dirname, '../pdf/' + fileName);
-    return new Promise((resolve, rej) => {
-        pdf.create(html, {
-            'type': 'pdf',
-            'format': 'A4',
-            'base': 'http://localhost:3000'
-        }).toFile(dir, function(err, res) {
-            if (err) rej(err);
-            else resolve();
-        });
-    });
-}
-
 async function convertToPdf() {
-    const layoutTemplate = await readFileContent('views/layout.mustache');
-    for (let resume of directories) {
-        const resumeTemplate = await readFileContent(resume + '/' + resume + '.mustache');
-        const html = Mustache.render(
-            layoutTemplate, {
-                person: person
-            }, {
-                content: resumeTemplate
-            });
-        await generatePdf(html, resume + '.pdf');
-    }
-    console.log('Generated resumes into /pdf.');
+    let script = '';
+    let dir = path.join(__dirname, '../pdf');
+    directories.forEach(async(resume) => {
+        script += 'electroshot localhost:3000/' + resume +
+            ' 2481x3508 --pdf-margin none --format pdf --out ' + dir +
+            ' --filename "' + resume + '.pdf" --pdf-background; ';
+    });
+    script = script.substring(0, script.length - 2);
+    exec(script,
+        (error, stdout, stderr) => {
+            if (error) console.log(error);
+            else console.log(stderr);
+        });
 }
 
 convertToPdf();

@@ -1,7 +1,8 @@
+@fontSize: 1em;
+
 #resume1 {
-    body {
-        font-family: 'Source Sans Pro', sans-serif;
-    }
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: @fontSize;
 
     h3 {
         margin-bottom: 0;
@@ -24,20 +25,20 @@
 
     .half {
         width: 44%;
-    }
 
-    .left {
-        float: left;
-        text-align: right;
-        padding-left: 4%;
-        padding-right: 2%;
-    }
+        &.left {
+            float: left;
+            text-align: right;
+            padding-left: 4%;
+            padding-right: 2%;
+        }
 
-    .right {
-        float: right;
-        text-align: left;
-        padding-right: 4%;
-        padding-left: 2%;
+        &.right {
+            float: right;
+            text-align: left;
+            padding-right: 4%;
+            padding-left: 2%;
+        }
     }
 
     .center {
@@ -53,8 +54,8 @@
         border: 1px solid black;
         text-transform: uppercase;
         padding: 10px 20px;
-        margin-top: 70px;
-        margin-bottom: 0;
+        margin-top: 80px;
+        margin-bottom: 5px;
         font-family: 'Open Sans', sans-serif;
         font-size: 25px;
         font-weight: bold;
@@ -72,8 +73,8 @@
     .image {
         width: 100px;
         height: 100px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
 
         img {
             width: 100%;
@@ -82,82 +83,90 @@
         }
     }
 
-    .contact,
-    .experience,
-    .experience-block {
+    .contact {
         width: 100%;
     }
 
-    .experience-block span {
-        width: 100%;
+    .experience {
+        .experience-block span {
+            width: 100%;
+            color: #616161;
 
-        &.company,
+            &.company {
+                font-weight: bold;
+                padding-bottom: 5px;
+                padding-top: 10px;
+                color: #424242;
+            }
+
+            &.job-title {
+                font-style: italic;
+            }
+        }
+    }
+
+    .education-block span {
+        color: #616161;
+
         &.degree {
             font-weight: bold;
-            padding-bottom: 10px;
-            padding-top: 20px;
+            padding-bottom: 5px;
+            padding-top: 10px;
             color: #424242;
         }
     }
 
-    .education-block span.degree-description,
-    .experience-block span.job-description,
-    .experience-block span.time-period,
     .skills-other {
         color: #616161;
-    }
-
-    .experience-block span.job-title {
-        font-style: italic;
-        color: #616161;
-    }
-
-    .skill-block {
-        display: flex;
-        padding-bottom: 10px;
-    }
-
-    .skill-block .skill {
-        width: 100px;
-        color: #616161;
-    }
-
-    .skill-block .skill-bar {
-        background: #E0E0E0;
-        overflow: hidden;
-        height: 8px;
-        flex: 1;
-        border-radius: 3px;
-        margin-top: 6.5px;
-        position: relative;
-    }
-
-    .skill-bar .level {
-        background: #757575;
-        height: 100%;
+        margin-bottom: 10px;
+        font-size: @fontSize;
     }
 
     .skills {
         margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        font-size: @fontSize;
+
+        .skill-block {
+            display: flex;
+            padding-bottom: 10px;
+
+            .skill {
+                width: 100px;
+                color: #616161;
+            }
+
+            .skill-bar {
+                background: #E0E0E0;
+                overflow: hidden;
+                height: 8px;
+                flex: 1;
+                border-radius: 3px;
+                margin-top: 6.5px;
+                position: relative;
+
+                .level {
+                    background: #757575;
+                    height: 100%;
+                }
+            }
+        }
     }
 
     .contact table {
+        font-size: @fontSize;
         text-align: right;
         float: right;
-        margin-top: 20px;
-    }
-
-    .contact table i {
-        padding: 5px;
+        margin-top: 5px;
         color: #616161;
-    }
 
-    .contact table tr td:nth-child(2) {
-        vertical-align: top;
-    }
+        i {
+            padding: 2px;
+            color: #616161;
+        }
 
-    .contact table {
-        color: #616161;
+        tr td:nth-child(2) {
+            vertical-align: top;
+        }
     }
 }

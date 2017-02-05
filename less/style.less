@@ -1,9 +1,15 @@
 @import "fonts.less";
 @import "githubPages.less";
+@import (less) "../node_modules/normalize.css/normalize.css";
 @header: #4B5B6E;
 @background: #CCCCCC;
 @darkgrey: #343444;
 @main: #E77171;
+
+html {
+    zoom: 0.75;
+    -webkit-text-size-adjust: auto;
+}
 
 body {
     background: @background;
@@ -12,12 +18,12 @@ body {
     padding: 0;
     -webkit-print-color-adjust: exact;
     box-sizing: border-box;
-
+    /* https://github.com/ariya/phantomjs/issues/12685 */
     page {
         background: white;
         position: relative;
-        width: 15.8cm;
-        height: 22.25cm;
+        width: 21cm;
+        height: 29.7cm;
         display: block;
         page-break-after: auto;
         overflow: hidden;

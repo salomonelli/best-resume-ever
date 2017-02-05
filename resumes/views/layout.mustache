@@ -13,6 +13,10 @@
 
 
     {{>content}}
+    <script>
+        var userAgent = navigator.userAgent;
+        if (userAgent.indexOf('PhantomJS') < 0) document.getElementsByTagName('html')[0].style['zoom'] = 1;
+    </script>
 </body>
 
 </html>

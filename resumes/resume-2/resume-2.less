@@ -12,6 +12,13 @@
         font-weight: 400;
     }
 
+    a,
+    a:focus,
+    a:hover,
+    a:visited {
+        text-decoration: none;
+    }
+
     .top-row {
         width: 100%;
         padding-top: 100px;
@@ -48,8 +55,13 @@
                 height: auto;
                 overflow: hidden;
 
-                img {
+                .img {
                     flex: none;
+                    background: url('/person.jpg');
+                    background-position: center;
+                    background-size: cover;
+                    height: 250px;
+                    width: 100%;
                 }
             }
         }

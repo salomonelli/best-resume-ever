@@ -3,6 +3,7 @@
     font-family: 'TypoPRO Montserrat';
     font-weight: 300;
 }
+@fontSize: 20px;
 
 #resume6 {
     color: white;
@@ -42,7 +43,7 @@
                 .person-name {
                     width: 100%;
                     margin-bottom: 10px;
-                    font-size: 20px;
+                    font-size: @fontSize;
                 }
 
                 .person-position {
@@ -65,6 +66,7 @@
 
         .skills-other {
             color: rgba(154,154,154,.8);
+            text-align: center;
         }
 
         .skills-block {
@@ -119,7 +121,7 @@
 
             .education-block,
             .experience-block {
-                font-size: 20px;
+                font-size: @fontSize;
                 padding: 20px;
                 border-bottom: 1px #262626 solid;
                 color: rgba(154, 154, 154, 0.8);
@@ -138,7 +140,7 @@
             table {
                 color: #9a9a9a;
                 padding: 20px;
-                font-size: 20px;
+                font-size: @fontSize;
                 font-weight: 300;
 
                 a,

@@ -1,4 +1,8 @@
 @fontSize: 20px;
+@name: black;
+@lightergrey: #616161;
+@grey: #757575;
+@whitegrey: #E0E0E0;
 
 #resume1 {
     font-family: 'Source Sans Pro', sans-serif;
@@ -12,7 +16,7 @@
     a:focus,
     a:hover,
     a:visited {
-        color: #616161;
+        color: @lightergrey;
     }
 
     span {
@@ -51,7 +55,7 @@
     }
 
     .name {
-        border: 1px solid black;
+        border: 1px solid @name;
         text-transform: uppercase;
         padding: 10px 20px;
         margin-top: 80px;
@@ -66,7 +70,7 @@
         text-transform: uppercase;
         font-family: 'Open Sans', sans-serif;
         font-size: smaller;
-        color: #757575;
+        color: @grey;
         margin-bottom: 40px;
     }
 
@@ -94,7 +98,7 @@
     .experience {
         .experience-block span {
             width: 100%;
-            color: #616161;
+            color: @lightergrey;
 
             &.company {
                 font-weight: bold;
@@ -110,7 +114,7 @@
     }
 
     .education-block span {
-        color: #616161;
+        color: @lightergrey;
 
         &.degree {
             font-weight: bold;
@@ -121,7 +125,7 @@
     }
 
     .skills-other {
-        color: #616161;
+        color: @lightergrey;
         margin-bottom: 10px;
     }
 
@@ -135,13 +139,13 @@
 
             .skill {
                 width: 100px;
-                color: #616161;
+                color: @lightergrey;
                 float: left;
             }
 
             .skill-bar {
                 float: right;
-                background: #E0E0E0;
+                background: @whitegrey;
                 overflow: hidden;
                 height: 8px;
                 border-radius: 3px;
@@ -150,7 +154,7 @@
                 width: 249px;
 
                 .level {
-                    background: #757575;
+                    background: @grey;
                     height: 100%;
                 }
             }
@@ -161,12 +165,12 @@
         text-align: right;
         float: right;
         margin-top: 5px;
-        color: #616161;
+        color: @lightergrey;
         font-size: @fontSize;
 
         i {
             padding: 2px;
-            color: #616161;
+            color: @lightergrey;
         }
 
         tr td:nth-child(2) {

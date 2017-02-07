@@ -1,5 +1,12 @@
+@green: #1cb251;
+@background: #171717;
+@grey: #282828;
+@grey2: #9a9a9a;
+@grey3: #767676;
+@circle: #c6c6c6;
+
 .resume6 {
-    background: #171717;
+    background: @background;
     font-family: 'TypoPRO Montserrat';
     font-weight: 300;
 }
@@ -9,7 +16,7 @@
     color: white;
 
     h3 {
-        background: #1cb251;
+        background: @green;
         margin: 0;
         text-align: center;
         font-weight: 300;
@@ -27,7 +34,7 @@
 
         .person-box {
             width: 100%;
-            background: #282828;
+            background: @grey;
 
             .img {
                 height: 300px;
@@ -47,7 +54,7 @@
                 }
 
                 .person-position {
-                    color: #767676;
+                    color: @grey3;
                     width: 100%;
                 }
             }
@@ -60,13 +67,12 @@
             margin-right: auto;
 
             .skill-name {
-                color: #9a9a9a;
+                color: @grey2;
             }
         }
 
         .skills-other {
             color: rgba(154,154,154,.8);
-            text-align: center;
         }
 
         .skills-block {
@@ -77,7 +83,7 @@
 
             .skill-bar {
                 width: 100%;
-                background: #282828;
+                background: @grey;
                 height: 10px;
                 border-radius: 20px;
                 position: relative;
@@ -87,7 +93,7 @@
                 .level {
                     width: 99%;
                     position: absolute;
-                    background: #9a9a9a;
+                    background: @grey2;
                     height: 10px;
                 }
             }
@@ -99,7 +105,7 @@
                 transform: translateX(-15px);
 
                 .circle {
-                    background: #c6c6c6;
+                    background: @circle;
                     height: 20px;
                     width: 20px;
                     border-radius: 50%;
@@ -131,14 +137,14 @@
                 }
 
                 .row:first-child {
-                    color: #9a9a9a;
+                    color: @grey2;
                 }
             }
         }
 
         .contact {
             table {
-                color: #9a9a9a;
+                color: @grey2;
                 padding: 20px;
                 font-size: @fontSize;
                 font-weight: 300;
@@ -147,7 +153,7 @@
                 a:focus,
                 a:hover,
                 a:visited {
-                    color: #9a9a9a;
+                    color: @grey2;
                     text-decoration: none;
                 }
 

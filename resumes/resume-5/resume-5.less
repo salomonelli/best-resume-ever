@@ -1,25 +1,32 @@
-@pageBackground: #ECEFF1;
-@background: #009688;
-
 .resume5 {
-    background: @pageBackground;
+    background: #ECEFF1;
 }
 
 #resume5 {
+    .dp1 {
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    }
+
+    .dp2 {
+        box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+    }
+
+    .dp3 {
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+    }
+
+    .dp4 {
+        box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
+    }
+
+    .dp5 {
+        box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+    }
+
     .introduction {
         height: 25%;
         position: relative;
-        background: @background;
-
-        .dp3 {
-            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-            position: absolute;
-            height: 100%;
-            -webkit-print-color-adjust: exact;
-            -webkit-filter:opacity(1);
-            top: 0;
-            width: 100%;
-        }
+        background: #009688;
 
         .wrapper {
             width: 100%;
@@ -40,19 +47,6 @@
                 border-radius: 50%;
                 display: inline-block;
                 position: relative;
-            }
-
-            .img-dp4 {
-                box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
-                -webkit-print-color-adjust: exact;
-                -webkit-filter:opacity(1);
-                position: absolute;
-                height: 100px;
-                width: 100px;
-                top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                border-radius: 50%;
             }
 
             .position {
@@ -87,27 +81,6 @@
         flex: 1;
         background: white;
         border-radius: 2px;
-        position: relative;
-
-        .title-shadow {
-            box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
-            position: absolute;
-            width: 100%;
-            height: 79px;
-            top: 0;
-            -webkit-print-color-adjust: exact;
-            -webkit-filter:opacity(1);
-        }
-
-        .dp1 {
-            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            -webkit-print-color-adjust: exact;
-            -webkit-filter:opacity(1);
-        }
 
         .title {
             display: block;
@@ -233,20 +206,6 @@
                 float: left;
                 position: absolute;
                 z-index: 2;
-            }
-
-            .circle-shadow {
-                height: 30px;
-                width: 30px;
-                display: inline-block;
-                background: #009688;
-                border-radius: 50%;
-                float: left;
-                position: absolute;
-                z-index: 2;
-                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-                -webkit-print-color-adjust: exact;
-                -webkit-filter:opacity(1);
             }
 
             .job {

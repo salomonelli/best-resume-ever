@@ -131,7 +131,3 @@ TODO
 ## Contribute
 
 Feel free to create your own templates. Please read this documentation carefully. After adding your template please add a preview as in `/public/preview` and add it to the README. Compile index.html for github Pages with `npm run readme`. If needed adjust github Pages styling in `/less/githubPages.less`.
-
---------------------------------------------------------------------------------
-
-Icons made by [Vectors Market](http://www.flaticon.com/authors/vectors-market "Vectors Market") from [www.flaticon.com](http://www.flaticon.com "Flaticon") is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/ "Creative Commons BY 3.0").

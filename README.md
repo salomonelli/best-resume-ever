@@ -40,13 +40,13 @@ If you adjust your data in `/src/person.js`, please stop application with `CTRL 
 
 ### Exporting resumes as PDF
 
-When finished, run `npm start` and run `npm run PDF` in a new console window to generate resumes as PDF. You will find the all resumes as PDFs in `/pdf`.
+When finished, run `npm start` and run `npm run PDF` in a new console window to generate resumes as PDF. You will find all resumes as PDFs in `/pdf`.
 
 ### Adjusting stylings and layout
 
-Feel free to adjust stylings. This project uses LESS. Under `/less` global stylings are defined. Concerning the resumes, you will find here imported fonts and the page layout. To see how to adjust the page layout see 'Page size'. To add fonts see 'Add fonts'.
+Feel free to adjust stylings. This project uses LESS. Under `/less` global stylings are defined. You will find here imported fonts and the page layout.
 
-Each resume has its own directory. For example 'resume-1' is under `/resumes/resume-1`. Each resume directory contains a Mustache template and a less-file. Font-sizes and box-shadows are being adjusted automatically. Therefore please read: XX and XX.
+Each resume has its own directory. For example 'resume-1' is under `/resumes/resume-1`. Each resume directory contains a Mustache template and a less-file. Font-sizes and box-shadows are being adjusted automatically.
 
 #### Font-Sizes
 
@@ -81,6 +81,7 @@ Due to this [Chrome bug](http://stackoverflow.com/questions/13975198/text-shadow
 ```
 
 Unfortunately, fonts and images get blurred and lose quality. Therefore `fixBoxShadows()` in `/public/javascript.js` fixes this bug, by
+
 1. searching for all elements with a box-shadow,
 2. removing the box-shadow,
 3. adding a new and absolute positioned element (with same size, position, border-radius and box-shadow) to the HTMl body,

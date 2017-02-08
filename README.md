@@ -6,12 +6,12 @@ A collection of multiple beautiful resumes build with LESS and Mustache Template
 
 ## Resumes
 
-<a href="public/preview/resume-1.png"><img src="public/preview/resume-1.png" width="150"/></a>
-<a href="public/preview/resume-2.png"><img src="public/preview/resume-2.png" width="150"/></a>
-<a href="public/preview/resume-3.png"><img src="public/preview/resume-3.png" width="150"/></a>
-<a href="public/preview/resume-4.png"><img src="public/preview/resume-4.png" width="150"/></a>
-<a href="public/preview/resume-5.png"><img src="public/preview/resume-5.png" width="150"/></a>
-<a href="public/preview/resume-6.png"><img src="public/preview/resume-6.png" width="150"/></a>
+<a href="public/preview/resume-left-right.png"><img src="public/preview/resume-left-right.png" width="150"/></a>
+<a href="public/preview/resume-side-bar.png"><img src="public/preview/resume-side-bar.png" width="150"/></a>
+<a href="public/preview/resume-oblique.png"><img src="public/preview/resume-oblique.png" width="150"/></a>
+<a href="public/preview/resume-wanted.png"><img src="public/preview/resume-wanted.png" width="150"/></a>
+<a href="public/preview/resume-grey-boxes.png"><img src="public/preview/resume-grey-boxes.png" width="150"/></a>
+<a href="public/preview/resume-spotify.png"><img src="public/preview/resume-spotify.png" width="150"/></a>
 
 ## Getting Started
 

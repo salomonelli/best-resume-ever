@@ -28,34 +28,12 @@
             <section class="resume-collection">
                 <h3>Resumes</h3>
                 <p>Click one of the resumes to preview.</p>
-                <a class="resume" href="/resume-1">
-                    <img src="/preview/resume-1.png" />
-                    <span class="resume-title">Resume 1</span>
-                </a>
-                <a class="resume" href="/resume-2">
-                    <img src="/preview/resume-2.png" />
-                    <span class="resume-title">Resume 2</span>
-                </a>
-
-                <a class="resume" href="/resume-3">
-                    <img src="/preview/resume-3.png" />
-                    <span class="resume-title">Resume 3</span>
-                </a>
-
-                <a class="resume" href="/resume-4">
-                    <img src="/preview/resume-4.png" />
-                    <span class="resume-title">Resume 4</span>
-                </a>
-
-                <a class="resume" href="/resume-5">
-                    <img src="/preview/resume-5.png" />
-                    <span class="resume-title">Resume 5</span>
-                </a>
-
-                <a class="resume" href="/resume-6">
-                    <img src="/preview/resume-6.png" />
-                    <span class="resume-title">Resume 5</span>
-                </a>
+                {{#resumes}}
+                    <a class="resume" href="/{{path}}">
+                        <img src="/preview/{{path}}.png" />
+                        <span class="resume-title">{{name}}</span>
+                    </a>
+                {{/resumes}}
             </section>
         </main>
     </div>

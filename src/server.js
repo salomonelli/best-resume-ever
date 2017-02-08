@@ -19,11 +19,21 @@ function getDirectories(srcpath) {
         .filter(file => file.includes('resume-'))
 }
 
+let resumes = [];
+directories.forEach(dir => {
+    let name = dir.replace('resume-', '');
+    resumes.push({
+        path: dir,
+        name: name.replace('-', ' ')
+    })
+});
+
 app.get('/', (req, res) => {
     res.render('views/layout', {
         partials: {
             content: 'views/index'
-        }
+        },
+        resumes: resumes
     });
 });
 

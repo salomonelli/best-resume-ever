@@ -76,11 +76,11 @@ var marginBottom = 50; // in px
 </ol>
 <p>If shadows may be displayed wrong, please check that the element with a box-shadow has a proper height, width and positioning.</p>
 <h3 id="icons">Icons</h3>
-<p>This project contains the <a href="https://material.io/icons/">Google Material</a> and <a href="http://fontawesome.io/icons/">fontawesome</a> icon set. </p>
+<p>This project contains the <a href="https://material.io/icons/">Google Material</a> and <a href="http://fontawesome.io/icons/">fontawesome</a> icon sets.</p>
 <h3 id="adjustingpdfgenerationandpagesize">Adjusting PDF-generation and page size</h3>
 <p><a href="https://github.com/mixu/electroshot">electroshot</a> is used to generate PDFs. <code>convertToPdf()</code> in <code>/src/htmlToPdf.js</code> runs a short bash script for each resume running under <code>localhost:3000/resumes/resume-X</code>. By default the PDF size is A4. For more PDF settings check <a href="https://github.com/mixu/electroshot">mixu/electroshot</a>.</p>
 <h3 id="addingfonts">Adding fonts</h3>
-<p>To add a font to the project, search for the npm-module of the desired font, e.g. <a href="https://www.npmjs.com/package/roboto-fontface">roboto-fontface</a> for font face 'Roboto'. Add dependency to <code>package.json</code> with <code>npm i --save</code>, e.g. <code>npm i --save roboto-fontface</code>.</p>
+<p>To add a font to the project, search for the npm-module of the desired font, e.g. <a href="https://www.npmjs.com/package/roboto-fontface">roboto-fontface</a> for 'Roboto'. Add dependency to <code>package.json</code> with <code>npm i --save</code>, e.g. <code>npm i --save roboto-fontface</code>.</p>
 <p>Create a new less file in <code>/less/fonts</code>, e.g. 'roboto.less'. <code>/node_modules</code> are accessable through localhost:3000. That means if the corresponding woff-file is under <code>/node_modules/roboto-fontface/anyFont.woff</code> the source url needs to equal <code>/roboto-fontface/anyFont.woff</code>:</p>
 <pre><code class="less language-less">@font-face {
     font-family: 'Roboto';

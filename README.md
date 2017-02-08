@@ -91,7 +91,7 @@ If shadows may be displayed wrong, please check that the element with a box-shad
 
 ### Icons
 
-This project contains the [Google Material](https://material.io/icons/) and [fontawesome](http://fontawesome.io/icons/) icon set. 
+This project contains the [Google Material](https://material.io/icons/) and [fontawesome](http://fontawesome.io/icons/) icon sets.
 
 ### Adjusting PDF-generation and page size
 
@@ -99,7 +99,7 @@ This project contains the [Google Material](https://material.io/icons/) and [fon
 
 ### Adding fonts
 
-To add a font to the project, search for the npm-module of the desired font, e.g. [roboto-fontface](https://www.npmjs.com/package/roboto-fontface) for font face 'Roboto'. Add dependency to `package.json` with `npm i --save`, e.g. `npm i --save roboto-fontface`.
+To add a font to the project, search for the npm-module of the desired font, e.g. [roboto-fontface](https://www.npmjs.com/package/roboto-fontface) for 'Roboto'. Add dependency to `package.json` with `npm i --save`, e.g. `npm i --save roboto-fontface`.
 
 Create a new less file in `/less/fonts`, e.g. 'roboto.less'. `/node_modules` are accessable through localhost:3000. That means if the corresponding woff-file is under `/node_modules/roboto-fontface/anyFont.woff` the source url needs to equal `/roboto-fontface/anyFont.woff`:
 

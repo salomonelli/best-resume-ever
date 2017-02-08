@@ -128,20 +128,9 @@ Import new less file in `/less/fonts.less`:
 
 TODO
 
-## Build With
-
-- LESS
-- Mustache
-- Babel
-- electroshot
-- Node.js, JavaScript.
-
-TODO add readme to html!
-
 ## Contribute
 
-Feel free to create your own templates!
-TODO add contribute.md on how to contribute
+Feel free to create your own templates. Please read this documentation carefully. After adding your template please add a preview as in `/public/preview` and add it to the README. Compile index.html for github Pages with `npm run readme`. If needed adjust github Pages styling in `/less/githubPages.less`.
 
 --------------------------------------------------------------------------------
 

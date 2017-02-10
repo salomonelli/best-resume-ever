@@ -1,0 +1,2 @@
+write readme
+fix github pages on mobile

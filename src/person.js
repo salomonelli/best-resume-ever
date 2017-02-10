@@ -1,5 +1,8 @@
 module.exports = {
-    name: 'John Doe',
+    name: {
+        first: 'John',
+        last: 'Doe',
+    },
     position: 'Software Developer',
     experience: [{
             company: 'Company A',

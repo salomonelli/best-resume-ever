@@ -17,10 +17,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/unpregnant/beautifulCV.git"
+        "url": "git+https://github.com/salomonelli/beautifulCV.git"
     },
-    "author": "salamimipizza",
-    "homepage": "https://unpregnant.github.io/beautifulCV/",
+    "author": "salomonelli",
+    "homepage": "https://salomonelli.github.io/beautifulCV/",
     "dependencies": {
         "@typopro/web-montserrat": "^3.4.9",
         "babel-cli": "^6.22.2",

@@ -24,73 +24,6 @@ var getResumeDOMElement = function getResumeDOMElement() {
 };
 
 /**
- * sets letiable 'page' to DOM-element of <page></page>
- */
-var setPageDOMElement = function setPageDOMElement() {
-    page = document.getElementsByTagName('page')[0];
-};
-
-/**
- * checks whether font needs to be fixed, and if fixes it
- */
-var checkFont = function checkFont() {
-    var resume = getResumeDOMElement();
-    if (contentIsGreaterThanPage(resume)) fixFont();
-};
-
-/**
- * checks whether content is greater than page
- * @param  {HTMLElement} resume
- * @return {boolean}        false if content fits to page
- */
-var contentIsGreaterThanPage = function contentIsGreaterThanPage(resume) {
-    var pageHeight = page.offsetHeight;
-    var resumeHeight = resume.offsetHeight + marginBottom;
-    if (pageHeight < resumeHeight) return true;else return false;
-};
-
-/**
- * gets font size of DOM-elemnt
- * @param  {HTMLElement} element
- * @return {number}         font size of element
- */
-var getFontSizeOfElement = function getFontSizeOfElement(element) {
-    var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
-    return parseFloat(style);
-};
-
-/**
- * sets font size of DOM-element
- * @param {HTMLElement} element
- * @param {number} fontSize
- */
-var setFontSizeOfElement = function setFontSizeOfElement(element, fontSize) {
-    element.style.fontSize = fontSize + 'px';
-};
-
-/**
- * decreases font size of all DOM-elements
- */
-var decreaseFontSizes = function decreaseFontSizes() {
-    var current = void 0,
-        newFontSize = void 0;
-    for (var i = 0; i < elements.length; i++) {
-        current = elements[i];
-        newFontSize = getFontSizeOfElement(current) * 0.99;
-        setFontSizeOfElement(current, newFontSize);
-    }
-};
-
-/**
- * decreases font size until content fits to page
- */
-var fixFont = function fixFont() {
-    decreaseFontSizes();
-    var resume = getResumeDOMElement();
-    if (contentIsGreaterThanPage(resume)) fixFont();
-};
-
-/**
  * checks if DOM-element has box-shadow
  * @param  {HTMLElement}  element
  * @return {string} '' if no shadow, otherwise shadow e.g. 'rgba(0, 0, 0, 0.137255) 0px 2px 2px 0px'
@@ -198,8 +131,6 @@ var fixResume = function fixResume() {
     if (!isResume()) return;
     getAllDOMElements();
     fixBoxShadows();
-    setPageDOMElement();
-    checkFont();
 };
 
 fixResume();

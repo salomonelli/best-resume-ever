@@ -1,6 +1,11 @@
 @dots: rgba(153, 153, 153, 0.6);
 @links: black;
 @skill: #333;
+@nameFontSize: 50px;
+@dotsFontSize: 10px;
+@experienceFontSize: 19px;
+@educationFontSize: 19px;
+@skillFontSize: 13px;
 
 #resume2 {
     font-family: 'Raleway', sans-serif;
@@ -33,7 +38,7 @@
 
             &.person-name {
                 text-transform: uppercase;
-                font-size: 50px;
+                font-size: @nameFontSize;
                 letter-spacing: 10px;
             }
 
@@ -85,7 +90,7 @@
                 &.dots {
                     margin-top: 20px;
                     margin-bottom: 15px;
-                    font-size: 10px;
+                    font-size: @dotsFontSize;
                     color: @dots;
                 }
 
@@ -112,11 +117,11 @@
 
                 .company {
                     text-transform: uppercase;
-                    font-size: 19px;
+                    font-size: @experienceFontSize;
                 }
 
                 .job-title {
-                    font-size: 19px;
+                    font-size: @experienceFontSize;
                 }
             }
         }
@@ -128,7 +133,7 @@
                 margin-bottom: 10px;
 
                 .degree {
-                    font-size: 19px;
+                    font-size: @educationFontSize;
                     text-transform: uppercase;
                     margin-bottom: 3px;
                 }
@@ -155,7 +160,7 @@
                     border: @skill 1px solid;
                     margin: 3px;
                     float: left;
-                    font-size: 13px;
+                    font-size: @skillFontSize;
 
                     .skill-name {
                         text-align: center;

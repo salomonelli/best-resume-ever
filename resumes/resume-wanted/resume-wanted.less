@@ -4,6 +4,14 @@
 @page4: #eaeaea;
 @cardHeader: #CCC;
 @skill: #223;
+@cardHeaderIconFontSize: 32px;
+@cardHeaderFontSize: 26px;
+@nameFontSize: 35px;
+@experienceFirstRowFontSize: 18px;
+@experienceSecondRowFontSize: 15px;
+@educationFirstRowFontSize: 18px;
+@educationSecondRowFontSize: 15px;
+@skillIconFontSize: 12px;
 
 .resume4 {
     background: @page4;
@@ -48,14 +56,14 @@
 
             i {
                 float: left;
-                font-size: 32px;
+                font-size: @cardHeaderIconFontSize;
                 color: @textLight;
             }
 
             h3 {
                 margin: 0;
                 float: left;
-                font-size: 26px;
+                font-size: @cardHeaderFontSize;
                 font-weight: 300;
                 margin-left: 10px;
                 color: @textLight;
@@ -104,7 +112,7 @@
 
                 .name {
                     color: @textDark;
-                    font-size: 35px;
+                    font-size: @nameFontSize;
                     margin-top: 10px;
                 }
 
@@ -130,12 +138,12 @@
 
             .row {
                 &:first-child {
-                    font-size: 18px;
+                    font-size: @experienceFirstRowFontSize;
                     color: @textDark;
                 }
 
                 &:nth-child(2) {
-                    font-size: 15px;
+                    font-size: @experienceSecondRowFontSize;
                     color: @textLight;
                 }
             }
@@ -154,12 +162,12 @@
 
                 .row {
                     &:first-child {
-                        font-size: 18px;
+                        font-size: @educationFirstRowFontSize;
                         color: @textDark;
                     }
 
                     &:nth-child(2) {
-                        font-size: 15px;
+                        font-size: @educationSecondRowFontSize;
                         color: @textLight;
                     }
                 }
@@ -176,13 +184,13 @@
                 .skill {
                     i {
                         margin-right: 5px;
-                        font-size: 12px;
+                        font-size: @skillIconFontSize;
                     }
                     width: 50%;
                     display: inline-block;
                     float: left;
                     width: 50%;
-                    font-size: 18px;
+                    font-size: @skill;
                     color: @skill;
                 }
             }

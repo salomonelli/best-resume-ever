@@ -1,3 +1,13 @@
+@nameFontSize: 42px;
+@cardTitleFontSize: 24px;
+@cardTextFontSize: 14px;
+@cardTextNameFontSize: 36px;
+@chipFontSize: 13px;
+@contactFontSize: 14px;
+@contactIconFontSize: 8px;
+@degreeFontSize: 18px;
+@jobtitleFontSize: 18px;
+
 .resume5 {
     background: #ECEFF1;
 }
@@ -56,7 +66,7 @@
             .name {
                 color: white;
                 margin-top: 16px;
-                font-size: 42px;
+                font-size: @nameFontSize;
                 font-weight: 300;
             }
         }
@@ -86,7 +96,7 @@
             display: block;
             line-height: 32px;
             margin-bottom: 8px;
-            font-size: 24px;
+            font-size: @cardTitleFontSize;
             font-weight: 300;
             padding: 24px;
             background: #607D8B;
@@ -97,11 +107,11 @@
             line-height: 1.5;
             font-family: "Roboto", sans-serif;
             font-weight: normal;
-            font-size: 14px;
+            font-size: @cardTextFontSize;
             color: black;
 
             .name {
-                font-size: 36px;
+                font-size: @cardTextNameFontSize;
                 margin-top: 10px;
             }
 
@@ -119,7 +129,7 @@
     .chip {
         display: inline-block;
         height: 32px;
-        font-size: 13px;
+        font-size: @chipFontSize;
         font-weight: 500;
         color: rgba(0, 0, 0, 0.6);
         line-height: 32px;
@@ -141,7 +151,7 @@
             width: 100%;
             padding: 2.5%;
             font-weight: 300px;
-            font-size: 14px;
+            font-size: @contactFontSize;
             text-align: center;
             color: #455A64;
 
@@ -156,14 +166,14 @@
             i.fa {
                 margin-left: 10px;
                 margin-right: 10px;
-                font-size: 8px;
+                font-size: @contactIconFontSize;
                 color: #969da0;
             }
         }
     }
 
     .degree {
-        font-size: 18px;
+        font-size: @degreeFontSize;
     }
 
     .degree-description {
@@ -219,7 +229,7 @@
                     line-height: 1.0;
                     font-family: Roboto,sans-serif;
                     font-weight: 400;
-                    font-size: 18px;
+                    font-size: @jobtitleFontSize;
                     color: #000;
                 }
 

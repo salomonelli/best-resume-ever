@@ -127,6 +127,17 @@ Import new less file in `/less/fonts.less`:
 ## Adding a template
 
 TODO
+- add folder in resumes, convention: 'resume-X'
+- add .less and .mustache with same naming
+
+```html
+<page class="a4">
+    <div id="resume1" class="resume">
+      <!-- Content goes here -->
+    </div>
+</page>
+```
+- url 
 
 ## Contribute
 

@@ -21,74 +21,6 @@ const getResumeDOMElement = () => {
     return page.children[0];
 }
 
-/**
- * sets letiable 'page' to DOM-element of <page></page>
- */
-const setPageDOMElement = () => {
-    page = document.getElementsByTagName('page')[0];
-}
-
-/**
- * checks whether font needs to be fixed, and if fixes it
- */
-const checkFont = () => {
-    const resume = getResumeDOMElement();
-    if (contentIsGreaterThanPage(resume)) fixFont();
-}
-
-/**
- * checks whether content is greater than page
- * @param  {HTMLElement} resume
- * @return {boolean}        false if content fits to page
- */
-const contentIsGreaterThanPage = resume => {
-    const pageHeight = page.offsetHeight;
-    const resumeHeight = resume.offsetHeight + marginBottom;
-    if (pageHeight < resumeHeight) return true;
-    else return false;
-}
-
-/**
- * gets font size of DOM-elemnt
- * @param  {HTMLElement} element
- * @return {number}         font size of element
- */
-const getFontSizeOfElement = element => {
-    const style = window
-        .getComputedStyle(element, null)
-        .getPropertyValue('font-size');
-    return parseFloat(style);
-}
-
-/**
- * sets font size of DOM-element
- * @param {HTMLElement} element
- * @param {number} fontSize
- */
-const setFontSizeOfElement = (element, fontSize) => {
-    element.style.fontSize = fontSize + 'px';
-}
-
-/**
- * decreases font size of all DOM-elements
- */
-const decreaseFontSizes = () => {
-    let current, newFontSize;
-    for (let i = 0; i < elements.length; i++) {
-        current = elements[i];
-        newFontSize = getFontSizeOfElement(current) * 0.99;
-        setFontSizeOfElement(current, newFontSize);
-    }
-}
-
-/**
- * decreases font size until content fits to page
- */
-const fixFont = () => {
-    decreaseFontSizes();
-    const resume = getResumeDOMElement();
-    if (contentIsGreaterThanPage(resume)) fixFont();
-}
 
 /**
  * checks if DOM-element has box-shadow
@@ -205,8 +137,6 @@ const fixResume = () => {
     if (!isResume()) return;
     getAllDOMElements();
     fixBoxShadows();
-    setPageDOMElement();
-    checkFont();
 }
 
 fixResume();

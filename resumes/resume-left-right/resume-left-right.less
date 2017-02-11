@@ -3,6 +3,8 @@
 @lightergrey: #616161;
 @grey: #757575;
 @whitegrey: #E0E0E0;
+@nameFontSize: 35px;
+@positionFontSize: smaller;
 
 #resume1 {
     font-family: 'Source Sans Pro', sans-serif;
@@ -61,7 +63,7 @@
         margin-top: 80px;
         margin-bottom: 5px;
         font-family: 'Open Sans', sans-serif;
-        font-size: 35px;
+        font-size: @nameFontSize;
         font-weight: 600;
         letter-spacing: 10px;
     }
@@ -69,7 +71,7 @@
     .position {
         text-transform: uppercase;
         font-family: 'Open Sans', sans-serif;
-        font-size: smaller;
+        font-size: @positionFontSize;
         color: @grey;
         margin-bottom: 40px;
     }

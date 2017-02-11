@@ -45,7 +45,7 @@ for (let resume of directories) {
     app.get('/' + resume, (req, res) => {
         res.render('views/layout', {
             partials: {
-                content: resume + '/' + resume
+                content: resume + '/index'
             },
             person: person
         });

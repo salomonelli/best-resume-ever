@@ -49,7 +49,7 @@ async function compileLessFiles() {
 
     const contents = await Promise.all(
         directories
-        .map(resume => readFileContent('resumes/' + resume + '/' + resume + '.less'))
+        .map(resume => readFileContent('resumes/' + resume + '/style.less'))
     );
     const compiledContents = await Promise.all(
         contents

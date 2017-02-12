@@ -1,7 +1,7 @@
 @main: #E77171;
 
 #forkme {
-    cursor: pointer;
+    cursor: pointer;font-family: Arial;
     display: block;
     position: absolute;
     top: 0;
@@ -21,6 +21,7 @@
 }
 
 #readme {
+  font-family: Arial;
     h1 {
         background: #4B5B6E;
         padding-top: 30px;
@@ -29,7 +30,7 @@
         padding-left: 10%;
         margin-top: 0;
         width: 100%;
-
+            font-size: 20px;
         img {
             float: left;
             width: 50px;
@@ -38,11 +39,12 @@
             margin-right: 10px;
             transition: none;
             box-shadow: none;
+            width: 35px;
         }
     }
 
     h2 {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     a {
@@ -77,15 +79,19 @@
         width: 75%;
         padding: 2.5%;
         margin-left: 10%;
+        overflow-x: scroll;
 
-        code {
-            overflow-x: scroll;
-        }
+    }
+    code{
+      background: rgba(255, 255, 255, 0.6);
     }
 
     hr {
         width: 80%;
         border: 1px solid #999;
+    }
+    p, ul, li, code {
+      font-size: 15px;
     }
 
     img {

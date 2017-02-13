@@ -78,7 +78,7 @@ Due to this [Chrome bug](http://stackoverflow.com/questions/13975198/text-shadow
 -webkit-filter:opacity(1);
 ```
 
-Unfortunately, fonts and images get blurred and lose quality. Therefore `fixBoxShadows()` in `/public/javascript.js` fixes this bug, by
+Unfortunately, fonts and images get blurred and lose quality. Therefore `fixBoxShadows()` in `/src/javascript.js` fixes this bug, by
 
 1. searching for all elements with a box-shadow,
 2. removing the box-shadow,

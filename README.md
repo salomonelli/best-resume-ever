@@ -4,6 +4,9 @@ Build your best resume ever!
 
 A collection of multiple beautiful resumes build with LESS and Mustache Templates. Choose your favorite Curriculum Vitae and easily export it as PDF.
 
+
+
+
 ## Resumes
 
 <a href="public/preview/resume-left-right.png"><img src="public/preview/resume-left-right.png" width="150"/></a>
@@ -13,9 +16,14 @@ A collection of multiple beautiful resumes build with LESS and Mustache Template
 <a href="public/preview/resume-grey-boxes.png"><img src="public/preview/resume-grey-boxes.png" width="150"/></a>
 <a href="public/preview/resume-spotify.png"><img src="public/preview/resume-spotify.png" width="150"/></a>
 
+
+
+
 ## Getting Started
 
 Follow these instructions to set up this project and create your own CV.
+
+
 
 ### Prerequisites
 
@@ -25,51 +33,46 @@ See:
 - https://nodejs.org/en/download/package-manager/
 - https://nodejs.org/en/download/
 
+
+
 ### Installation
 
 - Clone this repository.
 - Switch to project directory and run `npm install`.
 
+
+
 ### Adjusting your personal information
 
 - Adjust your personal information in `/src/person.js`.
 - Replace placeholder image `/public/person.jpg` with your portrait.
-- To preview your CV run `npm start`. Check out <http://localhost:3000>.
+- To preview your CV run `npm run dev`. Check out <http://localhost:3000>.
 
-If you adjust your data in `/src/person.js`, please stop application with `CTRL + C` and restart with `npm start`.
+Everytime you make changes, the app recompiles automatically. This may take a short while. Feel free to adjust font-sizes and other stylings to fit your needs!
+
+
 
 ### Exporting resumes as PDF
 
-When finished, run `npm start` and run `npm run PDF` in a new console window to generate resumes as PDF. You will find all resumes as PDFs in `/pdf`.
+With `npm run pdf` the resumes can be exported. You will find all resumes as PDFs in `/pdf`.
+
+[electroshot](https://github.com/mixu/electroshot) is used to generate PDFs. `convertToPdf()` in `/src/htmlToPdf.js` runs a short bash script for each resume running under `localhost:3000/resumes/resume-X`. By default the PDF size is A4. For more PDF settings check [mixu/electroshot](https://github.com/mixu/electroshot).
+
+
 
 ### Adjusting stylings and layout
 
-Feel free to adjust stylings. This project uses LESS. Under `/less` global stylings are defined. You will find here imported fonts and the page layout.
+This project uses LESS. Under `/less` global stylings are defined. You will find here imported fonts and the page layout.
 
-Each resume has its own directory. For example 'resume-1' is under `/resumes/resume-1`. Each resume directory contains a Mustache template and a less-file. Font-sizes and box-shadows are being adjusted automatically.
+Each resume has its own directory. For example 'resume-1' is under `/resumes/resume-1`. Each resume directory contains a Mustache template and a less-file.
 
-### Font-Sizes
 
-Font-sizes adjust automatically depending on how much content your resume has. The bottom margin of the content is defined in `/public/javascript.js`:
 
-```javascript
-// minimum margin of content to bottom of page
-var marginBottom = 50; // in px
-```
+### Icons
 
-If you do not want the font-size of an element to adjust automatically, please use `!important`:
+This project contains the [Google Material](https://material.io/icons/) and [fontawesome](http://fontawesome.io/icons/) icon sets.
 
-```css
-.anyFont {
-  font-size: 12px !important;
-}
-```
 
-If you want to deactivate the automatic font adjustment just remove this line from `/public/javascript.js`:
-
-```javascript
-checkFont();
-```
 
 ### CSS3 Box-Shadows
 
@@ -89,13 +92,7 @@ Unfortunately, fonts and images get blurred and lose quality. Therefore `fixBoxS
 
 If shadows may be displayed wrong, please check that the element with a box-shadow has a proper height, width and positioning.
 
-### Icons
 
-This project contains the [Google Material](https://material.io/icons/) and [fontawesome](http://fontawesome.io/icons/) icon sets.
-
-### Adjusting PDF-generation and page size
-
-[electroshot](https://github.com/mixu/electroshot) is used to generate PDFs. `convertToPdf()` in `/src/htmlToPdf.js` runs a short bash script for each resume running under `localhost:3000/resumes/resume-X`. By default the PDF size is A4. For more PDF settings check [mixu/electroshot](https://github.com/mixu/electroshot).
 
 ### Adding fonts
 
@@ -124,11 +121,13 @@ Import new less file in `/less/fonts.less`:
 @import "fonts/roboto.less";
 ```
 
+
+
 ## Adding a template
 
 TODO
 - add folder in resumes, convention: 'resume-X'
-- add .less and .mustache with same naming
+- add `style.less` and `index.mustache` with same naming
 
 ```html
 <page class="a4">
@@ -137,8 +136,11 @@ TODO
     </div>
 </page>
 ```
-- url 
+- url
+
+
+
 
 ## Contribute
 
-Feel free to create your own templates. Please read this documentation carefully. After adding your template please add a preview as in `/public/preview` and add it to the README. Compile index.html for github Pages with `npm run readme`. If needed adjust github Pages styling in `/less/githubPages.less`.
+Feel free to create your own templates. Please read this documentation carefully. After adding your template please add a preview as in `/public/preview` and add it to the README. Compile index.html for github Pages with `npm run readme`. If needed, adjust styling of github Pages in `/less/githubPages.less`.

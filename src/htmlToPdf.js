@@ -6,6 +6,10 @@ const path = require('path');
 var exec = require('child_process').exec;
 const dir = path.join(__dirname, '../resumes');
 const directories = getDirectories(dir);
+const request = require('request-promise');
+const port = 3000;
+
+require('./server');
 
 function getDirectories(srcpath) {
     return fs.readdirSync(srcpath)
@@ -25,7 +29,10 @@ async function convertToPdf() {
         (error, stdout, stderr) => {
             if (error) console.log(error);
             else console.log(stderr);
+            request.get('http://localhost:' + port + '/kill')
+                .catch(error => {});
         });
 }
+
 
 convertToPdf();

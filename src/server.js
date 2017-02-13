@@ -52,7 +52,6 @@ for (let resume of directories) {
     });
 }
 
-
 request.get('http://localhost:' + port + '/kill')
     .catch(error => {});
 

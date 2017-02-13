@@ -43,6 +43,7 @@
         "npm-font-open-sans-condensed": "1.0.3",
         "open-sans-fontface": "1.4.0",
         "path": "0.12.7",
+        "phantomjs-prebuilt": "2.1.14",
         "raleway-webfont": "3.0.1",
         "request": "2.79.0",
         "request-promise": "4.1.1",

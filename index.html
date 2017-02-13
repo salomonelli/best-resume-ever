@@ -25,18 +25,16 @@
 <a href="public/preview/resume-spotify.png"><img src="public/preview/resume-spotify.png" width="150"/></a></p>
 <h2 id="gettingstarted">Getting Started</h2>
 <p>Follow these instructions to set up this project and create your own CV.</p>
+<p><br><br></p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>To run this project, please install node.</p>
-<p>See:</p>
-<ul>
-<li>https://nodejs.org/en/download/package-manager/</li>
-<li>https://nodejs.org/en/download/</li>
-</ul>
+<p>To run this project, please install node. (See https://nodejs.org/en/download/package-manager/ and https://nodejs.org/en/download/)</p>
+<p><br><br></p>
 <h3 id="installation">Installation</h3>
 <ul>
 <li>Clone this repository.</li>
 <li>Switch to project directory and run <code>npm install</code>.</li>
 </ul>
+<p><br><br></p>
 <h3 id="adjustingyourpersonalinformation">Adjusting your personal information</h3>
 <ul>
 <li>Adjust your personal information in <code>/src/person.js</code>.</li>
@@ -44,14 +42,18 @@
 <li>To preview your CV run <code>npm run dev</code>. Check out <a href="http://localhost:3000">http://localhost:3000</a>.</li>
 </ul>
 <p>Everytime you make changes, the app recompiles automatically. This may take a short while. Feel free to adjust font-sizes and other stylings to fit your needs!</p>
+<p><br><br></p>
 <h3 id="exportingresumesaspdf">Exporting resumes as PDF</h3>
 <p>With <code>npm run pdf</code> the resumes can be exported. You will find all resumes as PDFs in <code>/pdf</code>.</p>
 <p><a href="https://github.com/mixu/electroshot">electroshot</a> is used to generate PDFs. <code>convertToPdf()</code> in <code>/src/htmlToPdf.js</code> runs a short bash script for each resume running under <code>localhost:3000/resumes/resume-X</code>. By default the PDF size is A4. For more PDF settings check <a href="https://github.com/mixu/electroshot">mixu/electroshot</a>.</p>
+<p><br><br></p>
 <h3 id="adjustingstylingsandlayout">Adjusting stylings and layout</h3>
 <p>This project uses LESS. Under <code>/less</code> global stylings are defined. You will find here imported fonts and the page layout.</p>
 <p>Each resume has its own directory. For example 'resume-1' is under <code>/resumes/resume-1</code>. Each resume directory contains a Mustache template and a less-file.</p>
+<p><br><br></p>
 <h3 id="icons">Icons</h3>
 <p>This project contains the <a href="https://material.io/icons/">Google Material</a> and <a href="http://fontawesome.io/icons/">fontawesome</a> icon sets.</p>
+<p><br><br></p>
 <h3 id="css3boxshadows">CSS3 Box-Shadows</h3>
 <p>Due to this <a href="http://stackoverflow.com/questions/13975198/text-shadow-and-box-shadow-while-printing-chrome">Chrome bug</a>, CSS3 box-shadows are not rendered properly in the PDF files. The solution is to add this styling to elements with box-shadows:</p>
 <pre><code class="css language-css">-webkit-print-color-adjust:exact;
@@ -65,6 +67,7 @@
 <li>and adding the stylings for <code>-webkit-print-color-adjust</code> and <code>-webkit-filter</code> to the new element.</li>
 </ol>
 <p>If shadows may be displayed wrong, please check that the element with a box-shadow has a proper height, width and positioning.</p>
+<p><br><br></p>
 <h3 id="addingfonts">Adding fonts</h3>
 <p>To add a font to the project, search for the npm-module of the desired font, e.g. <a href="https://www.npmjs.com/package/roboto-fontface">roboto-fontface</a> for 'Roboto'. Add dependency to <code>package.json</code> with <code>npm i --save</code>, e.g. <code>npm i --save roboto-fontface</code>.</p>
 <p>Create a new less file in <code>/less/fonts</code>, e.g. 'roboto.less'. <code>/node_modules</code> are accessable through localhost:3000. That means if the corresponding woff-file is under <code>/node_modules/roboto-fontface/anyFont.woff</code> the source url needs to equal <code>/roboto-fontface/anyFont.woff</code>:</p>
@@ -84,21 +87,22 @@
 @import "fonts/material-design-icons.less";
 @import "fonts/roboto.less";
 </code></pre>
+<p><br><br></p>
 <h2 id="addingatemplate">Adding a template</h2>
-<p>TODO</p>
+<p>Follow these steps:</p>
 <ul>
 <li>add folder in resumes, convention: 'resume-X'</li>
-<li>add <code>style.less</code> and <code>index.mustache</code> with same naming</li>
+<li>add <code>style.less</code> and <code>index.mustache</code> with same naming inside new folder</li>
 </ul>
+<p>Sample content of <code>index.mustache</code>:</p>
 <pre><code class="html language-html">&lt;page class="a4"&gt;
     &lt;div id="resume1" class="resume"&gt;
       &lt;!-- Content goes here --&gt;
     &lt;/div&gt;
 &lt;/page&gt;
 </code></pre>
-<ul>
-<li>url</li>
-</ul>
+<p>For further reference, check out existing templates.</p>
+<p><br><br></p>
 <h2 id="contribute">Contribute</h2>
 <p>Feel free to create your own templates. Please read this documentation carefully. After adding your template please add a preview as in <code>/public/preview</code> and add it to the README. Compile index.html for github Pages with <code>npm run readme</code>. If needed, adjust styling of github Pages in <code>/less/githubPages.less</code>.</p>
     </div>

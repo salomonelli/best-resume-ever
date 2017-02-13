@@ -16,27 +16,26 @@ A collection of multiple beautiful resumes build with LESS and Mustache Template
 <a href="public/preview/resume-grey-boxes.png"><img src="public/preview/resume-grey-boxes.png" width="150"/></a>
 <a href="public/preview/resume-spotify.png"><img src="public/preview/resume-spotify.png" width="150"/></a>
 
-
-
+<br>
 
 ## Getting Started
 
 Follow these instructions to set up this project and create your own CV.
 
-<br><br>
+<br>
 
 ### Prerequisites
 
 To run this project, please install node. (See https://nodejs.org/en/download/package-manager/ and https://nodejs.org/en/download/)
 
-<br><br>
+<br>
 
 ### Installation
 
 - Clone this repository.
 - Switch to project directory and run `npm install`.
 
-<br><br>
+<br>
 
 ### Adjusting your personal information
 
@@ -46,7 +45,7 @@ To run this project, please install node. (See https://nodejs.org/en/download/pa
 
 Everytime you make changes, the app recompiles automatically. This may take a short while. Feel free to adjust font-sizes and other stylings to fit your needs!
 
-<br><br>
+<br>
 
 ### Exporting resumes as PDF
 
@@ -54,7 +53,7 @@ With `npm run pdf` the resumes can be exported. You will find all resumes as PDF
 
 [electroshot](https://github.com/mixu/electroshot) is used to generate PDFs. `convertToPdf()` in `/src/htmlToPdf.js` runs a short bash script for each resume running under `localhost:3000/resumes/resume-X`. By default the PDF size is A4. For more PDF settings check [mixu/electroshot](https://github.com/mixu/electroshot).
 
-<br><br>
+<br>
 
 ### Adjusting stylings and layout
 
@@ -62,13 +61,13 @@ This project uses LESS. Under `/less` global stylings are defined. You will find
 
 Each resume has its own directory. For example 'resume-1' is under `/resumes/resume-1`. Each resume directory contains a Mustache template and a less-file.
 
-<br><br>
+<br>
 
 ### Icons
 
 This project contains the [Google Material](https://material.io/icons/) and [fontawesome](http://fontawesome.io/icons/) icon sets.
 
-<br><br>
+<br>
 
 ### CSS3 Box-Shadows
 
@@ -88,7 +87,7 @@ Unfortunately, fonts and images get blurred and lose quality. Therefore `fixBoxS
 
 If shadows may be displayed wrong, please check that the element with a box-shadow has a proper height, width and positioning.
 
-<br><br>
+<br>
 
 ### Adding fonts
 
@@ -117,7 +116,7 @@ Import new less file in `/less/fonts.less`:
 @import "fonts/roboto.less";
 ```
 
-<br><br>
+<br>
 
 ## Adding a template
 
@@ -136,7 +135,7 @@ Sample content of `index.mustache`:
 
 For further reference, check out existing templates.
 
-<br><br>
+<br>
 
 ## Contribute
 

@@ -1,7 +1,5 @@
 const path = require('path');
-const fs = require('fs');
 const express = require('express');
-const mustacheExpress = require('mustache-express');
 const request = require('request-promise');
 const Config = require('./Config');
 const Util = require('./Util');
@@ -31,7 +29,7 @@ const Server = {
      */
     kill: function() {
         request.get('http://localhost:' + Config.port + '/kill')
-            .catch(error => {});
+            .catch(error => console.log(error));
     },
     /**
      * sets route of express app
@@ -78,6 +76,6 @@ const Server = {
         await Util.setTimeout(500);
         Server.start();
     }
-}
+};
 
 module.exports = Server;

@@ -1,7 +1,3 @@
-// minimum margin of content to bottom of page
-const marginBottom = 50;
-// DOM-element of <page></page>
-let page;
 // all dom elements
 let elements;
 
@@ -11,16 +7,7 @@ let elements;
  */
 const getAllDOMElements = () => {
     elements = document.getElementsByTagName('*');
-}
-
-/**
- * gets DOM-element of #resumeX
- * @return {HTMLElement}
- */
-const getResumeDOMElement = () => {
-    return page.children[0];
-}
-
+};
 
 /**
  * checks if DOM-element has box-shadow
@@ -33,7 +20,7 @@ const hasBoxShadow = element => {
         .getPropertyValue('box-shadow');
     if (style != 'none') return style;
     else return '';
-}
+};
 
 /**
  * gets absolute position of element
@@ -44,8 +31,8 @@ const getAbsolutePositionOfElement = element => {
     return {
         top: element.getBoundingClientRect().top,
         left: element.getBoundingClientRect().left
-    }
-}
+    };
+};
 
 
 /**
@@ -54,7 +41,7 @@ const getAbsolutePositionOfElement = element => {
  */
 const removeBoxShadowOfElement = element => {
     element.style.boxShadow = 'none';
-}
+};
 
 
 /**
@@ -66,7 +53,7 @@ const getBorderRadiusOfElement = element => {
     return window
         .getComputedStyle(element, null)
         .getPropertyValue('border-radius');
-}
+};
 
 /**
  * adds new box shadow
@@ -86,7 +73,7 @@ const addNewBoxShadow = (element, position, boxShadow) => {
     div.style.top = position.top;
     div.style.left = position.left;
     document.getElementsByTagName('body')[0].appendChild(div);
-}
+};
 
 /**
  * fixes box shadow of element
@@ -97,7 +84,7 @@ const fixBoxShadow = (element, boxShadow) => {
     const position = getAbsolutePositionOfElement(element);
     removeBoxShadowOfElement(element);
     addNewBoxShadow(element, position, boxShadow);
-}
+};
 
 /**
  * gets all elements with shadows
@@ -115,7 +102,7 @@ const getElementsWithShadows = () => {
         });
     }
     return ret;
-}
+};
 
 /**
  * fixes shadows, since normal box-shadow cannot be printed in chrome,
@@ -126,7 +113,7 @@ const fixBoxShadows = () => {
     for (let i = 0; i < elementsWithShadow.length; i++) {
         fixBoxShadow(elementsWithShadow[i].element, elementsWithShadow[i].shadow);
     }
-}
+};
 
 /**
  * checks if the page contains a resume
@@ -135,7 +122,7 @@ const fixBoxShadows = () => {
 const isResume = () => {
     if (document.getElementsByTagName('page')[0]) return true;
     else return false;
-}
+};
 
 /**
  * fixes resume
@@ -144,6 +131,6 @@ const fixResume = () => {
     if (!isResume()) return;
     getAllDOMElements();
     fixBoxShadows();
-}
+};
 
 fixResume();

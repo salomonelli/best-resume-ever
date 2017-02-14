@@ -1,16 +1,14 @@
 const showdown = require('showdown');
 const converter = new showdown.Converter();
-const fs = require('fs');
 const path = require('path');
 const Mustache = require('mustache');
-const writeFile = require('write');
 const Util = require('./Util');
 
 /**
  * renders readme to html for github Pages
- * @return {Promise} 
+ * @return {Promise}
  */
-RenderReadMe = async function() {
+const RenderReadMe = async function() {
     let dir = path.join(__dirname, '../' + 'README.md');
     const readmeContent = await Util.readFileContent(dir);
     const readmeHTML = converter.makeHtml(readmeContent);
@@ -20,7 +18,7 @@ RenderReadMe = async function() {
         content: readmeHTML
     });
     await Util.writeFile('index.html', readme);
-}
+};
 
 RenderReadMe();
 

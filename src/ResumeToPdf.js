@@ -1,9 +1,7 @@
-const pdf = require('html-pdf');
 const path = require('path');
 const Config = require('./Config');
 const Util = require('./Util');
 const Server = require('./Server');
-
 
 const ResumeToPdf = {
     /**
@@ -13,7 +11,7 @@ const ResumeToPdf = {
      */
     electroshotScript: function(resume) {
         const dir = path.join(__dirname, '../pdf');
-        return 'electroshot localhost:3000/' + resume +
+        return 'electroshot localhost:' + Config.port + '/' + resume +
             ' 2481x3508 --pdf-margin none --format pdf --out ' + dir +
             ' --filename "' + resume + '.pdf" --pdf-background; ';
     },
@@ -30,6 +28,6 @@ const ResumeToPdf = {
         await Util.execBash(script);
         await Server.kill();
     }
-}
+};
 
 ResumeToPdf.convert();

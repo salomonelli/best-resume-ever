@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
     name: {
         first: 'John',

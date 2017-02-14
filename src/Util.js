@@ -1,19 +1,17 @@
 const path = require('path');
-const request = require('request-promise');
 const writeFile = require('write');
 const fs = require('fs');
-const Config = require('./Util');
 var exec = require('child_process').exec;
 
 const Util = {
     /**
      * gets directories starting with 'resume-'
-     * @return {[]} 
+     * @return {[]}
      */
     getDirectories: function() {
         const srcpath = path.join(__dirname, '../resumes');
         return fs.readdirSync(srcpath)
-            .filter(file => file.includes('resume-'))
+            .filter(file => file.includes('resume-'));
     },
     /**
      * gets resumes names and paths from directories
@@ -27,7 +25,7 @@ const Util = {
             resumes.push({
                 path: dir,
                 name: name.replace('-', ' ')
-            })
+            });
         });
         return resumes;
     },
@@ -75,12 +73,12 @@ const Util = {
     execBash: function(script) {
         return new Promise((res, rej) => {
             exec(script,
-                (error, stdout, stderr) => {
-                    if (error) rej(err);
+                error => {
+                    if (error) rej(error);
                     else res();
                 });
         });
     }
-}
+};
 
 module.exports = Util;

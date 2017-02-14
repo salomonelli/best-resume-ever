@@ -1,8 +1,6 @@
 const less = require('less');
 const path = require('path');
-const fs = require('fs');
 const CleanCSS = require('clean-css');
-const writeFile = require('write');
 const Util = require('./Util');
 
 const StyleCompiler = {
@@ -31,13 +29,13 @@ const StyleCompiler = {
         return new Promise((res, rej) => {
             new CleanCSS().minify(css, (err, output) => {
                 if (err) rej(err);
-                else res(output)
+                else res(output);
             });
         });
     },
     /**
      * compiles less files to minified css file
-     * @return {Promise} 
+     * @return {Promise}
      */
     run: async function() {
         const directories = Util.getResumesFromDirectories();
@@ -60,6 +58,6 @@ const StyleCompiler = {
         const p = path.join(__dirname, '../public/style.min.css');
         await Util.writeFile(p, minCSS.styles);
     }
-}
+};
 
 module.exports = StyleCompiler;

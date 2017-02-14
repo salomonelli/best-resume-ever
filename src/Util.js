@@ -63,7 +63,6 @@ const Util = {
                 res();
             });
         });
-
     },
     /**
      * executes command

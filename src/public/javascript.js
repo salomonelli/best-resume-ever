@@ -60,7 +60,7 @@ const removeBoxShadowOfElement = element => {
 /**
  * gets border radius of element
  * @param  {HTMLElement} element
- * @return {String}         e.g. '50%'
+ * @return {string}         e.g. '50%'
  */
 const getBorderRadiusOfElement = element => {
     return window
@@ -128,11 +128,18 @@ const fixBoxShadows = () => {
     }
 }
 
+/**
+ * checks if the page contains a resume
+ * @return {Boolean} true if page contains resume
+ */
 const isResume = () => {
     if (document.getElementsByTagName('page')[0]) return true;
     else return false;
 }
 
+/**
+ * fixes resume
+ */
 const fixResume = () => {
     if (!isResume()) return;
     getAllDOMElements();

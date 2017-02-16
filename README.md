@@ -139,4 +139,4 @@ For further reference, check out existing templates.
 
 ## Contribute
 
-Feel free to create your own templates. Please read this documentation carefully. After adding your template please add a preview as in `/public/preview` and add it to the README. Compile index.html for github Pages with `npm run readme`. If needed, adjust styling of github Pages in `/less/githubPages.less`.
+Feel free to create your own templates. Please read this documentation carefully. After adding your template please add a preview of the template to the readme. Place .png in `/public/preview`. 

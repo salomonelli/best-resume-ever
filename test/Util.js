@@ -88,14 +88,6 @@ describe('Util', () => {
                     .catch(err => assert(err === null));
             });
         });
-        describe('negative', () => {
-            it('should reject promise and return error if file does not exist', () => {
-                const p = 'asdasdasd';
-                Util.writeFile(p, 'any content')
-                    .then()
-                    .catch(err => assert(err != null));
-            });
-        });
     });
     describe('#execBash', () => {
         it('should return a promise', () => {

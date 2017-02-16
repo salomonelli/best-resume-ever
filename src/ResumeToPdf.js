@@ -29,5 +29,4 @@ const ResumeToPdf = {
         await Server.kill();
     }
 };
-
-ResumeToPdf.convert();
+module.exports = ResumeToPdf;

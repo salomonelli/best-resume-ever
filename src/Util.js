@@ -56,9 +56,9 @@ const Util = {
      * @param  {string} content content of file
      * @return {Promise}
      */
-    writeFile: function(dir, content) {
+    writeFile: async function(dir, content) {
         return new Promise((res, rej) => {
-            writeFile(dir, content, err => {
+            writeFile(dir, content, (err) => {
                 if (err) rej(err);
                 res();
             });

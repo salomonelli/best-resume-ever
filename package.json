@@ -22,12 +22,11 @@
         "server": "node --harmony-async-await src/app.js",
         "less": "node --harmony-async-await src/less.js",
         "babel": "babel --presets es2015 src/public/javascript.js -o public/javascript.js",
-        "readme": "node --harmony-async-await src/RenderReadMe.js",
         "start": "npm run babel && npm run less && npm run server",
         "dev": "watch 'npm start' src/ resumes/ less/",
         "pdf": "npm run babel && npm run less && node --harmony-async-await src/generatePdfs.js",
         "lint": "eslint src/",
-        "test": "mocha --harmony-async-await \"test/*.js\"",
+        "test": "nyc mocha --harmony-async-await \"test/*.js\"",
         "istanbul": "istanbul cover node_modules/.bin/_mocha -- -- -u exports test/**/* --harmony-async-await"
     },
     "dependencies": {
@@ -68,7 +67,7 @@
     },
     "devDependencies": {
         "eslint": "3.15.0",
-        "istanbul": "^0.4.5",
-        "mocha": "3.2.0"
+        "mocha": "3.2.0",
+        "nyc": "10.1.2"
     }
 }

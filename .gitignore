@@ -1,3 +1,4 @@
 npm-debug.*
 node_modules
 electroshot-config.json
+.nyc_output/

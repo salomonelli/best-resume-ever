@@ -45,7 +45,7 @@ const StyleCompiler = {
         await Util.writeFile(stylePath, styleMinified.styles);
 
         const directories = Util.getResumesFromDirectories();
-        const contents = await Promise.all(
+        await Promise.all(
             directories
             .map(async(resume) => {
                 const resumeLess = await Util.readFileContent(

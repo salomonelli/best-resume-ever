@@ -29,7 +29,7 @@ const Server = {
      */
     kill: function() {
         request.get('http://localhost:' + Config.port + '/kill')
-            .catch(error => console.log(error));
+            .catch();
     },
     /**
      * sets route of express app

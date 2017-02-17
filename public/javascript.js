@@ -1,9 +1,5 @@
 'use strict';
 
-// minimum margin of content to bottom of page
-var marginBottom = 50;
-// DOM-element of <page></page>
-var page = void 0;
 // all dom elements
 var elements = void 0;
 
@@ -13,14 +9,6 @@ var elements = void 0;
  */
 var getAllDOMElements = function getAllDOMElements() {
     elements = document.getElementsByTagName('*');
-};
-
-/**
- * gets DOM-element of #resumeX
- * @return {HTMLElement}
- */
-var getResumeDOMElement = function getResumeDOMElement() {
-    return page.children[0];
 };
 
 /**

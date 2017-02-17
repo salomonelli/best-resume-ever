@@ -38,25 +38,26 @@ const StyleCompiler = {
      * @return {Promise}
      */
     run: async function() {
-        const directories = Util.getResumesFromDirectories();
         const styleLess = await Util.readFileContent(path.join(__dirname, '../less/style.less'));
-        let css = await StyleCompiler.compile(styleLess);
+        const styleCss = await StyleCompiler.compile(styleLess);
+        const styleMinified = await StyleCompiler.minify(styleCss);
+        const stylePath = path.join(__dirname, '../public/styles/style.min.css');
+        await Util.writeFile(stylePath, styleMinified.styles);
+
+        const directories = Util.getResumesFromDirectories();
         const contents = await Promise.all(
             directories
-            .map(resume => Util.readFileContent(
-                path.join(__dirname, '../resumes/' + resume.path + '/style.less')
-            ))
+            .map(async(resume) => {
+                const resumeLess = await Util.readFileContent(
+                    path.join(__dirname, '../resumes/' + resume.path + '/style.less')
+                );
+                const resumeCss = await StyleCompiler.compile(resumeLess);
+                const resumeMinified = await StyleCompiler.minify(resumeCss);
+                //write file
+                const resumePath = path.join(__dirname, '../public/styles/' + resume.path + '.min.css');
+                await Util.writeFile(resumePath, resumeMinified.styles);
+            })
         );
-        const compiledContents = await Promise.all(
-            contents
-            .map(content => StyleCompiler.compile(content))
-        );
-        const ret = compiledContents.reduce((pre, cur) => pre += cur, css);
-        // minify
-        const minCSS = await StyleCompiler.minify(ret);
-        // write file
-        const p = path.join(__dirname, '../public/style.min.css');
-        await Util.writeFile(p, minCSS.styles);
     }
 };
 

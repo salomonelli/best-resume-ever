@@ -38,10 +38,14 @@ const Server = {
      */
     setRoute: function(path, template) {
         app.get(path, (req, res) => {
+            let style = null;
+            const stylePath = path.replace('/', '');
+            if (path != '') style = stylePath;
             res.render('views/layout', {
                 partials: {
                     content: template
                 },
+                style: style,
                 resumes: resumes,
                 person: person
             });

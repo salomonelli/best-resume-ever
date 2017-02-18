@@ -4,6 +4,8 @@ const request = require('request-promise');
 const Config = require('./Config');
 const Util = require('./Util');
 const person = require('./person.js');
+const http = require('http');
+const reload = require('reload');
 
 let app, resumes;
 const Server = {
@@ -68,6 +70,10 @@ const Server = {
             Server.setRoute('/' + resume, resume + '/index');
         }
     },
+    autoReload: function() {
+        const server = http.createServer(app);
+        reload(server, app);
+    },
     /**
      * run server
      * @return {Promise} resolves when server is running
@@ -80,6 +86,7 @@ const Server = {
         Server.setKillRoute();
         Server.kill();
         await Util.setTimeout(500);
+        Server.autoReload();
         Server.start();
     }
 };

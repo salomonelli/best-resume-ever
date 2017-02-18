@@ -15,15 +15,17 @@ module.exports = function(grunt) {
         execute: {
             less: {
                 options: {
-                    nodeargs: ['--harmony-async-await']
+                    nodeargs: ['--harmony-async-await'],
+                    args: ['less']
                 },
-                src: ['src/less.js']
+                src: ['src/app.js']
             },
             pdf: {
                 options: {
-                    nodeargs: ['--harmony-async-await']
+                    nodeargs: ['--harmony-async-await'],
+                    args: ['pdf']
                 },
-                src: ['src/generatePdfs.js']
+                src: ['src/app.js']
             }
         }
     });

@@ -15,9 +15,10 @@ module.exports = function(grunt) {
         execute: {
             target: {
                 options: {
-                    nodeargs: ['--harmony-async-await']
+                    nodeargs: ['--harmony-async-await'],
+                    args: ['less']
                 },
-                src: ['src/less.js']
+                src: ['src/app.js']
             }
         },
         watch: {

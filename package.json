@@ -20,7 +20,7 @@
         "grunt"
     ],
     "scripts": {
-        "server": "node --harmony-async-await src/app.js",
+        "server": "node --harmony-async-await src/app.js server",
         "dev": "concurrently --kill-others \"npm run server\" \"grunt --verbose\"",
         "pdf": "concurrently \"npm run server\" \"grunt --gruntfile GruntfilePdf.js --verbose\"",
         "lint": "eslint src/",
@@ -69,16 +69,11 @@
         "grunt": "^1.0.1",
         "grunt-babel": "^6.0.0",
         "grunt-cli": "^1.2.0",
-        "grunt-contrib-copy": "^1.0.0",
-        "grunt-contrib-less": "^1.4.0",
         "grunt-contrib-watch": "^1.0.0",
         "grunt-execute": "^0.2.2",
-        "grunt-run": "^0.6.0",
         "grunt-shell": "^2.1.0",
-        "jit-grunt": "^0.10.0",
         "load-grunt-tasks": "^3.5.2",
         "mocha": "3.2.0",
-        "nyc": "10.1.2",
-        "reload": "^1.1.1"
+        "nyc": "10.1.2"
     }
 }

@@ -1,7 +1,4 @@
-const path = require('path');
-const writeFile = require('write');
-const fs = require('fs');
-var exec = require('child_process').exec;
+let path, writeFile, fs, exec;
 
 const Util = {
     /**
@@ -9,7 +6,7 @@ const Util = {
      * @return {[]}
      */
     getDirectories: function() {
-        const srcpath = path.join(__dirname, '../resumes');
+        const srcpath = path.join(__dirname, '../../resumes');
         return fs.readdirSync(srcpath)
             .filter(file => file.includes('resume-'));
     },
@@ -80,4 +77,12 @@ const Util = {
     }
 };
 
-module.exports = Util;
+const mod = function(pathD, writeFileD, fsD, execD) {
+    path = pathD;
+    writeFile = writeFileD;
+    fs = fsD;
+    exec = execD;
+    return Util;
+};
+
+module.exports = mod;

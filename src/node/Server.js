@@ -1,11 +1,4 @@
-const path = require('path');
-const express = require('express');
-const request = require('request-promise');
-const Config = require('./Config');
-const Util = require('./Util');
-const person = require('./person.js');
-const http = require('http');
-const reload = require('reload');
+let path, express, request, Config, Util, person, http, reload;
 
 let app, resumes;
 const Server = {
@@ -14,11 +7,11 @@ const Server = {
      */
     setup: function() {
         if (!app) app = express();
-        app.set('views', path.join(__dirname, '../resumes'));
+        app.set('views', path.join(__dirname, '../../resumes'));
         app.engine('mustache', require('hogan-express'));
         app.set('view engine', 'mustache');
-        app.use(express.static(path.join(__dirname, '../public')));
-        app.use(express.static(path.join(__dirname, '../node_modules')));
+        app.use(express.static(path.join(__dirname, '../../public')));
+        app.use(express.static(path.join(__dirname, '../../node_modules')));
     },
     /**
      * starts up express app
@@ -91,4 +84,25 @@ const Server = {
     }
 };
 
-module.exports = Server;
+const mod = function(
+    pathD,
+    expressD,
+    requestD,
+    ConfigD,
+    UtilD,
+    personD,
+    httpD,
+    reloadD
+) {
+    path = pathD;
+    express = expressD;
+    request = requestD;
+    Config = ConfigD;
+    Util = UtilD;
+    person = personD;
+    http = httpD;
+    reload = reloadD;
+    return Server;
+};
+
+module.exports = mod;

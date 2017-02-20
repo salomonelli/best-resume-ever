@@ -1,7 +1,4 @@
-const path = require('path');
-const Config = require('./Config');
-const Util = require('./Util');
-const Server = require('./Server');
+let path, Config, Util, Server;
 
 const ResumeToPdf = {
     /**
@@ -10,7 +7,7 @@ const ResumeToPdf = {
      * @return {string}        electroshot command
      */
     electroshotScript: function(resume) {
-        const dir = path.join(__dirname, '../pdf');
+        const dir = path.join(__dirname, '../../pdf');
         return 'electroshot localhost:' + Config.port + '/' + resume +
             ' 2481x3508 --pdf-margin none --format pdf --out ' + dir +
             ' --filename "' + resume + '.pdf" --pdf-background; ';
@@ -29,4 +26,13 @@ const ResumeToPdf = {
         await Server.kill();
     }
 };
-module.exports = ResumeToPdf;
+
+const mod = function(pathD, ConfigD, UtilD, ServerD) {
+    path = pathD;
+    Config = ConfigD;
+    Util = UtilD;
+    Server = ServerD;
+    return ResumeToPdf.convert();
+};
+
+module.exports = mod;

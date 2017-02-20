@@ -1,7 +1,4 @@
-const less = require('less');
-const path = require('path');
-const CleanCSS = require('clean-css');
-const Util = require('./Util');
+let less, path, CleanCSS, Util;
 
 const StyleCompiler = {
     /**
@@ -10,7 +7,7 @@ const StyleCompiler = {
      * @return {string}             css
      */
     compile: function(lessContent) {
-        let lessDir = path.join(__dirname, '../less');
+        let lessDir = path.join(__dirname, '../../less');
         return new Promise((res, rej) => {
             less.render(lessContent, {
                 paths: [lessDir, lessDir + '/fonts'],
@@ -38,10 +35,10 @@ const StyleCompiler = {
      * @return {Promise}
      */
     run: async function() {
-        const styleLess = await Util.readFileContent(path.join(__dirname, '../less/style.less'));
+        const styleLess = await Util.readFileContent(path.join(__dirname, '../../less/style.less'));
         const styleCss = await StyleCompiler.compile(styleLess);
         const styleMinified = await StyleCompiler.minify(styleCss);
-        const stylePath = path.join(__dirname, '../public/styles/style.min.css');
+        const stylePath = path.join(__dirname, '../../public/styles/style.min.css');
         await Util.writeFile(stylePath, styleMinified.styles);
 
         const directories = Util.getResumesFromDirectories();
@@ -49,16 +46,25 @@ const StyleCompiler = {
             directories
             .map(async(resume) => {
                 const resumeLess = await Util.readFileContent(
-                    path.join(__dirname, '../resumes/' + resume.path + '/style.less')
+                    path.join(__dirname, '../../resumes/' + resume.path + '/style.less')
                 );
                 const resumeCss = await StyleCompiler.compile(resumeLess);
                 const resumeMinified = await StyleCompiler.minify(resumeCss);
                 //write file
-                const resumePath = path.join(__dirname, '../public/styles/' + resume.path + '.min.css');
+                const resumePath = path.join(__dirname, '../../public/styles/' + resume.path + '.min.css');
                 await Util.writeFile(resumePath, resumeMinified.styles);
             })
         );
     }
 };
 
-module.exports = StyleCompiler;
+
+const mod = function(lessD, pathD, CleanCSSD, UtilD) {
+    less = lessD;
+    path = pathD;
+    CleanCSS = CleanCSSD;
+    Util = UtilD;
+    return StyleCompiler.run();
+};
+
+module.exports = mod;

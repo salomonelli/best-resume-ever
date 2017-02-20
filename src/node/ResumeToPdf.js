@@ -1,5 +1,7 @@
-let path, Config, Util, Server;
-
+const path = require('path');
+const Config = require('./Config');
+const Util = require('./Util');
+const Server = require('./Server');
 const ResumeToPdf = {
     /**
      * generates electroshot command for screenshoting resume
@@ -20,19 +22,11 @@ const ResumeToPdf = {
         Server.run();
         const directories = Util.getResumesFromDirectories();
         let script = '';
-        directories.forEach(async(resume) => script += ResumeToPdf.electroshotScript(resume.path));
+        directories.forEach(async(resume) => script += this.electroshotScript(resume.path));
         script = script.substring(0, script.length - 2);
         await Util.execBash(script);
         await Server.kill();
     }
 };
 
-const mod = function(pathD, ConfigD, UtilD, ServerD) {
-    path = pathD;
-    Config = ConfigD;
-    Util = UtilD;
-    Server = ServerD;
-    return ResumeToPdf.convert();
-};
-
-module.exports = mod;
+module.exports = ResumeToPdf;

@@ -1,4 +1,7 @@
-let path, writeFile, fs, exec;
+const path = require('path');
+const writeFile = require('write');
+const fs = require('fs');
+const exec = require('child_process').exec;
 
 const Util = {
     /**
@@ -15,7 +18,7 @@ const Util = {
      * @return {Object[]} array with resumes object {path: '', name: ''}
      */
     getResumesFromDirectories: function() {
-        const directories = Util.getDirectories();
+        const directories = this.getDirectories();
         let resumes = [];
         directories.forEach(dir => {
             let name = dir.replace('resume-', '');
@@ -77,12 +80,4 @@ const Util = {
     }
 };
 
-const mod = function(pathD, writeFileD, fsD, execD) {
-    path = pathD;
-    writeFile = writeFileD;
-    fs = fsD;
-    exec = execD;
-    return Util;
-};
-
-module.exports = mod;
+module.exports = Util;

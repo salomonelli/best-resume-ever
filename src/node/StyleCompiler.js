@@ -1,4 +1,7 @@
-let less, path, CleanCSS, Util;
+const less = require('less');
+const path = require('path');
+const CleanCSS = require('clean-css');
+const Util = require('./Util');
 
 const StyleCompiler = {
     /**
@@ -58,13 +61,4 @@ const StyleCompiler = {
     }
 };
 
-
-const mod = function(lessD, pathD, CleanCSSD, UtilD) {
-    less = lessD;
-    path = pathD;
-    CleanCSS = CleanCSSD;
-    Util = UtilD;
-    return StyleCompiler.run();
-};
-
-module.exports = mod;
+module.exports = StyleCompiler;

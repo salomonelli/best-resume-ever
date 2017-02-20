@@ -7,7 +7,7 @@ const person = require('../person.js');
 const http = require('http');
 const reload = require('reload');
 
-let app, resumes, expressServer;
+let app, resumes;
 const Server = {
     /**
      * sets configurations of express app
@@ -24,19 +24,16 @@ const Server = {
      * starts up express app
      */
     start: function() {
-        expressServer = app.listen(Config.port, '0.0.0.0', () => console.log('Listening on localhost:' + Config.port + '!'));
+        app.listen(Config.port, '0.0.0.0', () => console.log('Listening on localhost:' + Config.port + '!'));
     },
     /**
      * kills express app
      */
     kill: function() {
-        /*
         request.get('http://localhost:' + Config.port + '/kill')
             .catch(error => {
                 if (error) return false;
             });
-         */
-        if (expressServer) expressServer.close();
     },
     /**
      * sets route of express app
@@ -71,7 +68,7 @@ const Server = {
     setRoutesForResumes: function() {
         const directories = Util.getDirectories();
         for (let resume of directories) {
-            this.setRoute('/' + resume, resume + '/index');
+            Server.setRoute('/' + resume, resume + '/index');
         }
     },
     autoReload: function() {
@@ -84,17 +81,14 @@ const Server = {
      */
     run: async function() {
         resumes = Util.getResumesFromDirectories();
-        this.setup();
-        this.setRoute('/', 'views/index');
-        this.setRoutesForResumes();
-        this.setKillRoute();
-        this.kill();
+        Server.setup();
+        Server.setRoute('/', 'views/index');
+        Server.setRoutesForResumes();
+        Server.setKillRoute();
+        Server.kill();
         await Util.setTimeout(500);
-        this.autoReload();
-        this.start();
+        Server.autoReload();
+        Server.start();
     }
 };
-
-Server.run();
-
 module.exports = Server;

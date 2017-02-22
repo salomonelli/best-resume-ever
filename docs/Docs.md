@@ -1,7 +1,5 @@
 # Docs
 
-Content:
-
 - [Adjusting stylings and layout](#adjusting-stylings-and-layout)
 - [Generating PDFs](#generating-pdfs)
 - [Adding a template](#adding-a-template)

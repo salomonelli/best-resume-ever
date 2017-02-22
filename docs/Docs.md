@@ -42,7 +42,7 @@ Sample content of `index.mustache`:
 </page>
 ```
 
-If you want fonts to adjust, according to the personal information, just add the tag `autofont` to the resume-div:
+If you want fonts to adjust, according to the personal information, just add the attribute `autofont` to the resume-div:
 
 ```html
 <div id="resume1" class="resume" autofont>

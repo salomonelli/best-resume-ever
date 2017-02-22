@@ -44,7 +44,7 @@ module.exports = function(grunt) {
                     'resumes/**/*.less',
                     'less/**/*.less'
                 ],
-                tasks: ['execute', 'babel', 'bgShell:express'],
+                tasks: ['execute', 'babel', 'bgShell:express', 'execute:wait'],
                 options: {
                     nospawn: false,
                     livereload: true

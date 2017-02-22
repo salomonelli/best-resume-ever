@@ -5,6 +5,9 @@ const Config = require('./Config');
 const Util = require('./Util');
 const person = require('../person.js');
 
+const http = require('http');
+const reload = require('reload');
+
 let app, resumes;
 const Server = {
     /**
@@ -61,6 +64,13 @@ const Server = {
 
     },
     /**
+     * does autorealod
+     */
+    autoReload: function() {
+        const server = http.createServer(app);
+        reload(server, app);
+    },
+    /**
      * sets routes for each resume
      */
     setRoutesForResumes: function() {
@@ -81,6 +91,7 @@ const Server = {
         Server.setKillRoute();
         Server.kill();
         await Util.setTimeout(500);
+        Server.autoReload();
         Server.start();
     }
 };

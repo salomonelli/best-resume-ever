@@ -16,26 +16,26 @@ A collection of multiple beautiful resumes build with LESS and Mustache Template
 <a href="public/preview/resume-grey-boxes.png"><img src="public/preview/resume-grey-boxes.png" width="150"/></a>
 <a href="public/preview/resume-spotify.png"><img src="public/preview/resume-spotify.png" width="150"/></a>
 
-<br>
+
 
 ## Getting Started
 
 Follow these instructions to set up this project and create your own CV.
 
-<br>
+
 
 ### Prerequisites
 
 To run this project, please install node. (See https://nodejs.org/en/download/package-manager/ and https://nodejs.org/en/download/)
 
-<br>
+
 
 ### Installation
 
 - Clone this repository.
 - Switch to project directory and run `npm install`.
 
-<br>
+
 
 ### Adjusting your personal information
 
@@ -45,19 +45,15 @@ To run this project, please install node. (See https://nodejs.org/en/download/pa
 
 The app recompiles automatically. This may take a short while. Feel free to adjust stylings to fit your needs!
 
-<br>
+
 
 ### Exporting resumes as PDF
 
 With `npm run pdf` the resumes can be exported. You will find all resumes as PDFs in `/pdf`.
 
-<br>
-
-### Configuration
-
-Please read [the guide](/docs/Docs.md) on how to configure page size, stylings and more.
 
 
-## Contribute
+## Configuration and Contribution
 
-Feel free to create your own templates or help in fixing issues. To find out how to add your own templates, please read [the guide](/docs/Docs.md) carefully.
+Please read [the guide](/docs/Docs.md) on how to configure page size, stylings and adding your own templates.
+Feel free to create your own templates or help in fixing issues. To find out how to add your own templates!

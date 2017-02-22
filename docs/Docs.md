@@ -1,11 +1,62 @@
+# Docs
 
-### Icons
+Content:
+
+- [Adjusting stylings and layout](#adjusting-stylings-and-layout)
+- [Generating PDFs](#generating-pdfs)
+- [Adding a template](#adding-a-template)
+- [Icons](icons)
+- [CSS3 Box-Shadows](css3-box-shadows)
+- [Adding fonts](adding-fonts)
+
+
+
+
+
+## Adjusting stylings and layout
+
+This project uses LESS. Under `/less` global stylings are defined. You will find here imported fonts and the page layout.
+
+Each resume has its own directory. For example 'resume-X' would be under `/resumes/resume-X`. Each resume directory contains a Mustache template and a less-file.
+
+
+
+
+## Generating PDFs
+
+[electroshot](https://github.com/mixu/electroshot) is used to generate PDFs. `convertToPdf()` in `/src/htmlToPdf.js` runs a short bash script for each resume running under `localhost:3000/resumes/resume-X`. By default the PDF size is A4. For more PDF settings check [mixu/electroshot](https://github.com/mixu/electroshot).
+
+
+
+
+## Adding a template
+
+Follow these steps:
+- add folder in resumes, convention: 'resume-X'
+- add `style.less` and `index.mustache` with same naming inside new folder
+
+Sample content of `index.mustache`:
+```html
+<page class="a4">
+    <div id="resume1" class="resume">
+      <!-- Content goes here -->
+    </div>
+</page>
+```
+
+For further reference, check out existing templates.
+
+
+
+
+## Icons
 
 This project contains the [Google Material](https://material.io/icons/) and [fontawesome](http://fontawesome.io/icons/) icon sets.
 
-<br>
 
-### CSS3 Box-Shadows
+
+
+## CSS3 Box-Shadows
 
 Due to this [Chrome bug](http://stackoverflow.com/questions/13975198/text-shadow-and-box-shadow-while-printing-chrome), CSS3 box-shadows are not rendered properly in the PDF files. The solution is to add this styling to elements with box-shadows:
 
@@ -23,9 +74,10 @@ Unfortunately, fonts and images get blurred and lose quality. Therefore `fixBoxS
 
 If shadows may be displayed wrong, please check that the element with a box-shadow has a proper height, width and positioning.
 
-<br>
 
-### Adding fonts
+
+
+## Adding fonts
 
 To add a font to the project, search for the npm-module of the desired font, e.g. [roboto-fontface](https://www.npmjs.com/package/roboto-fontface) for 'Roboto'. Add dependency to `package.json` with `npm i --save`, e.g. `npm i --save roboto-fontface`.
 
@@ -51,24 +103,3 @@ Import new less file in `/less/fonts.less`:
 @import "fonts/material-design-icons.less";
 @import "fonts/roboto.less";
 ```
-
-<br>
-
-## Adding a template
-
-Follow these steps:
-- add folder in resumes, convention: 'resume-X'
-- add `style.less` and `index.mustache` with same naming inside new folder
-
-Sample content of `index.mustache`:
-```html
-<page class="a4">
-    <div id="resume1" class="resume">
-      <!-- Content goes here -->
-    </div>
-</page>
-```
-
-For further reference, check out existing templates.
-
-<br>

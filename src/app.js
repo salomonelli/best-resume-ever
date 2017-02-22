@@ -16,5 +16,8 @@ process.argv.forEach(argument => {
         case 'kill':
             Server.kill();
             break;
+        case 'wait':
+            setTimeout(() => console.log('waiting'), 5000);
+            break;
     }
 });

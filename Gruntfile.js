@@ -13,12 +13,27 @@ module.exports = function(grunt) {
             }
         },
         execute: {
-            target: {
+            less: {
                 options: {
                     nodeargs: ['--harmony-async-await'],
                     args: ['less']
                 },
                 src: ['src/app.js']
+            },
+            wait: {
+                options: {
+                    nodeargs: ['--harmony-async-await'],
+                    args: ['wait']
+                },
+                src: ['src/app.js']
+            }
+        },
+        bgShell: {
+            _defaults: {
+                bg: true
+            },
+            express: {
+                cmd: 'npm run server'
             }
         },
         watch: {
@@ -29,7 +44,7 @@ module.exports = function(grunt) {
                     'resumes/**/*.less',
                     'less/**/*.less'
                 ],
-                tasks: ['execute', 'babel'],
+                tasks: ['execute', 'babel', 'bgShell:express'],
                 options: {
                     nospawn: false,
                     livereload: true
@@ -38,5 +53,5 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('default', ['babel', 'execute', 'watch']);
+    grunt.registerTask('default', ['babel', 'execute:less', 'bgShell:express', 'execute:wait', 'watch']);
 };

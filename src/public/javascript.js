@@ -1,136 +1,95 @@
-// all dom elements
-let elements;
+// minimum margin of content to bottom of page
+var marginBottom = 0;
+// DOM-element of <page></page>
+var page;
 
 /**
  * gets all DOM-elements on page
  * @return {HTMLElement[]} DOM-elements
  */
-const getAllDOMElements = () => {
-    elements = document.getElementsByTagName('*');
-};
+function getAllDOMElements() {
+    return document.getElementsByTagName('*');
+}
 
 /**
- * checks if DOM-element has box-shadow
- * @param  {HTMLElement}  element
- * @return {string} '' if no shadow, otherwise shadow e.g. 'rgba(0, 0, 0, 0.137255) 0px 2px 2px 0px'
+ * gets DOM-element of #resumeX
+ * @return {HTMLElement}
  */
-const hasBoxShadow = element => {
-    const style = window
-        .getComputedStyle(element, null)
-        .getPropertyValue('box-shadow');
-    if (style != 'none') return style;
-    else return '';
-};
+function getResumeDOMElement() {
+    return page.children[0];
+}
 
 /**
- * gets absolute position of element
- * @param  {HTMLElement} element
- * @return {{}}
+ * sets variable "page" to DOM-element of <page></page>
  */
-const getAbsolutePositionOfElement = element => {
-    return {
-        top: element.getBoundingClientRect().top,
-        left: element.getBoundingClientRect().left
-    };
-};
+function setPageDOMElement() {
+    page = document.getElementsByTagName('page')[0];
+}
 
+function autoFontEnabled(resume) {
+    return resume.hasAttribute('autofont');
+}
 
 /**
- * removes box shadow from element
- * @param  {HTMLElement} element
+ * checks whether font needs to be fixed, and if fixes it
  */
-const removeBoxShadowOfElement = element => {
-    element.style.boxShadow = 'none';
-};
-
-
-/**
- * gets border radius of element
- * @param  {HTMLElement} element
- * @return {string}         e.g. '50%'
- */
-const getBorderRadiusOfElement = element => {
-    return window
-        .getComputedStyle(element, null)
-        .getPropertyValue('border-radius');
-};
+function checkFont() {
+    var resume = getResumeDOMElement();
+    if (autoFontEnabled(resume) && contentIsGreaterThanPage(resume)) fixFont();
+}
 
 /**
- * adds new box shadow
- * @param {HTMLElement} element
- * @param {{}} position  e.g. { left: 10, top: 100}
- * @param {string} boxShadow e.g. 'rgba(0, 0, 0, 0.137255) 0px 2px 2px 0px'
+ * checks whether content is greater than page
+ * @param  {HTMLElement} resume
+ * @return {Boolean}        false if content fits to page
  */
-const addNewBoxShadow = (element, position, boxShadow) => {
-    let div = document.createElement('div');
-    div.style.height = element.offsetHeight;
-    div.style.width = element.offsetWidth;
-    div.style.borderRadius = getBorderRadiusOfElement(element);
-    div.style.position = 'absolute';
-    div.style.boxShadow = boxShadow;
-    div.style.webkitPrintColorAdjust = 'exact';
-    div.style.webkitFilter = 'opacity(1)';
-    div.style.top = position.top;
-    div.style.left = position.left;
-    document.getElementsByTagName('body')[0].appendChild(div);
-};
-
-/**
- * fixes box shadow of element
- * @param  {HTMLElement} element
- * @param  {string} boxShadow e.g. 'rgba(0, 0, 0, 0.137255) 0px 2px 2px 0px'
- */
-const fixBoxShadow = (element, boxShadow) => {
-    const position = getAbsolutePositionOfElement(element);
-    removeBoxShadowOfElement(element);
-    addNewBoxShadow(element, position, boxShadow);
-};
-
-/**
- * gets all elements with shadows
- * @return {HTMLElement[]} elements with shadows
- */
-const getElementsWithShadows = () => {
-    let current, boxShadow;
-    let ret = [];
-    for (let i = 0; i < elements.length; i++) {
-        current = elements[i];
-        boxShadow = hasBoxShadow(current);
-        if (hasBoxShadow(current) != '') ret.push({
-            element: current,
-            shadow: boxShadow
-        });
-    }
-    return ret;
-};
-
-/**
- * fixes shadows, since normal box-shadow cannot be printed in chrome,
- * see: http://stackoverflow.com/questions/13975198/text-shadow-and-box-shadow-while-printing-chrome
- */
-const fixBoxShadows = () => {
-    const elementsWithShadow = getElementsWithShadows();
-    for (let i = 0; i < elementsWithShadow.length; i++) {
-        fixBoxShadow(elementsWithShadow[i].element, elementsWithShadow[i].shadow);
-    }
-};
-
-/**
- * checks if the page contains a resume
- * @return {Boolean} true if page contains resume
- */
-const isResume = () => {
-    if (document.getElementsByTagName('page')[0]) return true;
+function contentIsGreaterThanPage(resume) {
+    var pageHeight = page.offsetHeight;
+    var resumeHeight = resume.offsetHeight + marginBottom;
+    if (pageHeight < resumeHeight) return true;
     else return false;
-};
+}
 
 /**
- * fixes resume
+ * gets font size of DOM-elemnt
+ * @param  {HTMLElement} element
+ * @return {Number}         font size of element
  */
-const fixResume = () => {
-    if (!isResume()) return;
-    getAllDOMElements();
-    fixBoxShadows();
-};
+function getFontSizeOfElement(element) {
+    var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    return parseFloat(style);
+}
 
-fixResume();
+/**
+ * sets font size of DOM-element
+ * @param {HTMLElement} element
+ * @param {Number} fontSize
+ */
+function setFontSizeOfElement(element, fontSize) {
+    element.style.fontSize = fontSize + 'px';
+}
+
+/**
+ * decreases font size of all DOM-elements
+ */
+function decreaseFontSizes() {
+    var elements = getAllDOMElements();
+    var current;
+    for (var i = 0; i < elements.length; i++) {
+        current = elements[i];
+        var newFontSize = getFontSizeOfElement(current) * 0.99;
+        setFontSizeOfElement(current, newFontSize);
+    }
+}
+
+/**
+ * decreases font size until content fits to page
+ */
+function fixFont() {
+    decreaseFontSizes();
+    var resume = getResumeDOMElement();
+    if (contentIsGreaterThanPage(resume)) fixFont();
+}
+
+setPageDOMElement();
+checkFont();

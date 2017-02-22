@@ -3,9 +3,9 @@
 - [Adjusting stylings and layout](#adjusting-stylings-and-layout)
 - [Generating PDFs](#generating-pdfs)
 - [Adding a template](#adding-a-template)
-- [Icons](icons)
-- [CSS3 Box-Shadows](css3-box-shadows)
-- [Adding fonts](adding-fonts)
+- [Icons](#icons)
+- [CSS3 Box-Shadows](#css3-box-shadows)
+- [Adding fonts](#adding-fonts)
 
 
 

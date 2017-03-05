@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+    grunt.loadNpmTasks('grunt-exec');
     require('load-grunt-tasks')(grunt);
     grunt.initConfig({
         babel: {
@@ -12,23 +13,11 @@ module.exports = function(grunt) {
                 }
             }
         },
-        execute: {
-            less: {
-                options: {
-                    nodeargs: ['--harmony-async-await'],
-                    args: ['less']
-                },
-                src: ['src/app.js']
-            },
-            pdf: {
-                options: {
-                    nodeargs: ['--harmony-async-await'],
-                    args: ['pdf']
-                },
-                src: ['src/app.js']
-            }
+        exec: {
+            less: 'node --harmony-async-await src/app.js less',
+            pdf: 'node --harmony-async-await src/app.js pdf'
         }
     });
 
-    grunt.registerTask('default', ['babel', 'execute']);
+    grunt.registerTask('default', ['babel', 'exec:less', 'exec:pdf']);
 };

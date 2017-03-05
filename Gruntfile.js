@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+    grunt.loadNpmTasks('grunt-exec');
     require('load-grunt-tasks')(grunt);
     grunt.initConfig({
         babel: {
@@ -12,21 +13,9 @@ module.exports = function(grunt) {
                 }
             }
         },
-        execute: {
-            less: {
-                options: {
-                    nodeargs: ['--harmony-async-await'],
-                    args: ['less']
-                },
-                src: ['src/app.js']
-            },
-            wait: {
-                options: {
-                    nodeargs: ['--harmony-async-await'],
-                    args: ['wait']
-                },
-                src: ['src/app.js']
-            }
+        exec: {
+            less: 'node --harmony-async-await src/app.js less',
+            wait: 'node --harmony-async-await src/app.js wait'
         },
         bgShell: {
             _defaults: {
@@ -44,7 +33,7 @@ module.exports = function(grunt) {
                     'resumes/**/*.less',
                     'less/**/*.less'
                 ],
-                tasks: ['execute', 'babel', 'bgShell:express', 'execute:wait'],
+                tasks: ['exec:less', 'babel', 'bgShell:express', 'exec:wait'],
                 options: {
                     nospawn: false,
                     livereload: true
@@ -53,5 +42,5 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('default', ['babel', 'execute:less', 'bgShell:express', 'execute:wait', 'watch']);
+    grunt.registerTask('default', ['babel', 'exec:less', 'bgShell:express', 'exec:wait', 'watch']);
 };

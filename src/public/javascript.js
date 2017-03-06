@@ -180,13 +180,17 @@ const checkFont = () => {
     ) fixFont(resume, page);
 };
 
+const isElectron = () => {
+    return window && window.process && window.process.type;
+}
+
 /**
  * fixes resume
  */
 const fixResume = () => {
     if (!isResume()) return;
     checkFont();
-    fixBoxShadows();
+    if (isElectron()) fixBoxShadows();
 };
 
 fixResume();

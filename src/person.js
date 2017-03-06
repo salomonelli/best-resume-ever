@@ -80,6 +80,6 @@ module.exports = {
         street: '1234 Broadway',
         city: 'New York',
         website: 'johndoe.com',
-        github: 'JohnDoe'
+        github: 'johnyD'
     }
 };

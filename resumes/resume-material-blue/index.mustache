@@ -13,7 +13,7 @@
             </div>
             <div class="text">
                 <ul>
-                    <li>Born 1990 in FoobarTown</li>
+                    <li>Born {{person.birth.year}} in {{person.birth.location}}</li>
                 </ul>
             </div>
         </div>
@@ -122,8 +122,7 @@
                     <div class="item">
                         <h3>{{degree}}</h3>
 
-                        <!-- TODO add time -->
-                        <span>Okt 2016 - vsl. März 2019</span>
+                        <span>{{timeperiod}}</span>
 
                         <p> {{description}} </p>
                     </div>

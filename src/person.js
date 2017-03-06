@@ -30,10 +30,12 @@ module.exports = {
     ],
     education: [{
             degree: 'Master of Arts',
+            timeperiod: 'March 2012 - December 2013',
             description: 'Major in Hacking and Computer Penetration, University A, New York, USA.'
         },
         {
             degree: 'Bachelor of Science',
+            timeperiod: 'March 2009 - December 2011',
             description: 'Major in Engineering, University B, Los Angeles, USA.'
         }
     ],

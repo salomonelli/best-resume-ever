@@ -5,6 +5,10 @@ module.exports = {
         last: 'Doe',
     },
     position: 'Software Developer',
+    birth: {
+      year: 1990,
+      location: 'New York'
+    },
     experience: [{
             company: 'Company A',
             position: 'Developer',

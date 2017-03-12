@@ -174,13 +174,17 @@ var checkFont = function checkFont() {
     if (autoFontEnabled(resume) && contentIsGreaterThanPage(resume, page)) fixFont(resume, page);
 };
 
+var isElectron = function isElectron() {
+    return window && window.process && window.process.type;
+};
+
 /**
  * fixes resume
  */
 var fixResume = function fixResume() {
     if (!isResume()) return;
     checkFont();
-    fixBoxShadows();
+    if (isElectron()) fixBoxShadows();
 };
 
 fixResume();

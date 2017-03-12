@@ -9,7 +9,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'public/javascript.js': 'src/public/javascript.js'
+                    'public/js/gen/javascript.js': 'public/js/javascript.js'
                 }
             }
         },

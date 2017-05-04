@@ -57,4 +57,4 @@ With `npm run pdf` the resumes can be exported. You will find all resumes as PDF
 ## Configuration and Contribution
 
 Please read [the guide](/docs/Docs.md) on how to configure page size, stylings and adding your own templates.
-Feel free to create your own templates or help in fixing issues. To find out how to add your own templates!
+Feel free to create your own templates or help in fixing issues. 

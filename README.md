@@ -9,10 +9,10 @@ A collection of multiple beautiful resumes build with LESS and Mustache Template
 
 ## Resumes
 
+<a href="public/preview/resume-material-blue.png"><img src="public/preview/resume-material-blue.png" width="150"/></a>
 <a href="public/preview/resume-material-dark.png"><img src="public/preview/resume-material-dark.png" width="150"/></a>
 <a href="public/preview/resume-left-right.png"><img src="public/preview/resume-left-right.png" width="150"/></a>
 <a href="public/preview/resume-side-bar.png"><img src="public/preview/resume-side-bar.png" width="150"/></a>
-<a href="public/preview/resume-material-blue.png"><img src="public/preview/resume-material-blue.png" width="150"/></a>
 <a href="public/preview/resume-oblique.png"><img src="public/preview/resume-oblique.png" width="150"/></a>
 <a href="public/preview/resume-grey-boxes.png"><img src="public/preview/resume-grey-boxes.png" width="150"/></a>
 <a href="public/preview/resume-spotify.png"><img src="public/preview/resume-spotify.png" width="150"/></a>

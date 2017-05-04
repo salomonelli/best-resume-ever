@@ -15,7 +15,6 @@ A collection of multiple beautiful resumes build with LESS and Mustache Template
 <a href="public/preview/resume-side-bar.png"><img src="public/preview/resume-side-bar.png" width="150"/></a>
 <a href="public/preview/resume-oblique.png"><img src="public/preview/resume-oblique.png" width="150"/></a>
 <a href="public/preview/resume-grey-boxes.png"><img src="public/preview/resume-grey-boxes.png" width="150"/></a>
-<a href="public/preview/resume-spotify.png"><img src="public/preview/resume-spotify.png" width="150"/></a>
 
 
 
@@ -57,4 +56,4 @@ With `npm run pdf` the resumes can be exported. You will find all resumes as PDF
 ## Configuration and Contribution
 
 Please read [the guide](/docs/Docs.md) on how to configure page size, stylings and adding your own templates.
-Feel free to create your own templates or help in fixing issues. 
+Feel free to create your own templates or help in fixing issues.

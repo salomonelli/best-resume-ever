@@ -182,10 +182,10 @@ var isElectron = function isElectron() {
  * fixes resume
  */
 var fixResume = function fixResume() {
-  console.log('aaaaaaa');
   if (!isResume()) return;
   checkFont();
-  if (isElectron()) fixBoxShadows();
+  //if (isElectron())
+  fixBoxShadows();
 };
 
 fixResume();

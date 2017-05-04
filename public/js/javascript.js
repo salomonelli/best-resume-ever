@@ -3,7 +3,7 @@
  * @return {HTMLElement[]} DOM-elements
  */
 const getAllDOMElements = () => {
-    return document.getElementsByTagName('*');
+  return document.getElementsByTagName('*');
 };
 
 /**
@@ -12,7 +12,7 @@ const getAllDOMElements = () => {
  * @return {HTMLElement}
  */
 const getResumeDOMElement = page => {
-    return page.children[0];
+  return page.children[0];
 };
 
 /**
@@ -20,7 +20,7 @@ const getResumeDOMElement = page => {
  * @return {HTMLElement}
  */
 const getPageDOMElement = () => {
-    return document.getElementsByTagName('page')[0];
+  return document.getElementsByTagName('page')[0];
 };
 
 /**
@@ -29,7 +29,7 @@ const getPageDOMElement = () => {
  * @return {boolean}
  */
 const autoFontEnabled = resume => {
-    return resume.hasAttribute('autofont');
+  return resume.hasAttribute('autofont');
 };
 
 /**
@@ -39,10 +39,10 @@ const autoFontEnabled = resume => {
  * @return {boolean}        false if content fits to page
  */
 const contentIsGreaterThanPage = (resume, page) => {
-    const pageHeight = page.offsetHeight;
-    const resumeHeight = resume.offsetHeight;
-    if (pageHeight < resumeHeight) return true;
-    else return false;
+  const pageHeight = page.offsetHeight;
+  const resumeHeight = resume.offsetHeight;
+  if (pageHeight < resumeHeight) return true;
+  else return false;
 };
 
 /**
@@ -51,8 +51,8 @@ const contentIsGreaterThanPage = (resume, page) => {
  * @return {number}         font size of element
  */
 const getFontSizeOfElement = element => {
-    const style = window.getComputedStyle(element, null).getPropertyValue('font-size');
-    return parseFloat(style);
+  const style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+  return parseFloat(style);
 };
 
 /**
@@ -60,8 +60,8 @@ const getFontSizeOfElement = element => {
  * @param {HTMLElement[]}
  */
 const calcNewFontSizes = elements => {
-    return elements
-        .map(el => getFontSizeOfElement(el) * 0.99);
+  return elements
+    .map(el => getFontSizeOfElement(el) * 0.99);
 };
 
 
@@ -71,11 +71,11 @@ const calcNewFontSizes = elements => {
  * @return {string} '' if no shadow, otherwise shadow e.g. 'rgba(0, 0, 0, 0.137255) 0px 2px 2px 0px'
  */
 const hasBoxShadow = element => {
-    const style = window
-        .getComputedStyle(element, null)
-        .getPropertyValue('box-shadow');
-    if (style != 'none') return style;
-    else return '';
+  const style = window
+    .getComputedStyle(element, null)
+    .getPropertyValue('box-shadow');
+  if (style != 'none') return style;
+  else return '';
 };
 
 /**
@@ -84,10 +84,10 @@ const hasBoxShadow = element => {
  * @return {{}}
  */
 const getAbsolutePositionOfElement = element => {
-    return {
-        top: element.getBoundingClientRect().top,
-        left: element.getBoundingClientRect().left
-    };
+  return {
+    top: element.getBoundingClientRect().top,
+    left: element.getBoundingClientRect().left
+  };
 };
 
 /**
@@ -96,9 +96,9 @@ const getAbsolutePositionOfElement = element => {
  * @return {string}         e.g. '50%'
  */
 const getBorderRadiusOfElement = element => {
-    return window
-        .getComputedStyle(element, null)
-        .getPropertyValue('border-radius');
+  return window
+    .getComputedStyle(element, null)
+    .getPropertyValue('border-radius');
 };
 
 /**
@@ -108,17 +108,17 @@ const getBorderRadiusOfElement = element => {
  * @param {string} boxShadow e.g. 'rgba(0, 0, 0, 0.137255) 0px 2px 2px 0px'
  */
 const addNewBoxShadow = (element, position, boxShadow) => {
-    let div = document.createElement('div');
-    div.style.height = element.offsetHeight;
-    div.style.width = element.offsetWidth;
-    div.style.borderRadius = getBorderRadiusOfElement(element);
-    div.style.position = 'absolute';
-    div.style.boxShadow = boxShadow;
-    div.style.webkitPrintColorAdjust = 'exact';
-    div.style.webkitFilter = 'opacity(1)';
-    div.style.top = position.top;
-    div.style.left = position.left;
-    document.getElementsByTagName('body')[0].appendChild(div);
+  let div = document.createElement('div');
+  div.style.height = element.offsetHeight;
+  div.style.width = element.offsetWidth;
+  div.style.borderRadius = getBorderRadiusOfElement(element);
+  div.style.position = 'absolute';
+  div.style.boxShadow = boxShadow;
+  div.style.webkitPrintColorAdjust = 'exact';
+  div.style.webkitFilter = 'opacity(1)';
+  div.style.top = position.top;
+  div.style.left = position.left;
+  document.getElementsByTagName('body')[0].appendChild(div);
 };
 
 /**
@@ -127,15 +127,15 @@ const addNewBoxShadow = (element, position, boxShadow) => {
  * @return {HTMLElement[]} elements with shadows
  */
 const getElementsWithShadows = elements => {
-    const ar = [].slice.call(elements);
-    return ar
-        .filter(el => hasBoxShadow(el) != '')
-        .map(el => {
-            return {
-                element: el,
-                shadow: hasBoxShadow(el)
-            };
-        });
+  const ar = [].slice.call(elements);
+  return ar
+    .filter(el => hasBoxShadow(el) != '')
+    .map(el => {
+      return {
+        element: el,
+        shadow: hasBoxShadow(el)
+      };
+    });
 };
 
 /**
@@ -143,13 +143,13 @@ const getElementsWithShadows = elements => {
  * see: http://stackoverflow.com/questions/13975198/text-shadow-and-box-shadow-while-printing-chrome
  */
 const fixBoxShadows = () => {
-    const elements = getAllDOMElements();
-    const elementsWithShadow = getElementsWithShadows(elements);
-    elementsWithShadow.forEach(element => {
-        const position = getAbsolutePositionOfElement(element.element);
-        element.element.style.boxShadow = 'none';
-        addNewBoxShadow(element.element, position, element.shadow);
-    });
+  const elements = getAllDOMElements();
+  const elementsWithShadow = getElementsWithShadows(elements);
+  elementsWithShadow.forEach(element => {
+    const position = getAbsolutePositionOfElement(element.element);
+    element.element.style.boxShadow = 'none';
+    addNewBoxShadow(element.element, position, element.shadow);
+  });
 };
 
 /**
@@ -157,40 +157,41 @@ const fixBoxShadows = () => {
  * @return {Boolean} true if page contains resume
  */
 const isResume = () => {
-    if (document.getElementsByTagName('page')[0]) return true;
-    else return false;
+  if (document.getElementsByTagName('page')[0]) return true;
+  else return false;
 };
 
 /**
  * checks whether font needs to be fixed, and if fixes it
  */
 const checkFont = () => {
-    const page = getPageDOMElement();
-    const resume = getResumeDOMElement(page);
-    const fixFont = function(resume, page) {
-        const elements = getAllDOMElements();
-        const elementsAr = [].slice.call(elements);
-        const newFontSizes = calcNewFontSizes(elementsAr);
-        elementsAr.forEach((el, i) => el.style.fontSize = newFontSizes[i] + 'px');
-        if (contentIsGreaterThanPage(resume, page)) fixFont(resume, page);
-    };
-    if (
-        autoFontEnabled(resume) &&
-        contentIsGreaterThanPage(resume, page)
-    ) fixFont(resume, page);
+  const page = getPageDOMElement();
+  const resume = getResumeDOMElement(page);
+  const fixFont = function(resume, page) {
+    const elements = getAllDOMElements();
+    const elementsAr = [].slice.call(elements);
+    const newFontSizes = calcNewFontSizes(elementsAr);
+    elementsAr.forEach((el, i) => el.style.fontSize = newFontSizes[i] + 'px');
+    if (contentIsGreaterThanPage(resume, page)) fixFont(resume, page);
+  };
+  if (
+    autoFontEnabled(resume) &&
+    contentIsGreaterThanPage(resume, page)
+  ) fixFont(resume, page);
 };
 
 const isElectron = () => {
-    return window && window.process && window.process.type;
+  return window && window.process && window.process.type;
 }
 
 /**
  * fixes resume
  */
 const fixResume = () => {
-    if (!isResume()) return;
-    checkFont();
-    if (isElectron()) fixBoxShadows();
+  console.log('aaaaaaa');
+  if (!isResume()) return;
+  checkFont();
+  if (isElectron()) fixBoxShadows();
 };
 
 fixResume();

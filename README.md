@@ -26,22 +26,22 @@ Follow these instructions to set up this project and create your own CV.
 
 ### Prerequisites
 
-To run this project, please install node. (See https://nodejs.org/en/download/package-manager/ and https://nodejs.org/en/download/)
+To run this project, please install node.
 
 
 
 ### Installation
 
 - Clone this repository.
-- Switch to project directory and run `npm install`.
-
+- Switch to project directory.
+- Run `npm install`.
+- To preview CV's run `npm run dev`. Check out <http://localhost:3000>.
 
 
 ### Adjusting your personal information
 
 - Adjust your personal information in `/src/person.js`.
 - Replace placeholder image `/public/person.jpg` with your portrait.
-- To preview your CV run `npm run dev`. Check out <http://localhost:3000>.
 
 The app recompiles automatically. This may take a short while. Feel free to adjust stylings to fit your needs!
 

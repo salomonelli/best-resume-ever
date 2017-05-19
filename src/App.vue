@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+      <div class="page">
+        <router-view></router-view>
+      </div>
   </div>
 </template>
 
@@ -12,12 +13,30 @@ export default {
 </script>
 
 <style>
+
+@import '../node_modules/roboto-fontface/css/roboto/roboto-fontface.css';
+@import '../node_modules/font-awesome/css/font-awesome.css';
+@import '../node_modules/material-design-icons/iconfont/material-icons.css';
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    overflow-x: hidden;
+    background: #CCCCCC;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    box-sizing: border-box;
+}
+.page {
+    background: white;
+    position: relative;
+    width: 21cm;
+    height: 29.7cm;
+    display: block;
+    page-break-after: auto;
+    overflow: hidden;
+}
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
 }
 </style>

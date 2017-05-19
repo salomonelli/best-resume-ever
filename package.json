@@ -14,6 +14,10 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
+    "material-design-icons": "^3.0.1",
+    "material-icons": "^0.1.0",
+    "roboto-fontface": "^0.7.0",
     "vue": "^2.2.6",
     "vue-router": "^2.3.1"
   },

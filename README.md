@@ -1,59 +1,30 @@
-# best-resume-ever
+# vue-test
 
-Build your best resume ever!
+> A Vue.js project
 
-A collection of multiple beautiful resumes build with LESS and Mustache Templates. Add your personal information to a JSON-File and easily export all of the Curriculum Vitaes as PDF!
+## Build Setup
 
+``` bash
+# install dependencies
+npm install
 
+# serve with hot reload at localhost:8080
+npm run dev
 
+# build for production with minification
+npm run build
 
-## Resumes
+# build for production and view the bundle analyzer report
+npm run build --report
 
-<a href="public/preview/resume-material-blue.png"><img src="public/preview/resume-material-blue.png" width="150"/></a>
-<a href="public/preview/resume-material-dark.png"><img src="public/preview/resume-material-dark.png" width="150"/></a>
-<a href="public/preview/resume-left-right.png"><img src="public/preview/resume-left-right.png" width="150"/></a>
-<a href="public/preview/resume-side-bar.png"><img src="public/preview/resume-side-bar.png" width="150"/></a>
-<a href="public/preview/resume-oblique.png"><img src="public/preview/resume-oblique.png" width="150"/></a>
-<a href="public/preview/resume-grey-boxes.png"><img src="public/preview/resume-grey-boxes.png" width="150"/></a>
+# run unit tests
+npm run unit
 
+# run e2e tests
+npm run e2e
 
+# run all tests
+npm test
+```
 
-## Getting Started
-
-Follow these instructions to set up this project and create your own CV.
-
-
-
-### Prerequisites
-
-To run this project, please install node. (See https://nodejs.org/en/download/package-manager/ and https://nodejs.org/en/download/)
-
-
-
-### Installation
-
-- Clone this repository.
-- Switch to project directory and run `npm install`.
-
-
-
-### Adjusting your personal information
-
-- Adjust your personal information in `/src/person.js`.
-- Replace placeholder image `/public/person.jpg` with your portrait.
-- To preview your CV run `npm run dev`. Check out <http://localhost:3000>.
-
-The app recompiles automatically. This may take a short while. Feel free to adjust stylings to fit your needs!
-
-
-
-### Exporting resumes as PDF
-
-With `npm run pdf` the resumes can be exported. You will find all resumes as PDFs in `/pdf`.
-
-
-
-## Configuration and Contribution
-
-Please read [the guide](/docs/Docs.md) on how to configure page size, stylings and adding your own templates.
-Feel free to create your own templates or help in fixing issues.
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

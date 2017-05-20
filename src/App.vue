@@ -9,7 +9,7 @@
 <script>
 export default {
   name: 'app'
-}
+};
 </script>
 
 <style>
@@ -24,6 +24,10 @@ export default {
     padding: 0;
     -webkit-print-color-adjust: exact;
     box-sizing: border-box;
+}
+.resume{
+  height: 100%;
+  width: 100%;
 }
 .page {
     background: white;

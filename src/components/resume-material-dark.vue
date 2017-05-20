@@ -1,113 +1,125 @@
 <template>
-<div class="resume leftCol m_box">
-  <div class="shadow"></div>
-  <div class="heading" id="myselfpic">
-  </div>
-  <div class="section-headline">
-    Contact
-  </div>
-  <div class="item">
-    <div class="icon">
-      <i class="material-icons">account_circle</i>
+<div class="resume">
+  <div class="leftCol m_box">
+    <div class="shadow"></div>
+    <div class="heading" id="myselfpic">
     </div>
-    <div class="text">
-      <ul>
-        <li> Born {{person.birth.year}} in {{person.birth.location}}</li>
-      </ul>
+    <div class="section-headline">
+      Contact
     </div>
-  </div>
-
-  <div class="item">
-    <div class="icon">
-      <i class="material-icons">location_city</i>
-    </div>
-    <div class="text">
-      <ul>
-        <li>{{person.contact.street}}</li>
-        <li>{{person.contact.city}}</li>
-      </ul>
-    </div>
-  </div>
-
-  <a :href="'tel:'+person.contact.phone">
     <div class="item">
       <div class="icon">
-        <i class="material-icons">phone</i>
+        <i class="material-icons">account_circle</i>
       </div>
       <div class="text">
-        {{person.contact.phone}}
+        <ul>
+          <li> Born {{person.birth.year}} in {{person.birth.location}}</li>
+        </ul>
       </div>
     </div>
-  </a>
 
-  <a :href="'mailto:'+person.contact.email">
     <div class="item">
       <div class="icon">
-        <i class="material-icons">email</i>
+        <i class="material-icons">location_city</i>
       </div>
       <div class="text">
-        {{person.contact.email}}
+        <ul>
+          <li>{{person.contact.street}}</li>
+          <li>{{person.contact.city}}</li>
+        </ul>
       </div>
     </div>
-  </a>
 
-  <a :href="'https://github.com/'+person.contact.github" target="_blank">
-    <div class="item">
-      <div class="icon">
-        <i class="fa fa-github"></i>
+    <a :href="'tel:'+person.contact.phone">
+      <div class="item">
+        <div class="icon">
+          <i class="material-icons">phone</i>
+        </div>
+        <div class="text">
+          {{person.contact.phone}}
+        </div>
       </div>
-      <div class="text">
-        <span>@{{person.contact.github}}</span>
-        <span>github.com/{{person.contact.github}}</span>
-      </div>
-    </div>
-  </a>
+    </a>
 
-  <a :href="person.contact.website" target="_blank">
-    <div class="item">
-      <div class="icon">
-        <i class="material-icons">language</i>
+    <a :href="'mailto:'+person.contact.email">
+      <div class="item">
+        <div class="icon">
+          <i class="material-icons">email</i>
+        </div>
+        <div class="text">
+          {{person.contact.email}}
+        </div>
       </div>
-      <div class="text">
-        <span>{{person.contact.website}}m</span>
+    </a>
+
+    <a :href="'https://github.com/'+person.contact.github" target="_blank">
+      <div class="item">
+        <div class="icon">
+          <i class="fa fa-github"></i>
+        </div>
+        <div class="text">
+          <span>@{{person.contact.github}}</span>
+          <span>github.com/{{person.contact.github}}</span>
+        </div>
       </div>
+    </a>
+
+    <a :href="person.contact.website" target="_blank">
+      <div class="item">
+        <div class="icon">
+          <i class="material-icons">language</i>
+        </div>
+        <div class="text">
+          <span>{{person.contact.website}}</span>
+        </div>
+      </div>
+    </a>
+
+    <div class="item last">
+      <div class="section-headline">
+        Skills
+      </div>
+        <div class="skill" v-for="skill in person.skills">
+          <div class="right">
+            <span>{{skill.name}}</span>
+            <div class="progress">
+              <div class="determinate" :style="'width: '+skill.level+'%;'">
+                <i class="fa fa-circle"></i>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
-  </a>
+  </div>
+
+  <div class="rightCol">
+    <div class="title">
+      <h2>{{person.name.first}}  {{person.name.last}}</h2>
+      <div>{{person.position}}</div>
+    </div>
+
+    <div class="section-headline">Working experience</div>
+      <div class="block" v-for="experience in person.experience">
+        <div class="block-helper"></div>
+        <div class="headline">{{experience.position}} - {{experience.company}}</h3>
+          <div class="subheadline">{{experience.timeperiod}}</div>
+          <p class="info">
+            {{experience.description}}
+          </p>
+        </div>
+      </div>
+    <div class="section-headline">Education</div>
+      <div class="block" v-for="education in person.education">
+        <div class="block-helper"></div>
+        <div class="headline">{{education.degree}}</div>
+        <p class="info">
+          {{education.timeperiod}}, {{education.description}}
+        </p>
+      </div>
+  </div>
+
+  <div style="clear:both;"></div>
 </div>
-<div class="rightCol">
-  <div class="title">
-    <h2>{{person.name.first}}  {{person.name.last}}</h2>
-    <div>{{person.position}}</div>
-  </div>
-
-  <div class="section-headline">Working experience</div>
-
-
-  {{#person.experience}}
-  <div class="block">
-    <div class="block-helper"></div>
-    <div class="headline">{{position}} - {{company}}</h3>
-      <div class="subheadline">{{timeperiod}}</div>
-      <p class="info">
-        {{description}}
-      </p>
-    </div>
-  </div>
-  {{/person.experience}}
-
-  <div class="section-headline">Education</div>
-
-  {{#person.education}}
-  <div class="block">
-    <div class="block-helper"></div>
-    <div class="headline">{{degree}}</div>
-    <p class="info">
-      {{timeperiod}}, {{description}}
-    </p>
-  </div>
-  {{/person.education}}
-</div>
-<div style="clear:both;"></div>
 </template>
 
 <script>
@@ -116,10 +128,10 @@ import {
 } from '../person';
 export default {
   name: 'hello',
-  data() {
+  data () {
     return {
       person: PERSON
-    }
+    };
   }
 };
 </script>
@@ -128,6 +140,7 @@ export default {
 <style scoped>
 .resume {
   font-family: 'Roboto' !important;
+  background: #CCCCCC;
 }
 
 a {

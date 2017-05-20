@@ -33,6 +33,7 @@ module.exports = {
     ],
     'no-console': 'off',
     'curly': ['error', 'multi-or-nest'],
+    'space-before-function-paren': ['error', 'always'],
     'no-var': 'error'
   }
 }

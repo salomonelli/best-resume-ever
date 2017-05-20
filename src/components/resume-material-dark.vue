@@ -79,16 +79,16 @@
       <div class="section-headline">
         Skills
       </div>
-        <div class="skill" v-for="skill in person.skills">
-          <div class="right">
-            <span>{{skill.name}}</span>
-            <div class="progress">
-              <div class="determinate" :style="'width: '+skill.level+'%;'">
-                <i class="fa fa-circle"></i>
-              </div>
+      <div class="skill" v-for="skill in person.skills">
+        <div class="right">
+          <span>{{skill.name}}</span>
+          <div class="progress">
+            <div class="determinate" :style="'width: '+skill.level+'%;'">
+              <i class="fa fa-circle"></i>
             </div>
           </div>
         </div>
+      </div>
     </div>
   </div>
 
@@ -99,23 +99,23 @@
     </div>
 
     <div class="section-headline">Working experience</div>
-      <div class="block" v-for="experience in person.experience">
-        <div class="block-helper"></div>
-        <div class="headline">{{experience.position}} - {{experience.company}}</h3>
-          <div class="subheadline">{{experience.timeperiod}}</div>
-          <p class="info">
-            {{experience.description}}
-          </p>
-        </div>
-      </div>
-    <div class="section-headline">Education</div>
-      <div class="block" v-for="education in person.education">
-        <div class="block-helper"></div>
-        <div class="headline">{{education.degree}}</div>
+    <div class="block" v-for="experience in person.experience">
+      <div class="block-helper"></div>
+      <div class="headline">{{experience.position}} - {{experience.company}}</h3>
+        <div class="subheadline">{{experience.timeperiod}}</div>
         <p class="info">
-          {{education.timeperiod}}, {{education.description}}
+          {{experience.description}}
         </p>
       </div>
+    </div>
+    <div class="section-headline">Education</div>
+    <div class="block" v-for="education in person.education">
+      <div class="block-helper"></div>
+      <div class="headline">{{education.degree}}</div>
+      <p class="info">
+        {{education.timeperiod}}, {{education.description}}
+      </p>
+    </div>
   </div>
 
   <div style="clear:both;"></div>
@@ -126,14 +126,16 @@
 import {
   PERSON
 } from '../person';
-export default {
-  name: 'hello',
+
+import Vue from 'vue';
+export default Vue.component('resume-material-dark', {
+  name: 'resume-material-dark',
   data () {
     return {
       person: PERSON
     };
   }
-};
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

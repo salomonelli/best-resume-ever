@@ -1,16 +1,16 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import ResumeMaterialDark from '@/components/resume-material-dark';
 import Resume from '@/pages/resume';
+import Home from '@/pages/home';
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/resume-material-dark',
-      name: 'resume-material-dark',
-      component: ResumeMaterialDark
+      path: '/',
+      name: 'home',
+      component: Home
     },
     {
       path: '/resume/:resumeid',

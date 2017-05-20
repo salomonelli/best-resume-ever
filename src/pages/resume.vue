@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="page-wrapper">
+    <div class="page">
     <resume-material-dark v-if="$route.params.resumeid==='material-dark'"></resume-material-dark>
   </div>
+</div>
 </template>
 
 <script>
@@ -11,3 +13,29 @@ export default Vue.component('resume', {
   name: 'app'
 });
 </script>
+
+<style scoped>
+.page-wrapper{
+    overflow-x: hidden;
+    background: #CCCCCC;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    box-sizing: border-box;
+}
+
+.resume {
+  height: 100%;
+  width: 100%;
+}
+
+.page {
+  background: white;
+  position: relative;
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  page-break-after: auto;
+  overflow: hidden;
+}
+</style>

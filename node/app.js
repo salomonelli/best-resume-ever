@@ -26,7 +26,7 @@ const convert = async() => {
  */
 const electroshotScript = resume => {
   const dir = path.join(__dirname, '../pdf');
-  return 'electroshot localhost:8080/#/' + resume +
+  return 'electroshot localhost:8080/#/resume/' + resume +
     ' 2481x3508 --pdf-margin none --format pdf --out ' + dir +
     ' --filename "' + resume + '.pdf" --pdf-background; ';
 };
@@ -41,8 +41,9 @@ const getResumesFromDirectories = () => {
   .filter(dir => dir.includes('resume-') && dir !== 'resume-XX')
   .map(dir => {
     let name = dir.replace('resume-', '');
+    let fileName = dir.replace('.vue', '');
     return {
-      path: dir.replace('.vue', ''),
+      path: fileName.replace('resume-', ''),
       name: name.replace('-', ' ')
     };
   });

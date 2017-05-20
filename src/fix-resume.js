@@ -156,6 +156,7 @@ const fixBoxShadows = () => {
  * @return {Boolean} true if page contains resume
  */
 const isResume = () => {
+  console.log(document.getElementsByTagName('page')[0]);
   if (document.getElementsByTagName('page')[0]) return true;
   else return false;
 };
@@ -166,11 +167,11 @@ const isResume = () => {
 const checkFont = () => {
   const page = getPageDOMElement();
   const resume = getResumeDOMElement(page);
-  const fixFont = function(resume, page) {
+  const fixFont = (resume, page) => {
     const elements = getAllDOMElements();
     const elementsAr = [].slice.call(elements);
     const newFontSizes = calcNewFontSizes(elementsAr);
-    elementsAr.forEach((el, i) => el.style.fontSize = newFontSizes[i] + 'px');
+    elementsAr.forEach((el, i) => (el.style.fontSize = newFontSizes[i] + 'px'));
     if (contentIsGreaterThanPage(resume, page)) fixFont(resume, page);
   };
   if (
@@ -179,17 +180,13 @@ const checkFont = () => {
   ) fixFont(resume, page);
 };
 
-const isElectron = () => {
-  return window && window.process && window.process.type;
-}
-
 /**
  * fixes resume
  */
-const fixResume = () => {
+export const fixResume = () => {
+  console.log('aaaaaaaaaaaaaa');
   if (!isResume()) return;
   checkFont();
-  //if (isElectron())
   fixBoxShadows();
 };
 

@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import './fix-resume';
 export default {
   name: 'app'
 };

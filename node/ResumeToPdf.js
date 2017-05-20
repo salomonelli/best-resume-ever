@@ -7,7 +7,8 @@ const ResumeToPdf = {
    * @return {string}        electroshot command
    */
   electroshotScript: resume => {
-    const dir = path.join(__dirname, '../../pdf');
+    const dir = path.join(__dirname, '../pdf');
+    console.dir(dir);
     return 'electroshot localhost:8080/#/' + resume +
       ' 2481x3508 --pdf-margin none --format pdf --out ' + dir +
       ' --filename "' + resume + '.pdf" --pdf-background; ';

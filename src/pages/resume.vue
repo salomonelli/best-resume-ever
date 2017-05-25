@@ -8,18 +8,11 @@
 
 <script>
 import Vue from 'vue';
-// import '../fix-resume';
 import '../components/resume-material-dark.vue';
-// import {fixResume} from '../fix-resume';
 import {fix} from 'chrome-shadow-fixer';
 export default Vue.component('resume', {
   name: 'app',
-  created: () => {
-    console.log('created');
-  },
   mounted: () => {
-    // fixResume();
-    console.dir(fix);
     fix();
   }
 });

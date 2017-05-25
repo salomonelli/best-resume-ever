@@ -1,6 +1,6 @@
 <template>
-  <div class="page-wrapper">
-    <div class="page">
+<div class="page-wrapper">
+  <div class="page">
     <resume-material-dark v-if="$route.params.resumeid==='material-dark'"></resume-material-dark>
   </div>
 </div>
@@ -8,20 +8,31 @@
 
 <script>
 import Vue from 'vue';
+// import '../fix-resume';
 import '../components/resume-material-dark.vue';
+// import {fixResume} from '../fix-resume';
+import {fix} from 'chrome-shadow-fixer';
 export default Vue.component('resume', {
-  name: 'app'
+  name: 'app',
+  created: () => {
+    console.log('created');
+  },
+  mounted: () => {
+    // fixResume();
+    console.dir(fix);
+    fix();
+  }
 });
 </script>
 
 <style scoped>
-.page-wrapper{
-    overflow-x: hidden;
-    background: #CCCCCC;
-    margin: 0;
-    padding: 0;
-    -webkit-print-color-adjust: exact;
-    box-sizing: border-box;
+.page-wrapper {
+  overflow-x: hidden;
+  background: #CCCCCC;
+  margin: 0;
+  padding: 0;
+  -webkit-print-color-adjust: exact;
+  box-sizing: border-box;
 }
 
 .resume {
@@ -33,7 +44,7 @@ export default Vue.component('resume', {
   background: white;
   position: relative;
   width: 21cm;
-  height: 29.7cm;
+  height: 29.68cm;
   display: block;
   page-break-after: auto;
   overflow: hidden;

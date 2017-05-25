@@ -20,7 +20,8 @@ const getResumeDOMElement = page => {
  * @return {HTMLElement}
  */
 const getPageDOMElement = () => {
-  return document.getElementsByTagName('page')[0];
+  console.dir(document.getElementsByClassName('page'));
+  return document.getElementsByClassName('page')[0];
 };
 
 /**
@@ -152,20 +153,11 @@ const fixBoxShadows = () => {
 };
 
 /**
- * checks if the page contains a resume
- * @return {Boolean} true if page contains resume
- */
-const isResume = () => {
-  console.log(document.getElementsByTagName('page')[0]);
-  if (document.getElementsByTagName('page')[0]) return true;
-  else return false;
-};
-
-/**
  * checks whether font needs to be fixed, and if fixes it
  */
 const checkFont = () => {
   const page = getPageDOMElement();
+  console.dir(page);
   const resume = getResumeDOMElement(page);
   const fixFont = (resume, page) => {
     const elements = getAllDOMElements();
@@ -184,8 +176,6 @@ const checkFont = () => {
  * fixes resume
  */
 export const fixResume = () => {
-  console.log('aaaaaaaaaaaaaa');
-  if (!isResume()) return;
   checkFont();
   fixBoxShadows();
 };

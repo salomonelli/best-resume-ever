@@ -13,6 +13,7 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "chrome-shadow-fixer": "0.0.12",
     "font-awesome": "^4.7.0",
     "material-design-icons": "^3.0.1",
     "material-icons": "^0.1.0",

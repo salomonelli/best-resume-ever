@@ -1,7 +1,9 @@
 <template>
 <div class="page-wrapper">
   <div class="page">
-    <resume-material-dark v-if="$route.params.resumeid==='material-dark'"></resume-material-dark>
+    <div class="page-inner">
+      <resume-material-dark v-if="$route.params.resumeid==='material-dark'"></resume-material-dark>
+    </div>
   </div>
 </div>
 </template>
@@ -9,16 +11,23 @@
 <script>
 import Vue from 'vue';
 import '../components/resume-material-dark.vue';
-import {fix} from 'chrome-shadow-fixer';
+import * as chromeShadowFixer from 'chrome-shadow-fixer';
+import * as textFitter from 'text-fitter';
 export default Vue.component('resume', {
   name: 'app',
   mounted: () => {
-    fix();
+    const pageElements = document.querySelectorAll('.page-inner');
+    textFitter.fix(pageElements);
+    chromeShadowFixer.fix();
   }
 });
 </script>
 
 <style scoped>
+.page-inner{
+  height: 100%;
+  width: 100%;
+}
 .page-wrapper {
   overflow-x: hidden;
   background: #CCCCCC;

@@ -7,8 +7,7 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
-    "pdf": "node --harmony-async-await node/app.js",
-    "build": "node build/build.js",
+    "pdf": "node node/app.js",
     "test": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
@@ -18,11 +17,13 @@
     "material-design-icons": "^3.0.1",
     "material-icons": "^0.1.0",
     "roboto-fontface": "^0.7.0",
+    "text-fitter": "0.0.6",
     "vue": "^2.2.6",
     "vue-router": "^2.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",

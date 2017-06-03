@@ -6,14 +6,13 @@ const exec = require('child_process').exec;
  * converts resumes to pdf
  * @return {Promise}
  */
-const convert = async() => {
+const convert = () => {
   try {
     const directories = getResumesFromDirectories();
     let script = '';
     directories.forEach(resume => (script += electroshotScript(resume.path)));
     script = script.substring(0, script.length - 2);
-    await execBash(script);
-    console.log('Successfully generated pdfs. Check in "/pdf".');
+    return execBash(script);
   } catch (err) {
     throw new Error(err);
   }

@@ -89,155 +89,129 @@ export default Vue.component('resume-oblique', {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="less" scoped>
 #resume3 {
-  font-family: 'Open Sans Condensed', sans-serif;
-  padding-bottom: 50px;
-}
-
-#resume3 h3 {
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-#resume3 a,
-#resume3 a:focus,
-#resume3 a:hover {
-  color: black;
-  text-decoration: none;
-}
-
-#resume3 .resume-header .triangle {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 600px 0 0 1500px;
-  border-color: #006064 transparent transparent transparent;
-  position: absolute;
-  left: -600px;
-  top: 0;
-}
-
-#resume3 .resume-header .person-header {
-  position: absolute;
-  z-index: 20;
-  right: 15%;
-  top: 200px;
-}
-
-#resume3 .resume-header .person-header .person-wrapper {
-  overflow: hidden;
-  position: relative;
-}
-
-#resume3 .resume-header .person-header .img {
-  height: 100%;
-  width: 100px;
-  float: left;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: url('../assets/person.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
-#resume3 .resume-header .person-header .person {
-  float: right;
-  color: white;
-  margin-right: 120px;
-}
-
-#resume3 .resume-header .person-header .name {
-  text-transform: uppercase;
-  font-size: 50px;
-  display: table-caption;
-  text-align: right;
-  line-height: 1.0;
-  font-weight: bold;
-}
-
-#resume3 .resume-header .person-header .position {
-  font-size: 20px;
-  display: table-caption;
-  text-align: right;
-  line-height: 1.0;
-  margin-top: 10px;
-}
-
-#resume3 .resume-content {
-  margin-top: 435px;
-  margin-left: 15%;
-  width: 70%;
-}
-
-#resume3 .resume-content .experience .experience-block {
-  line-height: 1;
-  margin-bottom: 10px;
-}
-
-#resume3 .resume-content .experience .experience-block:first-of-type {
-  width: 80%;
-}
-
-#resume3 .resume-content .experience .experience-block .row:first-child {
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-#resume3 .resume-content .experience .experience-block .row:first-child i {
-  font-size: 17px;
-}
-
-#resume3 .education-block {
-  line-height: 1;
-  margin-bottom: 10px;
-}
-
-#resume3 .education-block .row:first-child {
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-#resume3 .skill-section .skills {
-  width: 100%;
-}
-
-#resume3 .skill-section .skills .skill-block {
-  width: 50%;
-  float: left;
-}
-
-#resume3 .skill-section .skills .skill-block i {
-  font-size: 17px;
-  margin-right: 15px;
-}
-
-#resume3 .skill-section .skills .skill-block .skill {
-  font-size: 20px;
-}
-
-#resume3 .skills-other {
-  display: inline-block;
-  font-size: 20px;
-  margin-top: 10px;
-  line-height: 1;
-}
-
-#resume3 .contact {
-  margin-top: 50px;
-}
-
-#resume3 .contact a,
-#resume3 .contact span {
-  display: inline-block;
-  font-size: 20px;
-  list-style: none;
-  margin-top: 0;
-  line-height: 1;
-  float: left;
-  padding-left: 0;
-  margin-left: 0;
+  font-family:'Open Sans Condensed', sans-serif;
+  padding-bottom:50px;
+  a, a:focus, a:hover {
+    color:black;
+    text-decoration:none;
+  }
+  h3 {
+    font-weight:bold;
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .resume-header .triangle {
+    width:0;
+    height:0;
+    border-style:solid;
+    border-width:600px 0 0 1500px;
+    border-color:#006064 transparent transparent transparent;
+    position:absolute;
+    left:-600px;
+    top:0;
+  }
+  .resume-header .person-header {
+    position:absolute;
+    z-index:20;
+    right:15%;
+    top:200px;
+    .person-wrapper {
+      overflow:hidden;
+      position:relative;
+    }
+    .img {
+      height:100%;
+      width:100px;
+      float:left;
+      position:absolute;
+      top:0;
+      right:0;
+      background:url('../assets/person.jpg');
+      background-position:center;
+      background-size:cover;
+    }
+    .person {
+      float:right;
+      color:white;
+      margin-right:120px;
+    }
+    .name {
+      text-transform:uppercase;
+      font-size:50px;
+      display:table-caption;
+      text-align:right;
+      line-height:1.0;
+      font-weight:bold;
+    }
+    .position {
+      font-size:20px;
+      display:table-caption;
+      text-align:right;
+      line-height:1.0;
+      margin-top:10px;
+    }
+  }
+  .resume-content {
+    margin-top:435px;
+    margin-left:15%;
+    width:70%;
+    .experience .experience-block {
+      line-height:1;
+      margin-bottom:10px;
+      .row:first-child {
+        font-size:20px;
+        text-transform:uppercase;
+        i {
+          font-size:17px;
+        }
+      }
+    }
+    .experience .experience-block:first-of-type {
+      width:80%;
+    }
+  }
+  .education-block {
+    line-height:1;
+    margin-bottom:10px;
+    .row:first-child {
+      font-size:20px;
+      text-transform:uppercase;
+    }
+  }
+  .skill-section .skills {
+    width:100%;
+    .skill-block {
+      width:50%;
+      float:left;
+      i {
+        font-size:17px;
+        margin-right:15px;
+      }
+      .skill {
+        font-size:20px;
+      }
+    }
+  }
+  .skills-other {
+    display:inline-block;
+    font-size:20px;
+    margin-top:10px;
+    line-height:1;
+  }
+  .contact {
+    margin-top:50px;
+    a, span {
+      display:inline-block;
+      font-size:20px;
+      list-style:none;
+      margin-top:0;
+      line-height:1;
+      float:left;
+      padding-left:0;
+      margin-left:0;
+    }
+  }
 }
 </style>

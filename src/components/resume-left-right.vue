@@ -86,178 +86,147 @@ export default Vue.component('resume-left-right', {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="less" scoped>
 #resume1 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
-  padding-bottom: 50px;
-}
-
-#resume1 h3 {
-  margin-bottom: 0;
-}
-
-#resume1 a,
-#resume1 a:focus,
-#resume1 a:hover,
-#resume1 a:visited {
-  color: #616161;
-}
-
-#resume1 span {
-  display: inline-block;
-}
-
-#resume1 .row {
-  width: 100%;
-}
-
-#resume1 .half {
-  width: 44%;
-}
-
-#resume1 .half.left {
-  float: left;
-  text-align: right;
-  padding-left: 4%;
-  padding-right: 2%;
-}
-
-#resume1 .half.right {
-  float: right;
-  text-align: left;
-  padding-right: 4%;
-  padding-left: 2%;
-}
-
-#resume1 .center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#resume1 .text-center {
-  text-align: center;
-}
-
-#resume1 .name {
-  border: 1px solid black;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  margin-top: 80px;
-  margin-bottom: 5px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 35px;
-  font-weight: 600;
-  letter-spacing: 10px;
-}
-
-#resume1 .position {
-  text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
-  font-size: smaller;
-  color: #757575;
-  margin-bottom: 40px;
-}
-
-#resume1 .image {
-  width: 100px;
-  height: 100px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-#resume1 .image .img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-image: url('../assets/person.jpg');
-  background-repeat: none;
-  background-position: center;
-  background-size: cover;
-}
-
-#resume1 .contact {
-  width: 100%;
-}
-
-#resume1 .experience .experience-block span {
-  width: 100%;
-  color: #616161;
-}
-
-#resume1 .experience .experience-block span.company {
-  font-weight: bold;
-  padding-bottom: 5px;
-  padding-top: 10px;
-  color: #424242;
-}
-
-#resume1 .experience .experience-block span.job-title {
-  font-style: italic;
-}
-
-#resume1 .education-block span {
-  color: #616161;
-}
-
-#resume1 .education-block span.degree {
-  font-weight: bold;
-  padding-bottom: 5px;
-  padding-top: 10px;
-  color: #424242;
-}
-
-#resume1 .skills-other {
-  color: #616161;
-  margin-bottom: 10px;
-}
-
-#resume1 .skills {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-#resume1 .skills .skill-block {
-  padding-bottom: 10px;
-  display: inline-block;
-}
-
-#resume1 .skills .skill-block .skill {
-  width: 100px;
-  color: #616161;
-  float: left;
-}
-
-#resume1 .skills .skill-block .skill-bar {
-  float: right;
-  background: #E0E0E0;
-  overflow: hidden;
-  height: 8px;
-  border-radius: 3px;
-  margin-top: 6.5px;
-  position: relative;
-  width: 249px;
-}
-
-#resume1 .skills .skill-block .skill-bar .level {
-  background: #757575;
-  height: 100%;
-}
-
-#resume1 .contact table {
-  text-align: right;
-  float: right;
-  margin-top: 5px;
-  color: #616161;
-  font-size: 20px;
-}
-
-#resume1 .contact table i {
-  padding: 2px;
-  color: #616161;
-}
-
-#resume1 .contact table tr td:nth-child(2) {
-  vertical-align: top;
+  font-family:'Source Sans Pro', sans-serif;
+  font-size:20px;
+  padding-bottom:50px;
+  a, a:focus, a:hover, a:visited {
+    color:#616161;
+  }
+  h3 {
+    margin-bottom:0;
+  }
+  span {
+    display:inline-block;
+  }
+  .row {
+    width:100%;
+  }
+  .half {
+    width:44%;
+  }
+  .half.left {
+    float:left;
+    text-align:right;
+    padding-left:4%;
+    padding-right:2%;
+  }
+  .half.right {
+    float:right;
+    text-align:left;
+    padding-right:4%;
+    padding-left:2%;
+  }
+  .center {
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .text-center {
+    text-align:center;
+  }
+  .name {
+    border:1px solid black;
+    text-transform:uppercase;
+    padding:10px 20px;
+    margin-top:80px;
+    margin-bottom:5px;
+    font-family:'Open Sans', sans-serif;
+    font-size:35px;
+    font-weight:600;
+    letter-spacing:10px;
+  }
+  .position {
+    text-transform:uppercase;
+    font-family:'Open Sans', sans-serif;
+    font-size:smaller;
+    color:#757575;
+    margin-bottom:40px;
+  }
+  .image {
+    width:100px;
+    height:100px;
+    margin-top:50px;
+    margin-bottom:50px;
+    .img {
+      width:100%;
+      height:100%;
+      border-radius:50%;
+      background-image:url('../assets/person.jpg');
+      background-repeat:none;
+      background-position:center;
+      background-size:cover;
+    }
+  }
+  .contact {
+    width:100%;
+    table {
+      text-align:right;
+      float:right;
+      margin-top:5px;
+      color:#616161;
+      font-size:20px;
+      i {
+        padding:2px;
+        color:#616161;
+      }
+      tr td:nth-child(2) {
+        vertical-align:top;
+      }
+    }
+  }
+  .experience .experience-block span {
+    width:100%;
+    color:#616161;
+  }
+  .experience .experience-block span.company {
+    font-weight:bold;
+    padding-bottom:5px;
+    padding-top:10px;
+    color:#424242;
+  }
+  .experience .experience-block span.job-title {
+    font-style:italic;
+  }
+  .education-block span {
+    color:#616161;
+  }
+  .education-block span.degree {
+    font-weight:bold;
+    padding-bottom:5px;
+    padding-top:10px;
+    color:#424242;
+  }
+  .skills-other {
+    color:#616161;
+    margin-bottom:10px;
+  }
+  .skills {
+    margin-top:20px;
+    margin-bottom:10px;
+    .skill-block {
+      padding-bottom:10px;
+      display:inline-block;
+      .skill {
+        width:100px;
+        color:#616161;
+        float:left;
+      }
+      .skill-bar {
+        float:right;
+        background:#e0e0e0;
+        overflow:hidden;
+        height:8px;
+        border-radius:3px;
+        margin-top:6.5px;
+        position:relative;
+        width:249px;
+        .level {
+          background:#757575;
+          height:100%;
+        }
+      }
+    }
+  }
 }
 </style>

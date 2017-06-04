@@ -17,7 +17,7 @@
     "material-design-icons": "^3.0.1",
     "material-icons": "^0.1.0",
     "roboto-fontface": "^0.7.0",
-    "text-fitter": "0.0.6",
+    "text-fitter": "0.0.8",
     "vue": "^2.2.6",
     "vue-router": "^2.3.1"
   },

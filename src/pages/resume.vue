@@ -4,6 +4,7 @@
     <div class="page-inner">
       <resume-material-dark v-if="$route.params.resumeid==='material-dark'"></resume-material-dark>
       <resume-material-blue v-if="$route.params.resumeid==='material-blue'"></resume-material-blue>
+      <resume-left-right v-if="$route.params.resumeid==='left-right'"></resume-left-right>
     </div>
   </div>
 </div>
@@ -15,6 +16,7 @@ import * as chromeShadowFixer from 'chrome-shadow-fixer';
 import * as textFitter from 'text-fitter';
 import '../components/resume-material-dark.vue';
 import '../components/resume-material-blue.vue';
+import '../components/resume-left-right.vue';
 export default Vue.component('resume', {
   name: 'app',
   mounted: () => {

@@ -14,6 +14,7 @@ export default {
 @import '../node_modules/roboto-fontface/css/roboto/roboto-fontface.css';
 @import '../node_modules/font-awesome/css/font-awesome.css';
 @import '../node_modules/material-design-icons/iconfont/material-icons.css';
+@import '../node_modules/source-sans-pro/source-sans-pro.css';
 
 body {
   padding: 0;

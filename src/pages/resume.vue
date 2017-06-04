@@ -3,6 +3,7 @@
   <div class="page">
     <div class="page-inner">
       <resume-material-dark v-if="$route.params.resumeid==='material-dark'"></resume-material-dark>
+      <resume-material-blue v-if="$route.params.resumeid==='material-blue'"></resume-material-blue>
     </div>
   </div>
 </div>
@@ -10,14 +11,15 @@
 
 <script>
 import Vue from 'vue';
-import '../components/resume-material-dark.vue';
 import * as chromeShadowFixer from 'chrome-shadow-fixer';
 import * as textFitter from 'text-fitter';
+import '../components/resume-material-dark.vue';
+import '../components/resume-material-blue.vue';
 export default Vue.component('resume', {
   name: 'app',
   mounted: () => {
     const pageElements = document.querySelectorAll('.page-inner');
-    textFitter.fix(pageElements);
+    textFitter.fix(pageElements, false);
     chromeShadowFixer.fix();
   }
 });

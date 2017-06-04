@@ -9,6 +9,12 @@
         <span>material-dark</span>
       </router-link>
     </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/material-blue'">
+        <img src="../assets/preview/resume-material-dark.png" />
+        <span>material-blue</span>
+      </router-link>
+    </div>
   </div>
 </div>
 </template>
@@ -38,7 +44,10 @@ export default Vue.component('resume', {
 }
 
 .preview{
-  width: 200px;
+  width: 30%;
+  float: left;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
 }
 
 .preview img{

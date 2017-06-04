@@ -145,249 +145,247 @@ export default Vue.component('resume-material-blue', {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="less" scoped>
 #material-blue {
-  font-family: 'roboto', sans-serif;
-  background-color: #ccc;
-  font-size: 15px;
-  line-height: 1.5;
-  color: #767270;
-  letter-spacing: 0.072em;
-  font-weight: normal;
+  font-family:'roboto', sans-serif;
+  background-color:#cccccc;
+  font-size:15px;
+  line-height:1.5;
+  color:#767270;
+  letter-spacing:0.072em;
+  font-weight:normal;
+  h1, h3, h5, h6 {
+    font-weight:400;
+    margin:0;
+  }
+  .c {
+    clear:both;
+  }
+  li {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    padding-top:9px;
+  }
+  ul {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+  }
+  p {
+    margin-top:0;
+    margin-bottom:25px;
+    font-family:'Roboto', sans-serif;
+    font-weight:300;
+    font-size:10pt;
+    line-height:17pt;
+  }
+  .m_box {
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  }
+  .fa {
+    display:inline-block;
+    font-family:FontAwesome;
+    font-style:normal;
+    font-weight:normal;
+    line-height:1;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-size:26px;
+  }
+  h2 {
+    font-weight:400;
+    font-weight:500;
+    margin:0;
+    margin:0;
+    font-size:22pt;
+    line-height:37pt;
+  }
+  h4 {
+    font-weight:400;
+    margin:0;
+    font-size:12pt;
+    line-height:20pt;
+    opacity:1;
+  }
+  .rightCol {
+    width:63.5%;
+    height:100%;
+    float:right;
+    display:flex;
+    flex-direction:column;
+    .block {
+      box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+      width:100%;
+      min-height:50px;
+      flex:1;
+      position:relative;
+      background-color:white;
+      padding-top:24px;
+      padding-bottom:10px;
+      margin-top:6px;
+      margin-bottom:6px;
+      .icon {
+        width:16%;
+        float:left;
+        margin-left:0;
+        .fa {
+          text-align:center;
+          display:block;
+          font-size:30pt;
+        }
+      }
+      .content {
+        width:80%;
+        position:absolute;
+        height:96%;
+        left:17%;
+        padding-right:3%;
+        text-align:left;
+        display:flex;
+        flex-direction:column;
+        .item {
+          border-bottom:1px solid #bdbdbd;
+          flex:1;
+          width:97%;
+          display:flex;
+          justify-content:center;
+          flex-direction:column;
+          text-align:left;
+          span {
+            color:#5da4d9;
+            margin-top:0;
+            font-size:10pt;
+            line-height:16pt;
+          }
+          p {
+            margin-top:5px;
+          }
+        }
+        .item:last-of-type {
+          border-bottom-style:none;
+          border-bottom-style:none;
+        }
+      }
+    }
+  }
+  .leftCol {
+    width:35%;
+    height:100%;
+    float:left;
+    padding:0;
+    text-align:left;
+    color:#ffffff;
+    background-color:#5da4d9;
+    overflow:hidden;
+    display:block;
+    a {
+      color:white;
+      text-decoration:none;
+    }
+    .heading {
+      background-color:white;
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-position:center;
+      position:relative;
+      width:100%;
+      height:340px;
+    }
+    .title {
+      position:absolute;
+      right:25px;
+      bottom:25px;
+      span {
+        margin-top:-5px;
+        font-size:10pt;
+        margin:0;
+        padding:0;
+        line-height:15pt;
+      }
+    }
+    .item {
+      width:100%;
+      margin-top:13px;
+      float:left;
+      .icon {
+        width:20%;
+        margin-top:8px;
+        float:left;
+      }
+      .fa {
+        display:inherit;
+        text-align:center;
+      }
+      .text {
+        float:right;
+        width:69%;
+        padding-right:10%;
+        padding-bottom:13px;
+        border-bottom:1px solid #4783c2;
+        li {
+          padding-top:0;
+        }
+      }
+      span {
+        font-weight:300;
+      }
+      .skill {
+        clear:both;
+        width:77%;
+        margin-left:14%;
+        padding-top:4px;
+        .left {
+          float:left;
+          width:10%;
+          padding-top:3px;
+          i:nth-child(2) {
+            float:left;
+            padding-top:4px;
+          }
+        }
+        .right {
+          float:right;
+          width:90%;
+          .progress {
+            float:left;
+            position:relative;
+            height:2px;
+            display:block;
+            width:95%;
+            background-color:#4783c2;
+            border-radius:2px;
+            margin:0.5rem 0 1rem;
+            overflow:visible;
+            .determinate {
+              background-color:white;
+              position:absolute;
+              top:0;
+              bottom:0;
+              .fa {
+                font-size:12px;
+                position:absolute;
+                top:-4px;
+                right:-2px;
+                margin-left:50%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .item.last .text {
+      border-bottom-style:none;
+      padding-bottom:0;
+    }
+  }
+  #myselfpic {
+    background-image:url('../assets/person.jpg');
+    color:black;
+  }
+  #githubIcon {
+    width:25px;
+    padding-left:17px;
+  }
 }
-#material-blue .c {
-  clear: both;
-}
-#material-blue li,
-#material-blue ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-#material-blue li {
-  padding-top: 9px;
-}
-#material-blue p {
-  margin-top: 0;
-  margin-bottom: 25px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 10pt;
-  line-height: 17pt;
-}
-#material-blue .m_box {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-}
-#material-blue .fa {
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 26px;
-}
-#material-blue h1,
-#material-blue h2,
-#material-blue h3,
-#material-blue h4,
-#material-blue h5,
-#material-blue h6 {
-  font-weight: 400;
-  margin: 0;
-}
-#material-blue h2 {
-  font-size: 22pt;
-  line-height: 37pt;
-  margin: 0;
-  font-weight: 500;
-}
-#material-blue h4 {
-  font-size: 12pt;
-  line-height: 20pt;
-  opacity: 1;
-}
-#material-blue .rightCol {
-  width: 63.5%;
-  height: 100%;
-  float: right;
-  display: flex;
-  flex-direction: column;
-}
-#material-blue .rightCol .block {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  width: 100%;
-  min-height: 50px;
-  flex: 1;
-  position: relative;
-  background-color: white;
-  padding-top: 24px;
-  padding-bottom: 10px;
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-#material-blue .rightCol .block .icon {
-  width: 16%;
-  float: left;
-  margin-left: 0;
-}
-#material-blue .rightCol .block .icon .fa {
-  text-align: center;
-  display: block;
-  font-size: 30pt;
-}
-#material-blue .rightCol .block .content {
-  width: 80%;
-  position: absolute;
-  height: 96%;
-  left: 17%;
-  padding-right: 3%;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-}
-#material-blue .rightCol .block .content .item {
-  border-bottom: 1px solid #bdbdbd;
-  flex: 1;
-  width: 97%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: left;
-}
-#material-blue .rightCol .block .content .item span {
-  color: #5da4d9;
-  margin-top: 0;
-  font-size: 10pt;
-  line-height: 16pt;
-}
-#material-blue .rightCol .block .content .item p {
-  margin-top: 5px;
-}
-#material-blue .rightCol .block .content .item:last-of-type {
-  border-bottom-style: none;
-}
-#material-blue .rightCol .block .content .item:last-of-type {
-  border-bottom-style: none;
-}
-#material-blue .leftCol {
-  width: 35%;
-  height: 100%;
-  float: left;
-  padding: 0;
-  text-align: left;
-  color: #ffffff;
-  background-color: #5da4d9;
-  overflow: hidden;
-  display: block;
-}
-#material-blue .leftCol a {
-  color: white;
-  text-decoration: none;
-}
-#material-blue .leftCol .heading {
-  background-color: white;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  width: 100%;
-  height: 340px;
-}
-#material-blue .leftCol .title {
-  position: absolute;
-  right: 25px;
-  bottom: 25px;
-}
-#material-blue .leftCol .title span {
-  margin-top: -5px;
-  font-size: 10pt;
-  margin: 0;
-  padding: 0;
-  line-height: 15pt;
-}
-#material-blue .leftCol .item {
-  width: 100%;
-  margin-top: 13px;
-  float: left;
-}
-#material-blue .leftCol .item .icon {
-  width: 20%;
-  margin-top: 8px;
-  float: left;
-}
-#material-blue .leftCol .item .fa {
-  display: inherit;
-  text-align: center;
-}
-#material-blue .leftCol .item .text {
-  float: right;
-  width: 69%;
-  padding-right: 10%;
-  padding-bottom: 13px;
-  border-bottom: 1px solid #4783c2;
-}
-#material-blue .leftCol .item .text li {
-  padding-top: 0;
-}
-#material-blue .leftCol .item span {
-  font-weight: 300;
-}
-#material-blue .leftCol .item .skill {
-  clear: both;
-  width: 77%;
-  margin-left: 14%;
-  padding-top: 4px;
-}
-#material-blue .leftCol .item .skill .left {
-  float: left;
-  width: 10%;
-  padding-top: 3px;
-}
-#material-blue .leftCol .item .skill .left i:nth-child(2) {
-  float: left;
-  padding-top: 4px;
-}
-#material-blue .leftCol .item .skill .right {
-  float: right;
-  width: 90%;
-}
-#material-blue .leftCol .item .skill .right .progress {
-  float: left;
-  position: relative;
-  height: 2px;
-  display: block;
-  width: 95%;
-  background-color: #4783c2;
-  border-radius: 2px;
-  margin: 0.5rem 0 1rem;
-  overflow: visible;
-}
-#material-blue .leftCol .item .skill .right .progress .determinate {
-  background-color: white;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-#material-blue .leftCol .item .skill .right .progress .determinate .fa {
-  font-size: 12px;
-  position: absolute;
-  top: -4px;
-  right: -2px;
-  margin-left: 50%;
-}
-#material-blue .leftCol .item.last .text {
-  border-bottom-style: none;
-  padding-bottom: 0;
-}
-#material-blue #myselfpic {
-  background-image: url('../assets/person.jpg');
-  color: black;
-}
-#material-blue #githubIcon {
-  width: 25px;
-  padding-left: 17px;
-}
-
 </style>

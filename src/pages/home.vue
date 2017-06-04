@@ -11,7 +11,7 @@
     </div>
     <div class="preview">
       <router-link v-bind:to="'/resume/material-blue'">
-        <img src="../assets/preview/resume-material-dark.png" />
+        <img src="../assets/preview/resume-material-blue.png" />
         <span>material-blue</span>
       </router-link>
     </div>

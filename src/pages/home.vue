@@ -5,26 +5,42 @@
   <div class="previews">
     <div class="preview">
       <router-link v-bind:to="'/resume/material-dark'">
-        <img src="../assets/preview/resume-material-dark.png" />
-        <span>material-dark</span>
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-material-dark.png" />
+          <span>material-dark</span>
+        </div>
       </router-link>
     </div>
     <div class="preview">
       <router-link v-bind:to="'/resume/material-blue'">
+        <div class="preview-wrapper">
         <img src="../assets/preview/resume-material-blue.png" />
         <span>material-blue</span>
+      </div>
       </router-link>
     </div>
     <div class="preview">
       <router-link v-bind:to="'/resume/left-right'">
+        <div class="preview-wrapper">
         <img src="../assets/preview/resume-left-right.png" />
         <span>left-right</span>
+      </div>
       </router-link>
     </div>
     <div class="preview">
       <router-link v-bind:to="'/resume/oblique'">
+        <div class="preview-wrapper">
         <img src="../assets/preview/resume-oblique.png" />
         <span>oblique</span>
+      </div>
+      </router-link>
+    </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/side-bar'">
+        <div class="preview-wrapper">
+        <img src="../assets/preview/resume-side-bar.png" />
+        <span>side-bar</span>
+      </div>
       </router-link>
     </div>
   </div>
@@ -47,6 +63,11 @@ export default Vue.component('resume', {
   font-weight: normal;
   text-align: center;
   width: 100%;
+  color: #ee6e73;
+    font-weight: 300;
+    font-size: 3.56rem;
+    line-height: 110%;
+    margin: 1.78rem 0 1.424rem 0;
 }
 
 .previews{
@@ -56,19 +77,36 @@ export default Vue.component('resume', {
 }
 
 .preview{
-  width: 30%;
-  float: left;
-  margin-left: 1.5%;
-  margin-right: 1.5%;
+  width: 180px;
+    float: left;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-bottom: 1.5%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    height: 252px;
+    overflow: hidden;
+}
+.preview-wrapper {
+  position: relative;
+  background: white;
 }
 
 .preview img{
   width: 100%;
+  opacity: 0.5;
+  filter: blur(1px);
 }
 
 .preview span{
-  width: 100%;
-  display: inline-block;
-  text-align: center;
+  position: absolute;
+    max-width: 100%;
+    font-size: 24px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
 }
 </style>

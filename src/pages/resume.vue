@@ -6,6 +6,7 @@
       <resume-material-blue v-if="$route.params.resumeid==='material-blue'"></resume-material-blue>
       <resume-left-right v-if="$route.params.resumeid==='left-right'"></resume-left-right>
       <resume-oblique v-if="$route.params.resumeid==='oblique'"></resume-oblique>
+      <resume-side-bar v-if="$route.params.resumeid==='side-bar'"></resume-side-bar>
     </div>
   </div>
 </div>
@@ -19,6 +20,7 @@ import '../components/resume-material-dark.vue';
 import '../components/resume-material-blue.vue';
 import '../components/resume-left-right.vue';
 import '../components/resume-oblique.vue';
+import '../components/resume-side-bar.vue';
 export default Vue.component('resume', {
   name: 'app',
   mounted: () => {

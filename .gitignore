@@ -10,3 +10,4 @@ test/e2e/reports
 selenium-debug.log
 firefox_root/
 GeckoChildCrash*
+electroshot-config.json

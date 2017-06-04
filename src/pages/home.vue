@@ -23,7 +23,7 @@
     </div>
     <div class="preview">
       <router-link v-bind:to="'/resume/oblique'">
-        <img src="../assets/preview/resume-left-right.png" />
+        <img src="../assets/preview/resume-oblique.png" />
         <span>oblique</span>
       </router-link>
     </div>

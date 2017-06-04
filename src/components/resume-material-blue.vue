@@ -373,7 +373,7 @@ export default Vue.component('resume-material-blue', {
 #material-blue .leftCol .item .skill .right .progress .determinate .fa {
   font-size: 12px;
   position: absolute;
-  top: -6px;
+  top: -4px;
   right: -2px;
   margin-left: 50%;
 }

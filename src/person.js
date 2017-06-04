@@ -37,16 +37,6 @@ export const PERSON = {
       degree: 'Bachelor of Science',
       timeperiod: 'March 2009 - December 2011',
       description: 'Major in Engineering, University B, Los Angeles, USA.'
-    },
-    {
-      degree: 'Bachelor of Science',
-      timeperiod: 'March 2009 - December 2011',
-      description: 'Major in Engineering, University B, Los Angeles, USA.'
-    },
-    {
-      degree: 'Bachelor of Science',
-      timeperiod: 'March 2009 - December 2011',
-      description: 'Major in Engineering, University B, Los Angeles, USA.'
     }
   ],
   // skill level goes 0 to 100

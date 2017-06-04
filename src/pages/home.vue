@@ -21,6 +21,12 @@
         <span>left-right</span>
       </router-link>
     </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/oblique'">
+        <img src="../assets/preview/resume-left-right.png" />
+        <span>oblique</span>
+      </router-link>
+    </div>
   </div>
 </div>
 </template>

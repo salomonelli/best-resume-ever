@@ -16,6 +16,8 @@
     "font-awesome": "^4.7.0",
     "material-design-icons": "^3.0.1",
     "material-icons": "^0.1.0",
+    "npm-font-open-sans": "^1.0.3",
+    "npm-font-open-sans-condensed": "^1.0.3",
     "roboto-fontface": "^0.7.0",
     "source-sans-pro": "^2.0.10",
     "text-fitter": "0.0.8",

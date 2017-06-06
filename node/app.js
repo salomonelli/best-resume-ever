@@ -9,10 +9,8 @@ const exec = require('child_process').exec;
 const convert = () => {
   try {
     const directories = getResumesFromDirectories();
-    let script = '';
-    directories.forEach(resume => (script += electroshotScript(resume.path)));
-    script = script.substring(0, script.length - 2);
-    return execBash(script);
+    const scripts = directories.map(resume => electroshotScript(resume.path));
+    execBash(scripts.join(' && '));
   } catch (err) {
     throw new Error(err);
   }
@@ -27,7 +25,7 @@ const electroshotScript = resume => {
   const dir = path.join(__dirname, '../pdf');
   return 'electroshot localhost:8080/#/resume/' + resume +
     ' 2481x3508 --pdf-margin none --format pdf --out ' + dir +
-    ' --filename "' + resume + '.pdf" --pdf-background; ';
+    ' --filename "' + resume + '.pdf" --pdf-background';
 };
 
 /**

@@ -77,6 +77,7 @@
     "phantomjs-prebuilt": "^2.1.14",
     "postcss": "^6.0.1",
     "postcss-cssnext": "^2.11.0",
+    "pre-git": "^3.15.0",
     "request-promise": "^4.2.1",
     "rimraf": "^2.6.0",
     "selenium-server": "^3.0.1",
@@ -102,5 +103,13 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "config": {
+    "pre-git": {
+      "enabled": true,
+      "pre-commit": [
+        "lint"
+      ]
+    }
+  }
 }

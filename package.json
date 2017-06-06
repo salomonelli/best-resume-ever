@@ -108,7 +108,7 @@
     "pre-git": {
       "enabled": true,
       "pre-commit": [
-        "lint"
+        "npm run lint"
       ]
     }
   }

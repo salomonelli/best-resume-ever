@@ -40,21 +40,21 @@
 
 All resumes will be exported to `/pdf`.
 
-<br><br>
+<br>
 
 
 ## Creating and Updating Templates
 
 Please read the <a href="DEVELOPER.md">developer docs</a> on how to create or update templates.
 
-<br><br>
+<br>
 
 
 ## Contribute
 
 Feel free to add your own templates, fix bugs or improve the docs. Any kind of help is appreciated!
 
-<br><br>
+<br>
 
 
 ## Credits
@@ -65,7 +65,7 @@ This project uses several open source packages:
 * <a href="https://github.com/less/less.js" target="_blank">LESS</a>
 * <a href="https://github.com/mixu/electroshot" target="_blank">Electroshot</a>
 
-<br><br>
+<br>
 
 
 ---

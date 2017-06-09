@@ -11,12 +11,6 @@
   :necktie: :briefcase: Build fast :rocket: and easy multpile beautiful resumes and create your best CV ever!
   <br>
 </h4>
-<p align="center">
-Made with
-  <a href="https://github.com/vuejs/vue" target="_blank">Vue</a>,  
-  <a href="https://github.com/less/less.js" target="_blank">LESS</a> and
-  <a href="https://github.com/mixu/electroshot" target="_blank">Electroshot</a>.
-</p>
 
 <br>
 <br>
@@ -34,3 +28,20 @@ Made with
 5. Export with `npm run export`.
 
 All resumes will be exported to `/pdf`.
+
+
+
+## Credits
+
+This project uses several open source packages:
+
+* <a href="https://github.com/vuejs/vue" target="_blank">Vue</a>
+* <a href="https://github.com/less/less.js" target="_blank">LESS</a>
+* <a href="https://github.com/mixu/electroshot" target="_blank">Electroshot</a>
+
+
+---
+
+> [sarasteiert.com](https://www.sarasteiert.com) &nbsp;&middot;&nbsp;
+> GitHub [@salomonelli](https://github.com/salomonelli) &nbsp;&middot;&nbsp;
+> Twitter [@salomonelli](https://twitter.com/salomonelli)

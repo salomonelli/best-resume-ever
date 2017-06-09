@@ -18,4 +18,18 @@ Made with
   <a href="https://github.com/mixu/electroshot" target="_blank">Electroshot</a>.
 </p>
 
+
+
 ## How to use
+
+1. Clone this repository.
+
+2. Run `npm install`.
+
+3. Edit your personal data in `src/person.js`.
+
+4. Preview resumes with `npm run dev`.
+
+5. Export with `npm run export`.
+
+All resumes will be exported to `/pdf`.

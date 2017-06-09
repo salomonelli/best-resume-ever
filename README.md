@@ -42,11 +42,15 @@ All resumes will be exported to `/pdf`.
 
 
 
-## Updating
+## Creating and Updating Templates
+
+Please read the <a href="DEVELOPER.md">developer docs</a> on how to create or update templates.
 
 
 
 ## Contribute
+
+Feel free to add your own templates, fix bugs or improve the docs. Any kind of help is appreciated!
 
 
 

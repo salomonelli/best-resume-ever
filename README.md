@@ -8,11 +8,14 @@
 </h1>
 
 <h4 align="center">
-  :necktie: :briefcase: Build fast :rocket: and easy multpile beautiful resumes and create your best CV ever! Made with
-  <a href="" target="_blank">Vue</a>,  
-  <a href="" target="_blank">LESS</a> and
-  <a href="" target="_blank">Electroshot</a>
+  :necktie: :briefcase: Build fast :rocket: and easy multpile beautiful resumes and create your best CV ever!
+  <br>
+   Made with
 </h4>
-
+<span>
+  <a href="https://github.com/vuejs/vue" target="_blank">Vue</a>,  
+  <a href="https://github.com/less/less.js" target="_blank">LESS</a> and
+  <a href="https://github.com/mixu/electroshot" target="_blank">Electroshot</a>.
+</span>
 
 ## How to use

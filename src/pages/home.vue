@@ -1,6 +1,9 @@
 <template>
 <div class="home">
   <a href="https://github.com/salomonelli/best-resume-ever" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+  <div class="logo">
+    <img src="../assets/logo.png" />
+  </div>
   <h3 class="title">best-resume-ever</h3>
   <div class="previews">
     <div class="preview">
@@ -59,15 +62,25 @@ export default Vue.component('resume', {
   font-family: 'Roboto' !important;
 }
 
+.logo{
+  text-align: center;
+}
+
+.logo img {
+  height: 200px;
+}
+
 .title {
   font-weight: normal;
   text-align: center;
   width: 100%;
-  color: #ee6e73;
+  color: black;
     font-weight: 300;
-    font-size: 3.56rem;
+    font-size: 30px;
     line-height: 110%;
     margin: 1.78rem 0 1.424rem 0;
+    margin-top: 0px;
+margin-bottom: 40px;
 }
 
 .previews{

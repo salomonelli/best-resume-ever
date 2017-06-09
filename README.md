@@ -11,7 +11,7 @@
   :necktie: :briefcase: Build fast :rocket: and easy multpile beautiful resumes and create your best CV ever!
   <br>
 </h4>
-<span>
+<span align="center">
 Made with
   <a href="https://github.com/vuejs/vue" target="_blank">Vue</a>,  
   <a href="https://github.com/less/less.js" target="_blank">LESS</a> and

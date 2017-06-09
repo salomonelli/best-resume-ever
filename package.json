@@ -1,15 +1,13 @@
 {
-  "name": "vue-test",
+  "name": "best-resume-ever",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "Sara Steiert <sara.steiert@outlook.com>",
-  "private": true,
+  "description": "Build fast and easy multpile beautiful resumes and create your best CV ever! ",
+  "author": "salomonelli",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "pdf": "node node/app.js",
     "export": "concurrently \"npm run dev\" \"npm run pdf\" --success first --kill-others --raw",
-    "test": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {

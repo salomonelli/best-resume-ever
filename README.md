@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
   <a href="https://github.com/salomonelli/best-resume-ever">
-  <img src="https://github.com/salomonelli/best-resume-ever/blob/master/src/assets/logo.png" alt="Markdownify" width="200"></a>
+  <img src="src/assets/logo.png" alt="Markdownify" width="200"></a>
   <br>
   best-resume-ever
   <br>
@@ -12,7 +12,14 @@
   <br>
 </h4>
 
+<br>
+<br>
+
+<img src="src/assets/preview/resume-material-blue.png" width="150" />
+<img src="src/assets/preview/resume-material-dark.png" width="150" />
 <img src="src/assets/preview/resume-left-right.png" width="150" />
+<img src="src/assets/preview/resume-side-bar.png" width="150" />
+<img src="src/assets/preview/resume-oblique.png" width="150" />
 
 
 <br>

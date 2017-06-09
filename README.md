@@ -12,6 +12,9 @@
   <br>
 </h4>
 
+<img src="src/assets/preview/resume-left-right.png" width="150" />
+
+
 <br>
 <br>
 
@@ -28,6 +31,14 @@
 5. Export with `npm run export`.
 
 All resumes will be exported to `/pdf`.
+
+
+
+## Updating
+
+
+
+## Contribute
 
 
 

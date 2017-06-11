@@ -10,6 +10,7 @@ import {
 } from '../person';
 
 import Vue from 'vue';
+// TODO rename vue component
 export default Vue.component('template', {
   name: 'template',
   data () {

@@ -59,21 +59,19 @@ const electroshotScript = resume => {
 const getResumesFromDirectories = () => {
   const directories = getDirectories();
   return directories
-    .filter(dir => dir.includes('resume-') && dir !== 'resume-XX')
     .map(dir => {
-      let name = dir.replace('resume-', '');
       let fileName = dir.replace('.vue', '');
       return {
-        path: fileName.replace('resume-', ''),
-        name: name.replace('-', ' ')
+        path: fileName,
+        name: fileName
       };
     });
 };
 
 const getDirectories = () => {
-  const srcpath = path.join(__dirname, '../src/components');
+  const srcpath = path.join(__dirname, '../src/resumes');
   return fs.readdirSync(srcpath)
-    .filter(file => file.includes('resume-'));
+    .filter(file => file !== 'resumes.js' && file !== 'template.vue');
 };
 
 const execBash = script => {

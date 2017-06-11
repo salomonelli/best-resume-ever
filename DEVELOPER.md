@@ -3,7 +3,6 @@
 
 
 ## Adding a new template
-<br>
 
 1. Create a copy of `src/resumes/template.vue`.
 

@@ -78,8 +78,8 @@ import {
 } from '../person';
 
 import Vue from 'vue';
-export default Vue.component('resume-oblique', {
-  name: 'resume-oblique',
+export default Vue.component('oblique', {
+  name: 'oblique',
   data () {
     return {
       person: PERSON

@@ -2,11 +2,7 @@
 <div class="page-wrapper">
   <div class="page">
     <div class="page-inner">
-      <resume-material-dark v-if="$route.params.resumeid==='material-dark'"></resume-material-dark>
-      <resume-material-blue v-if="$route.params.resumeid==='material-blue'"></resume-material-blue>
-      <resume-left-right v-if="$route.params.resumeid==='left-right'"></resume-left-right>
-      <resume-oblique v-if="$route.params.resumeid==='oblique'"></resume-oblique>
-      <resume-side-bar v-if="$route.params.resumeid==='side-bar'"></resume-side-bar>
+      <component :is="$route.params.resumeid"></component>
     </div>
   </div>
 </div>
@@ -16,11 +12,7 @@
 import Vue from 'vue';
 import * as chromeShadowFixer from 'chrome-shadow-fixer';
 import * as textFitter from 'text-fitter';
-import '../components/resume-material-dark.vue';
-import '../components/resume-material-blue.vue';
-import '../components/resume-left-right.vue';
-import '../components/resume-oblique.vue';
-import '../components/resume-side-bar.vue';
+import '../resumes/resumes';
 export default Vue.component('resume', {
   name: 'app',
   mounted: () => {

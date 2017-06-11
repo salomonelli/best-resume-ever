@@ -89,8 +89,8 @@ import {
 } from '../person';
 
 import Vue from 'vue';
-export default Vue.component('resume-side-bar', {
-  name: 'resume-side-bar',
+export default Vue.component('side-bar', {
+  name: 'side-bar',
   data () {
     return {
       person: PERSON

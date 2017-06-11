@@ -7,6 +7,7 @@
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "pdf": "node node/app.js",
+    "template": "node node/template/template.js",
     "export": "concurrently \"npm run dev\" \"npm run pdf\" --success first --kill-others --raw",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
@@ -40,6 +41,7 @@
     "chromedriver": "^2.27.2",
     "connect-history-api-fallback": "^1.3.0",
     "copy-webpack-plugin": "^4.0.1",
+    "cpx": "^1.5.0",
     "cross-env": "^4.0.0",
     "cross-spawn": "^5.0.1",
     "css-loader": "^0.28.0",
@@ -80,6 +82,7 @@
     "phantomjs-prebuilt": "^2.1.14",
     "postcss": "^6.0.1",
     "postcss-cssnext": "^2.11.0",
+    "rename": "^1.0.4",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
     "rimraf": "^2.6.0",

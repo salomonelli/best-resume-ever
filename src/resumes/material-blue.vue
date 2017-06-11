@@ -134,8 +134,8 @@ import {
 } from '../person';
 
 import Vue from 'vue';
-export default Vue.component('resume-material-blue', {
-  name: 'resume-material-blue',
+export default Vue.component('material-blue', {
+  name: 'material-blue',
   data () {
     return {
       person: PERSON

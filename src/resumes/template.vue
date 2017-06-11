@@ -10,8 +10,8 @@ import {
 } from '../person';
 
 import Vue from 'vue';
-export default Vue.component('resume-template', {
-  name: 'resume-template',
+export default Vue.component('template', {
+  name: 'template',
   data () {
     return {
       person: PERSON

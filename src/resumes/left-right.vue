@@ -75,8 +75,8 @@ import {
 } from '../person';
 
 import Vue from 'vue';
-export default Vue.component('resume-left-right', {
-  name: 'resume-left-right',
+export default Vue.component('left-right', {
+  name: 'left-right',
   data () {
     return {
       person: PERSON

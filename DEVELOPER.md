@@ -1,5 +1,7 @@
 # Developer Docs
 
+Table of Contents
+
 [Templates](#templates)
 
 [Fonts](#fonts)
@@ -11,7 +13,7 @@
 In the directory `src/resumes` you will find all existing templates.
 
 
-### Creating new templates
+### Creating New Templates
 
 1. Create a copy of `src/resumes/template.vue`.
 
@@ -36,7 +38,7 @@ Your new resume will be now reachable at [localhost:8080/#/resume/TEMPLATE-NAME]
 
 This project contains the [Material Design](https://github.com/google/material-design-icons) and [Font Awesome](https://github.com/FortAwesome/Font-Awesome) icon sets.
 
-### Included fonts
+### Included Fonts
 
 These fonts are included:
 
@@ -49,7 +51,7 @@ These fonts are included:
 - Source Sans Pro
 
 
-### Adding a new fonts
+### Adding a New Font
 
 All fonts are installed via npm. To add a new font, search for the associated npm-module. Add the module to the package.json and install it. Import the css file in `src/App.vue`.
 

@@ -11,6 +11,7 @@ export default {
 </script>
 
 <style>
+/* Add new fonts here */
 @import '../node_modules/roboto-fontface/css/roboto/roboto-fontface.css';
 @import '../node_modules/font-awesome/css/font-awesome.css';
 @import '../node_modules/material-design-icons/iconfont/material-icons.css';

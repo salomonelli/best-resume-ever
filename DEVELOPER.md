@@ -1,5 +1,11 @@
 # Developer Docs
 
+[Templates](#templates)
+
+[Fonts](#fonts)
+
+<br><br>
+
 ## Templates
 
 In the directory `src/resumes` you will find all existing templates.

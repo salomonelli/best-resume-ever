@@ -6,7 +6,7 @@ Table of Contents
 
 [Fonts](#fonts)
 
-[PDF Export](#pdfexport)
+[Export](#export)
 
 <br><br>
 
@@ -60,13 +60,14 @@ All fonts are installed via npm. To add a new font, search for the associated np
 <br>
 
 
-## PDF Export
+## Export
 
+Resumes are being exported with [Electroshot](https://github.com/mixu/electroshot).
 
-## Box shadows
+### Box Shadows
 
-## text fitting
+[Electroshot](https://github.com/mixu/electroshot) uses Electron to generate PDF-files. Since Chrome does not export box-shadows properly, every resume uses [chrome-shadow-fixer](https://github.com/salomonelli/chrome-shadow-fixer).
 
-## pdf export
+### Text Adjustment
 
-## Page settings
+[text-fitter](https://github.com/salomonelli/chrome-shadow-fixer) is used to adjust the content proportionally to fit the page and keep the resume layout and design. No matter how long a CV may be, the content will be resized to fit the page.

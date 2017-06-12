@@ -6,7 +6,7 @@ Table of Contents
 
 [Fonts](#fonts)
 
-[PDF Export](#pdf export)
+[PDF Export](#pdfexport)
 
 <br><br>
 

@@ -6,6 +6,8 @@ Table of Contents
 
 [Fonts](#fonts)
 
+[PDF Export](#pdf export)
+
 <br><br>
 
 ## Templates
@@ -57,6 +59,8 @@ All fonts are installed via npm. To add a new font, search for the associated np
 <br>
 <br>
 
+
+## PDF Export
 
 
 ## Box shadows

@@ -30,7 +30,7 @@ export default Vue.component('TEMPLATE-NAME', {
 <br>
 Your new resume will be now reachable at [localhost:8080/#/resume/TEMPLATE-NAME](localhost:8080/#/resume/TEMPLATE-NAME).
 <br>
-
+<br>
 
 ## Fonts
 
@@ -54,6 +54,9 @@ These fonts are included:
 ### Adding a New Font
 
 All fonts are installed via npm. To add a new font, search for the associated npm-module. Add the module to the package.json and install it. Import the css file in `src/App.vue`.
+<br>
+<br>
+
 
 
 ## Box shadows

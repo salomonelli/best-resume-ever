@@ -11,13 +11,10 @@
 <script>
 import Vue from 'vue';
 import * as chromeShadowFixer from 'chrome-shadow-fixer';
-import * as textFitter from 'text-fitter';
 import '../resumes/resumes';
 export default Vue.component('resume', {
   name: 'app',
   mounted: () => {
-    const pageElements = document.querySelectorAll('.page-inner');
-    textFitter.fix(pageElements, false);
     chromeShadowFixer.fix();
   }
 });

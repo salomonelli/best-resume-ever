@@ -1,7 +1,7 @@
 {
   "name": "best-resume-ever",
   "version": "1.0.0",
-  "description": "Build fast and easy multpile beautiful resumes and create your best CV ever! ",
+  "description": "Build fast and easy multiple beautiful resumes and create your best CV ever! ",
   "author": "salomonelli",
   "scripts": {
     "dev": "node build/dev-server.js",

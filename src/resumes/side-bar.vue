@@ -207,7 +207,7 @@ export default Vue.component('side-bar', {
     }
     .projects {
         margin-top:50px;
-        .education-block {
+        .project-block {
             margin-bottom:10px;
             .degree {
             font-size:19px;

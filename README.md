@@ -8,7 +8,7 @@
 </h1>
 
 <h4 align="center">
-  :necktie: :briefcase: Build fast :rocket: and easy multpile beautiful resumes and create your best CV ever!
+  :necktie: :briefcase: Build fast :rocket: and easy multiple beautiful resumes and create your best CV ever!
   <br><br>
   Made with Vue and LESS.
 </h4>

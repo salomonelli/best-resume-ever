@@ -41,7 +41,7 @@
                     </div>
                     <div class="text">
                         <h4>{{person.contact.phone}}</h4>
-                        <span>mobil</span>
+                        <span>mobile</span>
                     </div>
                 </div>
             </a>

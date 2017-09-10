@@ -66,6 +66,16 @@
     </div>
     <span class="skills-other"> {{person.skillDescription}} </span>
   </div>
+  <div class="projects">
+    <h3>Projects</h3>
+    <div class="project-block" v-for="project in person.projects">
+        <span class="project">{{project.name}}</span>
+        <br>
+        <span class="project-description">{{project.description}}</span>
+    </div>
+
+  </div>
+
 </div>
 </template>
 
@@ -89,7 +99,7 @@ export default Vue.component('left-right', {
 <style lang="less" scoped>
 #resume1 {
   font-family:'Source Sans Pro', sans-serif;
-  font-size:20px;
+  font-size:15px;
   padding-bottom:50px;
   a, a:focus, a:hover, a:visited {
     color:#616161;
@@ -165,7 +175,7 @@ export default Vue.component('left-right', {
       float:right;
       margin-top:5px;
       color:#616161;
-      font-size:20px;
+      font-size:15px;
       i {
         padding:2px;
         color:#616161;
@@ -194,6 +204,22 @@ export default Vue.component('left-right', {
   .education-block span.degree {
     font-weight:bold;
     padding-bottom:5px;
+    padding-top:10px;
+    color:#424242;
+  }
+  .project-block {
+    display:flex;
+    flex-direction:column;
+    width:25%;
+    float:left;
+  }
+  .project-block span {
+    color:#616161;
+    font-size:15px;
+  }
+  .project-block span.project{
+    font-weight:bold;
+    margin-bottom:-10px;
     padding-top:10px;
     color:#424242;
   }
@@ -227,6 +253,12 @@ export default Vue.component('left-right', {
         }
       }
     }
+  }
+  .projects {
+    float:left;
+    text-align:left;
+    padding-left:4%;
+    padding-right:2%;
   }
 }
 </style>

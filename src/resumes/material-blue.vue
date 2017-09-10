@@ -91,7 +91,7 @@
       </div>
   </div>
 
-  <div class="rightCol">
+  <div class="farRightCol">
 
       <div class="block">
           <div class="icon">
@@ -123,6 +123,22 @@
                   </div>
           </div>
       </div>
+  </div>
+  <div class="rightCol">
+    <div class="block">
+          <div class="icon">
+              <i class="fa fa-graduation-cap"></i>
+          </div>
+          <div class="content">
+              <h2>Projects</h2>
+
+                  <div class="item" v-for="project in person.projects">
+                      <h3>{{project.name}}</h3>
+                      <span>{{project.timeperiod}}</span>
+                      <p> {{project.description}} </p>
+                  </div>
+          </div>
+    </div>
   </div>
   <div style="clear:both;"></div>
 </div>
@@ -208,14 +224,75 @@ export default Vue.component('material-blue', {
     line-height:20pt;
     opacity:1;
   }
-  .rightCol {
-    width:63.5%;
+  .farRightCol {
+    width:33.5%;
     height:100%;
     float:right;
     display:flex;
     flex-direction:column;
     .block {
-      box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+      box-shadow:0 2px 2px 0 rgba(0,0,0,0.16), 0 2px 5px 0 rgba(0,0,0,0.12);
+      width:100%;
+      min-height:50px;
+      flex:1;
+      position:relative;
+      background-color:white;
+      padding-top:24px;
+      padding-bottom:10px;
+      margin-top:6px;
+      margin-bottom:6px;
+      .icon {
+        width:16%;
+        float:left;
+        margin-left:0;
+        .fa {
+          text-align:center;
+          display:block;
+          font-size:30pt;
+        }
+      }
+      .content {
+        width:80%;
+        position:absolute;
+        height:96%;
+        left:17%;
+        padding-right:3%;
+        text-align:left;
+        display:flex;
+        flex-direction:column;
+        .item {
+          border-bottom:1px solid #bdbdbd;
+          flex:1;
+          width:97%;
+          display:flex;
+          justify-content:center;
+          flex-direction:column;
+          text-align:left;
+          span {
+            color:#5da4d9;
+            margin-top:0;
+            font-size:10pt;
+            line-height:16pt;
+          }
+          p {
+            margin-top:5px;
+          }
+        }
+        .item:last-of-type {
+          border-bottom-style:none;
+          border-bottom-style:none;
+        }
+      }
+    }
+  }
+  .rightCol {
+    width:30%;
+    height:100%;
+    float:left;
+    display:flex;
+    flex-direction:column;
+    .block {
+      box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 5px 0 rgba(0,0,0,0.12);
       width:100%;
       min-height:50px;
       flex:1;
@@ -273,7 +350,7 @@ export default Vue.component('material-blue', {
     width:35%;
     height:100%;
     float:left;
-    padding:0;
+    margin-right:5px;
     text-align:left;
     color:#ffffff;
     background-color:#5da4d9;

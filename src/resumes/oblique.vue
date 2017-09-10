@@ -31,6 +31,21 @@
         </div>
       </div>
     </div>
+    <div class="projects">
+      <h3>Projects</h3>
+
+      <div class="project-block" v-for="project in person.projects">
+        <div class="row">
+          <span class="name"> {{project.name}} </span>
+        </div>
+
+        <div class="row">
+          <span class="time-period"> {{project.timeperiod}}</span>
+          <span class="description">, {{project.description}} </span>
+        </div>
+      </div>
+    </div>
+
     <div class="education">
       <h3>Education</h3>
       <div class="education-block" v-for="education in person.education">
@@ -158,6 +173,17 @@ export default Vue.component('oblique', {
     margin-left:15%;
     width:70%;
     .experience .experience-block {
+      line-height:1;
+      margin-bottom:10px;
+      .row:first-child {
+        font-size:20px;
+        text-transform:uppercase;
+        i {
+          font-size:17px;
+        }
+      }
+    }
+      .projects .project-block {
       line-height:1;
       margin-bottom:10px;
       .row:first-child {

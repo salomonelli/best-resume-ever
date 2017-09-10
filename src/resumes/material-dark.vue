@@ -108,6 +108,15 @@
         </p>
       </div>
     </div>
+
+    <div class="section-headline">Projects</div>
+    <div class="block" v-for="project in person.projects">
+      <div class="block-helper"></div>
+      <div class="headline">{{project.name}}</h3>
+        <div class="subheadline">{{project.timeperiod}}</div>
+        <p class="info">{{project.description}}</p>
+    </div>
+    </div>
     <div class="section-headline">Education</div>
     <div class="block" v-for="education in person.education">
       <div class="block-helper"></div>

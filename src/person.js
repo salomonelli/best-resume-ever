@@ -1,85 +1,80 @@
 /* eslint-disable */
 export const PERSON = {
   name: {
-    first: 'John',
-    last: 'Doe',
+    first: 'Paul',
+    last: 'Sajna',
   },
   position: 'Software Developer',
   birth: {
-    year: 1990,
-    location: 'New York'
+    year: 1996,
+    location: 'Kelowna'
   },
   experience: [{
-      company: 'Company A',
-      position: 'Developer',
-      timeperiod: 'since January 2016',
-      description: 'Programming and watching cute cat videos.'
+      company: 'Boomers Computers',
+      position: 'Computer Technician',
+      timeperiod: 'August 2016-January 2017',
+      description: 'Troubleshot, repaired, and built desktop and laptop computers'
     },
     {
-      company: 'Company B',
-      position: 'Frontend Developer',
-      timeperiod: 'January 2015 - December 2015',
-      description: 'Fulfillment of extremly important tasks.'
-    },
-    {
-      company: 'Company C',
-      position: 'Trainee',
-      timeperiod: 'March 2014 - December 2014',
-      description: 'Making coffee and baking cookies.'
+      company: 'Valley Laptop',
+      position: 'Laptop Technician/Website Administrator',
+      timeperiod: '2014-2016',
+      description: 'Refurbished laptops, offered technical support and built an ecommerce website for the company'
     }
   ],
-  education: [{
-      degree: 'Master of Arts',
-      timeperiod: 'March 2012 - December 2013',
-      description: 'Major in Hacking and Computer Penetration, University A, New York, USA.'
-    },
+  projects:[{
+      name: 'Emoji Rehab',
+      timeperiod: 'March 2016',
+      description: 'Community notice board for Victoria. Has the capability of marking locations with emoji.'
+    }
+  ],
+  education: [
     {
-      degree: 'Bachelor of Science',
-      timeperiod: 'March 2009 - December 2011',
-      description: 'Major in Engineering, University B, Los Angeles, USA.'
+      degree: 'Information and Computer Systems Diploma',
+      timeperiod: 'Sept 2017 - April 2019',
+      description: 'Camosun College - Victoria, BC, Canada'
     }
   ],
   // skill level goes 0 to 100
   skills: [{
-      name: 'HTML5',
-      level: '99'
-    },
-    {
-      name: 'CSS3',
-      level: '95'
-    },
-    {
-      name: 'JavaScript',
-      level: '97'
-    },
-    {
-      name: 'Node.js',
-      level: '93'
-    },
-    {
-      name: 'Angular 2',
-      level: '60'
-    },
-    {
-      name: 'TypeScript',
+      name: 'Java',
       level: '80'
     },
     {
-      name: 'ES.Next',
+      name: 'Android SDK',
+      level: '90'
+    },
+    {
+      name: 'Python',
+      level: '90'
+    },
+    {
+      name: 'Go',
+      level: '75'
+    },
+    {
+      name: 'C++',
+      level: '60'
+    },
+    {
+      name: 'Node.js',
       level: '70'
     },
     {
-      name: 'Docker',
-      level: '99'
+      name: 'Linux',
+      level: '80'
+    },
+    {
+      name: 'AWS',
+      level: '80'
     }
   ],
-  skillDescription: 'Also proficient in Adobe Photoshop and Illustrator, grew up bilingual (English and Klingon).',
   contact: {
-    email: 'john.doe@email.com',
-    phone: '0123 456789',
-    street: '1234 Broadway',
-    city: 'New York',
-    website: 'johndoe.com',
-    github: 'johnyD'
+    email: 'paulsajna@gmail.com',
+    phone: '+1 250 891 4058',
+    street: '4402 Wilkinson Rd',
+    city: 'Victoria',
+    website: 'paulsajna.com',
+    github: 'sajattack'
   }
 };

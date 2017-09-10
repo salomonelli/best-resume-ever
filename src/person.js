@@ -23,10 +23,25 @@ export const PERSON = {
     }
   ],
   projects:[{
+      name: 'Throw Remote',
+      timeperiod: 'February 2016',
+      description: 'Remote Control app for Throw streaming media player'
+  },
+  {
       name: 'Emoji Rehab',
       timeperiod: 'March 2016',
       description: 'Community notice board for Victoria. Has the capability of marking locations with emoji.'
-    }
+  },
+  {
+      name: 'Down2Home',
+      timeperiod: 'June 2013',
+      description: 'Saves mobile bandwidth by sending download links to a remote PC'
+  },
+  {
+      name: 'Net Toolbox',
+      timeperiod: 'April 2013',
+      description: 'A suite of networking tools for professionals and enthusiasts.'
+  },
   ],
   education: [
     {

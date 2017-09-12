@@ -19,7 +19,7 @@ export const PERSON = {
       company: 'Company B',
       position: 'Frontend Developer',
       timeperiod: 'January 2015 - December 2015',
-      description: 'Fulfillment of extremly important tasks.'
+      description: 'Fulfillment of extremely important tasks.'
     },
     {
       company: 'Company C',

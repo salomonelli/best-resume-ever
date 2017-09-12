@@ -25,11 +25,11 @@
       <h3>Contact</h3>
       <table>
         <tr>
-          <td><a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a></td>
+          <td><a :href="`mailto:${person.contact.email}`">{{person.contact.email}}</a></td>
           <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
         </tr>
         <tr>
-          <td><a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a></td>
+          <td><a :href="`tel:${person.contact.phone}`">{{person.contact.phone}}</a></td>
           <td><i class="fa fa-phone" aria-hidden="true"></i></td>
         </tr>
         <tr>
@@ -41,7 +41,7 @@
           <td><i class="fa fa-globe" aria-hidden="true"></i></td>
         </tr>
         <tr>
-          <td><a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a></td>
+          <td><a :href="githubLink">{{githubLink}}</a></td>
           <td><i class="fa fa-github" aria-hidden="true"></i></td>
         </tr>
       </table>
@@ -60,7 +60,7 @@
       <div class="skill-block" v-for="skill in person.skills">
         <span class="skill">{{skill.name}}</span>
         <div class="skill-bar">
-          <div :style="'width: '+skill.level+'%'" class="level"> </div>
+          <div :style="{'width': `${skill.level}%`}" class="level"> </div>
         </div>
       </div>
     </div>
@@ -77,6 +77,11 @@ import {
 import Vue from 'vue';
 export default Vue.component('left-right', {
   name: 'left-right',
+  computed: {
+    githubLink: function () {
+      return `https://github.com/${this.person.contact.github}`;
+    }
+  },
   data () {
     return {
       person: PERSON

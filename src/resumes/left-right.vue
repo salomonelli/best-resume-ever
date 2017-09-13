@@ -18,7 +18,16 @@
         <span class="company"> {{experience.company}} </span>
         <span class="job-title"> {{experience.position}} </span>
         <span class="time-period"> {{experience.timeperiod}}</span>
-        <span class="job-description"> {{experience.description}} </span>
+        <span class="job-description"> 
+          <template v-if="Array.isArray(experience.description)">
+            <ul>
+              <li v-for="bullet in experience.description">{{bullet}}</li>
+            </ul>
+          </template>
+          <template v-else>
+            {{experience.description}}
+          </template>
+        </span>
       </div>
     </div>
     <div class="contact">
@@ -178,6 +187,9 @@ export default Vue.component('left-right', {
   .experience .experience-block span {
     width:100%;
     color:#616161;
+  }
+  .experience .experience-block span.job-description ul {
+    list-style-type:circle;
   }
   .experience .experience-block span.company {
     font-weight:bold;

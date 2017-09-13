@@ -53,7 +53,16 @@
                           <span class="time-period"> {{experience.timeperiod}}</span>
                       </div>
                       <div class="row">
-                          <span class="job-description"> {{experience.description}} </span>
+                          <span class="job-description"> 
+                            <template v-if="Array.isArray(experience.description)">
+                              <ul>
+                                <li v-for="bullet in experience.description"><span class="experience-text">{{bullet}}</span></li>
+                              </ul>
+                            </template>
+                            <template v-else>
+                              {{experience.description}}
+                            </template>
+                          </span>
                       </div>
                   </div>
           </div>
@@ -191,6 +200,12 @@ export default Vue.component('side-bar', {
       .row .job-title {
         font-size:19px;
       }
+      .row .job-description ul li {
+        color: rgba(153, 153, 153, 0.6);
+        .experience-text {
+          color:#000;
+        }
+      } 
     }
     .education {
       margin-top:50px;

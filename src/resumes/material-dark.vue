@@ -104,7 +104,14 @@
       <div class="headline">{{experience.position}} - {{experience.company}}</h3>
         <div class="subheadline">{{experience.timeperiod}}</div>
         <p class="info">
-          {{experience.description}}
+          <template v-if="Array.isArray(experience.description)">
+            <ul>
+              <li v-for="bullet in experience.description"><span class="experience-dash"> - </span>{{bullet}}</li>
+            </ul>
+          </template>
+          <template v-else>
+            {{experience.description}}
+          </template>
         </p>
       </div>
     </div>
@@ -282,6 +289,9 @@ h4 {
       display:block;
       font-size:15px;
       color:rgba(0,0,0,0.870588);
+      .experience-dash{
+        margin-right:6px;
+      }
     }
     .subheadline {
       color:rgba(0,0,0,0.541176);

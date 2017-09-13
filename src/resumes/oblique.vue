@@ -27,7 +27,15 @@
 
         <div class="row">
           <span class="time-period"> {{experience.timeperiod}}</span>
-          <span class="job-description">, {{experience.description}} </span>
+          <template v-if="Array.isArray(experience.description)">
+            <ul>
+              <li v-for="bullet in experience.description"><i class="material-icons">details</i> {{bullet}}</li>
+              <!-- <li v-for="bullet in experience.description"> {{bullet}}</li> -->
+            </ul>
+          </template>
+          <template v-else>
+            <span class="job-description">, {{experience.description}} </span>
+          </template>
         </div>
       </div>
     </div>
@@ -165,6 +173,13 @@ export default Vue.component('oblique', {
         text-transform:uppercase;
         i {
           font-size:17px;
+        }
+      }
+      ul {
+        list-style-type:none;
+        i {
+          font-size:11px;
+          margin-right:6px;
         }
       }
     }

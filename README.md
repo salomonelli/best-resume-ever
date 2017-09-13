@@ -54,7 +54,7 @@ Please read the <a href="DEVELOPER.md">developer docs</a> on how to create or up
 
 ## Contribute
 
-Feel free to add your own templates, fix bugs or improve the docs. Any kind of help is appreciated!
+Feel free to add your own templates, fix bugs or improve the docs. Any kind of help is appreciated! If you any kind of changes to an existing template, please commit them as new templates.
 
 <br>
 

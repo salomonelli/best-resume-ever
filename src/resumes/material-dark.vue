@@ -94,7 +94,7 @@
 
   <div class="rightCol">
     <div class="title">
-      <h2>{{person.name.first}}  {{person.name.last}}</h2>
+      <h2>{{person.name.first}} {{person.name.middle}} {{person.name.last}}</h2>
       <div>{{person.position}}</div>
     </div>
 

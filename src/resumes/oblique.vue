@@ -5,7 +5,7 @@
     <div class="person-header">
       <div class="person-wrapper">
         <div class="person">
-          <div class="name">{{person.name.first}} {{person.name.last}}</div>
+          <div class="name">{{person.name.first}} {{person.name.middle}} {{person.name.last}}</div>
           <div class="position">{{person.position}}</div>
         </div>
         <div class="img">

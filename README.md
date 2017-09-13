@@ -28,6 +28,8 @@
 
 ## How to use
 
+best-resume-ever requires at least node v.7.4.
+
 1. Clone this repository.
 
 2. Run `npm install`.

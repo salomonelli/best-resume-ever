@@ -1,12 +1,8 @@
 <template>
   <div id="resume2" class="resume">
       <div class="top-row">
-          <span class="person-name">
-            {{person.name.first}} {{person.name.middle}} {{person.name.last}}
-          </span>
-          <span class="person-position">
-            {{person.position}}
-          </span>
+          <span class="person-name">  {{person.name.first}}  {{person.name.last}}    </span>
+          <span class="person-position">  {{person.position}}    </span>
       </div>
       <div class="left-col">
           <div class="person-image">
@@ -61,6 +57,19 @@
                       </div>
                   </div>
           </div>
+          <div class="projects">
+              <h3>Projects</h3>
+                  <div class="project-block" v-for="project in person.projects">
+                      <div class="row">
+                          <span class="name"> {{project.name}} </span>
+                      <div class="row">
+                          <span class="time-period"> {{project.timeperiod}}</span>
+                      </div>
+                      <div class="row">
+                          <span class="description"> {{project.description}} </span>
+                      </div>
+                  </div>
+          </div>          
           <div class="education">
               <h3>Education</h3>
                   <div class="education-block" v-for="education in person.education">
@@ -93,8 +102,8 @@ import {
 } from '../person';
 
 import Vue from 'vue';
-export default Vue.component('side-bar', {
-  name: 'side-bar',
+export default Vue.component('side-bar-projects', {
+  name: 'side-bar-projects',
   data () {
     return {
       person: PERSON
@@ -195,6 +204,17 @@ export default Vue.component('side-bar', {
       .row .job-title {
         font-size:19px;
       }
+    }
+    .projects {
+        margin-top:50px;
+        .project-block {
+            margin-bottom:10px;
+            .degree {
+            font-size:19px;
+            text-transform:uppercase;
+            margin-bottom:3px;
+            }
+        }
     }
     .education {
       margin-top:50px;

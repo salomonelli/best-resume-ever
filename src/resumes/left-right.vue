@@ -1,7 +1,7 @@
 <template>
 <div class="resume" id="resume1">
   <div class="row text-center">
-    <span class="name">{{person.name.first}}  {{person.name.last}}</span>
+    <span class="name">{{person.name.first}} {{person.name.middle}} {{person.name.last}}</span>
   </div>
   <div class="row text-center">
     <p class="position center">{{person.position}}</p>

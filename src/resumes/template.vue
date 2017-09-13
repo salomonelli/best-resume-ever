@@ -5,9 +5,7 @@
 </template>
 
 <script>
-import {
-  PERSON
-} from '../person';
+import { PERSON as person } from '../person';
 
 import Vue from 'vue';
 // TODO rename vue component
@@ -15,7 +13,7 @@ export default Vue.component('template', {
   name: 'template',
   data () {
     return {
-      person: PERSON
+      person
     };
   }
 });

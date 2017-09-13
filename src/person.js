@@ -2,6 +2,7 @@
 export const PERSON = {
   name: {
     first: 'John',
+    middle: '',
     last: 'Doe',
   },
   position: 'Software Developer',

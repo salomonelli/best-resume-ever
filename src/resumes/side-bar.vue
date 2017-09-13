@@ -1,8 +1,12 @@
 <template>
   <div id="resume2" class="resume">
       <div class="top-row">
-          <span class="person-name">  {{person.name.first}}  {{person.name.last}}    </span>
-          <span class="person-position">  {{person.position}}    </span>
+          <span class="person-name">
+            {{person.name.first}} {{person.name.middle}} {{person.name.last}}
+          </span>
+          <span class="person-position">
+            {{person.position}}
+          </span>
       </div>
       <div class="left-col">
           <div class="person-image">

@@ -5,6 +5,7 @@
   "author": "salomonelli",
   "scripts": {
     "dev": "node build/dev-server.js",
+    "build": "node build/build.js",
     "start": "node build/dev-server.js",
     "pdf": "node node/app.js",
     "template": "node node/template/template.js",

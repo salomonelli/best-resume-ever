@@ -82,5 +82,6 @@ export const PERSON = {
     city: 'New York',
     website: 'johndoe.com',
     github: 'johnyD'
-  }
+  },
+  lang: "de"
 };

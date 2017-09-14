@@ -19,12 +19,9 @@ In the directory `src/resumes` you will find all existing templates.
 
 1. Create a copy of `src/resumes/template.vue`.
 
-2. Rename file and update component name:
+2. Rename file and update template name:
 ```javascript
-export default Vue.component('TEMPLATE-NAME', {
-  name: 'TEMPLATE-NAME',
-  ...
-});
+let name = 'TEMPLATE-NAME';
 ```
 
 3. Import the newly added template in `src/resumes/resumes.js`.

@@ -5,7 +5,7 @@
     <div class="heading" id="myselfpic">
     </div>
     <div class="section-headline">
-      Contact
+      {{ lang.headings.contact }}
     </div>
     <div class="item">
       <div class="icon">
@@ -77,7 +77,7 @@
 
     <div class="item last">
       <div class="section-headline">
-        Skills
+        {{ lang.headings.skills }}
       </div>
       <div class="skill" v-for="skill in person.skills">
         <div class="right">
@@ -98,7 +98,7 @@
       <div>{{person.position}}</div>
     </div>
 
-    <div class="section-headline">Working experience</div>
+    <div class="section-headline">{{ lang.headings.experience }}</div>
     <div class="block" v-for="experience in person.experience">
       <div class="block-helper"></div>
       <div class="headline">{{experience.position}} - {{experience.company}}</h3>
@@ -108,7 +108,7 @@
         </p>
       </div>
     </div>
-    <div class="section-headline">Education</div>
+    <div class="section-headline">{{ lang.headings.education }}</div>
     <div class="block" v-for="education in person.education">
       <div class="block-helper"></div>
       <div class="headline">{{education.degree}}</div>
@@ -123,19 +123,11 @@
 </template>
 
 <script>
-import {
-  PERSON
-} from '../person';
-
 import Vue from 'vue';
-export default Vue.component('material-dark', {
-  name: 'material-dark',
-  data () {
-    return {
-      person: PERSON
-    };
-  }
-});
+import { getVueOptions } from './resumes';
+
+let name = 'material-dark';
+export default Vue.component(name, getVueOptions(name));
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -5,19 +5,11 @@
 </template>
 
 <script>
-import { PERSON as person } from '../person';
-import { terms } from '../terms';
-
 import Vue from 'vue';
-// TODO rename vue component
-export default Vue.component('template', {
-  name: 'template',
-  data () {
-    return {
-      person, terms
-    };
-  }
-});
+import { getVueOptions } from './resumes';
+
+let name = 'TEMPLATE-NAME'; // TODO change name
+export default Vue.component(name, getVueOptions(name));
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

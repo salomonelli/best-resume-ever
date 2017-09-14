@@ -2,9 +2,9 @@
 const de = {
   headings: {
     contact: 'Kontakt',
-    experience: 'Erfahrung',
+    experience: 'Berufserfahrung',
     education: 'Schulbildung',
-    skills: 'Fähigkeiten',
+    skills: 'Qualifikationen'
   }
 };
 export default de;

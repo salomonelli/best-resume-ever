@@ -4,7 +4,7 @@ const en = {
     contact: 'Contact',
     experience: 'Experience',
     education: 'Education',
-    skills: 'Skills',
+    skills: 'Skills'
   }
 };
 export default en;

@@ -56,17 +56,16 @@
     </div>
     <div class="contact">
       <h3>Contact</h3>
-      <a :href="'mailto:'+person.contact.email"> {{person.contact.email}}</a>
+      <a :href="`mailto:${person.contact.email}`"> {{person.contact.email}}</a>
       <span>;&nbsp;</span>
-      <a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
+      <a :href="`tel:${person.contact.phone}`">{{person.contact.phone}}</a>
       <span>;&nbsp;</span>
       <span>{{person.contact.street}}, {{person.contact.city}}</span>
       <span>;&nbsp;</span>
       <a :href="person.contact.website">
               {{person.contact.website}}</a>
       <span>;&nbsp;</span>
-      <a :href="'https://github.com/'+person.contact.github">
-                https://github.com/{{person.contact.github}}</a>
+      <a :href="githubLink">{{githubLink}}</a>
     </div>
   </div>
 </div>
@@ -80,6 +79,11 @@ import {
 import Vue from 'vue';
 export default Vue.component('oblique', {
   name: 'oblique',
+  computed: {
+    githubLink: function () {
+      return `https://github.com/${this.person.contact.github}`;
+    }
+  },
   data () {
     return {
       person: PERSON

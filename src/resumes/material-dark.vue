@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <a :href="'tel:'+person.contact.phone">
+    <a :href="`tel:${person.contact.phone}`">
       <div class="item">
         <div class="icon">
           <i class="material-icons">phone</i>
@@ -41,7 +41,7 @@
       </div>
     </a>
 
-    <a :href="'mailto:'+person.contact.email">
+    <a :href="`mailto:${person.contact.email}`">
       <div class="item">
         <div class="icon">
           <i class="material-icons">email</i>
@@ -83,7 +83,7 @@
         <div class="right">
           <span>{{skill.name}}&nbsp;</span>
           <div class="progress">
-            <div class="determinate" :style="'width: '+skill.level+'%;'">
+            <div class="determinate" :style="{'width': `${skill.level}%`}">
               <i class="fa fa-circle"></i>
             </div>
           </div>

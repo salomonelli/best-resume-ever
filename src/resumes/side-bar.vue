@@ -17,7 +17,7 @@
           <div class="contact">
               <h3>Contact</h3>
               <div class="contact-row">
-                  <a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a>
+                  <a :href="`mailto:${person.contact.email}`">{{person.contact.email}}</a>
               </div>
               <div class="contact-row dots">
                   <i class="fa fa-circle" aria-hidden="true"></i>
@@ -25,7 +25,7 @@
                   <i class="fa fa-circle" aria-hidden="true"></i>
               </div>
               <div class="contact-row">
-                  <a href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
+                  <a :href="`tel:${person.contact.phone}`">{{person.contact.phone}}</a>
               </div>
               <div class="contact-row dots">
                   <i class="fa fa-circle" aria-hidden="true"></i>
@@ -41,7 +41,7 @@
                   <i class="fa fa-circle" aria-hidden="true"></i>
               </div>
               <div class="contact-row">
-                  <a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a>
+                  <a :href="githubLink">{{githubLink}}</a>
               </div>
           </div>
       </div>
@@ -75,15 +75,13 @@
           <div class="skills-block">
               <h3>Skills</h3>
               <div class="skills">
-                      <div class="skill" v-for="skill in person.skills">
-                          <span class="skill-name">{{skill.name}}</span>
-                      </div>
+                  <div class="skill" v-for="skill in person.skills">
+                      <span class="skill-name">{{skill.name}}</span>
+                  </div>
               </div>
               <span class="skills-other"> {{person.skillDescription}} </span>
           </div>
       </div>
-  </div>
-
   </div>
 </template>
 
@@ -95,6 +93,11 @@ import {
 import Vue from 'vue';
 export default Vue.component('side-bar', {
   name: 'side-bar',
+  computed: {
+    githubLink: function () {
+      return `https://github.com/${this.person.contact.github}`;
+    }
+  },
   data () {
     return {
       person: PERSON

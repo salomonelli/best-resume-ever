@@ -1,11 +1,19 @@
+import { PERSON } from '../person';
+import { terms } from '../terms';
+
 // If you create a new resume, import it here:
 import '../resumes/material-dark.vue';
 import '../resumes/left-right.vue';
 import '../resumes/oblique.vue';
 import '../resumes/side-bar.vue';
 
-import { PERSON } from '../person';
-import { terms } from '../terms';
+// and add it to the template list (for displaying on home)
+const templates = [
+  'material-dark',
+  'left-right',
+  'oblique',
+  'side-bar'
+];
 
 // Called by templates to decrease redundancy
 function getVueOptions (name) {
@@ -26,4 +34,4 @@ function getVueOptions (name) {
   return opt;
 }
 
-export { getVueOptions };
+export { getVueOptions, templates };

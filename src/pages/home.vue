@@ -6,35 +6,11 @@
   </div>
   <h3 class="title">best-resume-ever</h3>
   <div class="previews">
-    <div class="preview">
-      <router-link v-bind:to="'/resume/material-dark'">
+    <div class="preview" v-for="template in templates">
+      <router-link v-bind:to="'/resume/'+template">
         <div class="preview-wrapper">
-          <img src="../assets/preview/resume-material-dark.png" />
-          <span>material-dark</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/left-right'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-left-right.png" />
-          <span>left-right</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/oblique'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-oblique.png" />
-          <span>oblique</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/side-bar'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-side-bar.png" />
-          <span>side-bar</span>
+          <img v-bind:src="'../assets/preview/resume-'+template+'.png'" />
+          <span>{{ template }}</span>
         </div>
       </router-link>
     </div>
@@ -44,8 +20,15 @@
 
 <script>
 import Vue from 'vue';
+import { templates } from '../resumes/resumes';
+
 export default Vue.component('resume', {
-  name: 'app'
+  name: 'app',
+  data () {
+    return {
+      templates
+    };
+  }
 });
 </script>
 

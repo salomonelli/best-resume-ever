@@ -2,6 +2,7 @@
 export const PERSON = {
   name: {
     first: 'John',
+    middle: '',
     last: 'Doe',
   },
   position: 'Software Developer',
@@ -19,7 +20,7 @@ export const PERSON = {
       company: 'Company B',
       position: 'Frontend Developer',
       timeperiod: 'January 2015 - December 2015',
-      description: 'Fulfillment of extremly important tasks.'
+      description: 'Fulfillment of extremely important tasks.'
     },
     {
       company: 'Company C',
@@ -81,5 +82,6 @@ export const PERSON = {
     city: 'New York',
     website: 'johndoe.com',
     github: 'johnyD'
-  }
+  },
+  lang: 'en' // en, de, fr
 };

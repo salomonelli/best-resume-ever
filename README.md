@@ -17,7 +17,6 @@
 <br>
 
 <p align="left">
-<img src="src/assets/preview/resume-material-blue.png" width="150" style="margin-right:5px; border: 1px solid #ccc;"/>
 <img src="src/assets/preview/resume-material-dark.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <img src="src/assets/preview/resume-left-right.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <img src="src/assets/preview/resume-side-bar.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
@@ -28,6 +27,8 @@
 <br>
 
 ## How to use
+
+best-resume-ever requires at least node v.7.6.
 
 1. Clone this repository.
 
@@ -53,7 +54,7 @@ Please read the <a href="DEVELOPER.md">developer docs</a> on how to create or up
 
 ## Contribute
 
-Feel free to add your own templates, fix bugs or improve the docs. Any kind of help is appreciated!
+Feel free to add your own templates, fix bugs or improve the docs. Any kind of help is appreciated! If you any kind of changes to an existing template, please commit them as new templates.
 
 <br>
 

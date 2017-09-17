@@ -1,8 +1,12 @@
 <template>
   <div id="resume2" class="resume">
       <div class="top-row">
-          <span class="person-name">  {{person.name.first}}  {{person.name.last}}    </span>
-          <span class="person-position">  {{person.position}}    </span>
+          <span class="person-name">
+            {{person.name.first}} {{person.name.middle}} {{person.name.last}}
+          </span>
+          <span class="person-position">
+            {{person.position}}
+          </span>
       </div>
       <div class="left-col">
           <div class="person-image">
@@ -11,7 +15,7 @@
               </div>
           </div>
           <div class="contact">
-              <h3>Contact</h3>
+              <h3>{{ lang.headings.contact }}</h3>
               <div class="contact-row">
                   <a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a>
               </div>
@@ -43,7 +47,7 @@
       </div>
       <div class="right-col">
           <div class="experience">
-              <h3>Experience</h3>
+              <h3>{{ lang.headings.experience }}</h3>
                   <div class="experience-block" v-for="experience in person.experience">
                       <div class="row">
                           <span class="company"> {{experience.company}} -</span>
@@ -58,7 +62,7 @@
                   </div>
           </div>
           <div class="education">
-              <h3>Education</h3>
+              <h3>{{ lang.headings.education }}</h3>
                   <div class="education-block" v-for="education in person.education">
                       <div class="row">
                           <span class="degree">{{education.degree}}</span>
@@ -69,7 +73,7 @@
                   </div>
           </div>
           <div class="skills-block">
-              <h3>Skills</h3>
+              <h3>{{ lang.headings.skills }}</h3>
               <div class="skills">
                       <div class="skill" v-for="skill in person.skills">
                           <span class="skill-name">{{skill.name}}</span>
@@ -84,19 +88,11 @@
 </template>
 
 <script>
-import {
-  PERSON
-} from '../person';
-
 import Vue from 'vue';
-export default Vue.component('side-bar', {
-  name: 'side-bar',
-  data () {
-    return {
-      person: PERSON
-    };
-  }
-});
+import { getVueOptions } from './resumes';
+
+let name = 'side-bar';
+export default Vue.component(name, getVueOptions(name));
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

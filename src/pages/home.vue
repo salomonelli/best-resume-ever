@@ -15,10 +15,10 @@
       </router-link>
     </div>
     <div class="preview">
-      <router-link v-bind:to="'/resume/material-blue'">
+      <router-link v-bind:to="'/resume/purple'">
         <div class="preview-wrapper">
-          <img src="../assets/preview/resume-material-blue.png" />
-          <span>material-blue</span>
+          <img src="../assets/preview/resume-purple.png" />
+          <span>purple</span>
         </div>
       </router-link>
     </div>

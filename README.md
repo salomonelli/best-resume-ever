@@ -28,7 +28,7 @@
 
 ## How to use
 
-best-resume-ever requires at least node v.7.6.
+best-resume-ever requires at least node v.8.5.
 
 1. Clone this repository.
 

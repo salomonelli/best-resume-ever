@@ -5,10 +5,10 @@
             <h2 id="position">{{person.position}}</h2>
             <h1 id="name">{{person.name.first}} {{person.name.last}}</h1>
             <div id="info-flex">
-                <span id="email"><a :href='person.contact.mailto'><i class="fa fa-envelope" aria-hidden="true"></i> {{person.contact.email}}</a></span>
+                <span id="email"><a :href='mailto'><i class="fa fa-envelope" aria-hidden="true"></i> {{person.contact.email}}</a></span>
                 <span id="phone"><i class='fa fa-phone-square' aria-hidden="true"></i> {{person.contact.phone}}</span>
                 <span id="website"><a :href='person.contact.website'><i class="fa fa-home" aria-hidden="true"></i> {{person.contact.website}}</a></span>
-                <span id="github"><a :href='person.contact.githubFull'><i class="fa fa-github" aria-hidden="true"></i> {{person.contact.github}}</a></span>
+                <span id="github"><a :href='githubFull'><i class="fa fa-github" aria-hidden="true"></i> {{person.contact.github}}</a></span>
             </div>
         </div>
         <div id="header-right">
@@ -17,7 +17,7 @@
     </div>
     <div id="resume-body">
         <div id="experience-container">
-            <h2 id="experience-title">EXPERIENCE</h2>
+            <h2 id="experience-title">Experience</h2>
             <div class="spacer"></div>
             <div class="experience" v-for="experience in person.experience">
                 <h2 class="company">{{experience.company}}</h2>
@@ -29,7 +29,7 @@
             </div>
         </div>
         <div id="education-container">
-            <h2>EDUCATION</h2>
+            <h2 id="education-title">Education</h2>
             <div class="spacer"></div>
             <div class="education" v-for="education in person.education">
                 <h2 class="education-description">{{education.description}}</h2>
@@ -37,7 +37,7 @@
             </div>
         </div>
         <div id="skills-container" v-if="person.skills != []">
-            <h2>SKILLS</h2>
+            <h2 id="skills-title">Skills</h2>
             <div class="spacer"></div>
             <p id="skill-description">{{person.skillDescription}}</p>
             <ul id="skill-list">
@@ -61,13 +61,13 @@ import {
 
 import Vue from 'vue';
 
-PERSON.contact.githubFull = 'https://github.com/' + PERSON.contact.github;
-PERSON.contact.mailto = 'mailto:' + PERSON.contact.email;
 export default Vue.component('purple', {
   name: 'purple',
   data () {
     return {
-      person: PERSON
+      person: PERSON,
+      githubFull: 'https://github.com/' + PERSON.contact.github,
+      mailto: 'mailto:' + PERSON.contact.email
     };
   }
 });
@@ -160,8 +160,9 @@ export default Vue.component('purple', {
     #resume-body {
         padding: 40px 100px;
         
-        #experience-title {
+        #experience-title, #education-title, #skills-title {
             font-size:26px;
+            text-transform:uppercase;
         }
         
         .experience {

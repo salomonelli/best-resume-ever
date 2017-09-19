@@ -24,7 +24,9 @@ In the directory `src/resumes` you will find all existing templates.
 let name = 'TEMPLATE-NAME';
 ```
 
-3. Import the newly added template in `src/resumes/resumes.js`.
+3. Import the newly added template and add the name to the list in `src/resumes/resumes.js`.
+
+4. Place a preview image in `src/assets/preview/resume-TEMPLATE-NAME.png`.
 
 <br>
 Your new resume will be now reachable at localhost:8080/#/resume/TEMPLATE-NAME.

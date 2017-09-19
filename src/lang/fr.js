@@ -2,10 +2,10 @@
 const fr = {
   headings: {
     contact: 'Contact',
-    experience: 'Expériences professionelles',
+    experience: 'Expérience professionelle',
     education: 'Formation',
     skills: 'Compétences',
-    about: 'C\'est moi' 
+    about: 'À propos de moi' 
   }
 };
 export default fr;

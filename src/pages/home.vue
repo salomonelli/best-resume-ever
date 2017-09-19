@@ -38,6 +38,14 @@
         </div>
       </router-link>
     </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/purple'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-purple.png" />
+          <span>purple</span>
+        </div>
+      </router-link>
+    </div>
   </div>
 </div>
 </template>

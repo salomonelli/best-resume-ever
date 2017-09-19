@@ -4,7 +4,8 @@ const fr = {
     contact: 'Contact',
     experience: 'Expériences professionelles',
     education: 'Formation',
-    skills: 'Compétences'
+    skills: 'Compétences',
+    about: 'À propos de moi'
   }
 };
 export default fr;

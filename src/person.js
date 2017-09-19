@@ -83,5 +83,5 @@ export const PERSON = {
     website: 'johndoe.com',
     github: 'johnyD'
   },
-  lang: 'en' // en, de, fr, pt
+  lang: 'en' // en, de, fr, pt, it
 };

@@ -4,7 +4,8 @@ const it = {
     contact: 'Contatti',
     experience: 'Esperienza professionale',
     education: 'Formazione',
-    skills: 'Competenze'
+    skills: 'Competenze',
+    about: 'A proposito di me'
   }
 };
 export default it;

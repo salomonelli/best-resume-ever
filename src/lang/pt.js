@@ -4,7 +4,8 @@ const pt = {
     contact: 'Contactos',
     experience: 'Experiência Profissional',
     education: 'Educação',
-    skills: 'Competências'
+    skills: 'Competências',
+    about: 'About me' // Translation needed!
   }
 };
 export default pt;

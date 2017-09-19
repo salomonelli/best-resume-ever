@@ -5,10 +5,11 @@
             <h2 id="position">{{person.position}}</h2>
             <h1 id="name">{{person.name.first}} {{person.name.last}}</h1>
             <div id="info-flex">
-                <span id="email"><a :href='mailto'><i class="fa fa-envelope" aria-hidden="true"></i> {{person.contact.email}}</a></span>
+                <span id="email"><a :href='"mailto:" + person.contact.email'>
+                  <i class="fa fa-envelope" aria-hidden="true"></i> {{person.contact.email}}</a></span>
                 <span id="phone"><i class='fa fa-phone-square' aria-hidden="true"></i> {{person.contact.phone}}</span>
                 <span id="website"><a :href='person.contact.website'><i class="fa fa-home" aria-hidden="true"></i> {{person.contact.website}}</a></span>
-                <span id="github"><a :href='githubFull'><i class="fa fa-github" aria-hidden="true"></i> {{person.contact.github}}</a></span>
+                <span id="github"><a :href='"https://github.com/" + person.contact.github'><i class="fa fa-github" aria-hidden="true"></i> {{person.contact.github}}</a></span>
             </div>
         </div>
         <div id="header-right">
@@ -17,19 +18,19 @@
     </div>
     <div id="resume-body">
         <div id="experience-container">
-            <h2 id="experience-title">Experience</h2>
+            <h2 id="experience-title">{{ lang.headings.experience }}</h2>
             <div class="spacer"></div>
             <div class="experience" v-for="experience in person.experience">
                 <h2 class="company">{{experience.company}}</h2>
                 <p class="job-info"><span class="job-title">{{experience.position}} | </span><span class="experience-timeperiod">{{experience.timeperiod}}</span></p>
                 <p class="job-description" v-if="experience.description">{{experience.description}}</p>
-                <ul v-if="experience.list" > 
+                <ul v-if="experience.list" >
                     <li v-for="item in experience.list"><span class="list-item-black">{{item}}</span></li>
                 </ul>
             </div>
         </div>
         <div id="education-container">
-            <h2 id="education-title">Education</h2>
+            <h2 id="education-title">{{ lang.headings.education }}</h2>
             <div class="spacer"></div>
             <div class="education" v-for="education in person.education">
                 <h2 class="education-description">{{education.description}}</h2>
@@ -37,7 +38,7 @@
             </div>
         </div>
         <div id="skills-container" v-if="person.skills != []">
-            <h2 id="skills-title">Skills</h2>
+            <h2 id="skills-title">{{ lang.headings.skills }}</h2>
             <div class="spacer"></div>
             <p id="skill-description">{{person.skillDescription}}</p>
             <ul id="skill-list">
@@ -47,7 +48,7 @@
     </div>
     <div id="resume-footer">
         <div v-if="person.about">
-            <h2>About Me</h2>
+            <h2>{{ lang.headings.about }}</h2>
             <p>{{person.about}}</p>
         </div>
     </div>
@@ -55,22 +56,10 @@
 </template>
 
 <script>
-import {
-  PERSON
-} from '../person';
-
 import Vue from 'vue';
+import { getVueOptions } from './resumes';
 
-export default Vue.component('purple', {
-  name: 'purple',
-  data () {
-    return {
-      person: PERSON,
-      githubFull: 'https://github.com/' + PERSON.contact.github,
-      mailto: 'mailto:' + PERSON.contact.email
-    };
-  }
-});
+export default Vue.component('purple', getVueOptions(name));
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -84,33 +73,33 @@ export default Vue.component('purple', {
         margin:0;
         color: @text-purple;
     }
-    
+
     p {
         margin:0;
         font-size:12px;
     }
-    
+
     ul li {
         color:@text-purple;
         font-size:12px;
     }
-    
+
     a {
         color:#FFF;
         text-decoration:none;
     }
-    
+
     .list-item-black {
         color:black;
     }
-    
+
     #resume-header {
         color: white;
         height: 136px;
         background-color: purple;
         box-shadow: inset 0px 0px 200px #301030;
         padding: 40px 100px 25px;
-        
+
         #header-left {
             /*width: 465px;*/
             width:100%;
@@ -129,7 +118,7 @@ export default Vue.component('purple', {
                 display:flex;
                 margin-top:20px;
                 font-size:14px;
-                
+
                 span {
                     margin-right:25px;
                 }
@@ -138,7 +127,7 @@ export default Vue.component('purple', {
                 }
             }
         }
-        
+
         /*#header-right {
             width: 125px;
             float: right;
@@ -156,48 +145,48 @@ export default Vue.component('purple', {
             }
         }*/
     }
-    
+
     #resume-body {
         padding: 40px 100px;
-        
+
         #experience-title, #education-title, #skills-title {
             font-size:26px;
             text-transform:uppercase;
         }
-        
+
         .experience {
             margin: 10px 0 10px 50px;
             ul {
                 margin: 5px 0 0 0;
             }
         }
-        
+
         .company, .education-description {
-            font-size:20px;  
+            font-size:20px;
         }
-        
+
         .job-info {
             margin-bottom:5px;
         }
-        
-        
-        
+
+
+
         .job-title, .degree {
             font-weight:700;
             color: @text-purple;
             font-size:16px;
         }
-        
+
         .experience-timeperiod, .education-timeperiod {
             font-weight:100;
             color: @text-purple;
             font-size:16px;
         }
-        
+
         .education {
             margin: 10px 0 10px 50px;
         }
-        
+
         #skill-list {
             column-count: 3;
             list-style-position: inside;
@@ -205,7 +194,7 @@ export default Vue.component('purple', {
                 font-size:14px;
             }
         }
-        
+
         #education-container, #skills-container {
             margin-top: 20px;
         }
@@ -230,6 +219,6 @@ export default Vue.component('purple', {
     width:100%;
     border-bottom:1px solid @text-purple;
     margin:5px 0 10px;
-    
+
 }
 </style>

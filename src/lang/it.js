@@ -5,7 +5,7 @@ const it = {
     experience: 'Esperienza professionale',
     education: 'Formazione',
     skills: 'Competenze',
-    about: 'About me' // Translation needed!
+    about: 'Su di me'
   }
 };
 export default it;

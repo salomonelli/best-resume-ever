@@ -1,59 +1,78 @@
-# best-resume-ever
+<h1 align="center">
+  <br>
+  <a href="https://github.com/salomonelli/best-resume-ever">
+  <img src="src/assets/logo.png" alt="Markdownify" width="200"></a>
+  <br>
+  best-resume-ever
+  <br>
+</h1>
 
-Build your best resume ever!
+<h4 align="center">
+  :necktie: :briefcase: Build fast :rocket: and easy multiple beautiful resumes and create your best CV ever!
+  <br><br>
+  Made with Vue and LESS.
+</h4>
 
-A collection of multiple beautiful resumes build with LESS and Mustache Templates. Add your personal information to a JSON-File and easily export all of the Curriculum Vitaes as PDF!
+<br>
+<br>
 
+<p align="left">
+<img src="src/assets/preview/resume-purple.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="src/assets/preview/resume-material-dark.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="src/assets/preview/resume-left-right.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="src/assets/preview/resume-side-bar.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="src/assets/preview/resume-oblique.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+</p>
 
+<br>
+<br>
 
+## How to use
 
-## Resumes
+best-resume-ever requires at least node v.8.5.
 
-<a href="public/preview/resume-material-blue.png"><img src="public/preview/resume-material-blue.png" width="150"/></a>
-<a href="public/preview/resume-material-dark.png"><img src="public/preview/resume-material-dark.png" width="150"/></a>
-<a href="public/preview/resume-left-right.png"><img src="public/preview/resume-left-right.png" width="150"/></a>
-<a href="public/preview/resume-side-bar.png"><img src="public/preview/resume-side-bar.png" width="150"/></a>
-<a href="public/preview/resume-oblique.png"><img src="public/preview/resume-oblique.png" width="150"/></a>
-<a href="public/preview/resume-grey-boxes.png"><img src="public/preview/resume-grey-boxes.png" width="150"/></a>
+1. Clone this repository.
 
+2. Run `npm install`.
 
+3. Edit your personal data in `src/person.js`.
 
-## Getting Started
+4. Preview resumes with `npm run dev`.
 
-Follow these instructions to set up this project and create your own CV.
+5. Export with `npm run export`.
 
+All resumes will be exported to `/pdf`.
 
-
-### Prerequisites
-
-To run this project, please install node. (See https://nodejs.org/en/download/package-manager/ and https://nodejs.org/en/download/)
-
-
-
-### Installation
-
-- Clone this repository.
-- Switch to project directory and run `npm install`.
-
-
-
-### Adjusting your personal information
-
-- Adjust your personal information in `/src/person.js`.
-- Replace placeholder image `/public/person.jpg` with your portrait.
-- To preview your CV run `npm run dev`. Check out <http://localhost:3000>.
-
-The app recompiles automatically. This may take a short while. Feel free to adjust stylings to fit your needs!
-
-
-
-### Exporting resumes as PDF
-
-With `npm run pdf` the resumes can be exported. You will find all resumes as PDFs in `/pdf`.
+<br>
 
 
+## Creating and Updating Templates
 
-## Configuration and Contribution
+Please read the <a href="DEVELOPER.md">developer docs</a> on how to create or update templates.
 
-Please read [the guide](/docs/Docs.md) on how to configure page size, stylings and adding your own templates.
-Feel free to create your own templates or help in fixing issues.
+<br>
+
+
+## Contribute
+
+Feel free to add your own templates, language supports, fix bugs or improve the docs. Any kind of help is appreciated! If you any kind of changes to an existing template, please commit them as new templates.
+
+<br>
+
+
+## Credits
+
+This project uses several open source packages:
+
+* <a href="https://github.com/vuejs/vue" target="_blank">Vue</a>
+* <a href="https://github.com/less/less.js" target="_blank">LESS</a>
+* <a href="https://github.com/mixu/electroshot" target="_blank">Electroshot</a>
+
+<br>
+
+
+---
+
+> [sarasteiert.com](https://www.sarasteiert.com) &nbsp;&middot;&nbsp;
+> GitHub [@salomonelli](https://github.com/salomonelli) &nbsp;&middot;&nbsp;
+> Twitter [@salomonelli](https://twitter.com/salomonelli)

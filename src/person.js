@@ -1,9 +1,11 @@
 /* eslint-disable */
-module.exports = {
+export const PERSON = {
   name: {
     first: 'John',
+    middle: '',
     last: 'Doe',
   },
+  about: 'Hi, my name is John Doe. I\'m just about the most boring type of person you could possibly imagine. I like collecting leaves from the tree in my back yard and documenting each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.',
   position: 'Software Developer',
   birth: {
     year: 1990,
@@ -19,7 +21,7 @@ module.exports = {
       company: 'Company B',
       position: 'Frontend Developer',
       timeperiod: 'January 2015 - December 2015',
-      description: 'Fulfillment of extremly important tasks.'
+      description: 'Fulfillment of extremely important tasks.'
     },
     {
       company: 'Company C',
@@ -81,5 +83,6 @@ module.exports = {
     city: 'New York',
     website: 'johndoe.com',
     github: 'johnyD'
-  }
+  },
+  lang: 'en' // en, de, fr, pt, cn, it, es, th
 };

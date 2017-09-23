@@ -5,7 +5,7 @@ const cn = {
     experience: '工作经历',
     education: '教育经历',
     skills: '技能专长',
-    about: 'About me' // Translation needed!
+    about: '自我介绍'
   }
 };
 export default cn;

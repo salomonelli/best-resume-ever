@@ -7,7 +7,8 @@ import it from './lang/it';
 import es from './lang/es';
 import th from './lang/th';
 import ru from './lang/ru';
+import ptbr from './lang/pt-br';
 
 export const terms = {
-  en, de, fr, pt, cn, it, es, th, ru
+  en, de, fr, pt, cn, it, es, th, 'pt-br': ptbr, ru
 };

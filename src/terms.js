@@ -6,10 +6,11 @@ import cn from './lang/cn';
 import it from './lang/it';
 import es from './lang/es';
 import th from './lang/th';
+import id from './lang/id';
 import sv from './lang/sv';
 import ru from './lang/ru';
 import ptbr from './lang/pt-br';
 
 export const terms = {
-  en, de, fr, pt, cn, it, es, th, 'pt-br': ptbr, ru, sv
+  en, de, fr, pt, cn, it, es, th, 'pt-br': ptbr, ru, sv, id
 };

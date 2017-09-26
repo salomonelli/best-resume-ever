@@ -40,6 +40,15 @@
                   <a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a>
               </div>
           </div>
+          <div class="skills-block">
+              <h3>Skills</h3>
+              <div class="skills">
+                      <div class="skill" v-for="skill in person.skills">
+                          <span class="skill-name">{{skill.name}}</span>
+                      </div>
+              </div>
+              <span class="skills-other"> {{person.skillDescription}} </span>
+          </div>
       </div>
       <div class="right-col">
           <div class="experience">
@@ -81,15 +90,7 @@
                       </div>
                   </div>
           </div>
-          <div class="skills-block">
-              <h3>Skills</h3>
-              <div class="skills">
-                      <div class="skill" v-for="skill in person.skills">
-                          <span class="skill-name">{{skill.name}}</span>
-                      </div>
-              </div>
-              <span class="skills-other"> {{person.skillDescription}} </span>
-          </div>
+          
       </div>
   </div>
 
@@ -129,8 +130,8 @@ export default Vue.component('side-bar-projects', {
   }
   .top-row {
     width:100%;
-    padding-top:100px;
-    padding-bottom:100px;
+    padding-top:60px;
+    padding-bottom:60px;
     span {
       width:100%;
       display:block;
@@ -139,7 +140,7 @@ export default Vue.component('side-bar-projects', {
     }
     span.person-name {
       text-transform:uppercase;
-      font-size:50px;
+      font-size:40px;
       letter-spacing:10px;
     }
     span.person-position {
@@ -180,6 +181,9 @@ export default Vue.component('side-bar-projects', {
     .contact .contact-row:first-of-type {
       margin-top:50px;
     }
+    .contact .contact-row:last-of-type {
+      margin-bottom:50px;
+    }
     .contact .contact-row.dots {
       margin-top:20px;
       margin-bottom:15px;
@@ -199,10 +203,10 @@ export default Vue.component('side-bar-projects', {
       }
       .row .company {
         text-transform:uppercase;
-        font-size:19px;
+        font-size:12px;
       }
       .row .job-title {
-        font-size:19px;
+        font-size:12px;
       }
     }
     .projects {
@@ -210,7 +214,7 @@ export default Vue.component('side-bar-projects', {
         .project-block {
             margin-bottom:10px;
             .degree {
-            font-size:19px;
+            font-size:12px;
             text-transform:uppercase;
             margin-bottom:3px;
             }
@@ -221,16 +225,18 @@ export default Vue.component('side-bar-projects', {
       .education-block {
         margin-bottom:10px;
         .degree {
-          font-size:19px;
+          font-size:12px;
           text-transform:uppercase;
           margin-bottom:3px;
         }
       }
     }
     .skills-block {
+      text-align:center; 
       margin-top:50px;
       position:relative;
       .skills {
+        text-align:center; 
         margin-bottom:10px;
         margin-bottom:20px;
         position:relative;
@@ -238,6 +244,7 @@ export default Vue.component('side-bar-projects', {
         margin-right:auto;
         display:inline-block;
         .skill {
+          text-align:center;
           width:80px;
           height:80px;
           border-radius:50%;

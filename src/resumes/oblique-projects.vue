@@ -121,7 +121,7 @@ export default Vue.component('oblique-projects', {
     width:0;
     height:0;
     border-style:solid;
-    border-width:600px 0 0 1500px;
+    border-width:415px 0 0 1500px;
     border-color:#006064 transparent transparent transparent;
     position:absolute;
     left:-600px;
@@ -131,7 +131,7 @@ export default Vue.component('oblique-projects', {
     position:absolute;
     z-index:20;
     right:15%;
-    top:200px;
+    top:70px;
     .person-wrapper {
       overflow:hidden;
       position:relative;
@@ -169,7 +169,7 @@ export default Vue.component('oblique-projects', {
     }
   }
   .resume-content {
-    margin-top:435px;
+    margin-top:250px;
     margin-left:15%;
     width:70%;
     .experience .experience-block {
@@ -227,7 +227,7 @@ export default Vue.component('oblique-projects', {
     line-height:1;
   }
   .contact {
-    margin-top:50px;
+    margin-top:20px;
     a, span {
       display:inline-block;
       font-size:20px;

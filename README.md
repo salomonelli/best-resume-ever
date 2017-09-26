@@ -8,7 +8,7 @@
 </h1>
 
 <h4 align="center">
-  :necktie: :briefcase: Build fast :rocket: and easy multpile beautiful resumes and create your best CV ever!
+  :necktie: :briefcase: Build fast :rocket: and easy multiple beautiful resumes and create your best CV ever!
   <br><br>
   Made with Vue and LESS.
 </h4>
@@ -17,7 +17,7 @@
 <br>
 
 <p align="left">
-<img src="src/assets/preview/resume-material-blue.png" width="150" style="margin-right:5px; border: 1px solid #ccc;"/>
+<img src="src/assets/preview/resume-purple.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <img src="src/assets/preview/resume-material-dark.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <img src="src/assets/preview/resume-left-right.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <img src="src/assets/preview/resume-side-bar.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
@@ -28,6 +28,8 @@
 <br>
 
 ## How to use
+
+best-resume-ever requires at least node v.8.5.
 
 1. Clone this repository.
 
@@ -53,7 +55,7 @@ Please read the <a href="DEVELOPER.md">developer docs</a> on how to create or up
 
 ## Contribute
 
-Feel free to add your own templates, fix bugs or improve the docs. Any kind of help is appreciated!
+Feel free to add your own templates, language supports, fix bugs or improve the docs. Any kind of help is appreciated! If you any kind of changes to an existing template, please commit them as new templates.
 
 <br>
 

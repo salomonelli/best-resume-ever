@@ -10,12 +10,17 @@
 
 <script>
 import Vue from 'vue';
-import * as chromeShadowFixer from 'chrome-shadow-fixer';
+// import * as chromeShadowFixer from 'chrome-shadow-fixer';
+import * as chromeShadowFixer from './chromeShadowFixer';
 import '../resumes/resumes';
 export default Vue.component('resume', {
   name: 'app',
   mounted: () => {
-    chromeShadowFixer.fix();
+    const els = chromeShadowFixer.fix();
+    if (
+      els &&
+      els.length > 0
+    ) window.onhashchange = () => { location.reload(); };
   }
 });
 </script>

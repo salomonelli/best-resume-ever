@@ -31,6 +31,21 @@
         </div>
       </div>
     </div>
+
+      <div class="experience">
+      <h3>{{ lang.headings.projects }}</h3>
+
+      <div class="experience-block" v-for="project in person.projects">
+        <div class="row">
+          <span class="job-title"> {{project.name}} </span>
+        </div>
+
+        <div class="row">
+          <span class="job-description">{{project.description}} </span>
+        </div>
+      </div>
+    </div>
+
     <div class="education">
       <h3>{{ lang.headings.education }}</h3>
       <div class="education-block" v-for="education in person.education">
@@ -66,7 +81,7 @@
               {{person.contact.website}}</a>
       <span>;&nbsp;</span>
       <a :href="'https://github.com/'+person.contact.github">
-                https://github.com/{{person.contact.github}}</a>
+                github.com/{{person.contact.github}}</a>
     </div>
   </div>
 </div>
@@ -193,7 +208,7 @@ export default Vue.component(name, getVueOptions(name));
     line-height:1;
   }
   .contact {
-    margin-top:50px;
+    margin-top:20px;
     a, span {
       display:inline-block;
       font-size:20px;

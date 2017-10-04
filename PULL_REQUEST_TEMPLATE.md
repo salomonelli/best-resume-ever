@@ -1,23 +1,8 @@
-<!-- REMOVE EVERYTHING WRITTEN IN UPPERCASE -->
-
 ## This PR contains:
-<!--
- - IMPROVED DOCS
- - A TYPO-FIX
  - A BUGFIX
- - A NEW FEATURE
- - A BREAKING CHANGE
- - SOMETHING ELSE
--->
 
 ## Describe the problem you have without this PR
-<!-- DESCRIBE PROBLEM HERE OR LINK TO AN ISSUE -->
+Previously it was impossible to export or preview a resume with more than 1 A4 page.
+I have set page height to auto on resume.vue and the problem seems to be fixed.
+[Issue Discussion](https://github.com/salomonelli/best-resume-ever/issues/70)
 
-<!--
-
-IMPORTANT: READ THIS BEFORE SUBMISSION:
-
-- IF YOUR PULL-REQUEST CONTAINS A NEW FEATURE, IT MUST HAVE BEEN DISCUSSED AT AN ISSUE BEFORE
-- DO NOT ADD GENERATED FILES TO THE PULL-REQUEST (NOTHING FROM THE pdf-FOLDER)
-
--->

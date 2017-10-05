@@ -219,6 +219,7 @@ export default Vue.component(name, getVueOptions(name));
           margin:3px;
           float:right;
           font-size:13px;
+          text-align:left;
           .skill-name {
             text-align:center;
             position:absolute;

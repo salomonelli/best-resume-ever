@@ -101,6 +101,7 @@ export default Vue.component(name, getVueOptions(name));
   font-family:'Raleway', sans-serif;
   padding-bottom:50px;
   text-align:right;
+  direction: rtl;
   a, a:focus, a:hover, a:visited {
     text-decoration:none;
   }
@@ -219,7 +220,6 @@ export default Vue.component(name, getVueOptions(name));
           margin:3px;
           float:right;
           font-size:13px;
-          text-align:left;
           .skill-name {
             text-align:center;
             position:absolute;

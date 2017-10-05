@@ -100,6 +100,7 @@ export default Vue.component(name, getVueOptions(name));
 #resume2 {
   font-family:'Raleway', sans-serif;
   padding-bottom:50px;
+  text-align:right;
   a, a:focus, a:hover, a:visited {
     text-decoration:none;
   }
@@ -216,7 +217,7 @@ export default Vue.component(name, getVueOptions(name));
           position:relative;
           border:#333333 1px solid;
           margin:3px;
-          float:left;
+          float:right;
           font-size:13px;
           .skill-name {
             text-align:center;

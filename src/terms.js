@@ -11,8 +11,9 @@ import sv from './lang/sv';
 import ru from './lang/ru';
 import ptbr from './lang/pt-br';
 import hu from './lang/hu';
+import pl from './lang/pl';
 import he from './lang/he';
 
 export const terms = {
-  en, de, fr, pt, cn, it, es, th, 'pt-br': ptbr, ru, sv, id, hu, he
+  en, de, fr, pt, cn, it, es, th, 'pt-br': ptbr, ru, sv, id, hu, pl, he
 };

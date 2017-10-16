@@ -2,8 +2,8 @@
 const nl = {
     headings: {
       contact: 'Contact',
-      experience: 'Ervaring',
-      education: 'Opleiding',
+      experience: 'Ervaringen',
+      education: 'Opleidingen',
       skills: 'Skills',
       about: 'Over mij'
     }

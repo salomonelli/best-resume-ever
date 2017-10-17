@@ -35,12 +35,12 @@
               <div class="contact-row">
                   {{person.contact.street}} <br> {{person.contact.city}}
               </div>
-              <div class="contact-row dots">
+              <div v-if="person.contact.github" class="contact-row dots">
                   <i class="fa fa-circle" aria-hidden="true"></i>
                   <i class="fa fa-circle" aria-hidden="true"></i>
                   <i class="fa fa-circle" aria-hidden="true"></i>
               </div>
-              <div class="contact-row">
+              <div v-if="person.contact.github" class="contact-row">
                   <a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a>
               </div>
           </div>

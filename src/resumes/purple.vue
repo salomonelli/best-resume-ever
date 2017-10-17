@@ -30,7 +30,7 @@
         <h2 id="experience-title">{{ lang.headings.experience }}</h2>
         <div class="spacer"></div>
         <div class="experience" v-for="(experience, index) in person.experience" :key="index">
-          <h2 class="company">{{experience.company}}</h2>
+          <h3 class="company">{{experience.company}}</h3>
           <p class="job-info">
             <span class="job-title">{{experience.position}} | </span>
             <span class="experience-timeperiod">{{experience.timeperiod}}</span>
@@ -47,7 +47,7 @@
         <h2 id="education-title">{{ lang.headings.education }}</h2>
         <div class="spacer"></div>
         <div class="education" v-for="(education, index) in person.education" :key="index">
-          <h2 class="education-description">{{education.description}}</h2>
+          <h3 class="education-description">{{education.description}}</h3>
           <p>
             <span class="degree">{{education.degree}} | </span>
             <span class="education-timeperiod">{{education.timeperiod}}</span>
@@ -57,12 +57,12 @@
       <div id="skills-container" v-if="person.skills != []">
         <h2 id="skills-title">{{ lang.headings.skills }}</h2>
         <div class="spacer"></div>
-        <p id="skill-description">{{person.skillDescription}}</p>
         <ul id="skill-list">
           <li class="skill" v-for="(skill, index) in person.skills" :key="index">
             <span class="list-item-black">{{skill.name}}</span>
           </li>
         </ul>
+        <p id="skill-description">{{person.skillDescription}}</p>
       </div>
     </div>
     <div id="resume-footer">
@@ -88,7 +88,8 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     h1,
-    h2 {
+    h2,
+    h3 {
       /*font-family:'Open Sans Condensed', sans-serif;*/
       margin: 0;
       color: @text-purple;
@@ -118,7 +119,7 @@
       height: 136px;
       background-color: purple;
       box-shadow: inset 0px 0px 200px #301030;
-      padding: 40px 100px 25px;
+      padding: 40px 60px;
 
       #header-left {
         /*width: 465px;*/
@@ -147,37 +148,23 @@
           }
         }
       }
-
-      /*#header-right {
-                      width: 125px;
-                      float: right;
-                      margin: 0px;
-                      box-sizing: border-box;
-                      height: 140px;
-                      background-color: #FFF;
-                      padding: 5px;
-                      #headshot {
-                          width: 100%;
-                          height: 100%;
-                          background:url('../assets/person.jpg');
-                          background-position:center;
-                          background-size:cover;
-                      }
-                  }*/
     }
 
     #resume-body {
-      padding: 40px 100px;
+      padding: 0 60px;
 
       #experience-title,
       #education-title,
       #skills-title {
         font-size: 26px;
-        text-transform: uppercase;
       }
 
+      h2 {
+        text-transform: uppercase;
+        margin-top: 20px;
+      }
       .experience {
-        margin: 10px 0 10px 50px;
+        margin: 10px 20px;
         ul {
           margin: 5px 0 0 0;
         }
@@ -209,25 +196,25 @@
       }
 
       .education {
-        margin: 10px 0 10px 50px;
+        margin: 10px 20px;
       }
 
       #skill-list {
         column-count: 3;
         list-style-position: inside;
+        padding-left: 20px;
         ul li {
           font-size: 14px;
         }
       }
 
-      #education-container,
-      #skills-container {
-        margin-top: 20px;
+      #skill-description {
+        padding-left: 20px;
       }
     }
     #resume-footer {
-      padding: 20px 100px;
-      height: 135px;
+      padding: 40px 60px;
+      height: 160px;
       background-color: purple;
       box-shadow: inset 0px 0px 100px #301030;
       box-sizing: border-box;

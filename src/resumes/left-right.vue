@@ -11,6 +11,14 @@
         <div class="img"></div>
       </div>
     </div>
+    <div class="row">
+      <template v-if="person.about">
+        <h3 class="text-center">{{ lang.headings.about }}</h3>
+        <div class="about-block">
+          <p v-html="person.about"></p>
+        </div>
+      </template>
+    </div>
     <div class="left half">
       <div class="experience">
         <h3>{{ lang.headings.experience }}</h3>
@@ -142,7 +150,7 @@
       border: 1px solid black;
       text-transform: uppercase;
       padding: 10px 20px;
-      margin-top: 80px;
+      margin-top: 50px;
       margin-bottom: 5px;
       font-family: 'Open Sans', sans-serif;
       font-size: 35px;
@@ -154,13 +162,13 @@
       font-family: 'Open Sans', sans-serif;
       font-size: smaller;
       color: #757575;
-      margin-bottom: 40px;
+      margin-top: 0px;
     }
     .image {
       width: 100px;
       height: 100px;
-      margin-top: 50px;
-      margin-bottom: 50px;
+      margin-top: 20px;
+      margin-bottom: 20px;
       .img {
         width: 100%;
         height: 100%;
@@ -169,6 +177,17 @@
         background-repeat: none;
         background-position: center;
         background-size: cover;
+      }
+    }
+
+    .text-center {
+      text-align: center;
+    }
+    .about-block {
+      padding: 0 20px;
+      color: #616161;
+      p {
+        margin-bottom: 0;
       }
     }
     .contact {
@@ -212,11 +231,9 @@
     }
     .skills-other {
       color: #616161;
-      margin-bottom: 10px;
     }
     .skills {
       margin-top: 20px;
-      margin-bottom: 10px;
       .skill-block {
         padding-bottom: 10px;
         display: inline-block;

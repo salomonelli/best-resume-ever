@@ -97,7 +97,13 @@
         <h2>{{person.name.first}} {{person.name.middle}} {{person.name.last}}</h2>
         <div>{{person.position}}</div>
       </div>
-
+      <template v-if="person.about">
+        <div class="section-headline">{{ lang.headings.about }}</div>
+        <div class="block">
+          <div class="block-helper"></div>
+          <p class="info" v-html="person.about"></p>
+        </div>
+      </template>
       <div class="section-headline">{{ lang.headings.experience }}</div>
       <div class="block" v-for="(experience, index) in person.experience" :key="index">
         <div class="block-helper"></div>
@@ -150,10 +156,8 @@
   }
 
   .title {
-    right: 25px;
-    padding-left: 20px;
     padding-top: 20px;
-    bottom: 25px;
+    padding-bottom: 20px;
     h2 {
       text-transform: uppercase;
       display: block;
@@ -165,14 +169,12 @@
       color: white;
       color: rgba(0, 0, 0, 0.7);
       padding-top: 0;
-      margin-top: 0;
+      margin: 0!important;
       letter-spacing: 10px;
       font-weight: 400;
     }
     div {
-      margin-top: -5px;
-      margin-top: 0;
-      margin: 0;
+      margin: 0!important;
       padding: 0;
       line-height: 15pt;
       font-weight: 300;
@@ -188,7 +190,6 @@
       -webkit-margin-before: 2.33em;
       -webkit-margin-start: 0;
       -webkit-margin-end: 0;
-      padding-top: 0;
       text-transform: uppercase;
       opacity: 0.8;
     }
@@ -200,9 +201,8 @@
     letter-spacing: 3px;
     font-size: 10pt;
     opacity: 0.8;
-    margin-left: 20px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     color: #3f3d3c;
   }
 
@@ -364,6 +364,7 @@
     overflow: hidden;
     display: block;
     .section-headline {
+      padding-left: 18px;
       color: rgba(255, 255, 255, 0.54);
     }
     a {

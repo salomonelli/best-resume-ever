@@ -25,24 +25,24 @@
       <h3>{{ lang.headings.contact }}</h3>
       <table>
         <tr>
-          <td><a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a></td>
           <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+          <td><a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a></td>
         </tr>
         <tr>
-          <td><a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a></td>
           <td><i class="fa fa-phone" aria-hidden="true"></i></td>
+          <td><a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a></td>
         </tr>
         <tr>
-          <td>{{person.contact.street}} <br> {{person.contact.city}}</td>
           <td><i class="fa fa-home" aria-hidden="true"></i></td>
+          <td>{{person.contact.street}} <br> {{person.contact.city}}</td>
         </tr>
         <tr>
-          <td><a :href="person.contact.website">{{person.contact.website}}</a></td>
           <td><i class="fa fa-globe" aria-hidden="true"></i></td>
+          <td><a :href="person.contact.website">{{person.contact.website}}</a></td>
         </tr>
         <tr>
-          <td><a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a></td>
           <td><i class="fa fa-github" aria-hidden="true"></i></td>
+          <td><a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a></td>
         </tr>
       </table>
     </div>
@@ -83,6 +83,7 @@ export default Vue.component(name, getVueOptions(name));
   font-family:'Source Sans Pro', sans-serif;
   font-size:20px;
   padding-bottom:50px;
+  direction: rtl;
   a, a:focus, a:hover, a:visited {
     color:#616161;
   }
@@ -106,7 +107,7 @@ export default Vue.component(name, getVueOptions(name));
   }
   .half.right {
     float:right;
-    text-align:left;
+    text-align:right;
     padding-right:4%;
     padding-left:2%;
   }
@@ -196,6 +197,7 @@ export default Vue.component(name, getVueOptions(name));
   .skills {
     margin-top:20px;
     margin-bottom:10px;
+    direction: ltr !important;
     .skill-block {
       padding-bottom:10px;
       display:inline-block;
@@ -203,6 +205,7 @@ export default Vue.component(name, getVueOptions(name));
         width:100px;
         color:#616161;
         float:left;
+        text-align: left;
       }
       .skill-bar {
         float:right;

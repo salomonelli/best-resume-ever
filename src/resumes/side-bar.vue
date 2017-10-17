@@ -14,6 +14,12 @@
           <div class="img"></div>
         </div>
       </div>
+      <div v-if="person.about" class="about">
+        <h3 class="text-center">{{ lang.headings.about }}</h3>
+        <div class="about-block">
+          <p v-html="person.about"></p>
+        </div>
+      </div>
       <div class="contact">
         <h3>{{ lang.headings.contact }}</h3>
         <div class="contact-row">
@@ -115,8 +121,8 @@
     }
     .top-row {
       width: 100%;
-      padding-top: 100px;
-      padding-bottom: 100px;
+      padding-top: 80px;
+      padding-bottom: 80px;
       span {
         width: 100%;
         display: block;
@@ -133,9 +139,9 @@
       }
     }
     .left-col {
-      width: 26%;
+      width: 30%;
       float: left;
-      padding-left: 8%;
+      padding-left: 4%;
       padding-right: 4%;
       .person-image .image-centerer {
         display: flex;
@@ -151,7 +157,8 @@
           width: 100%;
         }
       }
-      .contact h3 {
+      .contact h3,
+      .about h3 {
         text-align: center;
         margin-top: 20px;
       }
@@ -164,20 +171,26 @@
         }
       }
       .contact .contact-row:first-of-type {
-        margin-top: 50px;
+        margin-top: 20px;
       }
       .contact .contact-row.dots {
-        margin-top: 20px;
-        margin-bottom: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         font-size: 10px;
         color: rgba(153, 153, 153, 0.6);
       }
+      .about .about-block {
+        line-height: 24px;
+      }
+    }
+    .text-center {
+      text-align: center;
     }
     .right-col {
-      width: 50%;
+      width: 54%;
       float: right;
       padding-left: 4%;
-      padding-right: 8%;
+      padding-right: 4%;
       .experience-block {
         margin-bottom: 10px;
         .row:first-child {

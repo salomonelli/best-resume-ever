@@ -68,7 +68,7 @@
     <div id="resume-footer">
       <div v-if="person.about">
         <h2>{{ lang.headings.about }}</h2>
-        <p>{{person.about}}</p>
+        <p v-html="person.about"></p>
       </div>
     </div>
   </div>
@@ -149,21 +149,21 @@
       }
 
       /*#header-right {
-                  width: 125px;
-                  float: right;
-                  margin: 0px;
-                  box-sizing: border-box;
-                  height: 140px;
-                  background-color: #FFF;
-                  padding: 5px;
-                  #headshot {
-                      width: 100%;
-                      height: 100%;
-                      background:url('../assets/person.jpg');
-                      background-position:center;
-                      background-size:cover;
-                  }
-              }*/
+                      width: 125px;
+                      float: right;
+                      margin: 0px;
+                      box-sizing: border-box;
+                      height: 140px;
+                      background-color: #FFF;
+                      padding: 5px;
+                      #headshot {
+                          width: 100%;
+                          height: 100%;
+                          background:url('../assets/person.jpg');
+                          background-position:center;
+                          background-size:cover;
+                      }
+                  }*/
     }
 
     #resume-body {

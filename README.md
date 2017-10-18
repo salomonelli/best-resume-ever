@@ -30,7 +30,7 @@
 
 ## How to use
 
-best-resume-ever requires at least node v.8.5.
+best-resume-ever requires at least node v.8.0.0.
 
 1. Clone this repository.
 

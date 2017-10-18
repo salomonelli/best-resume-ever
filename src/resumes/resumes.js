@@ -1,9 +1,10 @@
 // If you create a new resume, import it here:
-import '../resumes/material-dark.vue';
-import '../resumes/left-right.vue';
-import '../resumes/oblique.vue';
-import '../resumes/side-bar.vue';
-import '../resumes/purple.vue';
+import './material-dark.vue';
+import './left-right.vue';
+import './oblique.vue';
+import './side-bar.vue';
+import './purple.vue';
+import './side-bar-rtl.vue';
 
 import { PERSON } from '../person';
 import { terms } from '../terms';

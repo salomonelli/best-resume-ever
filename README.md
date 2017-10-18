@@ -68,8 +68,8 @@ Feel free to add your own templates, language supports, fix bugs or improve the 
 This project uses several open source packages:
 
 * <a href="https://github.com/vuejs/vue" target="_blank">Vue</a>
+* <a href="https://github.com/GoogleChrome/puppeteer" target="_blank">Puppeteer</a>
 * <a href="https://github.com/less/less.js" target="_blank">LESS</a>
-* <a href="https://github.com/mixu/electroshot" target="_blank">Electroshot</a>
 
 <br>
 

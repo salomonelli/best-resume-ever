@@ -75,7 +75,7 @@ All fonts are installed via npm. To add a new font, search for the associated np
 
 ## Export
 
-Resumes are being exported with [Electroshot](https://github.com/mixu/electroshot).
+Resumes are being exported with [Puppeteer](https://github.com/GoogleChrome/puppeteer).
 
 ### Box Shadows
 

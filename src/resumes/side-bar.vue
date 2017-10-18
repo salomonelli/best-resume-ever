@@ -25,7 +25,7 @@
                   <i class="fa fa-circle" aria-hidden="true"></i>
               </div>
               <div class="contact-row">
-                  <a href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
+                  <a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
               </div>
               <div class="contact-row dots">
                   <i class="fa fa-circle" aria-hidden="true"></i>

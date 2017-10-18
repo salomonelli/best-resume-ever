@@ -79,7 +79,7 @@
       <div class="section-headline">
         {{ lang.headings.skills }}
       </div>
-      <div class="skill" v-for="skill in person.skills">
+      <div class="skill" v-for="skill in person.skills" :key="skill.name">
         <div class="right">
           <span>{{skill.name}}&nbsp;</span>
           <div class="progress">
@@ -99,7 +99,7 @@
     </div>
 
     <div class="section-headline">{{ lang.headings.experience }}</div>
-    <div class="block" v-for="experience in person.experience">
+    <div class="block" v-for="experience in person.experience" :key="experience.company">
       <div class="block-helper"></div>
       <div class="headline">{{experience.position}} - {{experience.company}}</h3>
         <div class="subheadline">{{experience.timeperiod}}</div>
@@ -109,7 +109,7 @@
       </div>
     </div>
     <div class="section-headline">{{ lang.headings.education }}</div>
-    <div class="block" v-for="education in person.education">
+    <div class="block" v-for="education in person.education" :key="education.degree">
       <div class="block-helper"></div>
       <div class="headline">{{education.degree}}</div>
       <p class="info">

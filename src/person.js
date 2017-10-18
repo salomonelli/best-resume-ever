@@ -5,7 +5,7 @@ export const PERSON = {
     middle: '',
     last: 'Doe',
   },
-  about: 'Hi, my name is John Doe. I\'m just about the most boring type of person you could possibly imagine. I like collecting leaves from the tree in my back yard and documenting each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.',
+  about: 'Hi, my name is John Doe. I\'m just about the most boring type of person you could possibly imagine. I like collecting leaves from the tree in my back yard and documenting each time I eat a peanut that is non-uniform.',
   position: 'Software Developer',
   birth: {
     year: 1990,
@@ -23,12 +23,15 @@ export const PERSON = {
       timeperiod: 'January 2015 - December 2015',
       description: 'Fulfillment of extremely important tasks.'
     },
+  ],
+  projects: [{
+      name: 'Project A',
+      description: 'Programming and watching cute cat videos.'
+    },
     {
-      company: 'Company C',
-      position: 'Trainee',
-      timeperiod: 'March 2014 - December 2014',
-      description: 'Making coffee and baking cookies.'
-    }
+      name: 'Project B',
+      description: 'Fulfillment of extremely important tasks.'
+    },
   ],
   education: [{
       degree: 'Master of Arts',
@@ -66,14 +69,6 @@ export const PERSON = {
       name: 'TypeScript',
       level: '80'
     },
-    {
-      name: 'ES.Next',
-      level: '70'
-    },
-    {
-      name: 'Docker',
-      level: '99'
-    }
   ],
   skillDescription: 'Also proficient in Adobe Photoshop and Illustrator, grew up bilingual (English and Klingon).',
   contact: {

@@ -15,6 +15,11 @@
               </div>
           </div>
           <div class="contact">
+        <div v-if="person.about">
+            <h3>{{ lang.headings.about }}</h3>
+            <p>{{person.about}}</p>
+        </div>
+
               <h3>{{ lang.headings.contact }}</h3>
               <div class="contact-row">
                   <a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a>
@@ -41,7 +46,7 @@
                   <i class="fa fa-circle" aria-hidden="true"></i>
               </div>
               <div class="contact-row">
-                  <a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a>
+                  <a :href="'https://github.com/'+person.contact.github">github.com/{{person.contact.github}}</a>
               </div>
           </div>
       </div>

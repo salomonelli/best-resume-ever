@@ -1,7 +1,6 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
-const exec = require('child_process').exec;
 const Rx = require('rxjs/Rx');
 const http = require('http');
 
@@ -42,8 +41,6 @@ const convert = async() => {
   console.log('Exporting ...');
   try {
     const directories = getResumesFromDirectories();
-    // const scripts = directories.map(resume => electroshotScript(resume.path));
-    // await execBash(scripts.join(' && '));
     directories.forEach(async(dir) => {
       const browser = await puppeteer.launch();
       const page = await browser.newPage();
@@ -55,13 +52,6 @@ const convert = async() => {
     throw new Error(err);
   }
   console.log('Finished exports.');
-};
-
-const electroshotScript = resume => {
-  const dir = path.join(__dirname, '../pdf');
-  return 'electroshot localhost:8080/#/resume/' + resume +
-    ' 2481x3508 --pdf-margin none --format pdf --out ' + dir +
-    ' --filename "' + resume + '.pdf" --pdf-background';
 };
 
 const getResumesFromDirectories = () => {
@@ -80,16 +70,6 @@ const getDirectories = () => {
   const srcpath = path.join(__dirname, '../src/resumes');
   return fs.readdirSync(srcpath)
     .filter(file => file !== 'resumes.js' && file !== 'template.vue');
-};
-
-const execBash = script => {
-  return new Promise((resolve, reject) => {
-    exec(script,
-      error => {
-        if (error) reject(error);
-        else resolve();
-      });
-  });
 };
 
 convert();

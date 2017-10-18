@@ -31,6 +31,20 @@ Your new resume will be now reachable at localhost:8080/#/resume/TEMPLATE-NAME.
 <br>
 <br>
 
+4. Generate previews with `npm run preview`. PDF- and PNG-files will be generated.
+
+5. Add preview to `/src/pages/home.vue`:
+```javascript
+<div class="preview">
+  <router-link v-bind:to="'/resume/TEMPLATE-NAME'">
+    <div class="preview-wrapper">
+      <img src="../assets/preview/TEMPLATE-NAME.png" />
+      <span>left-right</span>
+    </div>
+  </router-link>
+</div>
+```
+
 ## Fonts
 
 ### Icons

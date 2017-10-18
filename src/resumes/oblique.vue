@@ -18,7 +18,7 @@
     <div class="experience">
       <h3>{{ lang.headings.experience }}</h3>
 
-      <div class="experience-block" v-for="experience in person.experience">
+      <div class="experience-block" v-for="experience in person.experience" :key="experience.company">
         <div class="row">
           <span class="job-title"> {{experience.position}} </span>
           <i class="material-icons">details</i>
@@ -33,7 +33,7 @@
     </div>
     <div class="education">
       <h3>{{ lang.headings.education }}</h3>
-      <div class="education-block" v-for="education in person.education">
+      <div class="education-block" v-for="education in person.education" :key="education.degree">
         <div class="row">
           <span class="degree">{{education.degree}}</span>
         </div>
@@ -44,7 +44,7 @@
     </div>
     <div class="skill-section">
       <h3>{{ lang.headings.skills }}</h3>
-      <div class="skills" v-for="skill in person.skills">
+      <div class="skills" v-for="skill in person.skills" :key="skill.name">
         <div class="skill-block">
           <i class="material-icons">details</i>
           <span class="skill">{{skill.name}}</span>

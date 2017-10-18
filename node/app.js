@@ -1,3 +1,4 @@
+const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 const exec = require('child_process').exec;
@@ -41,8 +42,15 @@ const convert = async() => {
   console.log('Exporting ...');
   try {
     const directories = getResumesFromDirectories();
-    const scripts = directories.map(resume => electroshotScript(resume.path));
-    await execBash(scripts.join(' && '));
+    // const scripts = directories.map(resume => electroshotScript(resume.path));
+    // await execBash(scripts.join(' && '));
+    directories.forEach(async(dir) => {
+      const browser = await puppeteer.launch();
+      const page = await browser.newPage();
+      await page.goto('http://localhost:8080/#/resume/' + dir.name, {waitUntil: 'networkidle'});
+      await page.pdf({path: path.join(__dirname, '../pdf/' + dir.name + '.pdf'), format: 'A4'});
+      await browser.close();
+    });
   } catch (err) {
     throw new Error(err);
   }

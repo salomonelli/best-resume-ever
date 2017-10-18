@@ -62,10 +62,10 @@
       <span>;&nbsp;</span>
       <span>{{person.contact.street}}, {{person.contact.city}}</span>
       <span>;&nbsp;</span>
-      <a :href="person.contact.website">
+      <a v-if="person.contact.website" :href="person.contact.website">
               {{person.contact.website}}</a>
-      <span>;&nbsp;</span>
-      <a :href="'https://github.com/'+person.contact.github">
+      <span v-if="person.contact.website">;&nbsp;</span>
+      <a v-if="person.contact.github" :href="'https://github.com/'+person.contact.github">
                 https://github.com/{{person.contact.github}}</a>
     </div>
   </div>

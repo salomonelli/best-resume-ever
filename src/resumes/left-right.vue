@@ -36,11 +36,11 @@
           <td>{{person.contact.street}} <br> {{person.contact.city}}</td>
           <td><i class="fa fa-home" aria-hidden="true"></i></td>
         </tr>
-        <tr>
+        <tr v-if="person.contact.website">
           <td><a :href="person.contact.website">{{person.contact.website}}</a></td>
           <td><i class="fa fa-globe" aria-hidden="true"></i></td>
         </tr>
-        <tr>
+        <tr v-if="person.contact.github">
           <td><a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a></td>
           <td><i class="fa fa-github" aria-hidden="true"></i></td>
         </tr>

@@ -63,6 +63,7 @@
     "html-webpack-plugin": "^2.30.1",
     "http": "0.0.0",
     "http-proxy-middleware": "^0.17.3",
+    "is-root": "^1.0.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "lolex": "^1.5.2",

@@ -2,6 +2,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 const Rx = require('rxjs/Rx');
+const isRoot = require('is-root');
 const http = require('http');
 
 const fetchResponse = () => {
@@ -36,6 +37,10 @@ const timedOut = timeout => {
 };
 
 const convert = async() => {
+  if(isRoot()) {
+    console.log('ERROR: Please run this without root (admin) permissions.');
+    return;
+  }
   await waitForServerReachable().first().toPromise();
   console.log('Connected to server ...');
   console.log('Exporting ...');

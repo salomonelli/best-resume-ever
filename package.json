@@ -14,6 +14,7 @@
     "start": "node build/dev-server.js",
     "pdf": "node node/app.js",
     "preview": "node node/preview.js",
+    "test": "testcafe chrome test/resumes-overview.js",
     "template": "node node/template/template.js",
     "export": "concurrently \"npm run dev\" \"npm run pdf\" --success first --kill-others --raw",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
@@ -84,6 +85,7 @@
     "rxjs": "5.4.3",
     "semver": "5.4.1",
     "shelljs": "0.7.6",
+    "testcafe": "^0.18.1",
     "url-exists": "1.0.3",
     "url-loader": "0.5.9",
     "vue-loader": "12.2.1",

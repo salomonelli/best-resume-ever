@@ -1,6 +1,6 @@
 <template>
 <div class="page-wrapper">
-  <div class="page">
+  <div class="page" :id="$route.params.resumeid">
     <div class="page-inner">
       <component :is="$route.params.resumeid"></component>
     </div>

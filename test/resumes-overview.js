@@ -26,5 +26,4 @@ test('Resume should have link to preview', async t => {
       const attr = Selector('.previews .preview a').nth(i).getAttribute('href');
       await t.expect(attr).eql('#/resume/' + resumeName);
   }
-
 });

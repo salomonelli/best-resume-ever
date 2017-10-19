@@ -2,7 +2,6 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 const Rx = require('rxjs/Rx');
-const isRoot = require('is-root');
 const http = require('http');
 
 const fetchResponse = () => {
@@ -37,17 +36,13 @@ const timedOut = timeout => {
 };
 
 const convert = async() => {
-  if(isRoot()) {
-    console.log('ERROR: Please run this without root (admin) permissions.');
-    return;
-  }
   await waitForServerReachable().first().toPromise();
   console.log('Connected to server ...');
   console.log('Exporting ...');
   try {
     const directories = getResumesFromDirectories();
     directories.forEach(async(dir) => {
-      const browser = await puppeteer.launch();
+      const browser = await puppeteer.launch({args: ['--no-sandbox']});
       const page = await browser.newPage();
       await page.goto('http://localhost:8080/#/resume/' + dir.name, {waitUntil: 'networkidle'});
       await page.pdf({path: path.join(__dirname, '../pdf/' + dir.name + '.pdf'), format: 'A4'});
@@ -74,7 +69,7 @@ const getResumesFromDirectories = () => {
 const getDirectories = () => {
   const srcpath = path.join(__dirname, '../src/resumes');
   return fs.readdirSync(srcpath)
-    .filter(file => file !== 'resumes.js' && file !== 'template.vue');
+    .filter(file => file !== 'resumes.js' && file !== 'template.vue' && file !== 'options.js');
 };
 
 convert();

@@ -30,19 +30,19 @@
 
 ## How to use
 
-best-resume-ever requires at least node v.8.0.0.
+best-resume-ever requires at least node v.8.0.0 and yarn.
 
 1. Clone this repository.
 
-2. Run `npm install`.
+2. Run `yarn install`.
 
 3. Edit your personal data in `src/person.js`.
 
 4. Replace your profile-picture in `src/assets/person.jpg`.
 
-5. Preview resumes with `npm run dev`.
+5. Preview resumes with `yarn run dev`.
 
-6. Export with `npm run export`.
+6. Export with `yarn run export`.
 
 All resumes will be exported to `/pdf`.
 

@@ -89,7 +89,7 @@
 
 <script>
 import Vue from 'vue';
-import { getVueOptions } from './resumes';
+import { getVueOptions } from './options';
 
 let name = 'side-bar';
 export default Vue.component(name, getVueOptions(name));

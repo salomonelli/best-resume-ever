@@ -74,7 +74,7 @@
 
 <script>
 import Vue from 'vue';
-import { getVueOptions } from './resumes';
+import { getVueOptions } from './options';
 
 let name = 'oblique';
 export default Vue.component(name, getVueOptions(name));

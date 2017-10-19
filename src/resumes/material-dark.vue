@@ -124,9 +124,9 @@
 
 <script>
 import Vue from 'vue';
-import { getVueOptions } from './resumes';
-
+import { getVueOptions } from './options';
 let name = 'material-dark';
+
 export default Vue.component(name, getVueOptions(name));
 </script>
 

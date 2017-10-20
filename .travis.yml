@@ -3,6 +3,7 @@ node_js:
  - "node"
 
 before_deploy:
+  - npm i
   - npm run lint
   - npm test
   - npm export

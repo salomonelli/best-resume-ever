@@ -22,7 +22,6 @@
     "test:preview": "SCRIPT=preview npm run test:deleteFiles && npm run export && npm run preview && mocha test/scripts/preview.js",
     "test:docs": "npm run docs && concurrently \"npm run docs:serve\" \"testcafe chromium test/\" --success first --kill-others --raw",
     "test": "npm run test:export && npm run test:preview && npm run test:docs && npm run test:e2e",
-    "test:travis": "npm run test:export && npm run export && npm run test:preview && npm run test:docs && npm run test:e2e",
     "export": "concurrently \"npm run dev\" \"npm run pdf\" --success first --kill-others --raw",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },

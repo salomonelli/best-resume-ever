@@ -17,7 +17,8 @@ import ja from './lang/ja';
 import zhtw from './lang/zh-tw';
 import nl from './lang/nl';
 import lt from './lang/lt';
+import tr from './lang/tr';
 
 export const terms = {
-  en, de, fr, pt, cn, it, es, th, 'pt-br': ptbr, ru, sv, id, hu, pl, ja, nl, he, 'zh-tw': zhtw, lt
+  en, de, fr, pt, cn, it, es, th, 'pt-br': ptbr, ru, sv, id, hu, pl, ja, nl, he, 'zh-tw': zhtw, lt, tr
 };

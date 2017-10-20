@@ -16,7 +16,7 @@
     "start": "node build/dev-server.js",
     "pdf": "node node/app.js",
     "preview": "node node/preview.js",
-    "test": "concurrently \"npm run dev\" \"testcafe chrome test/\" --success first --kill-others --raw",
+    "test": "concurrently \"npm run dev\" \"testcafe chromium test/\" --success first --kill-others --raw",
     "template": "node node/template/template.js",
     "export": "concurrently \"npm run dev\" \"npm run pdf\" --success first --kill-others --raw",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"

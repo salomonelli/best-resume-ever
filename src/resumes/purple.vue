@@ -65,7 +65,7 @@
 
 <script>
 import Vue from 'vue';
-import { getVueOptions } from './resumes';
+import { getVueOptions } from './options';
 
 export default Vue.component('purple', getVueOptions(name));
 </script>

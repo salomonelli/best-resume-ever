@@ -13,4 +13,4 @@ script:
   - npm run lint
   - npm test
   - npm run export
-  - npm run preview
+  - npm run preview  

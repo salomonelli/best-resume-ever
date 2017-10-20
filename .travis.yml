@@ -1,22 +1,8 @@
-sudo: required
-
-dist: trusty
-
 language: node_js
-
-node_js: stable
-
-cache:
-  directories:
-    - node_modules
+node_js:
+ - "node"
 
 before_deploy:
-  - npm run build
-
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: dist
-  on:
-    branch: master
+  - npm run lint
+  - npm test
+  - npm export

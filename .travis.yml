@@ -12,4 +12,5 @@ script:
   - npm i --silent
   - npm run lint
   - npm test
-  - npm export
+  - npm run export
+  - npm run preview

@@ -10,7 +10,7 @@
   },
   "scripts": {
     "docs": "node build/build.js",
-    "docs:serve": "ws",
+    "docs:serve": "cd docs/ && ws --rewrite '/best-resume-ever/* -> /$1'",
     "dev": "node build/dev-server.js",
     "predev": "check-node-version --node \">= 8.0.0\"",
     "start": "node build/dev-server.js",

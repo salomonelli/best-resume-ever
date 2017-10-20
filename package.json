@@ -21,6 +21,7 @@
     "test:export": "SCRIPT=export npm run test:deleteFiles && npm run export && mocha test/scripts/export.js",
     "test:preview": "SCRIPT=preview npm run test:deleteFiles && npm run export && npm run preview && mocha test/scripts/preview.js",
     "test": "npm run test:export && npm run test:preview && npm run test:e2e",
+    "test:travis": "npm run test:export && sleep 30 && npm run test:preview && npm run test:e2e",
     "export": "concurrently \"npm run dev\" \"npm run pdf\" --success first --kill-others --raw",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },

@@ -11,5 +11,5 @@ before_install:
 script:
   - npm i --silent
   - npm run lint
-  - npm test
+  - npm run test:travis
   - npm run export

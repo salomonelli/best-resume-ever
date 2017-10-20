@@ -9,6 +9,8 @@
     "url": "git+https://github.com/salomonelli/best-resume-ever.git"
   },
   "scripts": {
+    "docs": "node build/build.js",
+    "docs:serve": "ws",
     "dev": "node build/dev-server.js",
     "predev": "check-node-version --node \">= 8.0.0\"",
     "start": "node build/dev-server.js",
@@ -68,6 +70,7 @@
     "http-proxy-middleware": "0.17.3",
     "less": "2.7.2",
     "less-loader": "4.0.5",
+    "local-web-server": "^2.2.4",
     "lolex": "1.5.2",
     "mv": "2.1.1",
     "opn": "5.1.0",

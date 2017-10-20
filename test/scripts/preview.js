@@ -8,10 +8,12 @@ const allResumes = require('./allResumes');
 
 describe('npm run preview', () => {
   it('should have generated the png files', () => {
-    const resumes = allResumes();
-    resumes.forEach(resume => {
-      const p = path.join(__dirname, '../../src/assets/preview/resume-' + resume.path + '.png');
-      assert.ok(fs.existsSync(p));
-    });
+    setTimeout(() => {
+      const resumes = allResumes();
+      resumes.forEach(resume => {
+        const p = path.join(__dirname, '../../src/assets/preview/resume-' + resume.path + '.png');
+        assert.ok(fs.existsSync(p));
+      });
+    }, 20000);
   });
 });

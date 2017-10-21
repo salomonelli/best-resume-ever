@@ -6,7 +6,6 @@
   best-resume-ever
   <br>
   [![Greenkeeper badge](https://badges.greenkeeper.io/salomonelli/best-resume-ever.svg)](https://greenkeeper.io/)
-  [![Travis badge]](https://travis-ci.org/salomonelli/best-resume-ever.svg?branch=master)(https://travis-ci.org/salomonelli/best-resume-ever)
 </h1>
 
 <h4 align="center">

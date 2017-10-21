@@ -65,6 +65,6 @@ contact:
   city: New York
   website: johndoe.com
   github: johnyD
-# en, de, fr, pt, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, nl, he, zh-tw, lt
+# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, nl, he, zh-tw, lt, ko
 lang: en
 `

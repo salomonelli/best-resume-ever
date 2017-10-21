@@ -64,7 +64,7 @@
         </div>
       </div>
     </div>
-    <span class="skills-other"> {{person.skillDescription}} </span>
+    <span class="skills-other"> {{person.knowledge}} </span>
   </div>
 </div>
 </template>

@@ -52,7 +52,7 @@
       </div>
     </div>
     <div class="skills-other">
-      <span>{{person.skillDescription}} </span>
+      <span>{{person.knowledge}} </span>
     </div>
     <div class="contact">
       <h3>{{ lang.headings.contact }}</h3>

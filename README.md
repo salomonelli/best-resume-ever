@@ -30,6 +30,8 @@
 
 ## How to use
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/salomonelli/best-resume-ever.svg)](https://greenkeeper.io/)
+
 best-resume-ever requires at least node v.8.0.0.
 
 1. Clone this repository.

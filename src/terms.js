@@ -2,7 +2,7 @@ import en from './lang/en';
 import de from './lang/de';
 import fr from './lang/fr';
 import pt from './lang/pt';
-import ca from '.lang/ca';
+import ca from './lang/ca';
 import cn from './lang/cn';
 import it from './lang/it';
 import es from './lang/es';

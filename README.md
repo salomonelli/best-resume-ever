@@ -5,8 +5,13 @@
   <br>
   best-resume-ever
   <br>
-  [![Greenkeeper badge](https://badges.greenkeeper.io/salomonelli/best-resume-ever.svg)](https://greenkeeper.io/)
 </h1>
+
+<div align="center">
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/salomonelli/best-resume-ever.svg)](https://greenkeeper.io/) [![Travis badge](https://travis-ci.org/salomonelli/best-resume-ever.svg?branch=master)](https://travis-ci.org/salomonelli/best-resume-ever)
+
+</div>
 
 <h4 align="center">
   :necktie: :briefcase: Build fast :rocket: and easy multiple beautiful resumes and create your best CV ever!

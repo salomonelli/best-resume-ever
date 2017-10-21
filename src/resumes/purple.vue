@@ -44,7 +44,7 @@
         <div id="skills-container" v-if="person.skills != []">
             <h2 id="skills-title">{{ lang.headings.skills }}</h2>
             <div class="spacer"></div>
-            <p id="skill-description">{{person.skillDescription}}</p>
+            <p id="skill-description">{{person.knowledge}}</p>
             <ul id="skill-list">
                 <li class="skill" v-for="skill in person.skills" :key="skill.name">
                   <span class="list-item-black">
@@ -147,7 +147,7 @@ export default Vue.component('purple', getVueOptions(name));
             #headshot {
                 width: 100%;
                 height: 100%;
-                background:url('../assets/person.jpg');
+                background:url('../../resume/id.jpg');
                 background-position:center;
                 background-size:cover;
             }

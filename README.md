@@ -42,15 +42,14 @@ best-resume-ever requires at least node v.8.5.0.
 
 2. Run `npm install`.
 
-3. Edit your personal data in `src/person.js`.
+3. Customize your resume in the `resume/` directory: edit your data `data.yml` and replace your profile-picture `id.jpg`.
 
-4. Replace your profile-picture in `src/assets/person.jpg`.
+4. Preview resumes with `npm run dev`.
 
-5. Preview resumes with `npm run dev`.
+5. Export with `npm run export`.
 
-6. Export with `npm run export`.
 
-All resumes will be exported to `/pdf`.
+All resumes will be exported to the `pdf/` folder.
 
 <br>
 

@@ -1,4 +1,5 @@
-import { PERSON } from '../person';
+import yaml from 'js-yaml';
+import { PERSON } from '../../resume/data.yml';
 import { terms } from '../terms';
 
 // Called by templates to decrease redundancy
@@ -7,7 +8,7 @@ function getVueOptions (name) {
     name: name,
     data () {
       return {
-        person: PERSON,
+        person: yaml.load(PERSON),
         terms: terms
       };
     },

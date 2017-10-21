@@ -79,7 +79,7 @@
                           <span class="skill-name">{{skill.name}}</span>
                       </div>
               </div>
-              <span class="skills-other"> {{person.skillDescription}} </span>
+              <span class="skills-other"> {{person.knowledge}} </span>
           </div>
       </div>
   </div>
@@ -143,7 +143,7 @@ export default Vue.component(name, getVueOptions(name));
       overflow:hidden;
       .img {
         flex:none;
-        background:url('../assets/person.jpg');
+        background:url('../../resume/id.jpg');
         background-position:center;
         background-size:cover;
         height:250px;

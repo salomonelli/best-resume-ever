@@ -1,5 +1,5 @@
 /* eslint-disable */
-const cn = {
+const jp = {
   headings: {
     contact: '連絡先',
     experience: '職務経歴',
@@ -8,4 +8,4 @@ const cn = {
     about: '自己紹介'
   }
 };
-export default cn;
+export default jp;

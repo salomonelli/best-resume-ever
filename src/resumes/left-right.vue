@@ -144,7 +144,7 @@ export default Vue.component(name, getVueOptions(name));
       width:100%;
       height:100%;
       border-radius:50%;
-      background-image:url('../assets/person.jpg');
+      background-image:url('../../resume/id.jpg');
       background-repeat:none;
       background-position:center;
       background-size:cover;

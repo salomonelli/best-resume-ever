@@ -120,7 +120,7 @@ export default Vue.component(name, getVueOptions(name));
       position:absolute;
       top:0;
       right:0;
-      background:url('../assets/person.jpg');
+      background:url('../../resume/id.jpg');
       background-position:center;
       background-size:cover;
     }

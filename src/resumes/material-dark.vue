@@ -440,7 +440,7 @@ h4 {
   }
 }
 #myselfpic {
-  background-image:url('../assets/person.jpg');
+  background-image:url('../../resume/id.jpg');
   color:black;
 }
 #githubIcon {

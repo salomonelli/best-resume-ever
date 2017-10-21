@@ -1,4 +1,4 @@
-import { PERSON } from '../person';
+import { PERSON } from '../../resume/person';
 import { terms } from '../terms';
 
 // Called by templates to decrease redundancy

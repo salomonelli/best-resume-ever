@@ -44,7 +44,7 @@ const convert = async() => {
     directories.forEach(async(dir) => {
       const browser = await puppeteer.launch({args: ['--no-sandbox']});
       const page = await browser.newPage();
-      await page.goto('http://localhost:8080/#/resume/' + dir.name, {waitUntil: 'networkidle'});
+      await page.goto('http://localhost:8080/#/resume/' + dir.name, {waitUntil: 'networkidle', networkIdleTimeout: 5E3});
       await page.pdf({path: path.join(__dirname, '../pdf/' + dir.name + '.pdf'), format: 'A4'});
       await browser.close();
     });

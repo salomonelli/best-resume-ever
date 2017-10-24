@@ -20,7 +20,8 @@ import nl from './lang/nl';
 import lt from './lang/lt';
 import tr from './lang/tr';
 import ko from './lang/ko';
+import el from './lang/el';
 
 export const terms = {
-  en, de, fr, pt, ca, cn, it, es, th, 'pt-br': ptbr, ru, sv, id, hu, pl, ja, nl, he, 'zh-tw': zhtw, lt, tr, ko
+  en, de, fr, pt, ca, cn, it, es, th, 'pt-br': ptbr, ru, sv, id, hu, pl, ja, nl, he, 'zh-tw': zhtw, lt, tr, ko, el
 };

@@ -91,7 +91,7 @@
     "request-promise": "4.2.2",
     "rimraf": "2.6.2",
     "rx": "4.1.0",
-    "rxjs": "5.5.1",
+    "rxjs": "5.5.2",
     "semver": "5.4.1",
     "shelljs": "0.7.8",
     "testcafe": "0.18.1",

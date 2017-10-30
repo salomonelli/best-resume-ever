@@ -26,10 +26,13 @@
 
 <br>
 <br>
+## Prerequisite
+
+1. It requires at least node v.8.5
+
+2. If you don't have install node.js in your machine then go to this link https://nodejs.org/en/download/ in order to install node
 
 ## How to use
-
-best-resume-ever requires at least node v.8.5.
 
 1. Clone this repository.
 

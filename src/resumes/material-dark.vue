@@ -101,12 +101,11 @@
     <div class="section-headline">{{ lang.headings.experience }}</div>
     <div class="block" v-for="experience in person.experience" :key="experience.company">
       <div class="block-helper"></div>
-      <div class="headline">{{experience.position}} - {{experience.company}}</h3>
+      <h3 class="headline">{{experience.position}} - {{experience.company}}</h3>
         <div class="subheadline">{{experience.timeperiod}}</div>
         <p class="info">
           {{experience.description}}
         </p>
-      </div>
     </div>
     <div class="section-headline">{{ lang.headings.education }}</div>
     <div class="block" v-for="education in person.education" :key="education.degree">

@@ -52,7 +52,7 @@
       </div>
     </a>
 
-    <a :href="'https://github.com/'+person.contact.github" target="_blank">
+    <a v-if="person.contact.github" :href="'https://github.com/'+person.contact.github" target="_blank">
       <div class="item">
         <div class="icon">
           <i class="fa fa-github"></i>
@@ -64,7 +64,7 @@
       </div>
     </a>
 
-    <a :href="person.contact.website" target="_blank">
+    <a v-if="person.contact.website" :href="person.contact.website" target="_blank">
       <div class="item">
         <div class="icon">
           <i class="material-icons">language</i>
@@ -79,7 +79,7 @@
       <div class="section-headline">
         {{ lang.headings.skills }}
       </div>
-      <div class="skill" v-for="skill in person.skills">
+      <div class="skill" v-for="skill in person.skills" :key="skill.name">
         <div class="right">
           <span>{{skill.name}}&nbsp;</span>
           <div class="progress">
@@ -99,17 +99,16 @@
     </div>
 
     <div class="section-headline">{{ lang.headings.experience }}</div>
-    <div class="block" v-for="experience in person.experience">
+    <div class="block" v-for="experience in person.experience" :key="experience.company">
       <div class="block-helper"></div>
-      <div class="headline">{{experience.position}} - {{experience.company}}</h3>
+      <h3 class="headline">{{experience.position}} - {{experience.company}}</h3>
         <div class="subheadline">{{experience.timeperiod}}</div>
         <p class="info">
           {{experience.description}}
         </p>
-      </div>
     </div>
     <div class="section-headline">{{ lang.headings.education }}</div>
-    <div class="block" v-for="education in person.education">
+    <div class="block" v-for="education in person.education" :key="education.degree">
       <div class="block-helper"></div>
       <div class="headline">{{education.degree}}</div>
       <p class="info">
@@ -124,9 +123,9 @@
 
 <script>
 import Vue from 'vue';
-import { getVueOptions } from './resumes';
-
+import { getVueOptions } from './options';
 let name = 'material-dark';
+
 export default Vue.component(name, getVueOptions(name));
 </script>
 
@@ -440,7 +439,7 @@ h4 {
   }
 }
 #myselfpic {
-  background-image:url('../assets/person.jpg');
+  background-image:url('../../resume/id.jpg');
   color:black;
 }
 #githubIcon {

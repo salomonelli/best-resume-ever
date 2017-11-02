@@ -7,6 +7,12 @@
   <br>
 </h1>
 
+<div align="center">
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/salomonelli/best-resume-ever.svg)](https://greenkeeper.io/) [![Travis badge](https://travis-ci.org/salomonelli/best-resume-ever.svg?branch=master)](https://travis-ci.org/salomonelli/best-resume-ever)
+
+</div>
+
 <h4 align="center">
   :necktie: :briefcase: Build fast :rocket: and easy multiple beautiful resumes and create your best CV ever!
   <br><br>
@@ -18,6 +24,8 @@
 
 <p align="left">
 <img src="src/assets/preview/resume-purple.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="src/assets/preview/resume-side-bar-rtl.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
+<img src="src/assets/preview/resume-left-right-rtl.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <img src="src/assets/preview/resume-material-dark.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <img src="src/assets/preview/resume-left-right.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <img src="src/assets/preview/resume-side-bar.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
@@ -29,21 +37,20 @@
 
 ## How to use
 
-best-resume-ever requires at least node v.8.5.
+best-resume-ever requires at least node v.8.5.0.
 
 1. Clone this repository.
 
 2. Run `npm install`.
 
-3. Edit your personal data in `src/person.js`.
+3. Customize your resume in the `resume/` directory: edit your data `data.yml` and replace your profile-picture `id.jpg`.
 
-4. Replace your profile-picture in `src/assets/person.jpg`.
+4. Preview resumes with `npm run dev`.
 
-5. Preview resumes with `npm run dev`.
+5. Export with `npm run export`.
 
-6. Export with `npm run export`.
 
-All resumes will be exported to `/pdf`.
+All resumes will be exported to the `pdf/` folder.
 
 <br>
 
@@ -57,7 +64,7 @@ Please read the <a href="DEVELOPER.md">developer docs</a> on how to create or up
 
 ## Contribute
 
-Feel free to add your own templates, language supports, fix bugs or improve the docs. Any kind of help is appreciated! If you any kind of changes to an existing template, please commit them as new templates.
+Feel free to add your own templates, language supports, fix bugs or improve the docs. Any kind of help is appreciated! If you make any kind of changes to an existing template, please commit them as new templates.
 
 <br>
 
@@ -67,8 +74,8 @@ Feel free to add your own templates, language supports, fix bugs or improve the 
 This project uses several open source packages:
 
 * <a href="https://github.com/vuejs/vue" target="_blank">Vue</a>
+* <a href="https://github.com/GoogleChrome/puppeteer" target="_blank">Puppeteer</a>
 * <a href="https://github.com/less/less.js" target="_blank">LESS</a>
-* <a href="https://github.com/mixu/electroshot" target="_blank">Electroshot</a>
 
 <br>
 

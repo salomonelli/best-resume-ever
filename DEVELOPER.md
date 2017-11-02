@@ -31,6 +31,22 @@ Your new resume will be now reachable at localhost:8080/#/resume/TEMPLATE-NAME.
 <br>
 <br>
 
+5. Export resumes as PDF with `npm run export`. Verify export of new template.
+
+4. Generate previews by converting PDF-files to PNG-files with `npm run preview`.
+
+5. Add preview to `/src/pages/home.vue`:
+```javascript
+<div class="preview">
+  <router-link v-bind:to="'/resume/TEMPLATE-NAME'">
+    <div class="preview-wrapper">
+      <img src="../assets/preview/TEMPLATE-NAME.png" />
+      <span>left-right</span>
+    </div>
+  </router-link>
+</div>
+```
+
 ## Fonts
 
 ### Icons
@@ -59,7 +75,7 @@ All fonts are installed via npm. To add a new font, search for the associated np
 
 ## Export
 
-Resumes are being exported with [Electroshot](https://github.com/mixu/electroshot).
+Resumes are being exported with [Puppeteer](https://github.com/GoogleChrome/puppeteer).
 
 ### Box Shadows
 

@@ -46,6 +46,22 @@
         </div>
       </router-link>
     </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/side-bar-rtl'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-side-bar-rtl.png" />
+          <span>side-bar-rtl</span>
+        </div>
+      </router-link>
+    </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/left-right-rtl'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-left-right-rtl.png" />
+          <span>left-right-rtl</span>
+        </div>
+      </router-link>
+    </div>
   </div>
 </div>
 </template>

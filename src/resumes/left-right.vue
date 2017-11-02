@@ -14,7 +14,7 @@
   <div class="left half">
     <div class="experience">
       <h3>{{ lang.headings.experience }}</h3>
-      <div class="experience-block" v-for="experience in person.experience">
+      <div class="experience-block" v-for="experience in person.experience" :key="experience.company">
         <span class="company"> {{experience.company}} </span>
         <span class="job-title"> {{experience.position}} </span>
         <span class="time-period"> {{experience.timeperiod}}</span>
@@ -36,11 +36,11 @@
           <td>{{person.contact.street}} <br> {{person.contact.city}}</td>
           <td><i class="fa fa-home" aria-hidden="true"></i></td>
         </tr>
-        <tr>
+        <tr v-if="person.contact.website">
           <td><a :href="person.contact.website">{{person.contact.website}}</a></td>
           <td><i class="fa fa-globe" aria-hidden="true"></i></td>
         </tr>
-        <tr>
+        <tr v-if="person.contact.github">
           <td><a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a></td>
           <td><i class="fa fa-github" aria-hidden="true"></i></td>
         </tr>
@@ -50,28 +50,28 @@
   <div class="right half">
     <div class="education">
       <h3>{{ lang.headings.education }}</h3>
-      <div class="education-block" v-for="education in person.education">
+      <div class="education-block" v-for="education in person.education" :key="education.degree">
         <span class="degree">{{education.degree}}</span>
         <span class="degree-description">{{education.description}}</span>
       </div>
     </div>
     <h3>{{ lang.headings.skills }}</h3>
     <div class="skills">
-      <div class="skill-block" v-for="skill in person.skills">
+      <div class="skill-block" v-for="skill in person.skills" :key="skill.name">
         <span class="skill">{{skill.name}}</span>
         <div class="skill-bar">
           <div :style="'width: '+skill.level+'%'" class="level"> </div>
         </div>
       </div>
     </div>
-    <span class="skills-other"> {{person.skillDescription}} </span>
+    <span class="skills-other"> {{person.knowledge}} </span>
   </div>
 </div>
 </template>
 
 <script>
 import Vue from 'vue';
-import { getVueOptions } from './resumes';
+import { getVueOptions } from './options';
 
 let name = 'left-right';
 export default Vue.component(name, getVueOptions(name));
@@ -144,7 +144,7 @@ export default Vue.component(name, getVueOptions(name));
       width:100%;
       height:100%;
       border-radius:50%;
-      background-image:url('../assets/person.jpg');
+      background-image:url('../../resume/id.jpg');
       background-repeat:none;
       background-position:center;
       background-size:cover;

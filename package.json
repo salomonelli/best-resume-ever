@@ -99,7 +99,7 @@
     "url-loader": "0.6.2",
     "vue-loader": "13.3.0",
     "vue-style-loader": "3.0.3",
-    "vue-template-compiler": "2.5.2",
+    "vue-template-compiler": "2.5.3",
     "webpack": "3.8.1",
     "webpack-bundle-analyzer": "2.9.0",
     "webpack-dev-middleware": "1.12.0",

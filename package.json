@@ -97,7 +97,7 @@
     "testcafe": "0.18.1",
     "url-exists": "1.0.3",
     "url-loader": "0.6.2",
-    "vue-loader": "13.3.0",
+    "vue-loader": "13.4.0",
     "vue-style-loader": "3.0.3",
     "vue-template-compiler": "2.5.2",
     "webpack": "3.8.1",

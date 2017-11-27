@@ -52,7 +52,7 @@
     "check-node-version": "3.0.0",
     "concurrently": "3.5.0",
     "connect-history-api-fallback": "1.4.0",
-    "copy-webpack-plugin": "4.2.0",
+    "copy-webpack-plugin": "4.2.1",
     "cpx": "1.5.0",
     "css-loader": "0.28.7",
     "escope": "3.6.0",

@@ -4,7 +4,7 @@ const ru = {
     headings: {
         contact: "Контакты",
         experience: "Опыт",
-        education: "Обучение",
+        education: "Образование",
         skills: "Навыки",
         about: "Обо мне"
     }

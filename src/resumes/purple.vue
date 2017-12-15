@@ -18,7 +18,7 @@
     </div>
     <div id="resume-body">
         <div id="experience-container">
-            <h2 id="experience-title">{{ lang.headings.experience }}</h2>
+            <h2 id="experience-title">{{ lang.experience }}</h2>
             <div class="spacer"></div>
             <div class="experience" v-for="experience in person.experience" :key="experience.company">
                 <h2 class="company">{{experience.company}}</h2>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div id="education-container">
-            <h2 id="education-title">{{ lang.headings.education }}</h2>
+            <h2 id="education-title">{{ lang.education }}</h2>
             <div class="spacer"></div>
             <div class="education" v-for="education in person.education" :key="education.degree">
                 <h2 class="education-description">{{education.description}}</h2>
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div id="skills-container" v-if="person.skills != []">
-            <h2 id="skills-title">{{ lang.headings.skills }}</h2>
+            <h2 id="skills-title">{{ lang.skills }}</h2>
             <div class="spacer"></div>
             <p id="skill-description">{{person.knowledge}}</p>
             <ul id="skill-list">
@@ -56,7 +56,7 @@
     </div>
     <div id="resume-footer">
         <div v-if="person.about">
-            <h2>{{ lang.headings.about }}</h2>
+            <h2>{{ lang.about }}</h2>
             <p>{{person.about}}</p>
         </div>
     </div>

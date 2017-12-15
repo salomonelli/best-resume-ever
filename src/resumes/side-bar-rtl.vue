@@ -15,7 +15,7 @@
               </div>
           </div>
           <div class="contact">
-              <h3>{{ lang.headings.contact }}</h3>
+              <h3>{{ lang.contact }}</h3>
               <div class="contact-row">
                   <a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a>
               </div>
@@ -47,7 +47,7 @@
       </div>
       <div class="left-col">
           <div class="experience">
-              <h3>{{ lang.headings.experience }}</h3>
+              <h3>{{ lang.experience }}</h3>
                   <div class="experience-block" v-for="experience in person.experience">
                       <div class="row">
                           <span class="company"> {{experience.company}} -</span>
@@ -62,7 +62,7 @@
                   </div>
           </div>
           <div class="education">
-              <h3>{{ lang.headings.education }}</h3>
+              <h3>{{ lang.education }}</h3>
                   <div class="education-block" v-for="education in person.education">
                       <div class="row">
                           <span class="degree">{{education.degree}}</span>
@@ -73,7 +73,7 @@
                   </div>
           </div>
           <div class="skills-block">
-              <h3>{{ lang.headings.skills }}</h3>
+              <h3>{{ lang.skills }}</h3>
               <div class="skills">
                       <div class="skill" v-for="skill in person.skills">
                           <span class="skill-name">{{skill.name}}</span>

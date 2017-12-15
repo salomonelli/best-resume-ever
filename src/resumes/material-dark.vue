@@ -5,7 +5,7 @@
     <div class="heading" id="myselfpic">
     </div>
     <div class="section-headline">
-      {{ lang.headings.contact }}
+      {{ lang.contact }}
     </div>
     <div class="item">
       <div class="icon">
@@ -13,7 +13,7 @@
       </div>
       <div class="text">
         <ul>
-          <li> Born {{person.birth.year}} in {{person.birth.location}}</li>
+          <li> {{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</li>
         </ul>
       </div>
     </div>
@@ -77,7 +77,7 @@
 
     <div class="item last">
       <div class="section-headline">
-        {{ lang.headings.skills }}
+        {{ lang.skills }}
       </div>
       <div class="skill" v-for="skill in person.skills" :key="skill.name">
         <div class="right">
@@ -98,7 +98,7 @@
       <div>{{person.position}}</div>
     </div>
 
-    <div class="section-headline">{{ lang.headings.experience }}</div>
+    <div class="section-headline">{{ lang.experience }}</div>
     <div class="block" v-for="experience in person.experience" :key="experience.company">
       <div class="block-helper"></div>
       <h3 class="headline">{{experience.position}} - {{experience.company}}</h3>
@@ -107,7 +107,7 @@
           {{experience.description}}
         </p>
     </div>
-    <div class="section-headline">{{ lang.headings.education }}</div>
+    <div class="section-headline">{{ lang.education }}</div>
     <div class="block" v-for="education in person.education" :key="education.degree">
       <div class="block-helper"></div>
       <div class="headline">{{education.degree}}</div>

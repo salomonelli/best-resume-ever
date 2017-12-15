@@ -86,7 +86,7 @@
     "pdf-image": "1.1.0",
     "postcss": "6.0.14",
     "postcss-cssnext": "3.0.2",
-    "puppeteer": "0.12.0",
+    "puppeteer": "0.13.0",
     "rename": "1.0.4",
     "request": "2.83.0",
     "request-promise": "4.2.2",

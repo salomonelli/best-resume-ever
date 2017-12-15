@@ -3,11 +3,12 @@ const fs = require('fs');
 const path = require('path');
 const Rx = require('rxjs/Rx');
 const http = require('http');
+const config = require('../config');
 
 const fetchResponse = () => {
   return new Promise((res, rej) => {
     try {
-      const req = http.request('http://localhost:8080/#/', response => res(response.statusCode));
+      const req = http.request(`http://localhost:${config.dev.port}/#/`, response => res(response.statusCode));
       req.on('error', (err) => rej(err));
       req.end();
     } catch (err) {
@@ -46,7 +47,7 @@ const convert = async () => {
         args: ['--no-sandbox']
       });
       const page = await browser.newPage();
-      await page.goto('http://localhost:8080/#/resume/' + dir.name, {
+      await page.goto(`http://localhost:${config.dev.port}/#/resume/` + dir.name, {
         waitUntil: 'networkidle2'
       });
       await page.pdf({

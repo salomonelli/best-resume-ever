@@ -1,11 +1,8 @@
-/* eslint-disable */
-const it = {
-  headings: {
-    contact: 'Contatti',
-    experience: 'Esperienza professionale',
-    education: 'Formazione',
-    skills: 'Competenze',
-    about: 'Su di me'
-  }
+const lang = {
+  contact: 'Contatti',
+  experience: 'Esperienza professionale',
+  education: 'Formazione',
+  skills: 'Competenze',
+  about: 'Su di me'
 };
-export default it;
+export default lang;

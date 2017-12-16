@@ -1,11 +1,8 @@
-/* eslint-disable */
-const tr = {
-  headings: {
-    contact: 'İletişim',
-    experience: 'Deneyim',
-    education: 'Eğitim',
-    skills: 'Yetenekler',
-    about: 'Hakkımda'
-  }
+const lang = {
+  contact: 'İletişim',
+  experience: 'Deneyim',
+  education: 'Eğitim',
+  skills: 'Yetenekler',
+  about: 'Hakkımda'
 };
-export default tr;
+export default lang;

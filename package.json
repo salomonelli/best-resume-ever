@@ -95,7 +95,7 @@
     "rxjs": "5.5.5",
     "semver": "5.4.1",
     "shelljs": "0.7.8",
-    "testcafe": "0.17.1",
+    "testcafe": "0.18.6",
     "testcafe-hammerhead": "11.2.1",
     "url-exists": "1.0.3",
     "url-loader": "0.6.2",

@@ -1,11 +1,8 @@
-/* eslint-disable */
-const fr = {
-  headings: {
-    contact: 'Contact',
-    experience: 'Expérience professionelle',
-    education: 'Formation',
-    skills: 'Compétences',
-    about: 'À propos de moi' 
-  }
+const lang = {
+  contact: 'Contact',
+  experience: 'Expérience professionelle',
+  education: 'Formation',
+  skills: 'Compétences',
+  about: 'À propos de moi'
 };
-export default fr;
+export default lang;

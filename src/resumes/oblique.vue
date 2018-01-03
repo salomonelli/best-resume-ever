@@ -16,7 +16,7 @@
   </div>
   <div class="resume-content">
     <div class="experience">
-      <h3>{{ lang.headings.experience }}</h3>
+      <h3>{{ lang.experience }}</h3>
 
       <div class="experience-block" v-for="experience in person.experience" :key="experience.company">
         <div class="row">
@@ -32,7 +32,7 @@
       </div>
     </div>
     <div class="education">
-      <h3>{{ lang.headings.education }}</h3>
+      <h3>{{ lang.education }}</h3>
       <div class="education-block" v-for="education in person.education" :key="education.degree">
         <div class="row">
           <span class="degree">{{education.degree}}</span>
@@ -43,7 +43,7 @@
       </div>
     </div>
     <div class="skill-section">
-      <h3>{{ lang.headings.skills }}</h3>
+      <h3>{{ lang.skills }}</h3>
       <div class="skills" v-for="skill in person.skills" :key="skill.name">
         <div class="skill-block">
           <i class="material-icons">details</i>
@@ -55,7 +55,7 @@
       <span>{{person.knowledge}} </span>
     </div>
     <div class="contact">
-      <h3>{{ lang.headings.contact }}</h3>
+      <h3>{{ lang.contact }}</h3>
       <a :href="'mailto:'+person.contact.email"> {{person.contact.email}}</a>
       <span>;&nbsp;</span>
       <a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>

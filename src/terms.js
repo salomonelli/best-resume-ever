@@ -21,7 +21,8 @@ import lt from './lang/lt';
 import tr from './lang/tr';
 import ko from './lang/ko';
 import el from './lang/el';
+import zhcn from './lang/zh-cn';
 
 export const terms = {
-  en, de, fr, pt, ca, cn, it, es, th, 'pt-br': ptbr, ru, sv, id, hu, pl, ja, nl, he, 'zh-tw': zhtw, lt, tr, ko, el
+  en, de, fr, pt, ca, cn, it, es, th, 'pt-br': ptbr, ru, sv, id, hu, pl, ja, nl, he, 'zh-tw': zhtw, lt, tr, ko, el, 'zh-cn': zhcn
 };

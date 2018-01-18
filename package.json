@@ -78,7 +78,7 @@
     "less-loader": "4.0.5",
     "local-web-server": "2.3.0",
     "lolex": "2.3.1",
-    "mocha": "4.1.0",
+    "mocha": "5.0.0",
     "mv": "2.1.1",
     "opn": "5.2.0",
     "optimize-css-assets-webpack-plugin": "3.2.0",

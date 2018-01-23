@@ -1,5 +1,7 @@
 const lang = {
   contact: 'Contact',
+  born: 'Né en',
+  bornIn: 'à',
   experience: 'Expérience professionelle',
   education: 'Formation',
   skills: 'Compétences',

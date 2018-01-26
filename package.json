@@ -96,7 +96,7 @@
     "semver": "5.4.1",
     "shelljs": "0.8.1",
     "testcafe": "0.18.6",
-    "testcafe-hammerhead": "12.1.8",
+    "testcafe-hammerhead": "12.1.9",
     "url-exists": "1.0.3",
     "url-loader": "0.6.2",
     "vue-loader": "13.7.0",

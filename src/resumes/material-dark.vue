@@ -75,7 +75,7 @@
       </div>
     </a>
 
-    <div class="item last">
+    <div class="item">
       <div class="section-headline">
         {{ lang.skills }}
       </div>
@@ -90,15 +90,27 @@
         </div>
       </div>
     </div>
+
+    <div class="item last">
+      <div v-if="person.knowledge" class="section-headline">
+        {{ lang.additionalSkills }}
+      </div>
+      <div v-if="person.knowledge" class="skill">
+        <div class="right">
+          <span>{{person.knowledge}}</span>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="rightCol">
     <div class="title">
       <h2>{{person.name.first}} {{person.name.middle}} {{person.name.last}}</h2>
-      <div>{{person.position}}</div>
+      <div class="description">{{person.position}}</div>
+      <span class="about">{{person.about}}</span>
     </div>
 
-    <div class="section-headline">{{ lang.experience }}</div>
+    <div class="section-headline experience">{{ lang.experience }}</div>
     <div class="block" v-for="experience in person.experience" :key="experience.company">
       <div class="block-helper"></div>
       <h3 class="headline">{{experience.position}} - {{experience.company}}</h3>
@@ -148,7 +160,7 @@ a {
 .title {
   right:25px;
   padding-left:20px;
-  padding-top:20px;
+  padding-top:10px;
   bottom:25px;
   h2 {
     text-transform:uppercase;
@@ -188,6 +200,10 @@ a {
     text-transform:uppercase;
     opacity:0.8;
   }
+  .description {
+    margin-top: -20px;
+    margin-botton: 20px;
+  }
 }
 .section-headline {
   text-transform:uppercase;
@@ -196,8 +212,8 @@ a {
   font-size:10pt;
   opacity:0.8;
   margin-left:20px;
-  margin-top:40px;
-  margin-bottom:20px;
+  margin-top:12px;
+  margin-bottom:6px;
   color:#3f3d3c;
 }
 .c {
@@ -259,6 +275,16 @@ h4 {
   float:right;
   display:flex;
   flex-direction:column;
+  .experience {
+    margin-top: 40px;
+  }
+  .about {
+    display: block;
+    margin-top:8px !important;
+    font-weight:375;
+    font-size: 16px;
+    color:rgba(0,0,0,0.541176);
+  }
   .block {
     width:90%;
     position:relative;
@@ -392,6 +418,9 @@ h4 {
       clear:both;
       width:97%;
       padding-top:4px;
+      span {
+        font-size: 13px;
+      }
       .left {
         float:left;
         width:10%;
@@ -433,9 +462,15 @@ h4 {
       }
     }
   }
-  .item.last .text {
-    border-bottom-style:none;
-    padding-bottom:0;
+  .item.last{ 
+    .text {
+      border-bottom-style:none;
+      padding-bottom:0;
+    }
+
+    .section-headline {
+      margin-top: 0 !important;
+    }
   }
 }
 #myselfpic {

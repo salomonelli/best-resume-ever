@@ -15,6 +15,7 @@
     </div>
   </div>
   <div class="resume-content">
+    <div class="about">{{person.about}}</div>
     <div class="experience">
       <h3>{{ lang.experience }}</h3>
 
@@ -46,7 +47,7 @@
       <h3>{{ lang.skills }}</h3>
       <div class="skills" v-for="skill in person.skills" :key="skill.name">
         <div class="skill-block">
-          <i class="material-icons">details</i>
+          <i class="material-icons">keyboard_arrow_right</i>
           <span class="skill">{{skill.name}}</span>
         </div>
       </div>
@@ -93,6 +94,7 @@ export default Vue.component(name, getVueOptions(name));
     font-weight:bold;
     text-transform:uppercase;
     margin-bottom:10px;
+    font-size: 22px;
   }
   .resume-header .triangle {
     width:0;
@@ -102,13 +104,13 @@ export default Vue.component(name, getVueOptions(name));
     border-color:#006064 transparent transparent transparent;
     position:absolute;
     left:-600px;
-    top:0;
+    top:-200px;
   }
   .resume-header .person-header {
     position:absolute;
     z-index:20;
     right:15%;
-    top:200px;
+    top:50px;
     .person-wrapper {
       overflow:hidden;
       position:relative;
@@ -145,15 +147,25 @@ export default Vue.component(name, getVueOptions(name));
       margin-top:10px;
     }
   }
+  .company {
+    font-weight:bold;
+  }
   .resume-content {
     margin-top:435px;
     margin-left:15%;
     width:70%;
+    .about {
+      font-size: 20px;
+      font-weight: 350;
+      top: -200px;
+      margin-top: -200px;
+      width: 375px;
+    }
     .experience .experience-block {
       line-height:1;
       margin-bottom:10px;
       .row:first-child {
-        font-size:20px;
+        font-size:18px;
         text-transform:uppercase;
         i {
           font-size:17px;
@@ -193,7 +205,7 @@ export default Vue.component(name, getVueOptions(name));
     line-height:1;
   }
   .contact {
-    margin-top:50px;
+    margin-top: 0px;
     a, span {
       display:inline-block;
       font-size:20px;

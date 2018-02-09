@@ -104,7 +104,7 @@
     "vue-template-compiler": "2.5.13",
     "webpack": "3.10.0",
     "webpack-bundle-analyzer": "2.10.0",
-    "webpack-dev-middleware": "2.0.4",
+    "webpack-dev-middleware": "2.0.5",
     "webpack-hot-middleware": "2.21.0",
     "webpack-merge": "4.1.1"
   },

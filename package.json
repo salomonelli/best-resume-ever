@@ -84,7 +84,7 @@
     "optimize-css-assets-webpack-plugin": "3.2.0",
     "ora": "1.4.0",
     "pdf-image": "1.1.0",
-    "postcss": "6.0.16",
+    "postcss": "6.0.17",
     "postcss-cssnext": "3.1.0",
     "puppeteer": "1.0.0",
     "rename": "1.0.4",

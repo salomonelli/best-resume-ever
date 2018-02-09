@@ -99,7 +99,7 @@
     "testcafe-hammerhead": "13.0.1",
     "url-exists": "1.0.3",
     "url-loader": "0.6.2",
-    "vue-loader": "14.0.2",
+    "vue-loader": "14.0.3",
     "vue-style-loader": "4.0.0",
     "vue-template-compiler": "2.5.13",
     "webpack": "3.10.0",

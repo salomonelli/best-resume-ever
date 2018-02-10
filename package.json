@@ -102,7 +102,7 @@
     "vue-loader": "14.0.3",
     "vue-style-loader": "4.0.0",
     "vue-template-compiler": "2.5.13",
-    "webpack": "3.10.0",
+    "webpack": "3.11.0",
     "webpack-bundle-analyzer": "2.10.0",
     "webpack-dev-middleware": "2.0.5",
     "webpack-hot-middleware": "2.21.0",

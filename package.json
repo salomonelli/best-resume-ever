@@ -74,7 +74,7 @@
     "html-webpack-plugin": "2.30.1",
     "http": "0.0.0",
     "http-proxy-middleware": "0.17.4",
-    "less": "2.7.3",
+    "less": "3.0.0",
     "less-loader": "4.0.5",
     "local-web-server": "2.4.0",
     "lolex": "2.3.2",

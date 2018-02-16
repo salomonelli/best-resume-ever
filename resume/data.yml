@@ -1,70 +1,99 @@
 /* #*/ export const PERSON = `
 name:
-  first: John
+  first: Aseem
   middle:
-  last: Doe
-about: Hi, my name is John Doe. I"m just about the most boring type of person you could
+  last: Shrey
+about: Hi, my name is Aseem Shrey. I"m just about the most boring type of person you could
        possibly imagine. I like collecting leaves from the tree in my back yard and documenting
        each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+position: Student ( 3rd Year )
 
 birth:
-  year: 1990
-  location: New York
+  year: "1996"
+  location: Patna
 
-experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
+python:
+- company: Python Malware
+  position: Python
+  timeperiod: 2nd Year ( 2017 )
+  description: "Fully functional, using free webhosting ac c2c, thus totally anonymous.
+  Some capabilities added are stealing password from chrome and firefox."
+  link: "https://github.com/LuD1161/MyPythonAdministrationTool"
 
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
+- company: Social Network
+  position: django
+  timeperiod: 2nd Year ( 2017 )
+  description: A social network, where you can add friends and send messages, realtime to be implemented using django-channels
+  link: "https://github.com/LuD1161/django-Website"
 
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
+- company:  ssh-bruteforcer, admin-page-finder, local file search
+  position: Python
+  timeperiod: 2nd Year ( 2016 )
+  description: "ssh-bruteforcer as the name suggests and the other one helped in web admin-page finder,
+  cause finding files have been a headache "
+  link: "https://github.com/LuD1161/TheWebsite"
+
+other:
+  projects:
+    - company: Social Network
+      position: PHP
+      timeperiod: 2nd Year ( 2016 )
+      description: A social network, where you can add friends and send messages, no realtime support ( earlier version of the django website )
+      link: "https://github.com/LuD1161/TheWebsite"
+    - company: Crashy Ball
+      position: Android
+      timeperiod: 2nd Year Project ( 2016 )
+      description: "Avoid the ball from crashing :) . Developed the whole game framework (
+although basic but functional )"
+      link: "https://github.com/LuD1161/AndroidGame-CrashyBall"
+    - company: The Chrome Stealer
+      position: JavaScript
+      timeperiod: 3rd Year ( 2017 )
+      description: A chrome extension to steal authentication cookies, for various services like gmail, facebook, yandex etc
+      link: ""
+  achievements:
+    - name: "Found Bug in Digilocker - Government of India Initiative"
+      link: "https://digilocker.gov.in/credits-community-contribution.php"
+    - name: "HackIM CTF ( Feb 2018 ) - 1st ( India ), 8th ( World Rank )"
+    - name: "1st Terminal Tragedy ( CTF ) NIT"
+    - name: "DRDO CTF ( Dec 2017 )- Top 20"
+    - name: "5th in CSAW finals 2017, finalist for CSAW finals 2016"
+
 
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
+- degree: B Tech ( IT )
+  timeperiod: July 2015 - May 2019 
+  description: Indian Institute of Information Technology
 
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
+- degree: Class 12
+  timeperiod: "2014"
+  description: DPS R K Puram, New Delhi
 
 # skill level goes 0 to 100
 skills:
-- name: HTML5
-  level: 99
-- name: CSS3
+- name: Python
+  level: 98
+- name: django
   level: 95
+- name: HTML5
+  level: 98
 - name: JavaScript
-  level: 97
-- name: Node.js
-  level: 93
-- name: Angular 2
-  level: 60
-- name: TypeScript
-  level: 80
-- name: ES.Next
-  level: 70
-- name: Docker
-  level: 99
+  level: 90
+- name: VueJS
+  level: 85
+- name: C++
+  level: 88
+- name: Vue.js
+  level: 85
+
 knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
   (English and Klingon).
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
+  email: aseemshrey@gmail.com
+  phone: +91 9455245705
+  wordpress: LuD1161
+  github: LuD1161
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
 lang: en
 `

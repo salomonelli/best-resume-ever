@@ -362,7 +362,7 @@ h4 {
 }
 .leftCol {
   width:35%;
-  height:1900px;
+  height:2000px;
   float:left;
   padding:0;
   text-align:left;

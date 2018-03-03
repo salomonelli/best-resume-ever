@@ -98,7 +98,7 @@
     "testcafe": "0.18.6",
     "testcafe-hammerhead": "13.1.0",
     "url-exists": "1.0.3",
-    "url-loader": "0.6.2",
+    "url-loader": "1.0.1",
     "vue-loader": "14.0.3",
     "vue-style-loader": "4.0.0",
     "vue-template-compiler": "2.5.13",

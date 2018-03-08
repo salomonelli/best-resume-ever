@@ -64,7 +64,7 @@
     "eslint-plugin-html": "4.0.2",
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-node": "6.0.0",
-    "eslint-plugin-promise": "3.6.0",
+    "eslint-plugin-promise": "3.7.0",
     "eslint-plugin-standard": "3.0.1",
     "eventsource-polyfill": "0.9.6",
     "express": "4.16.2",

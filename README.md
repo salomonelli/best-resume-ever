@@ -9,7 +9,7 @@
 
 <div align="center">
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/salomonelli/best-resume-ever.svg)](https://greenkeeper.io/) [![Travis badge](https://travis-ci.org/salomonelli/best-resume-ever.svg?branch=master)](https://travis-ci.org/salomonelli/best-resume-ever)
+[![Travis badge](https://travis-ci.org/salomonelli/best-resume-ever.svg?branch=master)](https://travis-ci.org/salomonelli/best-resume-ever)
 
 </div>
 

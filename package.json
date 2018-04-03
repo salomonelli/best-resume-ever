@@ -12,7 +12,6 @@
     "docs": "node build/build.js",
     "docs:serve": "cd docs/ && ws --port 8080 --rewrite '/best-resume-ever/* -> /$1'",
     "dev": "node build/dev-server.js",
-    "predev": "check-node-version --node \">= 8.0.0\"",
     "start": "node build/dev-server.js",
     "pdf": "node scripts/export.js",
     "preview": "node scripts/preview.js",

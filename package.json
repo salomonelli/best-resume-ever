@@ -26,6 +26,7 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "detect-port": "^1.2.2",
     "font-awesome": "4.7.0",
     "js-yaml": "3.10.0",
     "material-design-icons": "3.0.1",

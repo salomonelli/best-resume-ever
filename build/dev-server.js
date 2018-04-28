@@ -91,10 +91,10 @@ function startServer(port) {
     .then(_port => {
       server = port === _port ? (
         app.listen(port),
-        console.log('listening on port', port)
+          console.log('> Listening at ' + uri + port +  '\n')
       ) : (
         app.listen(_port),
-        console.log('listening on port', _port)
+          console.log('> Listening at ' + uri + _port +  '\n')
       )
 
     })

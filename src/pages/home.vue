@@ -62,6 +62,14 @@
         </div>
       </router-link>
     </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/creative'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/creative.png" />
+          <span>creative</span>
+        </div>
+      </router-link>
+    </div>
   </div>
 </div>
 </template>

@@ -75,7 +75,7 @@
     "http-proxy-middleware": "0.17.4",
     "less": "3.0.0",
     "less-loader": "4.0.5",
-    "local-web-server": "2.4.0",
+    "local-web-server": "2.5.6",
     "lolex": "2.3.2",
     "mocha": "5.0.0",
     "mv": "2.1.1",

@@ -1,3 +1,4 @@
+// Dutch
 const lang = {
   contact: 'Kontakt',
   born: 'Geboren',
@@ -5,6 +6,8 @@ const lang = {
   experience: 'Berufserfahrung',
   education: 'Schulbildung',
   skills: 'Qualifikationen',
+  projects: 'Projecten',
+  contributions: 'Bijdragen',
   about: 'Über mich'
 };
 export default lang;

@@ -1,3 +1,4 @@
+// English
 const lang = {
   contact: 'Contact',
   born: 'Born',
@@ -5,6 +6,8 @@ const lang = {
   experience: 'Experience',
   education: 'Education',
   skills: 'Skills',
+  projects: 'Projects',
+  contributions: 'Contributions',
   about: 'About me'
 };
 export default lang;

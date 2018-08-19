@@ -17,6 +17,7 @@ experience:
   position: Developer
   timeperiod: since January 2016
   description: Programming and watching cute cat videos.
+  website: https://example.com
 
 - company: Company B
   position: Frontend Developer
@@ -32,6 +33,7 @@ education:
 - degree: Master of Arts
   timeperiod: March 2012 - December 2013
   description: Major in Hacking and Computer Penetration, University A, New York, USA.
+  website: https://example.com
 
 - degree: Bachelor of Science
   timeperiod: March 2009 - December 2011
@@ -57,6 +59,26 @@ skills:
   level: 99
 knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
   (English and Klingon).
+
+projects:
+- name: best-resume-ever
+  platform: Vue
+  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
+  url: https://github.com/salomonelli/best-resume-ever
+
+hobbies:
+- name: Video Games
+  iconClass: fa fa-gamepad
+  url: https://example.com
+
+- name: Drawing
+  iconClass: fa fa-pencil
+  url: https://example.com
+
+contributions:
+- name: best-resume-ever
+  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
+  url: https://github.com/salomonelli/best-resume-ever
 
 contact:
   email: john.doe@email.com

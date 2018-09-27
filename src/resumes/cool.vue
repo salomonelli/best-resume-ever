@@ -187,7 +187,7 @@
 import Vue from 'vue';
 import { getVueOptions } from './options';
 
-let name = 'cool';
+const name = 'cool';
 
 export default Vue.component(name, getVueOptions(name));
 </script>

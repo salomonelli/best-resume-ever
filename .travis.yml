@@ -29,6 +29,9 @@ jobs:
     - stage: export
       script: travis_retry npm run export
       env: LABEL=export
+    - stage: export
+      script: travis_retry npm run preview
+      env: LABEL=preview
 
     - stage: tests
       script: travis_retry npm run test:export

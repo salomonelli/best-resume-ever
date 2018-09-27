@@ -77,7 +77,7 @@
 <script>
 import Vue from 'vue';
 export default Vue.component('resume', {
-  name: 'app'
+    name: 'app'
 });
 </script>
 

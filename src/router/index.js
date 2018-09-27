@@ -6,16 +6,16 @@ import Home from '@/pages/home';
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/resume/:resumeid',
-      name: 'resume',
-      component: Resume
-    }
-  ]
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Home
+        },
+        {
+            path: '/resume/:resumeid',
+            name: 'resume',
+            component: Resume
+        }
+    ]
 });

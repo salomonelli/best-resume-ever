@@ -1,4 +1,5 @@
-﻿// Chinese (Simplified)
+/* eslint unicode-bom: "off" */
+// Chinese (Simplified)
 const lang = {
   contact: '联系方式',
   experience: '工作经历',

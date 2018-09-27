@@ -70,6 +70,14 @@
         </div>
       </router-link>
     </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/cool'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-cool.png" />
+          <span>cool</span>
+        </div>
+      </router-link>
+    </div>
   </div>
 </div>
 </template>

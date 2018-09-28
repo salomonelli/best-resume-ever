@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'app'
+    name: 'app'
 };
 </script>
 
@@ -19,6 +19,7 @@ export default {
 @import '../node_modules/npm-font-open-sans/open-sans.css';
 @import '../node_modules/npm-font-open-sans-condensed/open-sans-condensed.css';
 @import '../node_modules/raleway-webfont/raleway.css';
+
 body {
   padding: 0;
   margin: 0;

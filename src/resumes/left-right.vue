@@ -73,7 +73,7 @@
 import Vue from 'vue';
 import { getVueOptions } from './options';
 
-let name = 'left-right';
+const name = 'left-right';
 export default Vue.component(name, getVueOptions(name));
 </script>
 

@@ -6,8 +6,8 @@ const lang = {
     experience: 'Berufserfahrung',
     education: 'Schulbildung',
     skills: 'Qualifikationen',
-    projects: 'Projecten',
-    contributions: 'Bijdragen',
+    projects: 'Projekte',
+    contributions: 'Mitarbeit',
     about: 'Über mich'
 };
 export default lang;

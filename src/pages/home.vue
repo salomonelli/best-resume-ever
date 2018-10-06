@@ -78,6 +78,14 @@
         </div>
       </router-link>
     </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/europass'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/europass.png" />
+          <span>europass</span>
+        </div>
+      </router-link>
+    </div>
   </div>
 </div>
 </template>

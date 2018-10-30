@@ -1,5 +1,17 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+	<h1>dsfdsaf</h1>
+	  <!-- Badge without a Button -->
+</h1>
+	<h2>Example heading <span class="badge badge-secondary">New</span></h2>
+    <!-- Badge with a Button -->
+<button type="button" class="btn btn-primary"> Notifications <span class="badge badge-light">4</span> </button>
 <template>
-<div class="resume2" id="resume">
+  <div class="resume2" id="resume">
   <div class="row text-center">
     <span class="name">{{person.name.first}} {{person.name.middle}} {{person.name.last}}</span>
   </div>
@@ -11,10 +23,20 @@
       <div class="img"></div>
     </div>
   </div>
-  <div class="contact">
+  <div class="left half">
+    <div class="experience">
+      <h3>{{ lang.experience }}</h3>
+      <div class="experience-block" v-for="experience in person.experience" :key="experience.company">
+        <span class="company"> {{experience.company}} </span>
+        <span class="job-title"> {{experience.position}} </span>
+        <span class="time-period"> {{experience.timeperiod}}</span>
+        <span class="job-description"> {{experience.description}} </span>
+      </div>
+    </div>
+    <div class="contact">
       <table>
         <tr>
-          <td ><a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a></td>
+          <td><a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a></td>
           <!--<td><i class="fa fa-phone" aria-hidden="true"></i></td>-->
         </tr>
         <tr>
@@ -34,17 +56,6 @@
         <!--<td><i class="fa fa-github" aria-hidden="true"></i></td>-->
         </tr>
       </table>
-  </div>
-  <div id="grad1"></div>
-  <div class="left half">
-    <div class="experience">
-      <h3>{{ lang.experience }}</h3>
-      <div class="experience-block" v-for="experience in person.experience" :key="experience.company">
-        <span class="company"> {{experience.company}} </span>
-        <span class="job-title"> {{experience.position}} </span>
-        <span class="time-period"> {{experience.timeperiod}}</span>
-        <span class="job-description"> {{experience.description}} </span>
-      </div>
     </div>
     <div class="education">
       <h3>{{ lang.education }}</h3>
@@ -81,62 +92,85 @@ export default Vue.component(name, getVueOptions(name));
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-#resume2 {
-  font-family: 'Raleway', sans-serif;
-  padding-bottom:50px;
-  a, a:focus, a:hover, a:visited {
-    text-decoration:none;
-  }
-}
-
-h3{
-  margin-bottom:0;
-}
-
-span {
-  display:inline-block;
-}
-
-.image {
-    width:150px;
-    height:150px;
-    margin-top:50px;
-    margin-bottom:50px;
-    .img {
-      width:100%;
-      height:100%;
-      background-image:url('../../resume/id.jpg');
-      background-repeat:none;
-      background-position:center;
-      background-size:cover;
-    }
-  }
-.contact {
-    width:100%;
-    table {
-      text-align:;
-      float:center;
-      margin-top:5px;
-      color:green;
-      font-size:20px;
-      i {
-        padding:2px;
-        color:#616161;
-      }
-      tr td:nth-child(2) {
-        vertical-align:top;
-    }
-  }
-}
-
-
-#grad1 {
-    height: 10px;
-    background-color: red; /* For browsers that do not support gradients */
-    background-image: linear-gradient(green, green); /* Standard syntax (must be last) */
-}
-
-
-
 </style>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="less" scoped>
+#resume2 {
+
+
+.easeAnimObj {
+	position: relative;
+	/* Chrome, Safari*/
+	-webkit-animation-name: easeAnimation;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-delay: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-play-state: running;
+	/* Mozilla */
+	-moz-animation-name: easeAnimation;
+	-moz-animation-duration: 5s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-delay: 2s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction: alternate;
+	-moz-animation-play-state: running;	
+	/* Standard syntax */
+	animation-name: easeAnimation;
+	animation-duration: 5s;
+	animation-timing-function: ease;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-play-state: running;
+}
+
+/* 
+Define the keyframe and changes
+*/
+
+/* Chrome, Safari */
+@-webkit-keyframes easeAnimation {
+	0% {
+		left: 0;
+		top: 0;
+	}
+	100% {
+		left: 200px;
+		top: 0;
+	}
+}
+
+/* Firefox */
+@-moz-keyframes easeAnimation {
+	0% {
+		left: 0;
+		top: 0;
+	}
+	100% {
+		left: 200px;
+		top: 0;
+	}
+}
+
+/* Standard syntax */
+@keyframes easeAnimation {
+	0% {
+		left: 0;
+		top: 0;
+	}
+	100% {
+		left: 200px;
+		top: 0;
+	}
+}
+
+	}
+	
+</style>
+
+<body>
+</body>
+</html>

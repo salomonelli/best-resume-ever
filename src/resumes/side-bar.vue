@@ -20,25 +20,25 @@
                   <a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a>
               </div>
               <div class="contact-row dots">
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
+                  <font-awesome-icon icon="circle" aria-hidden="true"/>
+                  <font-awesome-icon icon="circle" aria-hidden="true"/>
+                  <font-awesome-icon icon="circle" aria-hidden="true"/>
               </div>
               <div class="contact-row">
                   <a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
               </div>
               <div class="contact-row dots">
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
+                  <font-awesome-icon icon="circle" aria-hidden="true"/>
+                  <font-awesome-icon icon="circle" aria-hidden="true"/>
+                  <font-awesome-icon icon="circle" aria-hidden="true"/>
               </div>
               <div class="contact-row">
                   {{person.contact.street}} <br> {{person.contact.city}}
               </div>
               <div v-if="person.contact.github" class="contact-row dots">
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
+                  <font-awesome-icon icon="circle" aria-hidden="true"/>
+                  <font-awesome-icon icon="circle" aria-hidden="true"/>
+                  <font-awesome-icon icon="circle" aria-hidden="true"/>
               </div>
               <div v-if="person.contact.github" class="contact-row">
                   <a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a>
@@ -90,6 +90,11 @@
 <script>
 import Vue from 'vue';
 import { getVueOptions } from './options';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faCircle);
 
 const name = 'side-bar';
 export default Vue.component(name, getVueOptions(name));

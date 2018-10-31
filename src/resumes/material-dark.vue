@@ -55,7 +55,7 @@
     <a v-if="person.contact.github" :href="'https://github.com/'+person.contact.github" target="_blank">
       <div class="item">
         <div class="icon">
-          <i class="fa fa-github"></i>
+          <font-awesome-icon :icon="['fab', 'github']" class="fa"/>
         </div>
         <div class="text">
           <span>@{{person.contact.github}}</span>
@@ -125,6 +125,12 @@
 import Vue from 'vue';
 import { getVueOptions } from './options';
 const name = 'material-dark';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
+library.add(faGithub);
 
 export default Vue.component(name, getVueOptions(name));
 </script>
@@ -233,6 +239,7 @@ p {
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   font-size:26px;
+  margin: auto;
 }
 h1, h3, h5, h6 {
   font-weight:400;

@@ -27,7 +27,11 @@
     "lint:fix": "eslint --ext .js,.vue src scripts --fix"
   },
   "dependencies": {
-    "font-awesome": "4.7.0",
+    "@fortawesome/fontawesome-svg-core": "1.2.7",
+    "@fortawesome/free-brands-svg-icons": "^5.4.2",
+    "@fortawesome/free-regular-svg-icons": "^5.4.2",
+    "@fortawesome/free-solid-svg-icons": "5.4.2",
+    "@fortawesome/vue-fontawesome": "0.1.2",
     "js-yaml": "3.12.0",
     "material-design-icons": "3.0.1",
     "material-icons": "0.2.3",

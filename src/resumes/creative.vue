@@ -37,7 +37,7 @@
           :href="person.contact.website">
 
           <div class="block-marged txt-full-white">
-            <i class="fa fa-globe contact-icon"></i>
+            <font-awesome-icon icon="globe-africa" class="contact-icon"/>
             {{ person.contact.website }}
           </div>
         </a>
@@ -46,7 +46,7 @@
           :href="'https://github.com/' + person.contact.github"
           class="external-link">
 
-          <i class="fa fa-github contact-icon"></i>
+          <font-awesome-icon :icon="['fab', 'github']" class="contact-icon"/>
           <span class="block-marged txt-full-white">
             {{ person.contact.github }}
           </span>
@@ -70,10 +70,12 @@
         <a v-if="person.contact.medium"
           :href="'https://medium.com/@' + person.contact.medium"
           class="external-link">
-          <i class="fab fa-medium contact-icon"></i>
+
+          <font-awesome-icon :icon="['fab', 'medium']" class="contact-icon"/>
           <span class="block-marged txt-full-white">
             {{ person.contact.medium }}
           </span>
+
         </a>
       </div>
 
@@ -84,7 +86,7 @@
             class="hobby-item"
             :href="hobby.url">
 
-            <i v-if="hobby.iconClass" :class="hobby.iconClass + ' hobby-item__icon'"></i>
+            <font-awesome-icon v-if="hobby.icon" :icon="[hobby.icon.prefix, hobby.icon.name]" :class="hobby-item__icon"/>
             <span class="hobby-item__icon-label"> {{ hobby.name }} </span>
           </a>
         </div>
@@ -177,7 +179,7 @@
         class="contributions-section section">
 
         <div class="icon">
-          <i class="fa fa-heart font-awesome-icons"></i>
+          <font-awesome-icon icon="heart" class="font-awesome-icons"/>
           <span class="section-headline"> {{lang.contributions}} </span>
         </div>
 
@@ -201,6 +203,18 @@
 <script>
 import Vue from 'vue';
 import { getVueOptions } from './options';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+import { faGamepad, faGlobeAfrica, faHeart, faPencilAlt }
+    from '@fortawesome/free-solid-svg-icons';
+
+import { faGithub, faMedium } from '@fortawesome/free-brands-svg-icons';
+
+library.add(
+    faGamepad, faGithub, faGlobeAfrica,
+    faHeart, faMedium, faPencilAlt
+);
 
 const name = 'creative';
 

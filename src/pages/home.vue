@@ -79,13 +79,13 @@
       </router-link>
     </div>
     <div class="preview">
-  <router-link v-bind:to="'/resume/clear'">
-    <div class="preview-wrapper">
-      <img src="../assets/preview/clear.png" />
-      <span>clear</span>
+      <router-link v-bind:to="'/resume/clear'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/clear.png" />
+          <span>clear</span>
+        </div>
+      </router-link>
     </div>
-  </router-link>
-</div>
   </div>
 </div>
 </template>

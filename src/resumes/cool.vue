@@ -215,6 +215,10 @@ a {
   position: relative;
   font-family:'Roboto' !important;
   font-size: 0.9em;
+  width: 90%;
+	max-width: 800px;
+	background: #f3f3f3;
+	margin: 30px auto;
 }
 
 .picture {

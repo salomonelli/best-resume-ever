@@ -19,7 +19,6 @@
 			<ul>
 				<li>Email: <a :href="'mailto:'+person.contact.email" target="_blank">{{person.contact.email}}</a></li>
 				<li>Website: <a :href="person.contact.website">{{person.contact.website}}</a></li>
-        <li>GitHub: <a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a></li>
         <li>Address: {{person.contact.street}} {{person.contact.city}}</li>
 				<li>Cellphone: <a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a></li>
 			</ul>
@@ -44,27 +43,18 @@
 		
 		<section>
 			<div class="sectionTitle">
-				<h1>Work Experience</h1>
+				<h1>{{lang.experience}}</h1>
 			</div>
 			
 			<div class="sectionContent">
-				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">April 2011 - Present</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>
-				
-				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">Janruary 2007 - March 2011</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>
-				
-				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">October 2004 - December 2006</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>
+				<div v-for="(experience, index) in person.experience" :key="index"
+              class="section-content__item"
+              :href="experience.website">
+					<h2>{{ experience.company }}</h2>
+          <span>{{experience.location}}</span>
+					<p class="subDetails">{{ experience.timeperiod }}</p>
+					<p>{{ experience.description }}</p>
+				</div>
 			</div>
 			<div class="clear"></div>
 		</section>
@@ -72,19 +62,14 @@
 		
 		<section>
 			<div class="sectionTitle">
-				<h1>Key Skills</h1>
+				<h1>{{ lang.skills }}</h1>
 			</div>
 			
-			<div class="sectionContent">
+			<div class="sectionContent" v-for="(skill, index) in person.skills"
+              :key="index"
+              :href="skill.url">
 				<ul class="keySkills">
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
+					<li>{{ skill.name }}</li>
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -93,21 +78,20 @@
 		
 		<section>
 			<div class="sectionTitle">
-				<h1>Education</h1>
-			</div>
+				<h1>{{ lang.education }}</h1>
 			
+			</div>
 			<div class="sectionContent">
-				<article>
-					<h2>College/University</h2>
-					<p class="subDetails">Qualification</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
+				<article  v-for="(education, index) in person.education"
+              class="section-content__item"
+              :key="index"
+              :href="education.website">
+					<h2>{{ education.school }}</h2>
+					<p class="subDetails">{{ education.degree }}</p>
+          <p class="subDetails"> {{ education.timeperiod }}</p>
+					<p>{{ education.description }}</p>
 				</article>
-				
-				<article>
-					<h2>College/University</h2>
-					<p class="subDetails">Qualification</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
-				</article>
+			
 			</div>
 			<div class="clear"></div>
 		</section>
@@ -177,9 +161,9 @@ span {
 }
 
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
-border:0;
+border:100;
 font:inherit;
-font-size:100%;
+font-size:94%;
 margin:0;
 padding:0;
 vertical-align:baseline;
@@ -217,10 +201,9 @@ p {
 }
 
 #cv {
-	width: 90%;
-	max-width: 800px;
-	background: #f3f3f3;
-	margin: 30px auto;
+	position: relative;
+  font-family:'Roboto' !important;
+  font-size: 0.9em;
 }
 
 .mainDetails {
@@ -310,6 +293,10 @@ section:last-child {
 	float: left;
 	width: 25%;
 }
+
+
+
+
 
 .sectionContent {
 	float: right;
@@ -492,8 +479,11 @@ section:last-child {
 
 .instaFade {
     -webkit-animation-name: reset, fade-in;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 0.5s;
     -webkit-animation-timing-function: ease-in;
+    position: relative;
+    font-family:'Roboto' !important;
+    font-size: 0.9em;
 	
 	-moz-animation-name: reset, fade-in;
     -moz-animation-duration: 1.5s;

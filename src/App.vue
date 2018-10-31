@@ -19,6 +19,7 @@ export default {
 @import '../node_modules/npm-font-open-sans/open-sans.css';
 @import '../node_modules/npm-font-open-sans-condensed/open-sans-condensed.css';
 @import '../node_modules/raleway-webfont/raleway.css';
+@import 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
 
 body {
   padding: 0;

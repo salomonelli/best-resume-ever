@@ -68,11 +68,15 @@ projects:
 
 hobbies:
 - name: Video Games
-  iconClass: fa fa-gamepad
+  icon:
+    prefix: 'fa'
+    name: 'gamepad'
   url: https://example.com
 
 - name: Drawing
-  iconClass: fa fa-pencil
+  icon:
+    prefix: 'fa'
+    name: 'pencil-alt'
   url: https://example.com
 
 contributions:
@@ -81,12 +85,14 @@ contributions:
   url: https://github.com/salomonelli/best-resume-ever
 
 contact:
+  city: New York
   email: john.doe@email.com
+  github: johnyD
+  linkedin: johnyD
+  medium: johnyD
   phone: 0123 456789
   street: 1234 Broadway
-  city: New York
   website: johndoe.com
-  github: johnyD
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
 lang: en
 `

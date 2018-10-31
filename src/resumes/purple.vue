@@ -6,10 +6,10 @@
             <h1 id="name">{{person.name.first}} {{person.name.last}}</h1>
             <div id="info-flex">
                 <span id="email"><a :href='"mailto:" + person.contact.email'>
-                  <i class="fa fa-envelope" aria-hidden="true"></i> {{person.contact.email}}</a></span>
-                <span id="phone"><i class='fa fa-phone-square' aria-hidden="true"></i> {{person.contact.phone}}</span>
-                <span v-if="person.contact.website" id="website"><a :href='person.contact.website'><i class="fa fa-home" aria-hidden="true"></i> {{person.contact.website}}</a></span>
-                <span v-if="person.contact.github" id="github"><a :href='"https://github.com/" + person.contact.github'><i class="fa fa-github" aria-hidden="true"></i> {{person.contact.github}}</a></span>
+                  <font-awesome-icon icon="envelope" aria-hidden="true"/> {{person.contact.email}}</a></span>
+                <span id="phone"><font-awesome-icon icon="phone-square" aria-hidden="true"/> {{person.contact.phone}}</span>
+                <span v-if="person.contact.website" id="website"><a :href='person.contact.website'><font-awesome-icon icon="home" aria-hidden="true"/> {{person.contact.website}}</a></span>
+                <span v-if="person.contact.github" id="github"><a :href='"https://github.com/" + person.contact.github'><font-awesome-icon :icon="['fab', 'github']" aria-hidden="true"/> {{person.contact.github}}</a></span>
             </div>
         </div>
         <div id="header-right">
@@ -66,6 +66,17 @@
 <script>
 import Vue from 'vue';
 import { getVueOptions } from './options';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+import { faEnvelope, faGlobeAfrica, faHome, faPhoneSquare }
+    from '@fortawesome/free-solid-svg-icons';
+
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
+library.add(
+    faEnvelope, faGithub, faGlobeAfrica, faHome, faPhoneSquare
+);
 
 const name = 'purple';
 export default Vue.component(name, getVueOptions(name));

@@ -65,28 +65,28 @@
               v-if="person.contact.website"
               class="section-link"
               :href="person.contact.website">
-              <i class="section-link__icon fa fa-globe"></i>{{ person.contact.website }}
+              <font-awesome-icon icon="globe-africa" class="section-link__icon"/>{{ person.contact.website }}
             </a>
 
             <a
               v-if="person.contact.linkedin"
               class="section-link"
               :href="'https://linkedin.com/in/' + person.contact.linkedin">
-              <i class="section-link__icon fa fa-linkedin"></i>{{ person.contact.linkedin }}
+              <font-awesome-icon :icon="['fab', 'linkedin']" class="section-link__icon/>{{ person.contact.linkedin }}
             </a>
 
             <a
               v-if="person.contact.github"
               class="section-link"
               :href="'https://github.com/' + person.contact.github">
-              <i class="section-link__icon fa fa-github"></i>{{ person.contact.github }}
+              <font-awesome-icon :icon="['fab', 'github']" class="section-link__icon"/>{{ person.contact.github }}
             </a>
 
             <a
               v-if="person.contact.medium"
               class="section-link"
               :href="'https://medium.com/@' + person.contact.medium">
-              <i class="section-link__icon fa fa-medium"></i>{{ person.contact.medium }}
+              <font-awesome-icon :icon="['fab', 'medium']" class="section-link__icon"/>{{ person.contact.medium }}
             </a>
           </div>
         </div>
@@ -159,7 +159,7 @@
           v-if="person.contributions"
           class="section">
           <div class="section-headline">
-            <i class="section-headline__icon fa fa-heart"></i>{{lang.contributions}}
+            <font-awesome-icon icon="heart" class="section-headline__icon"/>{{lang.contributions}}
           </div>
 
           <div class="section-content-grid">
@@ -186,6 +186,18 @@
 <script>
 import Vue from 'vue';
 import { getVueOptions } from './options';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+import { faGamepad, faGlobeAfrica, faHeart, faPencilAlt }
+    from '@fortawesome/free-solid-svg-icons';
+
+import { faGithub, faLinkedin, faMedium } from '@fortawesome/free-brands-svg-icons';
+
+library.add(
+    faGamepad, faGithub, faGlobeAfrica,
+    faHeart, faLinkedin, faMedium, faPencilAlt
+);
 
 const name = 'cool';
 

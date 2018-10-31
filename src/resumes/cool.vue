@@ -186,9 +186,7 @@
 <script>
 import Vue from 'vue';
 import { getVueOptions } from './options';
-
 const name = 'cool';
-
 export default Vue.component(name, getVueOptions(name));
 </script>
 
@@ -200,27 +198,19 @@ export default Vue.component(name, getVueOptions(name));
 @picture-offset: 35px;
 @base-padding: 30px;
 @left-column-width: 240px;
-
 a {
   color: inherit;
   cursor: pointer;
   text-decoration-line: none;
-
   &:visited {
     color: inherit;
   }
 }
-
 .resume {
   position: relative;
   font-family:'Roboto' !important;
   font-size: 0.9em;
-  width: 90%;
-	max-width: 800px;
-	background: #f3f3f3;
-	margin: 30px auto;
 }
-
 .picture {
   position: absolute;
   top: @banner-height - @picture-offset;
@@ -232,7 +222,6 @@ a {
   content: url('../../resume/id.jpg');
   z-index: 2;
 }
-
 .banner {
   width: calc(100% - @base-padding * 2);
   height: @banner-height;
@@ -244,50 +233,40 @@ a {
     background-size: cover;
   */
   color: white;
-
   &__fullname {
     font-size: 32px;
   }
-
   &__position {
     font-size: 16px;
   }
-
   &__location {
     font-size: 12px;
   }
 }
-
 .content {
   display: flex;
   width: 100%;
   height: 100%;
-
   &__left,
   &__right {
     height: 100%;
     padding: @base-padding;
   }
-
   &__left {
     width: @left-column-width;
     color: rgba(255, 255, 255, 0.59);
     background-color: @accent-color;
-
     .section-headline {
       color: white;
     }
   }
-
   &__right {
     flex: 1;
   }
 }
-
 .section {
   margin: 20px 0;
 }
-
 .section-link,
 .section-headline {
   display: flex !important;
@@ -296,80 +275,65 @@ a {
   display: inline-block;
   font-size: 1.2em;
   margin: 8px 0;
-
   &__icon {
     margin-right: 8px;
     font-size: 1.4em;
   }
 }
-
 .section-link {
   font-size: 1.1em;
   color: rgba(255, 255, 255, 0.59) !important;
-
   &__icon {
     color: white;
   }
 }
-
 .section-content {
   margin-top: 5px;
   padding-left: 32px;
   font-size: 14px;
-
   &__item {
     display: block;
     margin-bottom: 5px;
   }
-
   &__header {
     display: block;
     font-size: 1.1em;
     font-weight: 500;
   }
-
   &__subheader {
     display: block;
     font-weight: 400;
   }
-
   &__plain,
   &__text {
     display: block;
     font-size: 12px;
-
     &--light {
       font-size: 12px;
     }
   }
-
   &__plain {
     display: inline;
     font-weight: 300;
   }
-
   &__item-grid {
     flex: 1 1 0;
     margin-bottom: 5px;
     padding-right: 5px;
   }
-
   &--plain {
     padding: 0;
   }
 }
-
 .section-content-grid {
   display: flex;
   flex-wrap: wrap;
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
 .grid-item {
   padding-right: 5px;
 }
-
 .squarred-grid-item {
   display: block;
   border: 1px solid white;

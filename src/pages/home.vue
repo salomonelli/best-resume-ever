@@ -81,7 +81,7 @@
     <div class="preview">
       <router-link v-bind:to="'/resume/clear'">
         <div class="preview-wrapper">
-          <img src="../assets/preview/clear.png" />
+          <img src="../assets/preview/resume-clear.png" />
           <span>clear</span>
         </div>
       </router-link>

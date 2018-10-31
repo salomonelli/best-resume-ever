@@ -4,7 +4,7 @@
 		<div id="headshot" class="quickFade">
 			<div class="row">
         <div class="image">
-          <div class="img"></div>
+				<div class="img"></div>
         </div>
       </div>
 		</div>
@@ -126,15 +126,17 @@ export default Vue.component(name, getVueOptions(name));
     left:0px;
     top:0px;
 }
+
 .img{
-	position: absolute;
-  top: 20px;
-  right: 50px;
-  height: @picture-size;
-  width: @picture-size;
-  border: 5px solid @accent-color;
-  content: url('../../resume/id.jpg');
-  z-index: 2;
+	height:10%;
+  width:120px;
+  float:left;
+  position:absolute;
+  top:20px;
+  right:50px;
+  background:url('../../resume/id.jpg');
+  background-position:relative;
+  background-size:cover;
 }
 #name {
 	border-width:600px 0 0 1500px;

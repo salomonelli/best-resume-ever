@@ -67,7 +67,8 @@
 import Vue from 'vue';
 import { getVueOptions } from './options';
 
-export default Vue.component('purple', getVueOptions(name));
+const name = 'purple';
+export default Vue.component(name, getVueOptions(name));
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

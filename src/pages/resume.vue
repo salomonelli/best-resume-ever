@@ -12,7 +12,7 @@
 import Vue from 'vue';
 import '../resumes/resumes';
 export default Vue.component('resume', {
-  name: 'app'
+    name: 'app'
 });
 </script>
 

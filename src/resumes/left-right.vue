@@ -41,7 +41,7 @@
           <td><i class="fa fa-globe" aria-hidden="true"></i></td>
         </tr>
         <tr v-if="person.contact.github">
-          <td><a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a></td>
+          <td><a :href="contactLinks.github">{{contactLinks.github}}</a></td>
           <td><i class="fa fa-github" aria-hidden="true"></i></td>
         </tr>
       </table>

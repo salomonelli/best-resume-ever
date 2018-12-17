@@ -65,8 +65,8 @@
       <a v-if="person.contact.website" :href="person.contact.website">
               {{person.contact.website}}</a>
       <span v-if="person.contact.website">;&nbsp;</span>
-      <a v-if="person.contact.github" :href="'https://github.com/'+person.contact.github">
-                https://github.com/{{person.contact.github}}</a>
+      <a v-if="person.contact.github" :href="contactLinks.github">
+                {{contactLinks.github}}</a>
     </div>
   </div>
 </div>

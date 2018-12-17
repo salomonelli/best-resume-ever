@@ -52,7 +52,7 @@
       </div>
     </a>
 
-    <a v-if="person.contact.github" :href="'https://github.com/'+person.contact.github" target="_blank">
+    <a v-if="person.contact.github" :href="contactLinks.github" target="_blank">
       <div class="item">
         <div class="icon">
           <i class="fa fa-github"></i>

@@ -42,7 +42,7 @@
         </tr>
         <tr v-if="person.contact.github">
           <td><i class="fa fa-github" aria-hidden="true"></i></td>
-          <td><a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a></td>
+          <td><a :href="contactLinks.github">{{contactLinks.github}}</a></td>
         </tr>
       </table>
     </div>

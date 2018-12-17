@@ -41,7 +41,7 @@
                   <i class="fa fa-circle" aria-hidden="true"></i>
               </div>
               <div class="contact-row">
-                  <a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a>
+                  <a :href="contactLinks.github">{{contactLinks.github}}</a>
               </div>
           </div>
       </div>

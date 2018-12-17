@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <a :href="'tel:'+person.contact.phone">
+    <a :href="contactLinks.phone">
       <div class="item">
         <div class="icon">
           <i class="material-icons">phone</i>
@@ -41,7 +41,7 @@
       </div>
     </a>
 
-    <a :href="'mailto:'+person.contact.email">
+    <a :href="contactLinks.email">
       <div class="item">
         <div class="icon">
           <i class="material-icons">email</i>

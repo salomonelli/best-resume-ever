@@ -56,9 +56,9 @@
     </div>
     <div class="contact">
       <h3>{{ lang.contact }}</h3>
-      <a :href="'mailto:'+person.contact.email"> {{person.contact.email}}</a>
+      <a :href="contactLinks.email"> {{person.contact.email}}</a>
       <span>;&nbsp;</span>
-      <a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
+      <a :href="contactLinks.phone">{{person.contact.phone}}</a>
       <span>;&nbsp;</span>
       <span>{{person.contact.street}}, {{person.contact.city}}</span>
       <span>;&nbsp;</span>

@@ -47,12 +47,16 @@ function getVueOptions (name) {
                     links.medium = `https://medium.com/@${this.person.contact.medium}`;
                 }
 
-                if(this.person.email) {
+                if(this.person.contact.email) {
                     links.email = `mailto:${this.person.contact.email}`;
                 }
 
                 if(this.person.contact.linkedin) {
                     links.linkedin = `https://linkedin.com/in/${this.person.contact.linkedin}`;
+                }
+
+                if(this.person.contact.phone) {
+                    links.phone = `tel:${this.person.contact.phone}`;
                 }
 
                 return links;

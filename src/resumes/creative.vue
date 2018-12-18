@@ -22,7 +22,7 @@
         {{ person.knowledge }}
       </div>
 
-      <a :href="'mailto:' + person.contact.email">
+      <a :href="contactLinks.email">
         <div class="block-marged txt-full-white">
           {{ person.contact.email }}
         </div>
@@ -43,7 +43,7 @@
         </a>
 
         <a v-if="person.contact.github"
-          :href="'https://github.com/' + person.contact.github"
+          :href="contactLinks.github"
           class="external-link">
 
           <i class="fa fa-github contact-icon"></i>
@@ -53,7 +53,7 @@
         </a>
 
         <a v-if="person.contact.codefights"
-          :href="'https://codefights.com/profile/' + person.contact.codefights"
+          :href="contactLinks.codefights"
           class="external-link">
 
           <svg width="20" height="20" viewBox="0 0 24 24"
@@ -68,7 +68,7 @@
         </a>
 
         <a v-if="person.contact.medium"
-          :href="'https://medium.com/@' + person.contact.medium"
+          :href="contactLinks.medium"
           class="external-link">
           <i class="fab fa-medium contact-icon"></i>
           <span class="block-marged txt-full-white">

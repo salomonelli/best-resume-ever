@@ -53,7 +53,7 @@
 
             <a
               class="section-link"
-              :href="'mailto:' + person.contact.email">
+              :href="contactLinks.email">
               <i class="section-link__icon material-icons">mail</i>{{ person.contact.email }}
             </a>
 
@@ -71,21 +71,21 @@
             <a
               v-if="person.contact.linkedin"
               class="section-link"
-              :href="'https://linkedin.com/in/' + person.contact.linkedin">
+              :href="contactLinks.linkedin">
               <i class="section-link__icon fa fa-linkedin"></i>{{ person.contact.linkedin }}
             </a>
 
             <a
               v-if="person.contact.github"
               class="section-link"
-              :href="'https://github.com/' + person.contact.github">
+              :href="contactLinks.github">
               <i class="section-link__icon fa fa-github"></i>{{ person.contact.github }}
             </a>
 
             <a
               v-if="person.contact.medium"
               class="section-link"
-              :href="'https://medium.com/@' + person.contact.medium">
+              :href="contactLinks.medium">
               <i class="section-link__icon fa fa-medium"></i>{{ person.contact.medium }}
             </a>
           </div>

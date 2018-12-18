@@ -17,7 +17,7 @@
           <div class="contact">
               <h3>{{ lang.contact }}</h3>
               <div class="contact-row">
-                  <a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a>
+                  <a :href="contactLinks.email">{{person.contact.email}}</a>
               </div>
               <div class="contact-row dots">
                   <i class="fa fa-circle" aria-hidden="true"></i>
@@ -25,7 +25,7 @@
                   <i class="fa fa-circle" aria-hidden="true"></i>
               </div>
               <div class="contact-row">
-                  <a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
+                  <a :href="contactLinks.phone">{{person.contact.phone}}</a>
               </div>
               <div class="contact-row dots">
                   <i class="fa fa-circle" aria-hidden="true"></i>
@@ -41,7 +41,7 @@
                   <i class="fa fa-circle" aria-hidden="true"></i>
               </div>
               <div v-if="person.contact.github" class="contact-row">
-                  <a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a>
+                  <a :href="contactLinks.github">{{contactLinks.github}}</a>
               </div>
           </div>
       </div>

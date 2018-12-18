@@ -25,11 +25,11 @@
       <h3>{{ lang.contact }}</h3>
       <table>
         <tr>
-          <td><a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a></td>
+          <td><a :href="contactLinks.email">{{person.contact.email}}</a></td>
           <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
         </tr>
         <tr>
-          <td><a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a></td>
+          <td><a :href="contactLinks.phone">{{person.contact.phone}}</a></td>
           <td><i class="fa fa-phone" aria-hidden="true"></i></td>
         </tr>
         <tr>
@@ -41,7 +41,7 @@
           <td><i class="fa fa-globe" aria-hidden="true"></i></td>
         </tr>
         <tr v-if="person.contact.github">
-          <td><a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a></td>
+          <td><a :href="contactLinks.github">{{contactLinks.github}}</a></td>
           <td><i class="fa fa-github" aria-hidden="true"></i></td>
         </tr>
       </table>

@@ -33,6 +33,7 @@
               v-for="(skill, index) in person.skills"
               class="grid-item"
               :key="index"
+              :class="{ link: skill.url !== undefined}"
               :href="skill.url">
               <span class="squarred-grid-item">
                 {{ skill.name }}
@@ -52,7 +53,7 @@
             </div>
 
             <a
-              class="section-link"
+              class="section-link link"
               :href="contactLinks.email">
               <i class="section-link__icon material-icons">mail</i>{{ person.contact.email }}
             </a>
@@ -63,28 +64,28 @@
 
             <a
               v-if="person.contact.website"
-              class="section-link"
+              class="section-link link"
               :href="person.contact.website">
               <i class="section-link__icon fa fa-globe"></i>{{ person.contact.website }}
             </a>
 
             <a
               v-if="person.contact.linkedin"
-              class="section-link"
+              class="section-link link"
               :href="contactLinks.linkedin">
               <i class="section-link__icon fa fa-linkedin"></i>{{ person.contact.linkedin }}
             </a>
 
             <a
               v-if="person.contact.github"
-              class="section-link"
+              class="section-link link"
               :href="contactLinks.github">
               <i class="section-link__icon fa fa-github"></i>{{ person.contact.github }}
             </a>
 
             <a
               v-if="person.contact.medium"
-              class="section-link"
+              class="section-link link"
               :href="contactLinks.medium">
               <i class="section-link__icon fa fa-medium"></i>{{ person.contact.medium }}
             </a>
@@ -103,6 +104,7 @@
               v-for="(experience, index) in person.experience"
               :key="index"
               class="section-content__item"
+              :class="{ link: experience.website !== undefined}"
               :href="experience.website">
 
               <span class="section-content__header">{{ experience.position }}</span>
@@ -127,6 +129,7 @@
               v-for="(education, index) in person.education"
               class="section-content__item"
               :key="index"
+              :class="{ link: education.website !== undefined}"
               :href="education.website">
 
               <span class="section-content__header"> {{ education.school }} </span>
@@ -147,6 +150,7 @@
           <div class="section-content-grid">
             <a v-for="(project, index) in person.projects" :key="index"
               class="section-content__item-grid"
+              :class="{ link: project.url !== undefined}"
               :href="project.url">
               <span class="section-content__header"> {{ project.name }} </span>
               <span class="section-content__subheader">{{ project.platform }}</span>
@@ -167,6 +171,7 @@
               v-for="(contribution, index) in person.contributions"
               class="section-content__item-grid"
               :key="index"
+              :class="{ link: contribution.url !== undefined}"
               :href="contribution.url">
               <span class="section-content__header"> {{ contribution.name }} </span>
               <span class="section-content__text"> {{ contribution.description }} </span>
@@ -201,7 +206,7 @@ export default Vue.component(name, getVueOptions(name));
 @base-padding: 30px;
 @left-column-width: 240px;
 
-a {
+.link {
   color: inherit;
   cursor: pointer;
   text-decoration-line: none;

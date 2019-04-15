@@ -203,4 +203,11 @@ export default Vue.component(name, getVueOptions(name));
 @picture-offset: 35px;
 @base-padding: 30px;
 @left-column-width: 240px;
+
+.resume {
+  position: relative;
+  font-family:'Roboto' !important;
+  font-size: 0.9em;
+}
+
 </style>

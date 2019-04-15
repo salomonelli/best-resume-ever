@@ -312,8 +312,6 @@ export default Vue.component(name, getVueOptions(name));
     flex-direction: column;
     align-items: flex-end;
     margin-bottom: 5px;
-    border-color: red;
-    border-width: 5ex;
   }
 
   &__header {

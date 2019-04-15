@@ -210,6 +210,18 @@ export default Vue.component(name, getVueOptions(name));
   font-size: 0.9em;
 }
 
+.picture {
+  position: absolute;
+  top: @banner-height - @picture-offset;
+  left: @left-column-width + @base-padding * 2 - @picture-size / 2;
+  height: @picture-size;
+  width: @picture-size;
+  border-radius: 50%;
+  border: 5px solid @accent-color;
+  content: url('../../resume/id.jpg');
+  z-index: 2;
+}
+
 .banner {
   width: calc(100% - @base-padding * 2);
   height: @banner-height;

@@ -196,4 +196,11 @@ export default Vue.component(name, getVueOptions(name));
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
+@accent-color: #34495E;
+@banner-color: #42b883;
+@banner-height: 120px;
+@picture-size: 120px;
+@picture-offset: 35px;
+@base-padding: 30px;
+@left-column-width: 240px;
 </style>

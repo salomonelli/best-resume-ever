@@ -295,6 +295,7 @@ export default Vue.component(name, getVueOptions(name));
 .section-link {
   font-size: 1.1em;
   color: rgba(255, 255, 255, 0.59) !important;
+  text-decoration: none;
 
   &__icon {
     color: white;

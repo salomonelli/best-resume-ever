@@ -272,4 +272,108 @@ export default Vue.component(name, getVueOptions(name));
   }
 }
 
+.section {
+  margin: 20px 0;
+}
+
+.section-link,
+.section-headline {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  color: @accent-color;
+  display: inline-block;
+  font-size: 1.2em;
+  margin: 8px 0;
+
+  &__icon {
+    margin-right: 8px;
+    font-size: 1.4em;
+  }
+}
+
+.section-link {
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.59) !important;
+
+  &__icon {
+    color: white;
+  }
+}
+
+.section-content {
+  margin-top: 5px;
+  padding-left: 32px;
+  font-size: 14px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 5px;
+    border-color: red;
+    border-width: 5ex;
+  }
+
+  &__header {
+    display: block;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+
+  &__subheader {
+    display: block;
+    font-weight: 400;
+  }
+
+  &__plain,
+  &__text {
+    display: block;
+    font-size: 12px;
+
+    &--light {
+      font-size: 12px;
+    }
+  }
+
+  &__plain {
+    display: inline;
+    font-weight: 300;
+  }
+
+  &__item-grid {
+    flex: 1 1 0;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &--plain {
+    padding: 0;
+    text-align: right;
+  }
+}
+
+.section-content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  justify-content: flex-end;
+}
+
+.grid-item {
+  padding-right: 5px;
+}
+
+.squarred-grid-item {
+  display: block;
+  border: 1px solid white;
+  color: white;
+  margin-top: 5px;
+  padding: 5px;
+}
+
 </style>

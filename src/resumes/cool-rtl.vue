@@ -312,6 +312,8 @@ export default Vue.component(name, getVueOptions(name));
     flex-direction: column;
     align-items: flex-end;
     margin-bottom: 5px;
+    text-decoration: none;
+    color: #00104f;
   }
 
   &__header {
@@ -347,6 +349,8 @@ export default Vue.component(name, getVueOptions(name));
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    text-decoration: none;
+    color: #00104f;
   }
 
   &--plain {

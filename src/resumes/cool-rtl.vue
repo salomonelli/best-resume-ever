@@ -234,4 +234,30 @@ export default Vue.component(name, getVueOptions(name));
   }
 }
 
+.content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  &__left,
+  &__right {
+    height: 100%;
+    padding: @base-padding;
+  }
+
+  &__left {
+    width: @left-column-width;
+    color: rgba(255, 255, 255, 0.59);
+    background-color: @accent-color;
+
+    .section-headline {
+      color: white;
+    }
+  }
+
+  &__right {
+    flex: 1;
+  }
+}
+
 </style>

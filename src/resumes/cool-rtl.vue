@@ -210,4 +210,28 @@ export default Vue.component(name, getVueOptions(name));
   font-size: 0.9em;
 }
 
+.banner {
+  width: calc(100% - @base-padding * 2);
+  height: @banner-height;
+  padding: @base-padding;
+  background-color: @banner-color;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  color: white;
+
+  &__fullname {
+    font-size: 32px;
+  }
+
+  &__position {
+    font-size: 16px;
+  }
+
+  &__location {
+    font-size: 12px;
+  }
+}
+
 </style>

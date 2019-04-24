@@ -7,7 +7,7 @@
     <div class="section-headline">
       {{ lang.contact }}
     </div>
-    <div class="item">
+    <div v-if="person.birth" class="item">
       <div class="icon">
         <i class="material-icons">account_circle</i>
       </div>

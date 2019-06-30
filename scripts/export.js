@@ -52,6 +52,7 @@ const convert = async () => {
     console.log('Connected to server ...');
     console.log('Exporting ...');
     try {
+        const relativePdfDirectoryPath = '../pdf/';
         const directories = getResumesFromDirectories();
         directories.forEach(async (dir) => {
             const browser = await puppeteer.launch({
@@ -61,8 +62,17 @@ const convert = async () => {
             await page.goto(`http://localhost:${config.dev.port}/#/resume/` + dir.name, {
                 waitUntil: 'networkidle2'
             });
+
+            if (
+                !fs.existsSync(path.join(__dirname, relativePdfDirectoryPath))
+            ) {
+                fs.mkdirSync(path.join(__dirname, relativePdfDirectoryPath));
+            }
             await page.pdf({
-                path: path.join(__dirname, '../pdf/' + dir.name + '.pdf'),
+                path: path.join(
+                    __dirname,
+                    relativePdfDirectoryPath + dir.name + '.pdf'
+                ),
                 format: 'A4'
             });
             await browser.close();

@@ -21,5 +21,6 @@ fs.readdir(directory, (err, files) => {
       if (err) throw err;
     });
   }
+  fs.rmdirSync(directory);
   console.log('Deleted files.');
 });

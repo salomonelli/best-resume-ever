@@ -52,7 +52,7 @@ const convert = async () => {
     console.log('Connected to server ...');
     console.log('Exporting ...');
     try {
-        const relativePdfDirectoryPath = '../pdf/';
+        const fullDirectoryPath = path.join(__dirname, '../pdf/');
         const directories = getResumesFromDirectories();
         directories.forEach(async (dir) => {
             const browser = await puppeteer.launch({
@@ -64,15 +64,12 @@ const convert = async () => {
             });
 
             if (
-                !fs.existsSync(path.join(__dirname, relativePdfDirectoryPath))
+                !fs.existsSync(fullDirectoryPath)
             ) {
-                fs.mkdirSync(path.join(__dirname, relativePdfDirectoryPath));
+                fs.mkdirSync(fullDirectoryPath);
             }
             await page.pdf({
-                path: path.join(
-                    __dirname,
-                    relativePdfDirectoryPath + dir.name + '.pdf'
-                ),
+                path: fullDirectoryPath + dir.name + '.pdf',
                 format: 'A4'
             });
             await browser.close();

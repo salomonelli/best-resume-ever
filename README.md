@@ -1,3 +1,5 @@
+<p>A new template added by me.</p>
+<img src="src/assets/preview/resume-cool-enhance.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <h1 align="center">
   <br>
   <a href="https://github.com/salomonelli/best-resume-ever">

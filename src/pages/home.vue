@@ -78,6 +78,14 @@
         </div>
       </router-link>
     </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/cool-enhance'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-cool-enhance.png" />
+          <span>cool-enhance</span>
+        </div>
+      </router-link>
+    </div>
   </div>
 </div>
 </template>

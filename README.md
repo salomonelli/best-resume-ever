@@ -49,7 +49,7 @@ best-resume-ever requires at least node v.8.5.0.
 
 1. Clone this repository.
 ```
-git clone https://github.com/salomonelli/best-resume-ever
+git clone https://github.com/salomonelli/best-resume-ever.git
 ```
 
 2. Go to the cloned directory (e.g. `cd best-resume-ever`).

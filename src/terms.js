@@ -21,6 +21,7 @@ import lt from './lang/lt';
 import tr from './lang/tr';
 import ko from './lang/ko';
 import el from './lang/el';
+import nbno from './lang/nb-no';
 
 export const terms = {
     en,
@@ -45,5 +46,6 @@ export const terms = {
     lt,
     tr,
     ko,
-    el
+    el,
+    'nb-no': nbno
 };

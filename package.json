@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "font-awesome": "4.7.0",
-    "js-yaml": "3.12.0",
+    "js-yaml": "3.13.1",
     "material-design-icons": "3.0.1",
     "material-icons": "0.2.3",
     "npm-font-open-sans": "1.1.0",

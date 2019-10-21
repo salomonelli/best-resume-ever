@@ -3,7 +3,7 @@ const lang = {
     contact: 'Contact',
     born: 'Né en',
     bornIn: 'à',
-    experience: 'Expérience professionelle',
+    experience: 'Expérience professionnelle',
     education: 'Formation',
     skills: 'Compétences',
     projects: 'Projets',

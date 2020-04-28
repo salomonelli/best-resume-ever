@@ -47,6 +47,18 @@ node -v
 
 2. If you do not have installed Node.js in your machine then go to [this link](https://nodejs.org/en/download/) in order to install node.
 
+3. This program is intended to run using Linux as an operating system. 
+
+If you are running the program using a Windows Computer, you can set up Linux by following the instructions found <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">here</a>.
+
+Alternatively, the following changes will allow you to run the program using Windows directly.
+  a. Change the configuration in the .eslintrc.json file. On line 97 where it currently reads "linebreak-style": ["error","unix"], you     will want to substitute the word "windows" for "unix".
+  b. Run the following commands to manually install packages that will run using Windows:
+            npm install -g npm-windows-upgrade
+            npm install -g concurrently
+            npm i puppeteer
+
+
 ## How to use
 
 1. Clone this repository.

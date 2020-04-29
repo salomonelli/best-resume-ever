@@ -79,10 +79,10 @@
       </router-link>
     </div>
     <div class="preview">
-      <router-link v-bind:to="'/resume/cool-rtl'">
+      <router-link v-bind:to="'/resume/cool-rtl2'">
         <div class="preview-wrapper">
-          <img src="../assets/preview/resume-cool-rtl.png" />
-          <span>cool-rtl</span>
+          <img src="../assets/preview/resume-cool-rtl2.png" />
+          <span>cool-rtl2</span>
         </div>
       </router-link>
     </div>

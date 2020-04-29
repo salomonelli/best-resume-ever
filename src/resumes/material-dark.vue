@@ -100,20 +100,26 @@
 
     <div class="section-headline">{{ lang.experience }}</div>
     <div class="block" v-for="experience in person.experience" :key="experience.company">
-      <div class="block-helper"></div>
-      <h3 class="headline">{{experience.position}} - {{experience.company}}</h3>
-        <div class="subheadline">{{experience.timeperiod}}</div>
-        <p class="info">
-          {{experience.description}}
-        </p>
+      <a
+      :href="experience.website">
+        <div class="block-helper"></div>
+        <h3 class="headline">{{experience.position}} - {{experience.company}}</h3>
+          <div class="subheadline">{{experience.timeperiod}}</div>
+          <p class="info">
+            {{experience.description}}
+          </p>  
+      </a>
     </div>
     <div class="section-headline">{{ lang.education }}</div>
     <div class="block" v-for="education in person.education" :key="education.degree">
-      <div class="block-helper"></div>
-      <div class="headline">{{education.degree}}</div>
-      <p class="info">
-        {{education.timeperiod}}, {{education.description}}
-      </p>
+      <a
+      :href="education.website">
+        <div class="block-helper"></div>
+        <div class="headline">{{education.degree}}</div>
+        <p class="info">
+          {{education.timeperiod}}, {{education.description}}
+        </p>
+      </a>
     </div>
   </div>
 
@@ -136,7 +142,13 @@ export default Vue.component(name, getVueOptions(name));
   background:#cccccc;
 }
 a {
-  cursor:pointer;
+  color: inherit;
+  cursor: pointer;
+  text-decoration-line: none;
+
+  &:visited {
+    color: inherit;
+  }
 }
 .description-personal {
   margin-left:20px;

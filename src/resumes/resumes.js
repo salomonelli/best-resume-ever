@@ -9,3 +9,4 @@ import './left-right-rtl.vue';
 import './creative.vue';
 import './cool.vue';
 import './cool-rtl.vue';
+import './green.vue';

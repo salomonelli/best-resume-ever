@@ -1,11 +1,11 @@
-/* eslint-disable */
-const id = {
-  headings: {
-    contact: "Kontak",
-    experience: "Pengalaman",
-    education: "Pendidikan",
-    skills: "Keterampilan",
-    about: "Tentang Saya"
-  }
+// Indonesian
+const lang = {
+    contact: 'Kontak',
+    experience: 'Pengalaman',
+    education: 'Pendidikan',
+    skills: 'Keterampilan',
+    projects: 'Proyek',
+    contributions: 'Kontribusi',
+    about: 'Tentang Saya'
 };
-export default id;
+export default lang;

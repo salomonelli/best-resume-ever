@@ -1,34 +1,17 @@
 // If you create a new resume, import it here:
-import '../resumes/material-dark.vue';
-import '../resumes/left-right.vue';
-import '../resumes/oblique.vue';
-import '../resumes/side-bar.vue';
-import '../resumes/material-dark-projects.vue';
-import '../resumes/left-right-projects.vue';
-import '../resumes/oblique-projects.vue';
-import '../resumes/side-bar-projects.vue';
-import '../resumes/purple.vue';
-
-import { PERSON } from '../person';
-import { terms } from '../terms';
-
-// Called by templates to decrease redundancy
-function getVueOptions (name) {
-  let opt = {
-    name: name,
-    data () {
-      return {
-        person: PERSON,
-        terms: terms
-      };
-    },
-    computed: {
-      lang () {
-        return this.terms[this.person.lang];
-      }
-    }
-  };
-  return opt;
-}
-
-export { getVueOptions };
+import './material-dark.vue';
+import './material-dark-projects.vue';
+import './left-right.vue';
+import './left-right-projects.vue';
+import './oblique.vue';
+import './oblique-projects.vue';
+import './side-bar.vue';
+import './purple.vue';
+import './side-bar-rtl.vue';
+import './left-right-rtl.vue';
+import './oblique-rtl.vue';
+import './creative.vue';
+import './cool.vue';
+import './cool-rtl.vue';
+import './cool-rtl2.vue';
+import './green.vue';

@@ -15,10 +15,11 @@
     </div>
   </div>
   <div class="resume-content">
+    <div class="about">{{person.about}}</div>
     <div class="experience">
-      <h3>{{ lang.headings.experience }}</h3>
+      <h3>{{ lang.experience }}</h3>
 
-      <div class="experience-block" v-for="experience in person.experience">
+      <div class="experience-block" v-for="experience in person.experience" :key="experience.company">
         <div class="row">
           <span class="job-title"> {{experience.position}} </span>
           <i class="material-icons">details</i>
@@ -32,8 +33,8 @@
       </div>
     </div>
     <div class="education">
-      <h3>{{ lang.headings.education }}</h3>
-      <div class="education-block" v-for="education in person.education">
+      <h3>{{ lang.education }}</h3>
+      <div class="education-block" v-for="education in person.education" :key="education.degree">
         <div class="row">
           <span class="degree">{{education.degree}}</span>
         </div>
@@ -43,30 +44,30 @@
       </div>
     </div>
     <div class="skill-section">
-      <h3>{{ lang.headings.skills }}</h3>
-      <div class="skills" v-for="skill in person.skills">
+      <h3>{{ lang.skills }}</h3>
+      <div class="skills" v-for="skill in person.skills" :key="skill.name">
         <div class="skill-block">
-          <i class="material-icons">details</i>
+          <i class="material-icons">keyboard_arrow_right</i>
           <span class="skill">{{skill.name}}</span>
         </div>
       </div>
     </div>
     <div class="skills-other">
-      <span>{{person.skillDescription}} </span>
+      <span>{{person.knowledge}} </span>
     </div>
     <div class="contact">
-      <h3>{{ lang.headings.contact }}</h3>
-      <a :href="'mailto:'+person.contact.email"> {{person.contact.email}}</a>
+      <h3>{{ lang.contact }}</h3>
+      <a :href="contactLinks.email"> {{person.contact.email}}</a>
       <span>;&nbsp;</span>
-      <a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
+      <a :href="contactLinks.phone">{{person.contact.phone}}</a>
       <span>;&nbsp;</span>
       <span>{{person.contact.street}}, {{person.contact.city}}</span>
       <span>;&nbsp;</span>
-      <a :href="person.contact.website">
+      <a v-if="person.contact.website" :href="person.contact.website">
               {{person.contact.website}}</a>
-      <span>;&nbsp;</span>
-      <a :href="'https://github.com/'+person.contact.github">
-                https://github.com/{{person.contact.github}}</a>
+      <span v-if="person.contact.website">;&nbsp;</span>
+      <a v-if="person.contact.github" :href="contactLinks.github">
+                {{contactLinks.github}}</a>
     </div>
   </div>
 </div>
@@ -74,9 +75,9 @@
 
 <script>
 import Vue from 'vue';
-import { getVueOptions } from './resumes';
+import { getVueOptions } from './options';
 
-let name = 'oblique';
+const name = 'oblique';
 export default Vue.component(name, getVueOptions(name));
 </script>
 
@@ -93,6 +94,7 @@ export default Vue.component(name, getVueOptions(name));
     font-weight:bold;
     text-transform:uppercase;
     margin-bottom:10px;
+    font-size: 22px;
   }
   .resume-header .triangle {
     width:0;
@@ -102,13 +104,13 @@ export default Vue.component(name, getVueOptions(name));
     border-color:#006064 transparent transparent transparent;
     position:absolute;
     left:-600px;
-    top:0;
+    top:-200px;
   }
   .resume-header .person-header {
     position:absolute;
     z-index:20;
     right:15%;
-    top:200px;
+    top:50px;
     .person-wrapper {
       overflow:hidden;
       position:relative;
@@ -120,7 +122,7 @@ export default Vue.component(name, getVueOptions(name));
       position:absolute;
       top:0;
       right:0;
-      background:url('../assets/person.jpg');
+      background:url('../../resume/id.jpg');
       background-position:center;
       background-size:cover;
     }
@@ -145,15 +147,25 @@ export default Vue.component(name, getVueOptions(name));
       margin-top:10px;
     }
   }
+  .company {
+    font-weight:bold;
+  }
   .resume-content {
     margin-top:435px;
     margin-left:15%;
     width:70%;
+    .about {
+      font-size: 20px;
+      font-weight: 350;
+      top: -200px;
+      margin-top: -200px;
+      width: 375px;
+    }
     .experience .experience-block {
       line-height:1;
       margin-bottom:10px;
       .row:first-child {
-        font-size:20px;
+        font-size:18px;
         text-transform:uppercase;
         i {
           font-size:17px;
@@ -193,7 +205,7 @@ export default Vue.component(name, getVueOptions(name));
     line-height:1;
   }
   .contact {
-    margin-top:50px;
+    margin-top: 0px;
     a, span {
       display:inline-block;
       font-size:20px;

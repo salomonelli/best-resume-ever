@@ -1,11 +1,14 @@
-/* eslint-disable */
-const ptbr = {
-  headings: {
+// Portuguese
+const lang = {
     contact: 'Contato',
     experience: 'Experiência Profissional',
-    education: 'Educação',
+    /* You can choose, "Educação" or "Formação Acadêmica"! But the second one is more professional and is more used. */
+    education: 'Formação Acadêmica',
     skills: 'Competências',
-    about: 'Sobre'
-  }
+    projects: 'Projetos',
+    contributions: 'Contribuições',
+    about: 'Sobre',
+    born: 'Nascido em',
+    bornIn: 'em'
 };
-export default ptbr;
+export default lang;

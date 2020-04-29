@@ -15,9 +15,9 @@
               </div>
           </div>
           <div class="contact">
-              <h3>{{ lang.headings.contact }}</h3>
+              <h3>{{ lang.contact }}</h3>
               <div class="contact-row">
-                  <a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a>
+                  <a :href="contactLinks.email">{{person.contact.email}}</a>
               </div>
               <div class="contact-row dots">
                   <i class="fa fa-circle" aria-hidden="true"></i>
@@ -25,7 +25,7 @@
                   <i class="fa fa-circle" aria-hidden="true"></i>
               </div>
               <div class="contact-row">
-                  <a href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
+                  <a :href="contactLinks.phone">{{person.contact.phone}}</a>
               </div>
               <div class="contact-row dots">
                   <i class="fa fa-circle" aria-hidden="true"></i>
@@ -35,20 +35,20 @@
               <div class="contact-row">
                   {{person.contact.street}} <br> {{person.contact.city}}
               </div>
-              <div class="contact-row dots">
+              <div v-if="person.contact.github" class="contact-row dots">
                   <i class="fa fa-circle" aria-hidden="true"></i>
                   <i class="fa fa-circle" aria-hidden="true"></i>
                   <i class="fa fa-circle" aria-hidden="true"></i>
               </div>
-              <div class="contact-row">
-                  <a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a>
+              <div v-if="person.contact.github" class="contact-row">
+                  <a :href="contactLinks.github">{{contactLinks.github}}</a>
               </div>
           </div>
       </div>
       <div class="right-col">
           <div class="experience">
-              <h3>{{ lang.headings.experience }}</h3>
-                  <div class="experience-block" v-for="experience in person.experience">
+              <h3>{{ lang.experience }}</h3>
+                  <div class="experience-block" v-for="experience in person.experience" :key="experience.company">
                       <div class="row">
                           <span class="company"> {{experience.company}} -</span>
                           <span class="job-title"> {{experience.position}} </span>
@@ -62,8 +62,8 @@
                   </div>
           </div>
           <div class="education">
-              <h3>{{ lang.headings.education }}</h3>
-                  <div class="education-block" v-for="education in person.education">
+              <h3>{{ lang.education }}</h3>
+                  <div class="education-block" v-for="education in person.education" :key="education.degree">
                       <div class="row">
                           <span class="degree">{{education.degree}}</span>
                       </div>
@@ -73,13 +73,13 @@
                   </div>
           </div>
           <div class="skills-block">
-              <h3>{{ lang.headings.skills }}</h3>
+              <h3>{{ lang.skills }}</h3>
               <div class="skills">
-                      <div class="skill" v-for="skill in person.skills">
+                      <div class="skill" v-for="skill in person.skills" :key="skill.name">
                           <span class="skill-name">{{skill.name}}</span>
                       </div>
               </div>
-              <span class="skills-other"> {{person.skillDescription}} </span>
+              <span class="skills-other"> {{person.knowledge}} </span>
           </div>
       </div>
   </div>
@@ -89,9 +89,9 @@
 
 <script>
 import Vue from 'vue';
-import { getVueOptions } from './resumes';
+import { getVueOptions } from './options';
 
-let name = 'side-bar';
+const name = 'side-bar';
 export default Vue.component(name, getVueOptions(name));
 </script>
 
@@ -141,7 +141,7 @@ export default Vue.component(name, getVueOptions(name));
       overflow:hidden;
       .img {
         flex:none;
-        background:url('../assets/person.jpg');
+        background:url('../../resume/id.jpg');
         background-position:center;
         background-size:cover;
         height:250px;

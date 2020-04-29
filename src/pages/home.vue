@@ -39,6 +39,14 @@
       </router-link>
     </div>
     <div class="preview">
+      <router-link v-bind:to="'/resume/left-right-rtl'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-left-right-rtl.png" />
+          <span>left-right-rtl</span>
+        </div>
+      </router-link>
+    </div>
+    <div class="preview">
       <router-link v-bind:to="'/resume/oblique'">
         <div class="preview-wrapper">
           <img src="../assets/preview/resume-oblique.png" />
@@ -55,6 +63,14 @@
       </router-link>
     </div>
     <div class="preview">
+        <router-link v-bind:to="'/resume/oblique-rtl'">
+            <div class="preview-wrapper">
+                <img src="../assets/preview/resume-oblique-rtl.png" />
+                <span>oblique-rtl</span>
+            </div>
+        </router-link>
+    </div>
+    <div class="preview">
       <router-link v-bind:to="'/resume/side-bar'">
         <div class="preview-wrapper">
           <img src="../assets/preview/resume-side-bar.png" />
@@ -63,10 +79,10 @@
       </router-link>
     </div>
     <div class="preview">
-      <router-link v-bind:to="'/resume/side-bar-projects'">
+      <router-link v-bind:to="'/resume/side-bar-rtl'">
         <div class="preview-wrapper">
-          <img src="../assets/preview/resume-side-bar-projects.png" />
-          <span>side-bar-projects</span>
+          <img src="../assets/preview/resume-side-bar-rtl.png" />
+          <span>side-bar-rtl</span>
         </div>
       </router-link>
     </div>
@@ -78,6 +94,46 @@
         </div>
       </router-link>
     </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/creative'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-creative.png" />
+          <span>creative</span>
+        </div>
+      </router-link>
+    </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/cool'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-cool.png" />
+          <span>cool</span>
+        </div>
+      </router-link>
+    </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/cool-rtl'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-cool-rtl.png" />
+          <span>cool-rtl</span>
+        </div>
+      </router-link>
+    </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/cool-rtl2'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-cool-rtl2.png" />
+          <span>cool-rtl2</span>
+        </div>
+      </router-link>
+    </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/green'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-green.png" />
+          <span>green</span>
+        </div>
+      </router-link>
+    </div>
   </div>
 </div>
 </template>
@@ -85,7 +141,7 @@
 <script>
 import Vue from 'vue';
 export default Vue.component('resume', {
-  name: 'app'
+    name: 'app'
 });
 </script>
 

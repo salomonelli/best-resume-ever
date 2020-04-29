@@ -23,6 +23,14 @@
       </router-link>
     </div>
     <div class="preview">
+      <router-link v-bind:to="'/resume/left-right-rtl'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-left-right-rtl.png" />
+          <span>left-right-rtl</span>
+        </div>
+      </router-link>
+    </div>
+    <div class="preview">
       <router-link v-bind:to="'/resume/oblique'">
         <div class="preview-wrapper">
           <img src="../assets/preview/resume-oblique.png" />
@@ -31,18 +39,18 @@
       </router-link>
     </div>
     <div class="preview">
+        <router-link v-bind:to="'/resume/oblique-rtl'">
+            <div class="preview-wrapper">
+                <img src="../assets/preview/resume-oblique-rtl.png" />
+                <span>oblique-rtl</span>
+            </div>
+        </router-link>
+    </div>
+    <div class="preview">
       <router-link v-bind:to="'/resume/side-bar'">
         <div class="preview-wrapper">
           <img src="../assets/preview/resume-side-bar.png" />
           <span>side-bar</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/purple'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-purple.png" />
-          <span>purple</span>
         </div>
       </router-link>
     </div>
@@ -55,20 +63,12 @@
       </router-link>
     </div>
     <div class="preview">
-      <router-link v-bind:to="'/resume/left-right-rtl'">
+      <router-link v-bind:to="'/resume/purple'">
         <div class="preview-wrapper">
-          <img src="../assets/preview/resume-left-right-rtl.png" />
-          <span>left-right-rtl</span>
+          <img src="../assets/preview/resume-purple.png" />
+          <span>purple</span>
         </div>
       </router-link>
-    </div>
-    <div class="preview">
-        <router-link v-bind:to="'/resume/oblique-rtl'">
-            <div class="preview-wrapper">
-                <img src="../assets/preview/resume-oblique-rtl.png" />
-                <span>oblique-rtl</span>
-            </div>
-        </router-link>
     </div>
     <div class="preview">
       <router-link v-bind:to="'/resume/creative'">

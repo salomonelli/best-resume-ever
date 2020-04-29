@@ -5,7 +5,7 @@
     <div class="person-header">
       <div class="person-wrapper">
         <div class="person">
-          <div class="name">{{person.name.first}} {{person.name.middle}} {{person.name.last}}</div>
+          <div class="name">{{person.name.first}} {{person.name.last}}</div>
           <div class="position">{{person.position}}</div>
         </div>
         <div class="img">
@@ -16,8 +16,9 @@
   </div>
   <div class="resume-content">
     <div class="experience">
-      <h3>{{ lang.experience }}</h3>
-      <div class="experience-block" v-for="experience in person.experience" :key="experience.company">
+      <h3>Experience</h3>
+
+      <div class="experience-block" v-for="experience in person.experience">
         <div class="row">
           <span class="job-title"> {{experience.position}} </span>
           <i class="material-icons">details</i>
@@ -30,9 +31,24 @@
         </div>
       </div>
     </div>
+    <div class="projects">
+      <h3>Projects</h3>
+
+      <div class="project-block" v-for="project in person.projects">
+        <div class="row">
+          <span class="name"> {{project.name}} </span>
+        </div>
+
+        <div class="row">
+          <span class="time-period"> {{project.timeperiod}}</span>
+          <span class="description">, {{project.description}} </span>
+        </div>
+      </div>
+    </div>
+
     <div class="education">
-      <h3>{{ lang.education }}</h3>
-      <div class="education-block" v-for="education in person.education" :key="education.degree">
+      <h3>Education</h3>
+      <div class="education-block" v-for="education in person.education">
         <div class="row">
           <span class="degree">{{education.degree}}</span>
         </div>
@@ -42,8 +58,8 @@
       </div>
     </div>
     <div class="skill-section">
-      <h3>{{ lang.skills }}</h3>
-      <div class="skills" v-for="skill in person.skills" :key="skill.name">
+      <h3>Skills</h3>
+      <div class="skills" v-for="skill in person.skills">
         <div class="skill-block">
           <i class="material-icons">details</i>
           <span class="skill">{{skill.name}}</span>
@@ -51,20 +67,20 @@
       </div>
     </div>
     <div class="skills-other">
-      <span>{{person.knowledge}} </span>
+      <span>{{person.skillDescription}} </span>
     </div>
     <div class="contact">
-      <h3>{{ lang.contact }}</h3>
+      <h3>Contact</h3>
       <a :href="'mailto:'+person.contact.email"> {{person.contact.email}}</a>
       <span>;&nbsp;</span>
       <a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
       <span>;&nbsp;</span>
       <span>{{person.contact.street}}, {{person.contact.city}}</span>
       <span>;&nbsp;</span>
-      <a v-if="person.contact.website" :href="person.contact.website">
+      <a :href="person.contact.website">
               {{person.contact.website}}</a>
-      <span v-if="person.contact.website">;&nbsp;</span>
-      <a v-if="person.contact.github" :href="'https://github.com/'+person.contact.github">
+      <span>;&nbsp;</span>
+      <a :href="'https://github.com/'+person.contact.github">
                 https://github.com/{{person.contact.github}}</a>
     </div>
   </div>
@@ -75,15 +91,15 @@
 import Vue from 'vue';
 import { getVueOptions } from './options';
 
-const name = 'oblique-rtl';
+const name = 'oblique-projects';
 export default Vue.component(name, getVueOptions(name));
 </script>
+
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 #resume3 {
     font-family: 'Open Sans Condensed', sans-serif;
     padding-bottom: 50px;
-    direction: rtl;
     a,
     a:focus,
     a:hover {
@@ -99,17 +115,17 @@ export default Vue.component(name, getVueOptions(name));
         width: 0;
         height: 0;
         border-style: solid;
-        border-width: 600px 1500px 0 0;
+        border-width: 415px 0 0 1500px;
         border-color: #006064 transparent transparent transparent;
         position: absolute;
-        right: -600px;
+        left: -600px;
         top: 0;
     }
     .resume-header .person-header {
         position: absolute;
         z-index: 20;
-        left: 15%;
-        top: 200px;
+        right: 15%;
+        top: 70px;
         .person-wrapper {
             overflow: hidden;
             position: relative;
@@ -121,7 +137,7 @@ export default Vue.component(name, getVueOptions(name));
             position: absolute;
             top: 0;
             right: 0;
-            background: url("../../resume/id.jpg");
+            background: url('../../resume/id.jpg');
             background-position: center;
             background-size: cover;
         }
@@ -147,10 +163,21 @@ export default Vue.component(name, getVueOptions(name));
         }
     }
     .resume-content {
-        margin-top: 435px;
-        margin-right: 15%;
+        margin-top: 250px;
+        margin-left: 15%;
         width: 70%;
         .experience .experience-block {
+            line-height: 1;
+            margin-bottom: 10px;
+            .row:first-child {
+                font-size: 20px;
+                text-transform: uppercase;
+                i {
+                    font-size: 17px;
+                }
+            }
+        }
+        .projects .project-block {
             line-height: 1;
             margin-bottom: 10px;
             .row:first-child {
@@ -194,7 +221,7 @@ export default Vue.component(name, getVueOptions(name));
         line-height: 1;
     }
     .contact {
-        margin-top: 50px;
+        margin-top: 20px;
         a,
         span {
             display: inline-block;
@@ -202,7 +229,7 @@ export default Vue.component(name, getVueOptions(name));
             list-style: none;
             margin-top: 0;
             line-height: 1;
-            float: right;
+            float: left;
             padding-left: 0;
             margin-left: 0;
         }

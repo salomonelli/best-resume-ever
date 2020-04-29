@@ -63,6 +63,14 @@
       </router-link>
     </div>
     <div class="preview">
+        <router-link v-bind:to="'/resume/oblique-rtl'">
+            <div class="preview-wrapper">
+                <img src="../assets/preview/resume-oblique-rtl.png" />
+                <span>oblique-rtl</span>
+            </div>
+        </router-link>
+    </div>
+    <div class="preview">
       <router-link v-bind:to="'/resume/creative'">
         <div class="preview-wrapper">
           <img src="../assets/preview/resume-creative.png" />

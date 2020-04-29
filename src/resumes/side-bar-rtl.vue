@@ -158,6 +158,7 @@ export default Vue.component(name, getVueOptions(name));
       text-align:center;
       letter-spacing:2px;
       margin-bottom:3px;
+      direction: ltr;
       a {
         color:black;
       }

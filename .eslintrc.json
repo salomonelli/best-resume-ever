@@ -94,10 +94,7 @@
     "key-spacing": "error",
     "keyword-spacing": "off",
     "line-comment-position": "off",
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
+    "linebreak-style": 0,
     "lines-around-comment": "off",
     "lines-around-directive": "error",
     "lines-between-class-members": "off",

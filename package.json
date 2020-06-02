@@ -85,7 +85,7 @@
     "pdf-image": "2.0.0",
     "postcss": "7.0.4",
     "postcss-cssnext": "3.1.0",
-    "puppeteer": "^1.8.0",
+    "puppeteer": "1.8.0",
     "rename": "1.0.4",
     "request": "2.88.0",
     "request-promise": "4.2.2",
@@ -104,7 +104,7 @@
     "webpack-bundle-analyzer": "3.6.0",
     "webpack-dev-middleware": "3.4.0",
     "webpack-hot-middleware": "2.24.2",
-    "webpack-merge": "^4.1.4"
+    "webpack-merge": "4.1.4"
   },
   "engines": {
     "node": ">= 8.5.0",

@@ -14,7 +14,7 @@ const getTemplateName = PDF => {
 
 const convert = async (PDF) => {
     const pdfImage = new PDFImage(path.join(__dirname, '../pdf/' + PDF));
-    await pdfImage.convertPage(0);
+    await pdfImage.convertPage(0).catch(console.error);
 };
 
 const directories = getDirectories();

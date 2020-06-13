@@ -142,6 +142,14 @@
         </div>
       </router-link>
     </div>
+    <div class="preview">
+      <router-link v-bind:to="'/resume/green2'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-green.png" />
+          <span>green2</span>
+        </div>
+      </router-link>
+    </div>
   </div>
 </div>
 </template>

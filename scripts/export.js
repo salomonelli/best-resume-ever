@@ -81,6 +81,7 @@ const convert = async () => {
                 path: fullDirectoryPath + dir.name + '.pdf',
                 format: 'A4'
             });
+            await page.close();
             await browser.close();
         });
     } catch (err) {

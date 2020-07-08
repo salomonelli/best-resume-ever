@@ -4,7 +4,7 @@
       <div>
         <div class="headline">
           <span> {{ person.name.first }} {{ person.name.middle }} </span>
-          <span class="uppercase"> {{ person.name.last }} </span>
+          <span> {{ person.name.last }} </span>
         </div>
 
         <p>

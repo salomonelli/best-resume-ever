@@ -23,6 +23,7 @@ import tr from './lang/tr';
 import ko from './lang/ko';
 import el from './lang/el';
 import nbno from './lang/nb-no';
+import is from './lang/is';
 
 export const terms = {
     en,
@@ -49,5 +50,6 @@ export const terms = {
     tr,
     ko,
     el,
-    'nb-no': nbno
+    'nb-no': nbno,
+    is
 };

@@ -214,7 +214,7 @@ a {
   }
   .description {
     margin-top: -20px;
-    margin-botton: 20px;
+    margin-bottom: 20px;
   }
 }
 .section-headline {

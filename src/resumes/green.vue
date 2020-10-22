@@ -148,7 +148,7 @@ export default Vue.component(name, getVueOptions(name));
             #headshot {
                 width: 100%;
                 height: 100%;
-                background:url('../../resume/id.jpg');
+                background:url('../../mycv/myid.jpg');
                 background-position:center;
                 background-size:cover;
             }

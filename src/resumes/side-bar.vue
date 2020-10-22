@@ -141,7 +141,7 @@ export default Vue.component(name, getVueOptions(name));
       overflow:hidden;
       .img {
         flex:none;
-        background:url('../../resume/id.jpg');
+        background:url('../../mycv/myid.jpg');
         background-position:center;
         background-size:cover;
         height:250px;

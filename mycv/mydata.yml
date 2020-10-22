@@ -1,0 +1,151 @@
+/* #*/ export const PERSON = `
+name:
+  first: Alexandros
+  last: Soumplis
+about: I like to consider myself an IT enthusiast and certainly a Linux expert. I have gone through the whole path of engineering, starting as a helpdesk operator for dial up Internet connections and now I am a cloud engineer with particular focus on OpenStack and Kubernetes. I like spending my spare time with family and do various nature-related activities, such as scuba diving, canyoning, sailing etc.
+position: Head of Systems Development
+birth:
+  year: 1981
+  location: Athens, Greece
+contact:
+  email: alexandros@soumplis.com
+  phone: +30 1234 567890
+  street: Iodosmou 50
+  city: Athens
+  website: https://soumplis.com
+  github: soumplis
+
+# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
+lang: en
+
+experience:
+- company: National Infrastructures for Research and Technology (GRNET) 
+  position: Head of Systems Development
+  timeperiod: since August 2018
+  description: Team lead of cloud engineering team that designed, built and operates
+    the first OpenStack public cloud for the academic and research community
+    in Greece. Currently runs with 220+ compute hosts, offering almost 10K
+    CPU cores, 44TB RAM and 1,5PB storage. The project also required the full
+    deployment of the operations ecosystem, including health and perfromance
+    monitoring, log aggregation and analysis, security audit and other.
+  website: https://www.grnet.gr
+
+- company: Stavros Niarchos Foundation Cultural Center (SNFCC)
+  position: Chief Technology Officer
+  timeperiod: January 2016 - August 2018
+  description: Executive role in charge of the technology delpoyment and operation in the
+    SNFCC premises, hosting National Library of Greece and the Greek National
+    Opera. We provided full infrastructure and IT services to both organizations
+    and also visitor, exceeding 2M per year.
+
+- company: National Documentation Centre (EKT)
+  position: Head of NOC / Senior Systems Engineer
+  timeperiod: April 2007 - December 2015
+  description: Initially senior systems engineer and then Head of Network Operations 
+    Center and in charge of design, deploy and operations of the core ICT 
+    infrastructure, ICT services and digital data services. Main 
+    responsibilities including devops, virtualization, cloud storage, web 
+    services, high availability and scalability, monitoring and capacity 
+    planning
+
+- company: Ideal Systems S.A.
+  position: Systems Engineer (Unix)
+  timeperiod: May 2002 - February 2015
+
+- company: FORTHnet S.A.
+  position: Technical Support
+  timeperiod: July 1999 - April 2002
+
+education:
+- degree: MSC "Pervasive and Mobile Computing Systems"
+  timeperiod: since 2019
+  description: Hellenic Open University
+  website: http://sdy.eap.gr/
+
+- degree: MSc "Management and Administration of Business and Organisations"
+  timeperiod: 2018
+  description: National and Kapodistrian University of Athens
+  website: http://www.ddomo-stratman.econ.uoa.gr/
+
+- degree: MSc "Networking and Data Communications"
+  timeperiod: 2009
+  description: Kingston University
+  website: https://www.kingston.ac.uk/postgraduate/courses/networking-data-communications-msc/
+
+- degree: MEng "Information and Communication Systems Engineering"
+  timeperiod: 2003
+  description: Aegean University
+  website: http://www.icsd.aegean.gr/
+
+
+# skill level goes 0 to 100
+skills:
+- name: OpenStack
+  level: 95
+- name: Kubernetes
+  level: 75
+- name: Ansible
+  level: 90
+- name: Git
+  level: 80
+- name: Puppet
+  level: 60
+- name: Juju
+  level: 90
+- name: Linux
+  level: 99
+- name: Networks
+  level: 70
+- name: CEPH
+  level: 75
+knowledge: Certified Kubernetes Administrator (CKA), Certified OpenStack Administrator (COA), RedHat Certified Engineer (RHCE), VMware Certified Professional (VCP),​ Certified Information Systems Auditor (CISA), ISO 9001, 20000-1, 27001 Certified Lead Auditor, Certificate in IT Service Management (ITIL) 
+
+projects:
+- name: GEANT 5th SIG-CISS Meeting
+  timeperiod: November 2019
+  description: The Special Interest Group on Cloudy Interoperable Software Stacks, SIG-CISS, brings together those who are building or operating research and education clouds and are willing to share strategy, design, deployment, performance optimisation, application integration, interoperability, security and other related information, knowledge and best practices.
+  url: https://wiki.geant.org/display/CISS/5th+SIG-CISS+meeting
+- name: GEANT TNC20
+  timeperiod: June 2020
+  description: TNC brings together decision makers, networking and collaboration specialists, plus identity and access management experts from all major European NRENs, universities, worldwide sister institutions, as well as industry representatives. Through keynotes speeches by renowned specialists, varying parallel sessions and demonstrations, TNC presents participants with a unique overview of the latest developments in research networking, both in the technical field and in the area of application and management.
+  url: https://tnc20.geant.org/sessions/#s309
+- name: OpenConf
+  timeperiod: November 2020
+  description: Οπen (pronounced open) conference is an annual technical conference focusing in leading-edge tech topics. It’s supported by Nokia Hellas and major open communities of Greece from Software and IT sector. It’s vision is to interconnect and foster the local tech ecosystem, so that it helps it gain a  prominent position, while contributing to the reduction of brain drain.
+  url: https://www.open-conf.gr/speakers/
+- name: Charm Summit 2020
+  timeperiod: February 2020
+  description: Invited speaker to Canonical's event for the Juju community. The aim is to introduce a new charming framework for Juju.
+  url: https://discourse.juju.is/t/charm-summit-2020/2555
+
+hobbies:
+- name: Scuba Diving
+  iconClass: fa fa-tint
+
+- name: Canyoning
+  iconClass: fa fa-globe
+
+contributions:
+- name: Learning Management Systems and Learning 2.0
+  description: Soumplis A., Koulocheri E., Kostaras N., Karousos N., Xenos M. - International Journal of Web-Based Learning and Teaching Technologies (IJWLTT)
+- name: A funder repository of heterogeneous grey literature material with advanced user interface and presentation features
+  description: Stathopoulou I.O., Houssos N., Stathopoulos P., Hardouveli D., Roubani A., Sarantopoulou I., Soumplis A., Nanakos C. - Proceedings of the 14th International Conference on Grey Literature
+- name: A Usability Evaluation Approach in E-Learning Environments, the Case of IBM Lotus Quickr
+  description: Koulocheri E., Chatzidaki E., Soumplis A., Xenos M. - Proceedings of the 2nd Conference on The Future of Education,
+- name: Implementing an Open Personal Learning Environment
+  description: Soumplis A., Chatzidaki E., Koulocheri E., Xenos M. - Proceedings of the 15th Panhellenic Conference on Informatics 
+- name: Enhancing OJS journals with advanced online reading and viewing capabilities
+  description: Stathopoulos P., Houssos N., Stathopoulou O., Stavrou G, Soumplis A. - Proceedings of PKP Scholarly Publishing Conference 2011
+- name : Usability Inspection of Informal Learning Environments, The HOU2LEARN Case
+  description: Koulocheri E., Soumplis A., Kostaras N., Xenos M. - Proceedings of the 4th International Conference on Intelligent Interactive Multimedia Systems and Services (IIMSS 2011)
+- name: Usability Inspection Through Heuristic Evaluation in E-Learning Environments, The LAMS Case
+  description: Koulocheri E., Soumplis A., Kostaras N., Xenos M. - Proceedings of the 7th International Conference on ICT in Education
+- name: The twobility factor
+  description: Soumplis A., Koulocheri E., Xenos M. - Proceedings of the 7th eLearning and Software for Education Conference 2011
+- name: The evolution of e-Learning 2.0
+  description: Soumplis A., Koulocheri E., Kostaras N. and Karousos N. - Proceedings of the Social Applications for Lifelong Learning 2010
+- name: The Case Study ofan F/OSS VirtualizationPlatform Deployment and Quantitative Results
+  description: Stathopoulos P., Soumplis A., and Nikos Houssos - IFIP Advances in Information and Communication Technology Volume 299
+- name: Experience and quantitative results from the deployment of an open source production-grade virtualization platform
+  description: Stathopoulos P., Soumplis A. and Nikos Houssos - 3rd GFOSS Conference 2008
+`

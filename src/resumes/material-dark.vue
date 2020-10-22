@@ -486,7 +486,7 @@ h4 {
   }
 }
 #myselfpic {
-  background-image:url('../../resume/id.jpg');
+  background-image:url('../../mycv/myid.jpg');
   color:black;
 }
 #githubIcon {

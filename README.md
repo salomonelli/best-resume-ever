@@ -2,7 +2,16 @@
 
 ## General
 
-This repository holds the necessary data to generate my CV. Processed versions of my CV are available in [PDF](https://en.wikipedia.org/wiki/PDF) format in the directory pdf of this repository. Also a manually maintained version of this CV is available in [Markdown](https://en.wikipedia.org/wiki/Markdown) format in the root folder of this repository with the name [Alexandros_Soumpis.md](Alexandros_Soumpis.md)
+This repository holds the necessary data to generate my CV. Processed versions of my CV are available in [PDF](https://en.wikipedia.org/wiki/PDF) format in the directory pdf of this repository. 
+
+My personal favorites are...
+
+| Quick Glance | Full Version |
+|--------------|--------------|
+| ![Cool.pdf](pdf/cool.png) | [CoolCV](pdf/cool.pdf) |
+| ![Creative.pdf](pdf/creative.png) | [CreativeCV](pdf/creative.pdf) |
+| ![SideBar.pdf](pdf/side-bar.png) | [SideBarCV](pdf/side-bar.pdf) |
+
 
 ## Generate CV
 

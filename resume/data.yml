@@ -1,23 +1,33 @@
 /* #*/ export const PERSON = `
 name:
-  first: John
-  middle:
-  last: Doe
-about: Hi, my name is John Doe. I"m just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+  first: Sofía
+  middle: Fernández 
+  last: Moreno
+about: Hi, my name is Sofía Fernández Moreno. I'm just about the most boring type of person you could possibly imagine. I like collecting logs with SIEM
+       monitoring and living in the new era of the Cloud. I am not a robot. Please hire me.
+
+       
+position: Junior DevOps Engineer
 
 birth:
-  year: 1990
-  location: New York
+  location: Madrid
 
 experience:
-- company: Company A
-  position: Developer
+- company: STA Villacarrillo
+  position: Administrative and web designer
   timeperiod: since January 2016
   description: Programming and watching cute cat videos.
-  website: https://example.com
+  website: https://stavillacarrillo.jimdofree.com/
+
+- company: Company B
+  position: Frontend Developer
+  timeperiod: January 2015 - December 2015
+  description: Fulfillment of extremely important tasks.
+
+- company: Company C
+  position: Trainee
+  timeperiod: March 2014 - December 2014
+  description: Making coffee and baking cookies.
 
 - company: Company B
   position: Frontend Developer
@@ -41,53 +51,49 @@ education:
 
 # skill level goes 0 to 100
 skills:
-- name: HTML5
-  level: 99
-- name: CSS3
-  level: 95
-- name: JavaScript
-  level: 97
-- name: Node.js
-  level: 93
-- name: Angular 2
-  level: 60
-- name: TypeScript
-  level: 80
-- name: ES.Next
-  level: 70
-- name: Docker
-  level: 99
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
+- name: Bash, Python, C++, Ruby, Groovy
+- name: Docker, Docker-Compose, DockerSwarm, Kubernetes and Openshift
+- name: "CI/CD: Jenkins,Github Actions"
+- name: Pentesting, Social Enginering, Nmap, Wireshark, Kali Linux Tools, Penetration testing OSINT Tools
+- name: Experience configuring NGINX, Apache, Redis, SSL and TLS certificates, PostgresSQL
+- name: LDAP and Active Directory
+- name: "Cloud: GCP, Azure, AWS"
+- name: Logging and Monitoring (ELK and Prometheus)
+
+knowledge: Also proficient in developing CI/CD pipelines, Configuration Management Tools and deployments over large infrastructure.
 
 projects:
-- name: best-resume-ever
-  platform: Vue
-  timeperiod: February 2016
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
+- name: Análisis y monitorización de aplicaciones a través de plugins con Naemon
+  platform: Docker Compose, Naemon and Locust
+  description: Final Degree Project vinculated with DevOps World.
+  url: https://github.com/sofiafernandezmoreno/TFG
+- name: Security System
+  platform: Arduino and C
+  description: Project Arduino Security system
   url: https://github.com/salomonelli/best-resume-ever
+- name: DDoS Attacks
+  platform: Docker Compose, ELK, bash, Suricata, NGINX, IPTABLES and ModSecurity
+  description: Final Master Project vinculated with SME business continuity project applying resilience to DDoS UDP Flood attacks (new version to a different attack) with docker containers
+  url: https://github.com/sofiafernandezmoreno/TFM_DDoS_Resillience
 
-hobbies:
-- name: Video Games
-  iconClass: fa fa-gamepad
-  url: https://example.com
-
-- name: Drawing
-  iconClass: fa fa-pencil
-  url: https://example.com
 
 contributions:
-- name: best-resume-ever
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: Course of computer forensics
+- name: Course of Programming Web Java EE Indra
+
+languages:
+- name: English (B1) 
+- name: French (A2) 
+- name: Spanish (Native) 
+
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
+  street: "Madrid"
+  email: chui274@gmail.com
+  phone: +655760279
+  website: sofiafernandezmoreno.github.io
+  linkedin: sofiafernandezmoreno
+  github: sofiafernandezmoreno
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
 lang: en
 `

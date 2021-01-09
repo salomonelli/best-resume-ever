@@ -3,7 +3,7 @@
     <div class="banner">
       <div class="banner__fullname">{{ person.name.first }} {{ person.name.middle }} {{ person.name.last }}</div>
       <div class="banner__position">{{ person.position }}</div>
-      <div v-if="person.birth" class="banner__location">{{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</div>
+      <div v-if="person.birth" class="banner__location">{{person.birth.location}}</div>
     </div>
 
     <div class="content">
@@ -89,6 +89,11 @@
               :href="contactLinks.medium">
               <i class="section-link__icon fa fa-medium"></i>{{ person.contact.medium }}
             </a>
+
+            <div>
+            <img class="frame"/>
+            </div>
+
           </div>
         </div>
       </div>
@@ -158,15 +163,32 @@
             </a>
           </div>
         </div>
+        <div
+          v-if="person.languages"
+          class="section">
+          <div class="section-headline">
+            <i class="section-headline__icon fa fa-language"></i>{{ lang.languages }}
+          </div>
 
+          <div class="section-content">
+            <a v-for="(languages, index) in person.languages" :key="index"
+              class="section-content__item-grid"
+              :class="{ link: languages.url !== undefined}"
+              :href="languages.url">
+              <span class="section-content__header"> {{ languages.name }} </span>
+              <span class="section-content__subheader">{{ languages.platform }}</span>
+              <span class="section-content__text"> {{ languages.description }} </span>
+            </a>
+          </div>
+        </div>
         <div
           v-if="person.contributions"
           class="section">
           <div class="section-headline">
-            <i class="section-headline__icon fa fa-heart"></i>{{lang.contributions}}
+            <i class="section-headline__icon fa fa-certificate"></i>{{lang.contributions}}
           </div>
 
-          <div class="section-content-grid">
+          <div class="section-content">
             <a
               v-for="(contribution, index) in person.contributions"
               class="section-content__item-grid"
@@ -180,6 +202,8 @@
               </span>
             </a>
           </div>
+
+
         </div>
       </div>
     </div>
@@ -232,6 +256,14 @@ export default Vue.component(name, getVueOptions(name));
   border: 5px solid @accent-color;
   content: url('../../resume/id.jpg');
   z-index: 2;
+}
+
+.frame {
+  justify-content: center;
+  align-items: center;
+  height: @picture-size;
+  width: @picture-size;
+  content: url('../../resume/frame.png');
 }
 
 .banner {
@@ -296,7 +328,7 @@ export default Vue.component(name, getVueOptions(name));
   color: @accent-color;
   display: inline-block;
   font-size: 1.2em;
-  margin: 8px 0;
+  margin: 4px 0;
 
   &__icon {
     margin-right: 8px;
@@ -320,27 +352,28 @@ export default Vue.component(name, getVueOptions(name));
 
   &__item {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
   }
 
   &__header {
     display: block;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: 500;
   }
 
   &__subheader {
     display: block;
+    font-size: 0.8em;
     font-weight: 400;
   }
 
   &__plain,
   &__text {
     display: block;
-    font-size: 12px;
+    font-size: 10px;
 
     &--light {
-      font-size: 12px;
+      font-size: 10px;
     }
   }
 
@@ -357,6 +390,7 @@ export default Vue.component(name, getVueOptions(name));
 
   &--plain {
     padding: 0;
+    font-size: 13px;
   }
 }
 
@@ -377,5 +411,6 @@ export default Vue.component(name, getVueOptions(name));
   color: white;
   margin-top: 5px;
   padding: 5px;
+  font-size: 12.3px;
 }
 </style>

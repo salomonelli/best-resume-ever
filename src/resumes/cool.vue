@@ -90,11 +90,14 @@
               <i class="section-link__icon fa fa-medium"></i>{{ person.contact.medium }}
             </a>
 
-            <div>
-            <img class="frame"/>
-            </div>
+
 
           </div>
+            <div>
+            <br>
+            <br>
+            <img class="frame"/>
+            </div>
         </div>
       </div>
 
@@ -220,7 +223,7 @@ export default Vue.component(name, getVueOptions(name));
 
 <style lang="less" scoped>
 @accent-color: #34495E;
-@banner-color: #42b883;
+@banner-color: #F47B8F;
 @banner-height: 120px;
 @picture-size: 120px;
 @picture-offset: 35px;
@@ -260,6 +263,7 @@ export default Vue.component(name, getVueOptions(name));
   align-items: center;
   height: @picture-size;
   width: @picture-size;
+  margin-left: 51px;
   content: url('../../resume/frame.png');
 }
 
@@ -338,7 +342,7 @@ export default Vue.component(name, getVueOptions(name));
   color: rgba(255, 255, 255, 0.59) !important;
 
   &__icon {
-    color: white;
+    color: #F47B8F;
   }
 }
 
@@ -404,7 +408,7 @@ export default Vue.component(name, getVueOptions(name));
 
 .squarred-grid-item {
   display: block;
-  border: 1px solid white;
+  border: 1px solid #F47B8F;
   color: white;
   margin-top: 5px;
   padding: 5px;

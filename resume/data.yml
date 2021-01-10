@@ -13,41 +13,55 @@ birth:
   location: Madrid
 
 experience:
-- company: STA Villacarrillo
+- company: STA Villacarrillo S.L.
   position: Administrative and web designer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
+  timeperiod: June 2017 - September 2017
+  description: Performing office tasks, such as managing the CRM of the company, adapting data in SEO. In addition to the maintenance of the company's website.
   website: https://stavillacarrillo.jimdofree.com/
 
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
+- company: Euroinnova Business School S.L
+  position: Internship trainee
+  timeperiod: November 2018 - May 2019
+  description: Work in computer and web development department, carrying out support tasks in the computer
+                  department in the company such as programming, requirements analysis, data storage, etc.
+  website: https://www.euroinnova.edu.es/
 
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
+- company: Innoforma E-Learning Technologies S.L.
+  position: E-learning Content Designer
+  timeperiod: May 2019 - September 2019
+  description: Expert in creation of formative content of the branch of Computing and New Technologies
+  website: https://www.innoforma.com/
 
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
+- company: Social Network Loycus S.A.
+  position: Junior DevOps Engineer
+  timeperiod: September 2019 - June 2020
+  description: Management, monitoring, alert and administration of the tools used within the life cycle of the
+                  applications and the platform. The tools used are Prometheus Stack, Kubernetes and Docker, GCP, Jenkins and Terraform.
+  website: https://www.loycus.com/
 
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
+- company: ALTEN (Airbus customer)
+  position: DevOps Engineer
+  timeperiod: June 2020 - September 2020
+  description: Management, monitoring, alert and administration k8s infraestructure in Airbus Client.
+  website: https://www.alten.es/
+
+- company: IBM Global Technology Services
+  position: Junior DevOps Engineer
+  timeperiod: September 2020 - now
+  description: Management, monitoring, logging, alert and administration of the tools used within the life cycle of the
+                  applications and the platform, the tools used are all Prometheus Stack and Elastic Stack. Also provisioning all the infraestructure from DevOps Department with Ansible and managing the same
+                  with K8s and Openshift.
+  website: https://www.ibm.com/es-es
 
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
-  website: https://example.com
-
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
+- degree: MASTER SECURITY INFORMATION
+  timeperiod: November 2019 - July 2020
+  description: Universidad Europea de Madrid
+  website: https://sede.educacion.gob.es/registrotitulos/mostrarAutorizacion?ticket=18b277538e95ca39063318306202867d32f6d145
+- degree: BACHELOR’S DEGREE OF COMPUTER SCIENCE
+  timeperiod: September 2015 - September 2019
+  description: Universidad de Granada
+  website: https://sede.educacion.gob.es/registrotitulos/mostrarAutorizacion?ticket=0907d8fc17368ce11e2d59edd89a0f532057384c
 
 # skill level goes 0 to 100
 skills:
@@ -64,16 +78,10 @@ knowledge: Also proficient in developing CI/CD pipelines, Configuration Manageme
 
 projects:
 - name: Análisis y monitorización de aplicaciones a través de plugins con Naemon
-  platform: Docker Compose, Naemon and Locust
-  description: Final Degree Project vinculated with DevOps World.
   url: https://github.com/sofiafernandezmoreno/TFG
 - name: Security System
-  platform: Arduino and C
-  description: Project Arduino Security system
   url: https://github.com/salomonelli/best-resume-ever
 - name: DDoS Attacks
-  platform: Docker Compose, ELK, bash, Suricata, NGINX, IPTABLES and ModSecurity
-  description: Final Master Project vinculated with SME business continuity project applying resilience to DDoS UDP Flood attacks (new version to a different attack) with docker containers
   url: https://github.com/sofiafernandezmoreno/TFM_DDoS_Resillience
 
 

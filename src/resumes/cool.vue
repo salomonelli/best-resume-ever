@@ -158,26 +158,6 @@
               :class="{ link: project.url !== undefined}"
               :href="project.url">
               <span class="section-content__header"> {{ project.name }} </span>
-              <span class="section-content__subheader">{{ project.platform }}</span>
-              <span class="section-content__text"> {{ project.description }} </span>
-            </a>
-          </div>
-        </div>
-        <div
-          v-if="person.languages"
-          class="section">
-          <div class="section-headline">
-            <i class="section-headline__icon fa fa-language"></i>{{ lang.languages }}
-          </div>
-
-          <div class="section-content">
-            <a v-for="(languages, index) in person.languages" :key="index"
-              class="section-content__item-grid"
-              :class="{ link: languages.url !== undefined}"
-              :href="languages.url">
-              <span class="section-content__header"> {{ languages.name }} </span>
-              <span class="section-content__subheader">{{ languages.platform }}</span>
-              <span class="section-content__text"> {{ languages.description }} </span>
             </a>
           </div>
         </div>
@@ -196,12 +176,29 @@
               :class="{ link: contribution.url !== undefined}"
               :href="contribution.url">
               <span class="section-content__header"> {{ contribution.name }} </span>
-              <span class="section-content__text"> {{ contribution.description }} </span>
-              <span class="section-content__text--light" style="word-break: break-all;">
                 {{ contribution.url }}
               </span>
             </a>
           </div>
+        <div
+          v-if="person.languages"
+          class="section">
+          <div class="section-headline">
+            <i class="section-headline__icon fa fa-language"></i>{{ lang.languages }}
+          </div>
+
+          <div class="section-content-grid">
+            <a v-for="(languages, index) in person.languages" :key="index"
+              class="section-content__item-grid"
+              :class="{ link: languages.url !== undefined}"
+              :href="languages.url">
+              <span class="section-content__header"> {{ languages.name }} </span>
+              <span class="section-content__subheader">{{ languages.platform }}</span>
+              <span class="section-content__text"> {{ languages.description }} </span>
+            </a>
+          </div>
+        </div>
+
 
 
         </div>
@@ -318,7 +315,7 @@ export default Vue.component(name, getVueOptions(name));
 }
 
 .section {
-  margin: 20px 0;
+  margin: 1px 0;
 }
 
 .section-link,
@@ -328,7 +325,7 @@ export default Vue.component(name, getVueOptions(name));
   color: @accent-color;
   display: inline-block;
   font-size: 1.2em;
-  margin: 4px 0;
+  margin: 2px 0;
 
   &__icon {
     margin-right: 8px;
@@ -346,7 +343,7 @@ export default Vue.component(name, getVueOptions(name));
 }
 
 .section-content {
-  margin-top: 5px;
+  margin-top: 0.5px;
   padding-left: 32px;
   font-size: 14px;
 
@@ -357,20 +354,20 @@ export default Vue.component(name, getVueOptions(name));
 
   &__header {
     display: block;
-    font-size: 0.9em;
+    font-size: 13px;
     font-weight: 500;
   }
 
   &__subheader {
     display: block;
-    font-size: 0.8em;
+    font-size: 12.5px;
     font-weight: 400;
   }
 
   &__plain,
   &__text {
     display: block;
-    font-size: 10px;
+    font-size: 12px;
 
     &--light {
       font-size: 10px;

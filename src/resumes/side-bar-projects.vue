@@ -141,7 +141,7 @@
           <div class="skills-block">
               <h3 class="right-title">Skills</h3>
               <div class="skills">
-                      <div class="skill" v-for="skill in person.skills">
+                      <div class="skill" v-for="skill in person.skills" :style="{'--percentage': (100-skill.level)+'%'}" >
                           <span class="skill-name">{{skill.name}}</span>
                       </div>
               </div>
@@ -163,6 +163,7 @@ export default Vue.component(name, getVueOptions(name));
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
+
 #resume2 {
   font-family:'Raleway', sans-serif;
   font-size: 14px;
@@ -390,7 +391,7 @@ export default Vue.component(name, getVueOptions(name));
         .skill::before{
           content:'';
           background-color: #0984e3;
-          clip-path: polygon(0 30%, 100% 30%, 100% 100%, 0 100%);
+          clip-path: polygon(0 var(--percentage), 100%  var(--percentage), 100% 100%, 0 100%);
           display: block;
           width: 66px;
           height: 67px;

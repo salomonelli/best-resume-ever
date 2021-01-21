@@ -66,9 +66,9 @@ education:
 # skill level goes 0 to 100
 skills:
 - name: HTML5
-  level: 99
+  level: 97
 - name: CSS3
-  level: 95
+  level: 53
 - name: JavaScript
   level: 97
 - name: Node.js
@@ -76,7 +76,7 @@ skills:
 - name: Angular 2
   level: 60
 - name: TypeScript
-  level: 80
+  level: 20
 - name: ES.Next
   level: 70
 - name: Docker

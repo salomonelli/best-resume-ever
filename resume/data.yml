@@ -1,43 +1,67 @@
 /* #*/ export const PERSON = `
 name:
-  first: John
+  first: Danqiong
   middle:
-  last: Doe
+  last: SHEN
+chinese: 沈丹琼
 about: Hi, my name is John Doe. I"m just about the most boring type of person you could
        possibly imagine. I like collecting leaves from the tree in my back yard and documenting
        each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+position: Web Front-end Developer
 
 birth:
-  year: 1990
-  location: New York
+  year: 1998
+  location: China Beijing
+info:
+  age: 22
+  city: Beijing / Shenzhen / Hangzhou
 
 experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
+- company: Beijing Bytedance Technology Co.,Ltd.
+  position: Web Frontend Developer
+  department: DATA-Commercial technology-advertising platform
+  timeperiod: 2020/05 - Now
+  description:
+  - point: 1. Business output. Cooperate with PM, UI, RD, QA and other business team  to support the iteration and upgrade of the advertising platform.
+  - point: 2. Technical optimization. Webpack optimization; Introduce Garfish micro front-end framework to the advertising platform.
+  - point: 3. Documentation. Knowledge base arrangement and classification; Various document outputs.
   website: https://example.com
 
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
+campus:
+- organization: Pioneering And Partwork-study Instructing Center
+  timeperiod: 2017/09 - 2018/09
+  position: Human Resources Officer
+  description: As the director of the human resources department, I was responsible for planning and organizing various activities,   including the all-staff quality development activities, gold medal training activities, etc.
+- organization: Zhejiang University official account management
+  timeperiod: 2017/09 - 2018/09
+  position: Newmedia Marketing Officer
+  description: Responsible for the topic selection, typesetting, writing and interviewing of the official WeChat official account of Zhejiang University, and assisting teachers in its operation.
+- organization: Tencent Game designer open courses
+  timeperiod: 2018/09 - 2019/09
+  position: Game designer&developer
+  description: Learned game design knowledge and developed MINI GAME with team cooperation.
 
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
 
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
-  website: https://example.com
-
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
+- degree: Bachelor
+  timeperiod: Sep 2017 - Jun 2021
+  gpa: 4.13/5.0
+  description: Major in Digital Media Technology
+  university: Zhejiang University
+  major: Digital Media Technology
+  courses:
+  - name: Computer vision
+  - name: Database system
+  - name: Computer networks
+  - name: Operating system
+  - name: Computer graphics
+  - name: Computer animation
+  - name: Animation Drawing
+  - name: Photography art
+  - name: Program design(C&C++)
+  - name: Data structure and algorithm analysis
+  - name: Computer game programming
+  - name: Movie scripts composing
 
 # skill level goes 0 to 100
 skills:
@@ -57,8 +81,13 @@ skills:
   level: 70
 - name: Docker
   level: 99
+- name: ES.Next
+  level: 70
+- name: Docker
+  level: 99
 knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
   (English and Klingon).
+
 
 projects:
 - name: best-resume-ever
@@ -82,12 +111,10 @@ contributions:
   url: https://github.com/salomonelli/best-resume-ever
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
+  email: shendanqiong@qq.com
+  phone: 86-18888923686
+  website: https://dandandq.github.io/front-end-blog/
+  github: dandanDQ
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
 lang: en
 `

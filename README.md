@@ -127,3 +127,44 @@ This project uses several open source packages:
 ## License
 
 [MIT](https://github.com/salomonelli/best-resume-ever/blob/master/LICENCE.md)
+
+##### 动态 component 引入
+引入组件目录下所有组件
+组件的导出  export default Vue.component(name, getVueOptions(name));
+
+##### 使用 yaml 作为配置文件
+使用 js-yaml 包进行处理
+将这些信息作为 Options 挂载
+通用的数据串行化格式
+- 大小写敏感
+- 使用缩进表示层级关系
+- 缩进时不允许使用Tab键，只允许使用空格。
+- 缩进的空格数目不重要，只要相同层级的元素左侧对齐即可
+
+三种数据结构
+- 对象：键值对的集合，又称为映射（mapping）/ 哈希（hashes） / 字典（dictionary）
+```
+animal: pets
+hash: { name: Steve, foo: bar }
+```
+
+- 数组：一组按次序排列的值，又称为序列（sequence） / 列表（list）
+```
+-
+ - Cat
+ - Dog
+ - Goldfish
+
+animal: [Cat, Dog]
+```
+- 纯量（scalars）：单个的、不可再分的值
+
+##### 文件导出功能
+
+##### 当前目录结构
+router
+resumes
+lang
+assets
+
+

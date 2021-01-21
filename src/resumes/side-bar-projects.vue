@@ -10,8 +10,22 @@
                   <div class="img"></div>
               </div>
           </div>
+          <div class="contact left-module">
+              <h3 class="right-title">Info</h3>
+              <div class="contact-row">
+                  <span>age: {{person.info.age}}</span>
+              </div>
+              <div class="contact-row dots">
+                  <i class="fa fa-circle" aria-hidden="true"></i>
+                  <i class="fa fa-circle" aria-hidden="true"></i>
+                  <i class="fa fa-circle" aria-hidden="true"></i>
+              </div>
+              <div class="contact-row">
+                  <span>cities: {{person.info.city}}</span>
+              </div>
+          </div>
           <div class="contact">
-              <h3>Contact</h3>
+              <h3 class="right-title">Contact</h3>
               <div class="contact-row">
                   <a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a>
               </div>
@@ -29,7 +43,7 @@
                   <i class="fa fa-circle" aria-hidden="true"></i>
               </div>
               <div class="contact-row">
-                  {{person.contact.street}} <br> {{person.contact.city}}
+                <a :href="person.contact.website">{{person.contact.website}}</a>
               </div>
               <div class="contact-row dots">
                   <i class="fa fa-circle" aria-hidden="true"></i>
@@ -40,34 +54,65 @@
                   <a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a>
               </div>
           </div>
-          <div class="skills-block">
-              <h3>Skills</h3>
-              <div class="skills">
-                      <div class="skill" v-for="skill in person.skills">
-                          <span class="skill-name">{{skill.name}}</span>
-                      </div>
-              </div>
-              <span class="skills-other"> {{person.skillDescription}} </span>
-          </div>
+
+      <div class="hobbies-container">
+        <!-- <span class="subheadline">Hobbies</span> -->
+        <div class="hobbies-content">
+          <a v-for="(hobby, index) in person.hobbies" :key="index"
+            class="hobby-item"
+            :href="hobby.url">
+
+            <i v-if="hobby.iconClass" :class="hobby.iconClass + ' hobby-item__icon'"></i>
+            <span class="hobby-item__icon-label"> {{ hobby.name }} </span>
+          </a>
+        </div>
+      </div>
       </div>
       <div class="right-col">
+          <div class="education">
+              <h3 class="right-title">Education</h3>
+              <div class="education-block" v-for="education in person.education">
+                  <div class="row">
+                      <span class="university">{{education.university}}&nbsp-</span>
+                      <span class="degree">{{education.degree}}</span>
+                      <span class="timeperiod">{{education.timeperiod}}</span>
+                  </div>
+                   <div class="row">
+                      <span>Major: {{education.major}}</span>
+                  </div>
+                  <div class="courses">
+                    <div class="courses-title">Main courses
+                      <span class="gpa">GPA: {{education.gpa}}</span>
+
+                    </div>
+                    <div class="courses-content">
+                      <span class="course" v-for="course in education.courses">{{course.name}}</span>
+                    </div>
+                  </div>
+              </div>
+          </div>
           <div class="experience">
-              <h3>Experience</h3>
+              <h3 class="right-title">Practices</h3>
                   <div class="experience-block" v-for="experience in person.experience">
                       <div class="row">
-                          <span class="company"> {{experience.company}} -</span>
-                          <span class="job-title"> {{experience.position}} </span>
+                          <span class="company"> {{experience.company}}</span>
+                          <span class="timeperiod"> {{experience.timeperiod}} </span>
                       </div>
                       <div class="row">
-                          <span class="time-period"> {{experience.timeperiod}}</span>
+                          <span class="job-description">Department:&nbsp;&nbsp; {{experience.department}} </span>
                       </div>
                       <div class="row">
-                          <span class="job-description"> {{experience.description}} </span>
+                          <span class="job-description">Position:&nbsp;&nbsp; {{experience.position}} </span>
                       </div>
+                      <div class="row">
+                          <div class="job-description">Main work:&nbsp;&nbsp;</div>
+                          <div class="job-description" v-for="desc in experience.description"> {{desc.point}} </div>
+                      </div>
+
                   </div>
           </div>
           <div class="projects">
-              <h3>Projects</h3>
+              <h3 class="right-title">Projects</h3>
                   <div class="project-block" v-for="project in person.projects">
                       <div class="row">
                           <span class="name"> {{project.name}} </span>
@@ -79,18 +124,29 @@
                       </div>
                   </div>
           </div>
-          <div class="education">
-              <h3>Education</h3>
-                  <div class="education-block" v-for="education in person.education">
+          <div class="projects">
+              <h3 class="right-title">Campus Experience</h3>
+                  <div class="project-block" v-for="organization in person.campus">
                       <div class="row">
-                          <span class="degree">{{education.degree}}</span>
+                          <span class="company"> {{organization.organization}}</span>
+                          <span class="timeperiod"> {{organization.timeperiod}} </span>
                       </div>
                       <div class="row">
-                          <span class="degree-description">{{education.description}}</span>
+                          <span class="description"> {{organization.description}} </span>
                       </div>
                   </div>
+
           </div>
 
+          <div class="skills-block">
+              <h3 class="right-title">Skills</h3>
+              <div class="skills">
+                      <div class="skill" v-for="skill in person.skills">
+                          <span class="skill-name">{{skill.name}}</span>
+                      </div>
+              </div>
+              <span class="skills-other"> {{person.skillDescription}} </span>
+          </div>
       </div>
   </div>
 
@@ -109,6 +165,8 @@ export default Vue.component(name, getVueOptions(name));
 <style lang="less" scoped>
 #resume2 {
   font-family:'Raleway', sans-serif;
+  font-size: 14px;
+  line-height: 26px;
   padding-bottom:50px;
   a, a:focus, a:hover, a:visited {
     text-decoration:none;
@@ -122,8 +180,8 @@ export default Vue.component(name, getVueOptions(name));
   }
   .top-row {
     width:100%;
-    padding-top:60px;
-    padding-bottom:60px;
+    padding-top:40px;
+    padding-bottom:40px;
     span {
       width:100%;
       display:block;
@@ -132,18 +190,19 @@ export default Vue.component(name, getVueOptions(name));
     }
     span.person-name {
       text-transform:uppercase;
-      font-size:40px;
+      font-size:30px;
       letter-spacing:10px;
     }
     span.person-position {
+      margin-top: 10px;
       letter-spacing:5px;
     }
   }
   .left-col {
-    width:26%;
+    width:24%;
     float:left;
-    padding-left:8%;
-    padding-right:4%;
+    padding-left:4%;
+    padding-right:2%;
     .person-image .image-centerer {
       display:flex;
       justify-content:center;
@@ -163,15 +222,17 @@ export default Vue.component(name, getVueOptions(name));
       margin-top:20px;
     }
     .contact .contact-row {
+      font-size: 12px;
       text-align:center;
       letter-spacing:2px;
       margin-bottom:3px;
+      word-break: break-word;
       a {
         color:black;
       }
     }
     .contact .contact-row:first-of-type {
-      margin-top:50px;
+      margin-top:30px;
     }
     .contact .contact-row:last-of-type {
       margin-bottom:50px;
@@ -184,25 +245,42 @@ export default Vue.component(name, getVueOptions(name));
     }
   }
   .right-col {
-    width:50%;
+    width:64%;
     float:right;
-    padding-left:4%;
-    padding-right:8%;
+    padding-left:2%;
+    padding-right:4%;
+    .right-title {
+      font-weight: 600
+    }
+    .experience {
+      margin-top:30px;
+    }
     .experience-block {
-      margin-bottom:10px;
+      margin-bottom: 5px;
       .row:first-child {
         margin-bottom:3px;
       }
       .row .company {
-        text-transform:uppercase;
-        font-size:12px;
+        font-size:14px;
       }
+      .company::before{
+          display: inline-block;
+          height: 30px;
+          width: 30px;
+          content: '';
+          background-image: url('../../resume/bytedance.jpg');
+          background-size:30px 30px;
+          vertical-align: middle;
+        }
       .row .job-title {
-        font-size:12px;
+        font-size:14px;
+      }
+      .timeperiod {
+        float: right;
       }
     }
     .projects {
-        margin-top:50px;
+        margin-top:30px;
         .project-block {
             margin-bottom:10px;
             .degree {
@@ -213,32 +291,86 @@ export default Vue.component(name, getVueOptions(name));
         }
     }
     .education {
-      margin-top:50px;
       .education-block {
-        margin-bottom:10px;
+        margin-bottom: 5px;
         .degree {
           font-size:12px;
           text-transform:uppercase;
           margin-bottom:3px;
         }
+        .university {
+          font-size:14px;
+          font-weight: 500;
+          margin-bottom:3px;
+        }
+        .university::before{
+          display: inline-block;
+          height: 20px;
+          width: 20px;
+          content: '';
+          background-image: url('../../resume/zju.png');
+          background-size:20px 20px;
+          vertical-align: middle;
+          margin-right: 8px;
+        }
+        .timeperiod {
+          font-size:14px;
+          margin-bottom:3px;
+          float: right;
+        }
+        .courses{
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          align-items: stretch;
+          width: 100%;
+          .courses-title{
+              .major{
+                float: right;
+              }
+              .gpa{
+                float: right;
+              }
+          }
+          .courses-content {
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: center;
+            .course{
+              border-radius: 5px;
+              color: #555;
+              padding: 2px;
+              margin: 2px;
+              word-break: keep-all;
+              width: 30%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              border: #555 solid 1px;
+              font-size: 13px;
+            }
+          }
+        }
+
       }
     }
     .skills-block {
-      text-align:center;
-      margin-top:50px;
+      margin-top:30px;
       position:relative;
+      font-size: 12px;
       .skills {
-        text-align:center;
-        margin-bottom:10px;
+        margin-bottom: 5px;
         margin-bottom:20px;
         position:relative;
         margin-left:auto;
         margin-right:auto;
         display:inline-block;
         .skill {
-          text-align:center;
-          width:80px;
-          height:80px;
+          width:65px;
+          height:65px;
           border-radius:50%;
           position:relative;
           border:#333333 1px solid;
@@ -251,8 +383,21 @@ export default Vue.component(name, getVueOptions(name));
             top:50%;
             transform:translateY(-50%);
             width:100%;
+
           }
+
         }
+        .skill::before{
+          content:'';
+          background-color: #0984e3;
+          clip-path: polygon(0 30%, 100% 30%, 100% 100%, 0 100%);
+          display: block;
+          width: 66px;
+          height: 67px;
+          border-radius: 50%;
+          z-index:-5;
+        }
+
         .skills-other {
           display:inline-block;
           width:100%;
@@ -261,5 +406,40 @@ export default Vue.component(name, getVueOptions(name));
       }
     }
   }
+
+.hobbies-container {
+  margin-top: 30px;
+}
+
+.hobbies-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hobby-item {
+  display: grid;
+  grid-template-columns: 30px auto;
+
+  color: rgba(255, 255, 255, .6);
+
+  margin-right: 25px;
+  margin-bottom: 10px;
+
+  transition: .5s;
+
+  &:hover {
+    color: rgba(255, 255, 255, .8);
+    transition: .5s;
+  }
+}
+
+.hobby-item__icon {
+  font-size: 1.3em;
+}
+
+.hobby-item__icon-label {
+  top: 2.5px;
+  position: relative;
+}
 }
 </style>

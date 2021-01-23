@@ -15,6 +15,7 @@ birth:
 info:
   age: 22
   city: Beijing / Shenzhen / Hangzhou
+  nation: han
 
 experience:
 - company: Beijing Bytedance Technology Co.,Ltd.
@@ -33,11 +34,11 @@ campus:
   position: Human Resources Officer
   description: As the director of the human resources department, I was responsible for planning and organizing various activities,   including the all-staff quality development activities, gold medal training activities, etc.
 - organization: Zhejiang University official account management
-  timeperiod: 2017/09 - 2018/09
+  timeperiod: 2018/09 - 2019/09
   position: Newmedia Marketing Officer
   description: Responsible for the topic selection, typesetting, writing and interviewing of the official WeChat official account of Zhejiang University, and assisting teachers in its operation.
 - organization: Tencent Game designer open courses
-  timeperiod: 2018/09 - 2019/09
+  timeperiod: 2019/09 - 2019/12
   position: Game designer&developer
   description: Learned game design knowledge and developed MINI GAME with team cooperation.
 
@@ -65,36 +66,69 @@ education:
 
 # skill level goes 0 to 100
 skills:
-- name: HTML5
-  level: 97
-- name: CSS3
-  level: 53
 - name: JavaScript
-  level: 97
-- name: Node.js
-  level: 93
-- name: Angular 2
-  level: 60
+  level: 85
+- name: HTML5
+  level: 80
+- name: CSS3
+  level: 85
+- name: Vue 2.x
+  level: 85
+- name: React Native
+  level: 65
+- name: Webpack
+  level: 90
+- name: Git
+  level: 90
 - name: TypeScript
-  level: 20
-- name: ES.Next
+  level: 60
+- name: Node.js
+  level: 60
+- name: MySQL
+  level: 75
+- name: Matlab
   level: 70
-- name: Docker
-  level: 99
-- name: ES.Next
+- name: OpenGL
+  level: 65
+- name: C
+  level: 85
+- name: C++
+  level: 85
+- name: Python
+  level: 60
+- name: Flask
+  level: 60
+- name: Unity
+  level: 75
+- name: PS
+  level: 65
+- name: InDesign
+  level: 75
+- name: Light Room
   level: 70
-- name: Docker
-  level: 99
+- name: Maya
+  level: 60
+
+
 knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
   (English and Klingon).
 
 
 projects:
-- name: best-resume-ever
-  platform: Vue
-  timeperiod: February 2016
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: ZJU summer camp website
+  platform: vue 3.0 + webpack + ant design vue
+  timeperiod: 2020/12 - 2021/01
+  url: ss
+  description:
+    overview: College Student Scientific Research Training Program. Based on deep learning, a neural network is built to learn more than 4000 pages of ancient calligraphy font resources to generate a full set of strokes and styles similar to an ancient calligrapher.
+    responsibilities: Cause the team  is small,  I have participated in every process, including preliminary topic selection, data review, material processing, framework building, project optimization, etc.
+- name: Calligraphy Font Generation Based on Deep Learning
+  platform: Python + TensorFlow
+  timeperiod: 2020/12 - 2021/01
+  description:
+    overview: College Student Scientific Research Training Program. Based on deep learning, a neural network is built to learn more than 4000 pages of ancient calligraphy font resources to generate a full set of strokes and styles similar to an ancient calligrapher.
+    responsibilities: Cause the team  is small,  I have participated in every process, including preliminary topic selection, data review, material processing, framework building, project optimization, etc.
+  url: ss
 
 hobbies:
 - name: Video Games

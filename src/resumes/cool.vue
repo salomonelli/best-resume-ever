@@ -328,7 +328,7 @@ export default Vue.component(name, getVueOptions(name));
   align-items: center;
   color: @accent-color;
   display: inline-block;
-  font-size: 1.2em;
+  font-size: 1.0em;
   margin: 2px 0;
 
   &__icon {

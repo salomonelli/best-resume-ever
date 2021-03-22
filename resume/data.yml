@@ -71,7 +71,7 @@ skills:
 - name: Pentesting, Social Enginering, Nmap, Wireshark, Kali Linux Tools, Penetration testing OSINT Tools
 - name: Experience configuring NGINX, Apache, Redis, SSL and TLS certificates, PostgresSQL
 - name: LDAP and Active Directory
-- name: "Cloud: GCP, Azure, AWS"
+- name: "Cloud: GCP, Azure, AWS, IBM Cloud"
 - name: Logging and Monitoring (ELK and Prometheus)
 
 knowledge: Also proficient in developing CI/CD pipelines, Configuration Management Tools and deployments over large infrastructure.
@@ -80,14 +80,15 @@ projects:
 - name: Análisis y monitorización de aplicaciones a través de plugins con Naemon
   url: https://github.com/sofiafernandezmoreno/TFG
 - name: Security System
-  url: https://github.com/salomonelli/best-resume-ever
+  url: https://github.com/sofiafernandezmoreno/Arduino-Seguridad
 - name: DDoS Attacks
   url: https://github.com/sofiafernandezmoreno/TFM_DDoS_Resillience
 
 
 contributions:
 - name: Course of computer forensics
-- name: Course of Programming Web Java EE Indra
+- name: Certified Kubernetes Administrator
+  
 
 languages:
 - name: English (B1) 

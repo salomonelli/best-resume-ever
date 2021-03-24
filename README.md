@@ -14,9 +14,9 @@
 </div>
 
 <h4 align="center">
-  :necktie: :briefcase: Build fast :rocket: and easy multiple beautiful resumes and create your best CV ever!
+  :necktie: :briefcase: 빠른 Build :rocket: 여러 아름다운 이력서를 쉽게 만들고 최고의 이력서를 만드십시오!
   <br><br>
-  Made with Vue and LESS.
+  Vue 및 LESS로 제작되었습니다.
 </h4>
 
 <br>
@@ -61,38 +61,42 @@
 <br>
 <br>
 
-## Prerequisite
+## 
+전제 조건
 
-1. It is required to have Node.js with version 8.5.0 or higher. To see what version of Node.js is installed on your machine type the following command in the terminal:
+1. 버전 8.5.0 이상의 Node.js가 있어야합니다. 머신에 설치된 Node.js 버전을 확인하려면 터미널에 다음 명령을 입력하십시오.
 
 ```
 node -v
 ```
 
-2. If you do not have installed Node.js in your machine then go to [this link](https://nodejs.org/en/download/) in order to install node.
+2. 머신에 Node.js를 설치하지 않은 경우 [이 링크] (https://nodejs.org/en/download/)로 이동하여 노드를 설치합니다.
 
-## How to use
+## 사용하는 방법
 
-1. Clone this repository.
+
+1. 이 저장소를 복제합니다.
 
 ```
 git clone https://github.com/salomonelli/best-resume-ever.git
 ```
 
-2. Go to the cloned directory (e.g. `cd best-resume-ever`).
+2. 복제 된 디렉터리로 이동합니다 (예 :`cd best-resume-ever`).
 
-3. Run `npm install`.
+3. `npm install`을 실행합니다.
 
-4. Customize your resume in the `resume/` directory: edit your data `data.yml` and replace the default profile-picture `id.jpg` with your picture. Rename your picture as `id.jpg` and copy it in the `resume/` directory.
 
-5. Preview resumes with `npm run dev`. The command will start a server instance and listen on port 8080.  Open (http://localhost:8080/home) in your browser. The page will show some resume previews. To see the preview of your resume, with your picture and data, click on one layout that you like and the resume will be opened in the same window.
+4. 'resume /'디렉토리에서 이력서를 맞춤 설정하세요. 데이터 'data.yml'을 수정하고 기본 프로필 사진 'id.jpg'를 사진으로 바꿉니다. 사진의 이름을`id.jpg`로 바꾸고`resume /`디렉토리에 복사합니다.
+
+5. 'npm run dev'로 미리보기가 재개됩니다. 이 명령은 서버 인스턴스를 시작하고 포트 8080에서 수신합니다. 브라우저에서 (http : // localhost : 8080 / home)을 엽니 다. 페이지에는 몇 가지 이력서 미리보기가 표시됩니다. 사진과 데이터가 포함 된 이력서 미리보기를 보려면 원하는 레이아웃 하나를 클릭하면 이력서가 같은 창에서 열립니다.
+
 
 ![Resume previews](/readme-images/resumePreviews.png)
 
 
-6. Export your resume as pdf by running the command `npm run export`. In order to avoid errors due to the concurrency of two  `npm run` commands, stop the execution of the previus `npm run dev` and then type the export command.
+6. `npm run export` 명령을 실행하여 이력서를 pdf로 내 보냅니다. 두 개의`npm run` 명령의 동시성으로 인한 오류를 방지하려면 이전`npm run dev`의 실행을 중지 한 다음 export 명령을 입력하십시오.
 
-All resumes will be exported to the `pdf/` folder.
+모든 이력서는`pdf /`폴더로 내보내집니다.
 
 <br>
 

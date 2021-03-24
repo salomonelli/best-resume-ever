@@ -3,7 +3,7 @@
   <a href="https://github.com/salomonelli/best-resume-ever">
   <img src="src/assets/logo.png" alt="Markdownify" width="200"></a>
   <br>
-  최준호 copy.ver
+  최준호 copy.ver213231323
   <br>
 </h1>
 

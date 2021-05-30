@@ -61,6 +61,10 @@ function getVueOptions (name) {
 
                 return links;
             },
+
+            isPhotoAvailable() {
+                return Boolean(this.person.photo);
+            }
         }
     };
     return opt;

@@ -2,7 +2,7 @@
 <div class="resume">
   <div class="leftCol m_box">
     <div class="shadow"></div>
-    <div class="heading" id="myselfpic">
+    <div class="heading" id="myselfpic" v-if="isPhotoAvailable">
     </div>
     <div class="section-headline">
       Contact

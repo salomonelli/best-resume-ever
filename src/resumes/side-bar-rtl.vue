@@ -9,7 +9,7 @@
           </span>
       </div>
       <div class="right-col">
-          <div class="person-image">
+          <div class="person-image" v-if="isPhotoAvailable">
               <div class="image-centerer">
                   <div class="img"></div>
               </div>

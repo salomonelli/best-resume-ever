@@ -81,7 +81,7 @@ git clone https://github.com/salomonelli/best-resume-ever.git
 
 2. Go to the cloned directory (e.g. `cd best-resume-ever`).
 
-3. Run `npm install`.
+3. Run `npm install`. This may take a few seconds.
 
 4. Customize your resume in the `resume/` directory: edit your data `data.yml` and replace the default profile-picture `id.jpg` with your picture. Rename your picture as `id.jpg` and copy it in the `resume/` directory. During this step, you may find it easier to navigate with Finder or File Explorer to get to the files. This will allow you to edit files with your computers default text editor. 
 

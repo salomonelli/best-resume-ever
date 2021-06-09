@@ -1,4 +1,6 @@
 /* #*/ export const PERSON = `
+# Any fields left unchanged, please delete so your resume is fully yours!
+
 name:
   first: John
   middle:
@@ -11,6 +13,8 @@ position: Software Developer
 birth:
   year: 1990
   location: New York
+
+# you may add more experiences by duplicating the template
 
 experience:
 - company: Company A
@@ -39,7 +43,7 @@ education:
   timeperiod: March 2009 - December 2011
   description: Major in Engineering, University B, Los Angeles, USA.
 
-# skill level goes 0 to 100
+# skill level goes from 0 to 100
 skills:
 - name: HTML5
   level: 99
@@ -67,6 +71,7 @@ projects:
   description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
   url: https://github.com/salomonelli/best-resume-ever
 
+# optional, not all resume templates have hobbies included
 hobbies:
 - name: Video Games
   iconClass: fa fa-gamepad

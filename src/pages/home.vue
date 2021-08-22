@@ -87,6 +87,14 @@
       </router-link>
     </div>
     <div class="preview">
+      <router-link v-bind:to="'/resume/side-bar-projects-alt'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-side-bar-projects-alt.png" />
+          <span>side-bar-projects-alt</span>
+        </div>
+      </router-link>
+    </div>
+    <div class="preview">
       <router-link v-bind:to="'/resume/side-bar-rtl'">
         <div class="preview-wrapper">
           <img src="../assets/preview/resume-side-bar-rtl.png" />

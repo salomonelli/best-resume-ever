@@ -16,3 +16,4 @@ import './left-right-projects.vue';
 import './material-dark-projects.vue';
 import './oblique-projects.vue';
 import './side-bar-projects.vue';
+import './side-bar-projects-alt.vue';

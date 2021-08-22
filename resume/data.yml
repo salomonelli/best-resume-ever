@@ -14,6 +14,7 @@ birth:
   year: 1990
   location: New York
 
+nationalities: American, Spanish
 # you may add more experiences by duplicating the template
 
 experience:
@@ -43,6 +44,11 @@ education:
   timeperiod: March 2009 - December 2011
   description: Major in Engineering, University B, Los Angeles, USA.
 
+volunteering:
+- timeperiod: July 2012
+  company: Save The Children
+  description: Food distribution to families in need 
+
 # skill level goes from 0 to 100
 skills:
 - name: HTML5
@@ -63,6 +69,8 @@ skills:
   level: 99
 knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
   (English and Klingon).
+
+languages: English, Spanish 
 
 projects:
 - name: best-resume-ever

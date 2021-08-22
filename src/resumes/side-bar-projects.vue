@@ -11,7 +11,7 @@
               </div>
           </div>
           <div class="contact">
-              <h3>{{ lang.contact }}</h3>
+              <h3>Contact</h3>
               <div class="contact-row">
                   <a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a>
               </div>
@@ -41,7 +41,7 @@
               </div>
           </div>
           <div class="skills-block">
-              <h3> {{ lang.skills }}</h3>
+              <h3>Skills</h3>
               <div class="skills">
                       <div class="skill" v-for="skill in person.skills">
                           <span class="skill-name">{{skill.name}}</span>
@@ -52,7 +52,7 @@
       </div>
       <div class="right-col">
           <div class="experience">
-              <h3>{{ lang.experience }}</h3>
+              <h3>Experience</h3>
                   <div class="experience-block" v-for="experience in person.experience">
                       <div class="row">
                           <span class="company"> {{experience.company}} -</span>
@@ -67,7 +67,7 @@
                   </div>
           </div>
           <div class="projects">
-              <h3>{{ lang.projects }}</h3>
+              <h3>Projects</h3>
                   <div class="project-block" v-for="project in person.projects">
                       <div class="row">
                           <span class="name"> {{project.name}} </span>
@@ -80,7 +80,7 @@
                   </div>
           </div>
           <div class="education">
-              <h3>{{ lang.education }}</h3>
+              <h3>Education</h3>
                   <div class="education-block" v-for="education in person.education">
                       <div class="row">
                           <span class="degree">{{education.degree}}</span>
@@ -182,6 +182,40 @@ export default Vue.component(name, getVueOptions(name));
       font-size:10px;
       color:rgba(153,153,153,0.6);
     }
+    .skills-block {
+      margin-top:50px;
+      position:relative;
+      .skills {
+        margin-bottom:10px;
+        margin-bottom:20px;
+        position:relative;
+        margin-left:auto;
+        margin-right:auto;
+        display:inline-block;
+        .skill {
+          width:60px;
+          height:60px;
+          border-radius:50%;
+          position:relative;
+          border:#333333 1px solid;
+          margin:3px;
+          float:left;
+          font-size:13px;
+          .skill-name {
+            text-align:center;
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            width:100%;
+          }
+        }
+        .skills-other {
+          display:inline-block;
+          width:100%;
+          margin-top:20px;
+        }
+      }
+    }
   }
   .right-col {
     width:50%;
@@ -220,43 +254,6 @@ export default Vue.component(name, getVueOptions(name));
           font-size:12px;
           text-transform:uppercase;
           margin-bottom:3px;
-        }
-      }
-    }
-    .skills-block {
-      text-align:center;
-      margin-top:50px;
-      position:relative;
-      .skills {
-        text-align:center;
-        margin-bottom:10px;
-        margin-bottom:20px;
-        position:relative;
-        margin-left:auto;
-        margin-right:auto;
-        display:inline-block;
-        .skill {
-          text-align:center;
-          width:80px;
-          height:80px;
-          border-radius:50%;
-          position:relative;
-          border:#333333 1px solid;
-          margin:3px;
-          float:left;
-          font-size:13px;
-          .skill-name {
-            text-align:center;
-            position:absolute;
-            top:50%;
-            transform:translateY(-50%);
-            width:100%;
-          }
-        }
-        .skills-other {
-          display:inline-block;
-          width:100%;
-          margin-top:20px;
         }
       }
     }

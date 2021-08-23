@@ -8,6 +8,7 @@
 </h1>
 
 <div align="center">
+
 [![Travis badge](https://travis-ci.org/salomonelli/best-resume-ever.svg?branch=master)](https://travis-ci.org/salomonelli/best-resume-ever)
 
 </div>
@@ -17,6 +18,7 @@
   <br><br>
   Made with Vue and LESS.
 </h4>
+
 <br>
 <br>
 

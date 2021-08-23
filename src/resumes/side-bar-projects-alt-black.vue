@@ -128,13 +128,15 @@
 import Vue from 'vue';
 import { getVueOptions } from './options';
 
-const name = 'side-bar-projects-alt';
+const name = 'side-bar-projects-alt-black';
 export default Vue.component(name, getVueOptions(name));
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 #resume2 {
+  background: #131516;
+  color: #d8d4cf;
   font-family:'Raleway', sans-serif;
   padding-bottom:30px;
   a, a:focus, a:hover, a:visited{

@@ -364,8 +364,9 @@ export default Vue.component(name, getVueOptions(name));
 
   &__subheader {
     display: block;
-    font-size: 12.5px;
-    font-weight: 400;
+    font-size: 10px;
+    
+    font-weight: bold;
   }
 
   &__plain,

@@ -13,11 +13,11 @@ birth:
   location: Madrid
 
 experience:
-- company: STA Villacarrillo S.L.
-  position: Administrative and web designer
-  timeperiod: June 2017 - September 2017
-  description: Performing office tasks, such as managing the CRM of the company, adapting data in SEO. In addition to the maintenance of the company's website.
-  website: https://stavillacarrillo.jimdofree.com/
+# - company: STA Villacarrillo S.L.
+#   position: Administrative and web designer
+#   timeperiod: June 2017 - September 2017
+#   description: Performing office tasks, such as managing the CRM of the company, adapting data in SEO. In addition to the maintenance of the company's website.
+#   website: https://stavillacarrillo.jimdofree.com/
 
 - company: Euroinnova Business School S.L
   position: Internship trainee
@@ -47,12 +47,19 @@ experience:
 
 - company: IBM Global Technology Services
   position: Junior DevOps Engineer
-  timeperiod: September 2020 - now
+  timeperiod: September 2020 - September 2021 
   description: Management, monitoring, logging, alert and administration of the tools used within the life cycle of the
                   applications and the platform, the tools used are all Prometheus Stack and Elastic Stack. Also provisioning all the infraestructure from DevOps Department with Ansible and managing the same
                   with K8s and Openshift.
   website: https://www.ibm.com/es-es
 
+- company: Kyndryl (Startup by IBM)
+  position: Junior DevOps Engineer
+  timeperiod: September 2021 - now
+  description: Management, monitoring, logging, alert and administration of the tools used within the life cycle of the
+                  applications and the platform, the tools used are all Prometheus Stack and Elastic Stack. Also provisioning all the infraestructure from DevOps Department with Ansible and managing the same
+                  with K8s and Openshift.
+  website: https://kyndryl.com/
 education:
 - degree: MASTER SECURITY INFORMATION
   timeperiod: November 2019 - July 2020
@@ -72,7 +79,7 @@ skills:
 - name: Experience configuring NGINX, Apache, Redis, SSL and TLS certificates, PostgresSQL
 - name: LDAP and Active Directory
 - name: "Cloud: GCP, Azure, AWS, IBM Cloud"
-- name: Logging and Monitoring (ELK and Prometheus)
+- name: Logging, Event Streams and Monitoring (ELK, Apache Kafka and Prometheus)
 
 knowledge: Also proficient in developing CI/CD pipelines, Configuration Management Tools and deployments over large infrastructure.
 
@@ -87,7 +94,7 @@ projects:
 
 contributions:
 - name: Course of computer forensics
-- name: Certified Kubernetes Administrator
+- name: Certified Kubernetes Administrator (CKA)
   
 
 languages:

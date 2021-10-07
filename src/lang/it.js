@@ -1,6 +1,8 @@
 // Italian
 const lang = {
     contact: 'Contatti',
+    born: 'Nato nel',
+    bornIn: 'a',
     experience: 'Esperienza professionale',
     education: 'Formazione',
     skills: 'Competenze',

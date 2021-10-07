@@ -1,4 +1,6 @@
 /* #*/ export const PERSON = `
+# Any fields left unchanged, please delete so your resume is fully yours!
+
 name:
   first: Sofía
   middle: Fernández 
@@ -11,6 +13,8 @@ position: Junior DevOps Engineer
 
 birth:
   location: Madrid
+
+# you may add more experiences by duplicating the template
 
 experience:
 # - company: STA Villacarrillo S.L.
@@ -70,7 +74,7 @@ education:
   description: Universidad de Granada
   website: https://sede.educacion.gob.es/registrotitulos/mostrarAutorizacion?ticket=0907d8fc17368ce11e2d59edd89a0f532057384c
 
-# skill level goes 0 to 100
+# skill level goes from 0 to 100
 skills:
 - name: Bash, Python, C++, Ruby, Groovy
 - name: Docker, Docker-Compose, DockerSwarm, Kubernetes and Openshift

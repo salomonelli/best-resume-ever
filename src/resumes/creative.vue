@@ -3,8 +3,7 @@
     <div class="left-column">
       <div>
         <div class="headline">
-          <span> {{ person.name.first }} {{ person.name.middle }} </span>
-          <span class="uppercase"> {{ person.name.last }} </span>
+          <span> {{ person.name.first }} {{ person.name.middle }} {{ person.name.last }}</span>
         </div>
 
         <p>
@@ -78,7 +77,6 @@
       </div>
 
       <div class="hobbies-container">
-        <!-- <span class="subheadline">Hobbies</span> -->
         <div class="hobbies-content">
           <a v-for="(hobby, index) in person.hobbies" :key="index"
             class="hobby-item"

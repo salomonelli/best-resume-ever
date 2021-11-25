@@ -71,7 +71,7 @@ node -v
 
 2. If you do not have installed Node.js in your machine then go to [this link](https://nodejs.org/en/download/) in order to install node.
 
-## How to use
+## Setting Up Your Environment
 
 1. Clone this repository.
 
@@ -104,7 +104,7 @@ Please read the <a href="DEVELOPER.md">developer docs</a> on how to create or up
 
 ## Contribute
 
-Feel free to add your own templates, language supports, fix bugs or improve the docs. Any kind of help is appreciated! If you make any kind of changes to an existing template, please commit them as new templates.
+If you would like to contribute to Best Resume Every, please take a look at the <a href="CONTRIBUTING.md"> contribution guidelines </a>. Feel free to contribute by adding your own templates, language supports, fix bugs or improve the docs. Any kind of help is appreciated!
 
 <br>
 

@@ -163,7 +163,7 @@ export default Vue.component(name, getVueOptions(name));
         }
     }
     .resume-content {
-        margin-top: 250px;
+        margin-top: 325px;
         margin-left: 15%;
         width: 70%;
         .experience .experience-block {

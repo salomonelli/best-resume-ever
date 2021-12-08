@@ -16,6 +16,7 @@
   </div>
   <div class="resume-content">
     <div class="experience">
+      <div class="about">{{person.about}}</div>
       <h3>{{ lang.experience }}</h3>
       <div class="experience-block" v-for="experience in person.experience" :key="experience.company">
         <div class="row">

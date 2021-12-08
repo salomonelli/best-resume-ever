@@ -211,8 +211,9 @@ export default Vue.component(name, getVueOptions(name));
         height:8px;
         border-radius:3px;
         margin-top:6.5px;
+        margin-left:60px;
         position:relative;
-        width:249px;
+        width:150px;
         .level {
           background:#757575;
           height:100%;

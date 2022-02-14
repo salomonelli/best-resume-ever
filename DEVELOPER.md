@@ -33,9 +33,11 @@ Your new resume will be now reachable at localhost:8080/#/resume/TEMPLATE-NAME.
 
 5. Export resumes as PDF with `npm run export`. Verify export of new template.
 
-4. Generate previews by converting PDF-files to PNG-files with `npm run preview`.
+    Alternatively, export a single resume with `npm run export --template=TEMPLATE_NAME`.
 
-5. Add preview to `/src/pages/home.vue`:
+6. Generate previews by converting PDF-files to PNG-files with `npm run preview`.
+
+7. Add preview to `/src/pages/home.vue`:
 ```javascript
 <div class="preview">
   <router-link v-bind:to="'/resume/TEMPLATE-NAME'">

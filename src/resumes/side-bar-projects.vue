@@ -182,6 +182,40 @@ export default Vue.component(name, getVueOptions(name));
       font-size:10px;
       color:rgba(153,153,153,0.6);
     }
+    .skills-block {
+      margin-top:50px;
+      position:relative;
+      .skills {
+        margin-bottom:10px;
+        margin-bottom:20px;
+        position:relative;
+        margin-left:auto;
+        margin-right:auto;
+        display:inline-block;
+        .skill {
+          width:60px;
+          height:60px;
+          border-radius:50%;
+          position:relative;
+          border:#333333 1px solid;
+          margin:3px;
+          float:left;
+          font-size:13px;
+          .skill-name {
+            text-align:center;
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            width:100%;
+          }
+        }
+        .skills-other {
+          display:inline-block;
+          width:100%;
+          margin-top:20px;
+        }
+      }
+    }
   }
   .right-col {
     width:50%;
@@ -220,43 +254,6 @@ export default Vue.component(name, getVueOptions(name));
           font-size:12px;
           text-transform:uppercase;
           margin-bottom:3px;
-        }
-      }
-    }
-    .skills-block {
-      text-align:center;
-      margin-top:50px;
-      position:relative;
-      .skills {
-        text-align:center;
-        margin-bottom:10px;
-        margin-bottom:20px;
-        position:relative;
-        margin-left:auto;
-        margin-right:auto;
-        display:inline-block;
-        .skill {
-          text-align:center;
-          width:80px;
-          height:80px;
-          border-radius:50%;
-          position:relative;
-          border:#333333 1px solid;
-          margin:3px;
-          float:left;
-          font-size:13px;
-          .skill-name {
-            text-align:center;
-            position:absolute;
-            top:50%;
-            transform:translateY(-50%);
-            width:100%;
-          }
-        }
-        .skills-other {
-          display:inline-block;
-          width:100%;
-          margin-top:20px;
         }
       }
     }

@@ -12,3 +12,5 @@ firefox_root/
 GeckoChildCrash*
 electroshot-config.json
 tmpaddon*
+.idea*
+.vscode*

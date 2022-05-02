@@ -57,4 +57,4 @@ Example:
 
 ## Spacing
 
-Please refer to the linting standards as described in the in the repository.
+Please refer to the linting standards as described in the repository.

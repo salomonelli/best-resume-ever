@@ -5,7 +5,7 @@ Hello and welcome, below is a guide to help developers with their code syntax to
 
 # Variables
 
-Declare variables as a constant where possible, otherwise use var. Although Naming casing varies, the majority of instances use camelCase, therefore please use camelCase when declaring a variable.
+Declare variables as a constant where possible, otherwise use ```var```. Although naming varies, the majority of instances use camelCase, therefore please use camelCase when declaring a variable.
 
 Example using **const**:
 ```

@@ -6,8 +6,8 @@ const lang = {
     experience: 'Опыт',
     education: 'Образование',
     skills: 'Навыки',
-    projects: 'проектов',
-    contributions: 'взносы',
+    projects: 'Проекты',
+    contributions: 'Contributions',
     about: 'Обо мне'
 };
 

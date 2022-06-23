@@ -55,7 +55,7 @@ skills:
 - name: SQL
   level: 50
   
-knowledge: Также есть небольшой опыт работы с Nest.JS, TypeORM, Nginx, Linux (Ubuntu)
+knowledge: Также есть небольшой опыт работы с Nest.JS, TypeORM, Nginx, Linux (Ubuntu), CI/CD (GitHub Actions)
 
 projects:
 - name: Travel God
@@ -92,7 +92,7 @@ contact:
   email: lipatov.work@bk.ru
   phone: +7 (927) 474 10-66
   city: Казань
-#  website: johndoe.com
+  website: https://lipatovalexander.github.io
   github: LipatovAlexander
   telegram: ASLipatov
 

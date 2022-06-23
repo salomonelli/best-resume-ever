@@ -1,98 +1,100 @@
-/* #*/ export const PERSON = `
-# Any fields left unchanged, please delete so your resume is fully yours!
+export const PERSON = `
 
 name:
-  first: John
+  first: Александр
   middle:
-  last: Doe
-about: Hi, my name is John Doe. I'm just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+  last: Липатов
+about: Привет! Пока что я, возможно, самый обычный студент-программист. 
+       Сплю днём, учусь ночью. Иногда хожу на пары.
+       Наймите меня :)
+
+position: Junior Backend/Frontend Developer
 
 birth:
-  year: 1990
-  location: New York
-
-# you may add more experiences by duplicating the template
+  year: 2002
+  location: Тольятти
 
 experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
-  website: https://example.com
-
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
-
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
-
+- company: Simbirsoft
+  position: Практикант
+  timeperiod: июнь 2021 - июль 2021
+  description: Первый опыт командной работы. Создание простого MVP в формате 2-х недельного хакатона.
+  website: https://www.simbirsoft.com
+  
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
-  website: https://example.com
-
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
-
-# skill level goes from 0 to 100
+- degree: Высшее очное
+  timeperiod: 2020 - 2024
+  description: Программная инженерия, ИТИС, КФУ, Казань
+  website: https://kpfu.ru/itis
+  
 skills:
-- name: HTML5
-  level: 99
-- name: CSS3
-  level: 95
-- name: JavaScript
-  level: 97
-- name: Node.js
-  level: 93
-- name: Angular 2
-  level: 60
-- name: TypeScript
-  level: 80
-- name: ES.Next
+- name: git
   level: 70
+- name: HTTP
+  level: 90
+- name: RestAPI
+  level: 80
+- name: .NET
+  level: 80
+- name: Entity Framework
+  level: 80
+- name: ASP.Net Core
+  level: 80
+- name: HTML5
+  level: 90
+- name: CSS3
+  level: 70
+- name: JavaScript
+  level: 50
+- name: TypeScript
+  level: 50
+- name: React.JS
+  level: 50
 - name: Docker
-  level: 99
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
+  level: 50
+- name: SQL
+  level: 50
+  
+knowledge: Также есть небольшой опыт работы с Nest.JS, TypeORM, Nginx, Linux (Ubuntu)
 
 projects:
-- name: best-resume-ever
-  platform: Vue
-  timeperiod: February 2016
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: Travel God
+  platform: ASP.Net Core Razor Pages
+  timeperiod: Ноябрь - Декабрь 2021
+  description: ✈️ Сайт для объединения в группы для совместных туристических поездок
+  url: https://github.com/LipatovAlexander/TravelGod.ru
 
-# optional, not all resume templates have hobbies included
+- name: Live With Music
+  platform: ASP.Net Core MVC + F# + Nest.JS + React.JS
+  timeperiod: Март - Июнь 2022
+  description: 🎵 Приложение для прослушивания музыки
+  url: https://github.com/LipatovAlexander/LiWiMus
+
+- name: Student Alcohol Consumption
+  platform: Tensorflow + Django
+  timeperiod: 22 мая 2022
+  description: 🤖 Мини-проект по машинному обучению
+  url: https://github.com/LipatovAlexander/StudentAlcoholConsumption
+
 hobbies:
-- name: Video Games
-  iconClass: fa fa-gamepad
-  url: https://example.com
+- name: Сериалы
+  iconClass: fa fa-film
 
-- name: Drawing
-  iconClass: fa fa-pencil
-  url: https://example.com
+- name: GitHub Explore
+  iconClass: fa fa-search
 
-contributions:
-- name: best-resume-ever
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
-  url: https://github.com/salomonelli/best-resume-ever
+# contributions:
+# - name: best-resume-ever
+#   description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
+#   url: https://github.com/salomonelli/best-resume-ever
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
-# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
-lang: en
+  email: lipatov.work@bk.ru
+  phone: +7 (927) 474 10-66
+  city: Казань
+#  website: johndoe.com
+  github: LipatovAlexander
+  telegram: ASLipatov
+
+lang: ru
 `

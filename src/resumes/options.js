@@ -38,6 +38,10 @@ function getVueOptions (name) {
                 if(this.person.contact.github) {
                     links.github = `https://github.com/${this.person.contact.github}`;
                 }
+                
+                if(this.person.contact.telegram) {
+                    links.telegram = `https://t.me/${this.person.contact.telegram}`;
+                }
 
                 if(this.person.contact.codefights) {
                     links.codefights = `https://codefights.com/profile/${this.person.contact.codefights}`;

@@ -15,9 +15,6 @@
 
           <div class="section-content section-content--plain">
             {{ person.about }}
-            <br/>
-            <br/>
-            {{ person.knowledge }}
           </div>
         </div>
 
@@ -40,6 +37,10 @@
               </span>
             </a>
           </div>
+          
+          <div class="section-content section-content--plain">
+            {{ person.knowledge }}
+          </div>
         </div>
 
         <div class="section">
@@ -49,7 +50,7 @@
 
           <div class="section-content section-content--plain">
             <div class="section-link">
-              <i class="section-link__icon material-icons">business</i>{{ person.contact.street }}
+              <i class="section-link__icon material-icons">business</i>{{ person.contact.city }}
             </div>
 
             <a
@@ -88,6 +89,13 @@
               class="section-link link"
               :href="contactLinks.medium">
               <i class="section-link__icon fa fa-medium"></i>{{ person.contact.medium }}
+            </a>            
+            
+            <a
+              v-if="person.contact.telegram"
+              class="section-link link"
+              :href="contactLinks.telegram">
+              <i class="section-link__icon fa fa-telegram"></i>{{ person.contact.telegram }}
             </a>
           </div>
         </div>
@@ -179,6 +187,27 @@
                 {{ contribution.url }}
               </span>
             </a>
+          </div>
+        </div>
+        
+        <div
+          v-if="person.hobbies"
+          class="section">
+          <div class="section-headline">
+            <i class="section-headline__icon fa fa-star"></i>{{lang.hobbies}}
+          </div>
+
+          <div class="section-content-grid">
+              <div 
+                v-for="(hobby, index) in person.hobbies"
+                class="section-content__item-grid"
+                :key="index"
+              >
+                <span class="section-content__header">
+                  <i :class="hobby.iconClass"></i>
+                  {{ hobby.name }} 
+                </span>
+              </div>
           </div>
         </div>
       </div>

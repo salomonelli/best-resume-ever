@@ -7,17 +7,17 @@ import {
 } from '../terms';
 
 // Called by templates to decrease redundancy
-function getVueOptions (name) {
+function getVueOptions(name) {
     const opt = {
         name: name,
-        data () {
+        data() {
             return {
                 person: yaml.load(PERSON),
                 terms: terms,
             };
         },
         computed: {
-            lang () {
+            lang() {
                 const defaultLang = this.terms.en;
                 const useLang = this.terms[this.person.lang];
 
@@ -35,31 +35,31 @@ function getVueOptions (name) {
             contactLinks() {
                 const links = {};
 
-                if(this.person.contact.github) {
+                if (this.person.contact.github) {
                     links.github = `https://github.com/${this.person.contact.github}`;
                 }
-                
-                if(this.person.contact.telegram) {
+
+                if (this.person.contact.telegram) {
                     links.telegram = `https://t.me/${this.person.contact.telegram}`;
                 }
 
-                if(this.person.contact.codefights) {
+                if (this.person.contact.codefights) {
                     links.codefights = `https://codefights.com/profile/${this.person.contact.codefights}`;
                 }
 
-                if(this.person.contact.medium) {
+                if (this.person.contact.medium) {
                     links.medium = `https://medium.com/@${this.person.contact.medium}`;
                 }
 
-                if(this.person.contact.email) {
+                if (this.person.contact.email) {
                     links.email = `mailto:${this.person.contact.email}`;
                 }
 
-                if(this.person.contact.linkedin) {
+                if (this.person.contact.linkedin) {
                     links.linkedin = `https://linkedin.com/in/${this.person.contact.linkedin}`;
                 }
 
-                if(this.person.contact.phone) {
+                if (this.person.contact.phone) {
                     links.phone = `tel:${this.person.contact.phone}`;
                 }
 

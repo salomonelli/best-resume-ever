@@ -4,7 +4,7 @@ name:
   first: Александр
   middle:
   last: Липатов
-about: Привет! Пока что я, возможно, самый обычный студент-программист. 
+about: Привет! Пока что я, возможно, самый обычный студент-программист.
        Сплю днём, учусь ночью. Иногда хожу на пары.
        Наймите меня :)
 
@@ -20,13 +20,13 @@ experience:
   timeperiod: июнь 2021 - июль 2021
   description: Первый опыт командной работы. Создание простого MVP в формате 2-х недельного хакатона.
   website: https://www.simbirsoft.com
-  
+
 education:
 - degree: Высшее очное
   timeperiod: 2020 - 2024
   description: Программная инженерия, ИТИС, КФУ, Казань
   website: https://kpfu.ru/itis
-  
+
 skills:
 - name: git
   level: 70
@@ -54,7 +54,7 @@ skills:
   level: 50
 - name: SQL
   level: 50
-  
+
 knowledge: Также есть небольшой опыт работы с Nest.JS, TypeORM, Nginx, Linux (Ubuntu), CI/CD (GitHub Actions)
 
 projects:

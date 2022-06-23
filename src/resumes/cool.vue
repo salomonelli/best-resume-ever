@@ -37,7 +37,7 @@
               </span>
             </a>
           </div>
-          
+
           <div class="section-content section-content--plain">
             {{ person.knowledge }}
           </div>
@@ -89,8 +89,8 @@
               class="section-link link"
               :href="contactLinks.medium">
               <i class="section-link__icon fa fa-medium"></i>{{ person.contact.medium }}
-            </a>            
-            
+            </a>
+
             <a
               v-if="person.contact.telegram"
               class="section-link link"
@@ -189,7 +189,7 @@
             </a>
           </div>
         </div>
-        
+
         <div
           v-if="person.hobbies"
           class="section">
@@ -198,14 +198,14 @@
           </div>
 
           <div class="section-content-grid">
-              <div 
+              <div
                 v-for="(hobby, index) in person.hobbies"
                 class="section-content__item-grid"
                 :key="index"
               >
                 <span class="section-content__header">
                   <i :class="hobby.iconClass"></i>
-                  {{ hobby.name }} 
+                  {{ hobby.name }}
                 </span>
               </div>
           </div>

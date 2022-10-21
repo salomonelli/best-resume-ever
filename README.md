@@ -90,7 +90,7 @@ git clone https://github.com/salomonelli/best-resume-ever.git
 ![Resume previews](/readme-images/resumePreviews.png)
 
  
- <img src="src/assets/error.PNG" alt="error" width="200">
+ <img src="src/assets/error.PNG" alt="error" width="1000">
 
 
 

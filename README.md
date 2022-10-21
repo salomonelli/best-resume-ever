@@ -87,13 +87,18 @@ git clone https://github.com/salomonelli/best-resume-ever.git
 
 5. Preview resumes with `npm run dev`. The command will start a server instance and listen on port 8080.  Open (http://localhost:8080/home) in your browser. The page will show some resume previews. To see the preview of your resume, with your picture and data, click on one layout that you like and the resume will be opened in the same window.
 
+NOTE: If you are using a Windows terminal, you may encounter a bunch of linting errors after running `npm run dev` as seen below:
+<img src="src/assets/error.PNG" alt="error" width="1000">
+
+If so, steps to resolve this issue:
+- Open the .eslintrc.json file which is right in the main repository (best-resume-ever\.eslintrc.json)
+- Locate line 99 in the file which looks like this:
+<img src="src/assets/unix.PNG" alt="error" width="1000">
+- Change line 99 where it says `unix` to `windows`
+<img src="src/assets/windows.PNG" alt="error" width="1000">
+- Save the file and rerun `npm run dev`
+
 ![Resume previews](/readme-images/resumePreviews.png)
-
- 
- <img src="src/assets/error.PNG" alt="error" width="1000">
-
-
-
 
 6. Export your resume as pdf by running the command `npm run export`. In order to avoid errors due to the concurrency of two  `npm run` commands, stop the execution of the previus `npm run dev` and then type the export command.
 

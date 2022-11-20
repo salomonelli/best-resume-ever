@@ -89,8 +89,14 @@ git clone https://github.com/salomonelli/best-resume-ever.git
 
 ![Resume previews](/readme-images/resumePreviews.png)
 
+6. Do this step if you want to create a PDF resume, if not, skip this step. This software has experienced issues running on newer node.js versions such as 16.18.0 when trying use the npm run export for creating a pdf for the resumes. Node 12.0.0 has been tested and works well for this software. You will need Node Version Manager (nvm) to install and switch back to an earlier version. NVM allows you to very easily download, install, switch and manage multiple versions of nodejs.
+If you dont have nvm, you can obtain it by following this command:
+`curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash1`
+You can now download and install node v12 using this command:
+`nvm install 12.0.0`
+If you want to switch back to your newer version you can use the command `nvm use <version>`
 
-6. Export your resume as pdf by running the command `npm run export`. In order to avoid errors due to the concurrency of two  `npm run` commands, stop the execution of the previus `npm run dev` and then type the export command.
+7. Export your resume as pdf by running the command `npm run export`. In order to avoid errors due to the concurrency of two  `npm run` commands, stop the execution of the previus `npm run dev` and then type the export command.
 
 All resumes will be exported to the `pdf/` folder.
 

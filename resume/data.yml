@@ -44,6 +44,10 @@ education:
   description: Major in Engineering, University B, Los Angeles, USA.
 
 # skill level goes from 0 to 100
+# It is a known issue that single character names result in a formatting issue. 
+# example: programming language "C" will push the letter C to the opposite side of the template. 
+# This only impacts some templates such as material-dark. 
+# A quick fix is to type a "." right after the C, making it C.
 skills:
 - name: HTML5
   level: 99

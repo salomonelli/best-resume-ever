@@ -25,7 +25,8 @@ directories.forEach(async (dir) => {
         console.dir(e);
     }
     const source = path.join(__dirname, '../pdf/' + getTemplateName(dir) + '-0.png');
-    const output = path.join(__dirname, '../src/assets/preview/resume-' + getTemplateName(dir) + '.png');
+    const output = path.join(__dirname, '../src/assets/preview/resume-' 
+        + getTemplateName(dir) + '.png');
     console.log(output);
     mv(source, output, function (err) {
         if (err) console.dir(err);

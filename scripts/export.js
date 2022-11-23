@@ -16,7 +16,8 @@ const {
 const fetchResponse = () => {
     return new Promise((res, rej) => {
         try {
-            const req = http.request(`http://localhost:${config.dev.port}/#/`, response => res(response.statusCode));
+            const req = http.request(`http://localhost:${config.dev.port}/#/`, 
+                response => res(response.statusCode));
             req.on('error', (err) => rej(err));
             req.end();
         } catch (err) {
@@ -37,13 +38,7 @@ const waitForServerReachable = () => {
         filter(ok => !!ok)
     );
 };
-/*
-const timedOut = timeout => {
-    return new Promise(res => {
-        setTimeout(res, timeout);
-    });
-};
-*/
+
 const convert = async () => {
     await waitForServerReachable().pipe(
         first()

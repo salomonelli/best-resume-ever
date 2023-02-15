@@ -152,9 +152,9 @@
 
     <div class="sponsoring">
       <div class="sponsored-by">Sponsored by:</div><br />
-      <a href="https://rxdb.info/nodejs-database.html?utm_source=github&utm_medium=repo&utm_campaign=github-best-resume-ever">
+      <a href="https://rxdb.info/?utm_source=github&utm_medium=repo&utm_campaign=github-best-resume-ever">
         <img
-            src="https://github.com/pubkey/rxdb/raw/master/docs-src/files/logo/logo_text.svg"
+            src="https://rxdb.info/files/logo/logo_text.svg"
             alt="Sponsored by RxDB - NodeJs Database"
             width="100%"
          />

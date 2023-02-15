@@ -61,6 +61,8 @@
 <br>
 <br>
 
+
+
 ## Prerequisite
 
 1. It is required to have Node.js with version 8.5.0 or higher. To see what version of Node.js is installed on your machine type the following command in the terminal:
@@ -107,6 +109,22 @@ Please read the <a href="DEVELOPER.md">developer docs</a> on how to create or up
 Feel free to add your own templates, language supports, fix bugs or improve the docs. Any kind of help is appreciated! If you make any kind of changes to an existing template, please commit them as new templates.
 
 <br>
+
+
+## Sponsored by
+
+<p align="center">
+    <a href="https://rxdb.info/nodejs-database.html?utm_source=github&utm_medium=repo&utm_campaign=github-best-resume-ever">
+        <img
+            src="https://github.com/pubkey/rxdb/raw/master/docs-src/files/logo/logo_text.svg"
+            alt="Sponsored by RxDB - NodeJs Database"
+            width="300"
+         />
+         <br />
+         <br />
+         <span>The <b>NodeJs Database</b></span>
+    </a>
+</p>
 
 ## Credits
 

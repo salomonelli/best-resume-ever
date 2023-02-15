@@ -78,7 +78,6 @@
     "lolex": "2.7.5",
     "mocha": "5.2.0",
     "mv": "2.1.1",
-    "node": "10.11.0",
     "opn": "5.4.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "ora": "3.0.0",
@@ -107,7 +106,7 @@
     "webpack-merge": "4.1.4"
   },
   "engines": {
-    "node": ">= 8.5.0",
-    "npm": ">= 5.0.0"
+    "node": ">= 18.0.0",
+    "npm": ">= 6.0.0"
   }
 }

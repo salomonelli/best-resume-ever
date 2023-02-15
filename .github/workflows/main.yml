@@ -35,4 +35,8 @@ jobs:
       - run: npm run preview
       - run: npm run test:export
       - run: npm run test:docs
-      - run: npm run test:e2e
+
+      - name: e2e test
+        uses: GabrielBB/xvfb-action@v1
+        with:
+          run: npm run test:e2e

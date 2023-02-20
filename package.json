@@ -27,6 +27,7 @@
     "lint:fix": "eslint --ext .js,.vue src scripts --fix"
   },
   "dependencies": {
+    "detect-port": "^1.2.2",
     "font-awesome": "4.7.0",
     "js-yaml": "3.13.1",
     "material-design-icons": "3.0.1",

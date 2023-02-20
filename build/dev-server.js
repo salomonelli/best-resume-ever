@@ -7,6 +7,7 @@ var opn = require('opn')
 var path = require('path')
 var express = require('express')
 var webpack = require('webpack')
+var detect = require('detect-port')
 var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = process.env.NODE_ENV === 'testing'
   ? require('./webpack.prod.conf')
@@ -68,7 +69,7 @@ app.use(hotMiddleware)
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
 
-var uri = 'http://localhost:' + port
+var uri = 'http://localhost:';
 
 var _resolve
 var readyPromise = new Promise(resolve => {
@@ -77,19 +78,36 @@ var readyPromise = new Promise(resolve => {
 
 console.log('> Starting dev server...')
 devMiddleware.waitUntilValid(() => {
-  console.log('> Listening at ' + uri + '\n')
   // when env is testing, don't need open it
   if (autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
     opn(uri)
   }
   _resolve()
 })
+var server;
 
-var server = app.listen(port)
+function startServer(port) {
+  detect(port)
+    .then(_port => {
+      server = port === _port ? (
+        app.listen(port),
+          console.log('> Listening at ' + uri + port +  '\n')
+      ) : (
+        app.listen(_port),
+          console.log('> Listening at ' + uri + _port +  '\n')
+      )
+
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
+
+startServer(port);
 
 module.exports = {
   ready: readyPromise,
   close: () => {
     server.close()
   }
-}
+};

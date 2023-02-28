@@ -94,8 +94,20 @@ const getResumesFromDirectories = () => {
 
 const getDirectories = () => {
     const srcpath = path.join(__dirname, '../src/resumes');
-    return fs.readdirSync(srcpath)
-    .filter(file => file !== 'resumes.js' && file !== 'template.vue' && file !== 'options.js');
+    if (process.env.npm_config_template) {
+        const templateFile = process.env.npm_config_template + '.vue';
+        const templatePath = path.join(srcpath, templateFile);
+        try {
+            fs.accessSync(templatePath);
+        } catch (err) {
+            console.error(`Export error: no such template, '${templateFile}'`);
+            throw err;
+        }
+        return [templateFile];
+    } else {
+        return fs.readdirSync(srcpath)
+            .filter(file => !['resumes.js', 'template.vue', 'options.js'].includes(file));
+    }
 };
 
 convert();

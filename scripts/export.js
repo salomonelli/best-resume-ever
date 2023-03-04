@@ -53,6 +53,8 @@ const convert = async () => {
     console.log('Exporting ...');
     try {
         const fullDirectoryPath = path.join(__dirname, '../pdf/');
+        const previewOutPath = path.join(__dirname, '../src/assets/preview/resume-');
+        const printCSSPath = path.join(__dirname, '../src/assets/css/');
         const directories = getResumesFromDirectories();
         directories.forEach(async (dir) => {
             const browser = await puppeteer.launch({
@@ -68,10 +70,18 @@ const convert = async () => {
             ) {
                 fs.mkdirSync(fullDirectoryPath);
             }
+            await page.addStyleTag({path: printCSSPath + 'print.css'});
+            await page.emulateMedia('print');
+            await page.screenshot({
+                path: previewOutPath + dir.name + '.png',
+                fullPage: true,
+                omitBackground: false
+            });
             await page.pdf({
                 path: fullDirectoryPath + dir.name + '.pdf',
                 format: 'A4'
             });
+            await page.close();
             await browser.close();
         });
     } catch (err) {

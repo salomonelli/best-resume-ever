@@ -181,7 +181,7 @@
       </div>
     </div>
 
-    <img class="picture"/>
+    <img class="picture" v-if="isPhotoAvailable" />
 
   </div>
 </template>

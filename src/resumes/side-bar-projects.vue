@@ -5,7 +5,7 @@
           <span class="person-position">  {{person.position}}    </span>
       </div>
       <div class="left-col">
-          <div class="person-image">
+          <div class="person-image" v-if="isPhotoAvailable">
               <div class="image-centerer">
                   <div class="img"></div>
               </div>

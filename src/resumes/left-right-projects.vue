@@ -6,7 +6,7 @@
   <div class="row text-center">
     <p class="position center">{{person.position}}</p>
   </div>
-  <div class="row">
+  <div class="row" v-if="isPhotoAvailable">
     <div class="image center">
       <div class="img"></div>
     </div>

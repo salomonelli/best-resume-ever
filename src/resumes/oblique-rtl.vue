@@ -8,7 +8,7 @@
           <div class="name">{{person.name.first}} {{person.name.middle}} {{person.name.last}}</div>
           <div class="position">{{person.position}}</div>
         </div>
-        <div class="img">
+        <div class="img" v-if="isPhotoAvailable">
         </div>
       </div>
 

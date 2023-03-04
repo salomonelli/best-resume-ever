@@ -16,6 +16,7 @@
   </div>
   <div class="resume-content">
     <div class="experience">
+      <div class="about">{{person.about}}</div>
       <h3>{{ lang.experience }}</h3>
       <div class="experience-block" v-for="experience in person.experience" :key="experience.company">
         <div class="row">
@@ -103,13 +104,13 @@ export default Vue.component(name, getVueOptions(name));
         border-color: #006064 transparent transparent transparent;
         position: absolute;
         right: -600px;
-        top: 0;
+        top: -140px;
     }
     .resume-header .person-header {
         position: absolute;
         z-index: 20;
         left: 15%;
-        top: 200px;
+        top: 50px;
         .person-wrapper {
             overflow: hidden;
             position: relative;
@@ -147,7 +148,7 @@ export default Vue.component(name, getVueOptions(name));
         }
     }
     .resume-content {
-        margin-top: 435px;
+        margin-top: 400px;
         margin-right: 15%;
         width: 70%;
         .experience .experience-block {

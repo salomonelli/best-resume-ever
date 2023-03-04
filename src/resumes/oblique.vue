@@ -110,7 +110,7 @@ export default Vue.component(name, getVueOptions(name));
     position:absolute;
     z-index:20;
     right:15%;
-    top:50px;
+    top:30px;
     .person-wrapper {
       overflow:hidden;
       position:relative;
@@ -151,7 +151,7 @@ export default Vue.component(name, getVueOptions(name));
     font-weight:bold;
   }
   .resume-content {
-    margin-top:435px;
+    margin-top:480px;
     margin-left:15%;
     width:70%;
     .about {

@@ -2,7 +2,7 @@
 
 ## This PR contains:
 <!--
- - New resume tempalte
+ - New resume template
 -->
 
 ## Describe the problem you have without this PR

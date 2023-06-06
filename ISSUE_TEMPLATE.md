@@ -2,10 +2,7 @@
 
 ### Case
 <!-- IS IT A:
-- BUG
-- FEATURE REQUEST
-- ENHANCEMENT
-- HELP QUESTION
+- New Resume Template
 -->
 
 ## Issue

@@ -43,9 +43,11 @@ Your new resume will be now reachable at localhost:8080/#/resume/TEMPLATE-NAME.
       <img src="../assets/preview/TEMPLATE-NAME.png" />
       <span>left-right</span>
     </div>
+    
   </router-link>
 </div>
 ```
+6. Add preview image to `/assets/preview/template-name.png`:
 
 ## Fonts
 

@@ -2,12 +2,7 @@
 
 ## This PR contains:
 <!--
- - IMPROVED DOCS
- - A TYPO-FIX
- - A BUGFIX
- - A NEW FEATURE
- - A BREAKING CHANGE
- - SOMETHING ELSE
+ - New resume template
 -->
 
 ## Describe the problem you have without this PR

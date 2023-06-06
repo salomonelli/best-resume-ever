@@ -149,7 +149,16 @@
         </router-link>
       </div>
     </div>
-
+    
+    <div class="preview">
+    <router-link v-bind:to="'/resume/regular'">
+      <div class="preview-wrapper">
+        <img src="../assets/preview/regular.png" />
+        <span>Basic Left Resume</span>
+      </div>
+    </router-link>
+  </div>
+  
     <div class="sponsoring">
       <div class="sponsored-by">Sponsored by:</div><br />
       <a href="https://rxdb.info/?utm_source=github&utm_medium=repo&utm_campaign=github-best-resume-ever">

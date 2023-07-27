@@ -14,66 +14,34 @@
 </div>
 
 <h4 align="center">
-  :necktie: :briefcase: Build fast :rocket: and easy multiple beautiful resumes and create your best CV ever!
+  Build multiple fast and easy resumes to create your best CV ever!
   <br><br>
   Made with Vue and LESS.
 </h4>
 
-<br>
-<br>
+## Examples
 
-<p align="left">
-<p>Cool<br>
-<img src="src/assets/preview/resume-cool.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-cool-rtl2.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-cool-rtl.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-</p>
-<p>Creative<br>
-<img src="src/assets/preview/resume-creative.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-</p>
-<p>Green<br>
-<img src="src/assets/preview/resume-green.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-</p>
-<p>Purple<br>
-<img src="src/assets/preview/resume-purple.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-</p>
-<p>Side Bar<br>
-<img src="src/assets/preview/resume-side-bar.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-side-bar-rtl.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-side-bar-projects.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-</p>
-<p>Left Right<br>
-<img src="src/assets/preview/resume-left-right.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-left-right-rtl.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-left-right-projects.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-</p>
-<p>Material Dark<br>
-<img src="src/assets/preview/resume-material-dark.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-material-dark-projects.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-</p>
-<p>Oblique<br>
-<img src="src/assets/preview/resume-oblique.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-oblique-rtl.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-<img src="src/assets/preview/resume-oblique-projects.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
-</p>
-</p>
-
-<br>
-<br>
-
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|Cool 1 <img src="src/assets/preview/resume-cool.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">  |Cool 2  <img src="src/assets/preview/resume-cool-rtl2.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">|Cool 3 <img src="src/assets/preview/resume-cool-rtl.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">|
+|Creative <img src="src/assets/preview/resume-creative.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">  |Green  <img src="src/assets/preview/resume-green.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">|Purple <img src="src/assets/preview/resume-purple.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">|
+|Side Bar 1<img src="src/assets/preview/resume-side-bar.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">  |Side Bar 2  <img src="src/assets/preview/resume-side-bar-rtl.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">|Side Bar 3 <img src="src/assets/preview/resume-side-bar-projects.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">|
+|Left Right 1<img src="src/assets/preview/resume-left-right.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">  |Left Right 2  <img src="src/assets/preview/resume-left-right-rtl.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">|Left Right 3 <img src="src/assets/preview/resume-left-right-projects.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">|
+|Material Dark 1<img src="src/assets/preview/resume-material-dark.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">  |Material Dark 2  <img src="src/assets/preview/resume-material-dark-projects.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">|Oblique 1 <img src="src/assets/preview/resume-oblique.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">|
+|Oblique 2<img src="src/assets/preview/resume-oblique-rtl.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">  |Oblique 3  <img src="src/assets/preview/resume-oblique-projects.png" width="300" style="margin-right:5px; border: 1px solid #ccc;">| 
 
 
 ## Prerequisite
 
-1. It is required to have Node.js with version 8.5.0 or higher. To see what version of Node.js is installed on your machine type the following command in the terminal:
+1. It is required to have Node.js with version 8.5.0 or higher installed. To see what version of Node.js is installed on your machine, type the following command into the terminal:
 
 ```
 node -v
 ```
 
-2. If you do not have installed Node.js in your machine then go to [this link](https://nodejs.org/en/download/) in order to install node.
+2. If you do not have Node.js installed on your machine, then go to [this link](https://nodejs.org/en/download/) in order to install Node.js.
 
-## How to use
+## How to Use
 
 1. Clone this repository.
 
@@ -92,24 +60,17 @@ git clone https://github.com/salomonelli/best-resume-ever.git
 ![Resume previews](/readme-images/resumePreviews.png)
 
 
-6. Export your resume as pdf by running the command `npm run export`. In order to avoid errors due to the concurrency of two  `npm run` commands, stop the execution of the previus `npm run dev` and then type the export command.
+6. Export your resume as a pdf by running the command `npm run export`. In order to avoid errors due to the concurrency of two  `npm run` commands, stop the execution of the previus `npm run dev` and then type the export command.
 
 All resumes will be exported to the `pdf/` folder.
-
-<br>
 
 ## Creating and Updating Templates
 
 Please read the <a href="DEVELOPER.md">developer docs</a> on how to create or update templates.
 
-<br>
-
 ## Contribute
 
 Feel free to add your own templates, language supports, fix bugs or improve the docs. Any kind of help is appreciated! If you make any kind of changes to an existing template, please commit them as new templates.
-
-<br>
-
 
 ## Sponsored by
 
@@ -118,7 +79,7 @@ Feel free to add your own templates, language supports, fix bugs or improve the 
         <img
             src="https://rxdb.info/files/logo/logo_text.svg"
             alt="Sponsored by RxDB - NodeJs Database"
-            width="300"
+            width="200"
          />
          <br />
          <br />
@@ -133,8 +94,6 @@ This project uses several open source packages:
 - <a href="https://github.com/vuejs/vue" target="_blank">Vue</a>
 - <a href="https://github.com/GoogleChrome/puppeteer" target="_blank">Puppeteer</a>
 - <a href="https://github.com/less/less.js" target="_blank">LESS</a>
-
-<br>
 
 ---
 

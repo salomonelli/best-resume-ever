@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+  workflow_dispatch:
+
+jobs:
+  core:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set node version
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          
+      - name: Reuse npm cache folder
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: |
+            ~/.npm
+            ./node_modules
+          key: ${{ runner.os }}-npm-core-x8-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-core-x8-
+  
+      - run: npm install
+      - run: npm run lint
+      - run: npm run export
+      - run: npm run preview
+      - run: npm run test:export
+      - run: npm run test:docs
+
+      - name: e2e test
+        uses: GabrielBB/xvfb-action@v1
+        with:
+          run: npm run test:e2e

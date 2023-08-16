@@ -8,6 +8,7 @@ import it from './lang/it';
 import es from './lang/es';
 import th from './lang/th';
 import id from './lang/id';
+import nonn from './lang/no-nn';
 import sv from './lang/sv';
 import ru from './lang/ru';
 import ptbr from './lang/pt-br';
@@ -21,7 +22,32 @@ import lt from './lang/lt';
 import tr from './lang/tr';
 import ko from './lang/ko';
 import el from './lang/el';
+import nbno from './lang/nb-no';
 
 export const terms = {
-  en, de, fr, pt, ca, cn, it, es, th, 'pt-br': ptbr, ru, sv, id, hu, pl, ja, nl, he, 'zh-tw': zhtw, lt, tr, ko, el
+    en,
+    de,
+    fr,
+    pt,
+    ca,
+    cn,
+    it,
+    es,
+    th,
+    'pt-br': ptbr,
+    ru,
+    sv,
+    id,
+    'no-nn': nonn,
+    hu,
+    pl,
+    ja,
+    nl,
+    he,
+    'zh-tw': zhtw,
+    lt,
+    tr,
+    ko,
+    el,
+    'nb-no': nbno
 };

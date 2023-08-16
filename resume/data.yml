@@ -1,9 +1,11 @@
 /* #*/ export const PERSON = `
+# Any fields left unchanged, please delete so your resume is fully yours!
+
 name:
   first: John
   middle:
   last: Doe
-about: Hi, my name is John Doe. I"m just about the most boring type of person you could
+about: Hi, my name is John Doe. I'm just about the most boring type of person you could
        possibly imagine. I like collecting leaves from the tree in my back yard and documenting
        each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
 position: Software Developer
@@ -11,6 +13,8 @@ position: Software Developer
 birth:
   year: 1990
   location: New York
+
+# you may add more experiences by duplicating the template
 
 experience:
 - company: Company A
@@ -39,7 +43,7 @@ education:
   timeperiod: March 2009 - December 2011
   description: Major in Engineering, University B, Los Angeles, USA.
 
-# skill level goes 0 to 100
+# skill level goes from 0 to 100
 skills:
 - name: HTML5
   level: 99
@@ -63,9 +67,11 @@ knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
 projects:
 - name: best-resume-ever
   platform: Vue
+  timeperiod: February 2016
   description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
   url: https://github.com/salomonelli/best-resume-ever
 
+# optional, not all resume templates have hobbies included
 hobbies:
 - name: Video Games
   iconClass: fa fa-gamepad
@@ -87,6 +93,6 @@ contact:
   city: New York
   website: johndoe.com
   github: johnyD
-# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
+# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
 lang: en
 `

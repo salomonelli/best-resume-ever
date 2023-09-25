@@ -133,7 +133,15 @@
         </p>
       </a>
     </div>
-  </div>
+
+    <div v-if="person.projects" class="section-headline">{{ lang.projects }}</div>
+    <div class="block" v-for="(project, index) in person.projects" :key="index">
+      <div class="block-helper"></div>
+      <div class="headline">{{ project.name }}</div>
+      <p class="info"><strong>{{ project.platform }}</strong> // {{ project.description }}</p>
+      <a :href="project.url">{{ project.url }}</a>
+    </div>
+    </div>
 
   <div style="clear:both;"></div>
 </div>

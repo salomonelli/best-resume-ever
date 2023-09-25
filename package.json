@@ -11,9 +11,9 @@
   "scripts": {
     "docs": "node build/build.js",
     "docs:serve": "cd docs/ && ws --port 8080 --rewrite '/best-resume-ever/* -> /$1'",
-    "dev": "node build/dev-server.js",
+    "dev": "NODE_OPTIONS='--openssl-legacy-provider' node build/dev-server.js",
     "start": "node build/dev-server.js",
-    "pdf": "node scripts/export.js",
+    "pdf": "NODE_OPTIONS='--openssl-legacy-provider' node scripts/export.js",
     "preview": "node scripts/preview.js",
     "test:deleteFiles": "node test/scripts/deleteFiles.js",
     "test:cafe": "testcafe chromium test/",
@@ -103,7 +103,7 @@
     "webpack-bundle-analyzer": "3.6.0",
     "webpack-dev-middleware": "3.4.0",
     "webpack-hot-middleware": "2.24.2",
-    "webpack-merge": "4.1.4"
+    "webpack-merge": "^4.1.4"
   },
   "engines": {
     "node": ">= 18.0.0",

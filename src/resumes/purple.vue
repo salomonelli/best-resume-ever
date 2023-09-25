@@ -20,7 +20,7 @@
         <div id="experience-container">
             <h2 id="experience-title">{{ lang.experience }}</h2>
             <div class="spacer"></div>
-            <div class="experience" v-for="experience in person.experience" :key="experience.company">
+                <div class="experience" v-for="experience in person.experience.slice(0, 2)" :key="experience.company">
                 <h2 class="company">{{experience.company}}</h2>
                 <p class="job-info"><span class="job-title">{{experience.position}} | </span><span class="experience-timeperiod">{{experience.timeperiod}}</span></p>
                 <p class="job-description" v-if="experience.description">{{experience.description}}</p>
@@ -52,6 +52,15 @@
                   </span>
                 </li>
             </ul>
+        </div>
+        <div id="projects-container" v-if="person.projects != []">
+            <h2 id="projects-title"> {{ lang.projects }}</h2>
+            <div class="spacer"></div>
+            <div class="project" v-for="(project, index) in person.projects" :key="index">
+                <strong class="project-name">{{ project.name }}</strong>
+                <p class="project-description">{{ project.description }} // <strong>{{ project.platform }}</strong></p>
+                <a class="project-url" :href="project.url">{{ project.url }}</a>
+            </div>
         </div>
     </div>
     <div id="resume-footer">
@@ -158,7 +167,7 @@ export default Vue.component(name, getVueOptions(name));
     #resume-body {
         padding: 40px 100px;
 
-        #experience-title, #education-title, #skills-title {
+        #experience-title, #education-title, #skills-title, #projects-title {
             font-size:26px;
             text-transform:uppercase;
         }
@@ -192,8 +201,23 @@ export default Vue.component(name, getVueOptions(name));
             font-size:16px;
         }
 
-        .education {
+        .education, .project {
             margin: 10px 0 10px 50px;
+        }
+
+        .project-name{
+            color: @text-purple;
+            font-weight: 600;
+        }
+
+        .project-description{
+            font-style: italic; 
+        }
+
+        .project-url{
+            color: @text-purple;
+            font-size: 13px;
+            font-weight: 100;
         }
 
         #skill-list {
@@ -204,7 +228,7 @@ export default Vue.component(name, getVueOptions(name));
             }
         }
 
-        #education-container, #skills-container {
+        #education-container, #skills-container, #projects-container {
             margin-top: 20px;
         }
     }

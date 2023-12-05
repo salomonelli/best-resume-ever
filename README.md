@@ -94,7 +94,7 @@ git clone https://github.com/salomonelli/best-resume-ever.git
 <b>Note</b>: If you encounter `Error: error:0308010C:digital envelope routines::unsupported` use the following commands and run `run npm dev` again:
 
 `export NODE_OPTIONS=--openssl-legacy-provider`
-`export NODE_OPTIONS=--openssl-legacy-provider` (for Windows users)
+<br> `export NODE_OPTIONS=--openssl-legacy-provider` (for Windows users)
 
 The error message pertains to a vulnerability in a previous Node.js that has since been addressed. These commands will not downgrade your Node.js.
 
